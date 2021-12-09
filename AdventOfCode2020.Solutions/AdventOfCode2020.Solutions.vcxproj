@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
+      <Project>{e12387bc-ae11-4ece-b865-bc4bd1374889}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Day01\Day01_ReportRepair.cpp" />
+    <ClCompile Include="Day02\Day02_PasswordPhilosophy.cpp" />
+    <ClCompile Include="Day02\PasswortPolicyProcessor.cpp" />
+    <ClCompile Include="Day03\Day03_TobogganTrajectory.cpp" />
+    <ClCompile Include="Day04\Day04_PassportProcessing.cpp" />
+    <ClCompile Include="Day04\PassportProcessor.cpp" />
+    <ClCompile Include="Day05\Day05_BinaryBoarding.cpp" />
+    <ClCompile Include="Day06\AnswerProcessor.cpp" />
+    <ClCompile Include="Day06\Day06_CustomCustoms.cpp" />
+    <ClCompile Include="Day07\BagProcessor.cpp" />
+    <ClCompile Include="Day07\Day07_HandyHaversacks.cpp" />
+    <ClCompile Include="Day08\Day08_HandheldHalting.cpp" />
+    <ClCompile Include="Day08\Instruction.cpp" />
+    <ClCompile Include="Day08\InstructionProcessor.cpp" />
+    <ClCompile Include="Day09\Day09_EncodingError.cpp" />
+    <ClCompile Include="Day10\Day10_AdapterArray.cpp" />
+    <ClCompile Include="Day11\Day11_SeatingSystem.cpp" />
+    <ClCompile Include="Day11\SeatingProcessor.cpp" />
+    <ClCompile Include="Day12\Day12_RainRisk.cpp" />
+    <ClCompile Include="Day12\NavInstructionProcessor.cpp" />
+    <ClCompile Include="Day13\Day13_ShuttleSearch.cpp" />
+    <ClCompile Include="Day13\ShuttleLineProcessor.cpp" />
+    <ClCompile Include="Day14\Day14_DockingData.cpp" />
+    <ClCompile Include="Day14\InitializationProcessor.cpp" />
+    <ClCompile Include="Day15\Day15_RambunctiousRecitation.cpp" />
+    <ClCompile Include="Day16\Day16_TicketTranslation.cpp" />
+    <ClCompile Include="Day16\TicketProcessor.cpp" />
+    <ClCompile Include="Day17\CubeProcessor.cpp" />
+    <ClCompile Include="Day17\Day17_ConvayCubes.cpp" />
+    <ClCompile Include="Day18\Day18_OperationOrder.cpp" />
+    <ClCompile Include="Day18\MathExpressionProcessor.cpp" />
+    <ClCompile Include="Day20\Day20_JurassicJigsaw.cpp" />
+    <ClCompile Include="Day20\TileProcessor.cpp" />
+    <ClCompile Include="Day22\Day22_CrabCombat.cpp" />
+    <ClCompile Include="Day22\DeckProcessor.cpp" />
+    <ClCompile Include="Day23\Day23_CrabCups.cpp" />
+    <ClCompile Include="Day24\Day24_LobbyLayout.cpp" />
+    <ClCompile Include="Day24\HexProcessor.cpp" />
+    <ClCompile Include="Day25\Day25_ComboBreaker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Day01\Day01_ReportRepair.h" />
+    <ClInclude Include="Day02\Day02_PasswordPhilosophy.h" />
+    <ClInclude Include="Day02\PasswordPolicy.h" />
+    <ClInclude Include="Day02\PasswortPolicyProcessor.h" />
+    <ClInclude Include="Day03\Day03_TobogganTrajectory.h" />
+    <ClInclude Include="Day04\Day04_PassportProcessing.h" />
+    <ClInclude Include="Day04\Passport.h" />
+    <ClInclude Include="Day04\PassportProcessor.h" />
+    <ClInclude Include="Day05\Day05_BinaryBoarding.h" />
+    <ClInclude Include="Day06\AnswerProcessor.h" />
+    <ClInclude Include="Day06\AnswerSet.h" />
+    <ClInclude Include="Day06\Day06_CustomCustoms.h" />
+    <ClInclude Include="Day07\Bag.h" />
+    <ClInclude Include="Day07\BagProcessor.h" />
+    <ClInclude Include="Day07\Day07_HandyHaversacks.h" />
+    <ClInclude Include="Day08\Day08_HandheldHalting.h" />
+    <ClInclude Include="Day08\ExecutionContext.h" />
+    <ClInclude Include="Day08\Instruction.h" />
+    <ClInclude Include="Day08\InstructionProcessor.h" />
+    <ClInclude Include="Day09\Day09_EncodingError.h" />
+    <ClInclude Include="Day10\Day10_AdapterArray.h" />
+    <ClInclude Include="Day11\Day11_SeatingSystem.h" />
+    <ClInclude Include="Day11\Seat.h" />
+    <ClInclude Include="Day11\SeatingProcessor.h" />
+    <ClInclude Include="Day12\Day12_RainRisk.h" />
+    <ClInclude Include="Day12\NavInstruction.h" />
+    <ClInclude Include="Day12\NavInstructionProcessor.h" />
+    <ClInclude Include="Day13\Day13_ShuttleSearch.h" />
+    <ClInclude Include="Day13\ShuttleLine.h" />
+    <ClInclude Include="Day13\ShuttleLineProcessor.h" />
+    <ClInclude Include="Day14\Day14_DockingData.h" />
+    <ClInclude Include="Day14\InitializationInstruction.h" />
+    <ClInclude Include="Day14\InitializationProcessor.h" />
+    <ClInclude Include="Day15\Day15_RambunctiousRecitation.h" />
+    <ClInclude Include="Day16\Day16_TicketTranslation.h" />
+    <ClInclude Include="Day16\Ticket.h" />
+    <ClInclude Include="Day16\TicketProcessor.h" />
+    <ClInclude Include="Day17\CubeCoords.h" />
+    <ClInclude Include="Day17\CubeProcessor.h" />
+    <ClInclude Include="Day17\Day17_ConvayCubes.h" />
+    <ClInclude Include="Day18\Day18_OperationOrder.h" />
+    <ClInclude Include="Day18\MathExpressionProcessor.h" />
+    <ClInclude Include="Day20\Day20_JurassicJigsaw.h" />
+    <ClInclude Include="Day20\Tile.h" />
+    <ClInclude Include="Day20\TileProcessor.h" />
+    <ClInclude Include="Day22\Day22_CrabCombat.h" />
+    <ClInclude Include="Day22\Deck.h" />
+    <ClInclude Include="Day22\DeckProcessor.h" />
+    <ClInclude Include="Day23\Cup.h" />
+    <ClInclude Include="Day23\Day23_CrabCups.h" />
+    <ClInclude Include="Day24\Day24_LobbyLayout.h" />
+    <ClInclude Include="Day24\HexCoords.h" />
+    <ClInclude Include="Day24\HexProcessor.h" />
+    <ClInclude Include="Day25\Day25_ComboBreaker.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6E6D4998-F770-40DF-BB86-7FC0221C5B27}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AdventOfCode2020Solutions</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AdventOfCode2020.Solutions</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>aoc2020</TargetName>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>aoc2020</TargetName>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>aoc2020</TargetName>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>aoc2020</TargetName>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ADVENTOFCODE2020SOLUTIONS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ADVENTOFCODE2020SOLUTIONS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include\</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ADVENTOFCODE2020SOLUTIONS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include\</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;ADVENTOFCODE2020SOLUTIONS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

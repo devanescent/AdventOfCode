@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Day01">
+      <UniqueIdentifier>{45286e52-3c79-482e-a67a-566922ed9698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day02">
+      <UniqueIdentifier>{c8aa69a9-dcc4-42a5-845d-3da0e65badb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day03">
+      <UniqueIdentifier>{ae0f3fd0-b737-41ff-a951-54f6ae0a6490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day04">
+      <UniqueIdentifier>{cdf9ac59-8d1a-49c3-91e8-a72b794a27c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day05">
+      <UniqueIdentifier>{38be6667-4a43-4151-a11a-aac3a697ca0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day06">
+      <UniqueIdentifier>{8e4eb902-a250-4f79-bfcf-1f0b8b7d8718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day07">
+      <UniqueIdentifier>{11af47ad-71d5-4bad-a2ab-ad5ca15d30d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day08">
+      <UniqueIdentifier>{5d64a0b9-fbf8-48c2-ad74-76b86f4e2652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day09">
+      <UniqueIdentifier>{4752f976-12e1-4d47-9a0c-0e785f1d6f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day10">
+      <UniqueIdentifier>{4b1ea6f4-b051-4342-b990-8d8b10b0d2bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day11">
+      <UniqueIdentifier>{8a484229-5f12-4d8c-8a24-9998a763d775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day12">
+      <UniqueIdentifier>{7abb5583-38e7-4dc8-8e2e-e1f7e92fa008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day13">
+      <UniqueIdentifier>{4f99d12a-04c5-44a9-b678-f72a9958ca9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day14">
+      <UniqueIdentifier>{45443723-e2ce-4799-ae9e-1e9bed69b6e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day15">
+      <UniqueIdentifier>{ba527a39-cf94-4b7e-9648-a8a16eb97daa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day16">
+      <UniqueIdentifier>{607f64aa-5ed6-4bc4-a033-5bc20bac9788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day17">
+      <UniqueIdentifier>{2dcc2471-83d7-4019-9911-256aecd19420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day18">
+      <UniqueIdentifier>{a1579c11-58a1-4504-bb61-d00258f34e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day19">
+      <UniqueIdentifier>{e59998c4-8d18-4f60-82fe-50788ae49fd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day20">
+      <UniqueIdentifier>{95d04b37-37dc-4648-9ceb-3d61191bfb9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day21">
+      <UniqueIdentifier>{6f9ce160-9bb3-4980-982c-6ed5d4bce26b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day22">
+      <UniqueIdentifier>{eb5bc499-66f6-46f1-9b1c-62951740cc5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day23">
+      <UniqueIdentifier>{ad6d4465-61d9-436e-94b8-db184ce0925a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day24">
+      <UniqueIdentifier>{3baa0915-c734-4a69-986e-7110377fea53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day25">
+      <UniqueIdentifier>{710228bd-f132-4c30-9ca0-77385d024011}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Day01\Day01_ReportRepair.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\Day02_PasswordPhilosophy.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\PasswortPolicyProcessor.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\Day03_TobogganTrajectory.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\Day04_PassportProcessing.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\PassportProcessor.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\Day05_BinaryBoarding.cpp">
+      <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\AnswerProcessor.cpp">
+      <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\Day06_CustomCustoms.cpp">
+      <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\BagProcessor.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\Day07_HandyHaversacks.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Day08_HandheldHalting.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Instruction.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\InstructionProcessor.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\Day09_EncodingError.cpp">
+      <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_AdapterArray.cpp">
+      <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\Day11_SeatingSystem.cpp">
+      <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\SeatingProcessor.cpp">
+      <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_RainRisk.cpp">
+      <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\NavInstructionProcessor.cpp">
+      <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Day13_ShuttleSearch.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\ShuttleLineProcessor.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\Day14_DockingData.cpp">
+      <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\InitializationProcessor.cpp">
+      <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_RambunctiousRecitation.cpp">
+      <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\Day16_TicketTranslation.cpp">
+      <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\TicketProcessor.cpp">
+      <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\CubeProcessor.cpp">
+      <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_ConvayCubes.cpp">
+      <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\Day18_OperationOrder.cpp">
+      <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\MathExpressionProcessor.cpp">
+      <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\Day20_JurassicJigsaw.cpp">
+      <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\TileProcessor.cpp">
+      <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\Day22_CrabCombat.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\DeckProcessor.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\Day23_CrabCups.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\Day24_LobbyLayout.cpp">
+      <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\HexProcessor.cpp">
+      <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\Day25_ComboBreaker.cpp">
+      <Filter>Day25</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Day01\Day01_ReportRepair.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\Day02_PasswordPhilosophy.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\PasswordPolicy.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\PasswortPolicyProcessor.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\Day03_TobogganTrajectory.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\Day04_PassportProcessing.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\Passport.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\PassportProcessor.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\Day05_BinaryBoarding.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\AnswerProcessor.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\AnswerSet.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\Day06_CustomCustoms.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\Bag.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\BagProcessor.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\Day07_HandyHaversacks.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\Day08_HandheldHalting.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\ExecutionContext.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\Instruction.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\InstructionProcessor.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day09\Day09_EncodingError.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\Day10_AdapterArray.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\Day11_SeatingSystem.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\Seat.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\SeatingProcessor.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\Day12_RainRisk.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\NavInstruction.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\NavInstructionProcessor.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\Day13_ShuttleSearch.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\ShuttleLine.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\ShuttleLineProcessor.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\Day14_DockingData.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\InitializationInstruction.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\InitializationProcessor.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\Day15_RambunctiousRecitation.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Day16_TicketTranslation.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Ticket.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\TicketProcessor.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\CubeCoords.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\CubeProcessor.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\Day17_ConvayCubes.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\Day18_OperationOrder.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\MathExpressionProcessor.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\Day20_JurassicJigsaw.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\Tile.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\TileProcessor.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\Day22_CrabCombat.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\Deck.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\DeckProcessor.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Cup.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Day23_CrabCups.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\Day24_LobbyLayout.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\HexCoords.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\HexProcessor.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\Day25_ComboBreaker.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

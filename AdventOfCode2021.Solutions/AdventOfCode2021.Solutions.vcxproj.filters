@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Day01">
+      <UniqueIdentifier>{70c4736f-bd39-4bed-9f57-0cd3fc48c657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day02">
+      <UniqueIdentifier>{888b4883-bedc-40bf-a1bb-033cfda38e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day03">
+      <UniqueIdentifier>{710e20f4-820f-4964-be3f-69643d9ae11b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day04">
+      <UniqueIdentifier>{d2270ead-039d-4750-ab5a-03c6d59e5019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day05">
+      <UniqueIdentifier>{5e536222-201a-4639-86f0-bc8f5d296ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day06">
+      <UniqueIdentifier>{4729b8cd-9779-45cf-baa5-220d8912678e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day07">
+      <UniqueIdentifier>{c7ac69a7-4e10-4455-ad0b-b5b9f0e70435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day08">
+      <UniqueIdentifier>{255f3eb9-4915-4fc5-945b-2503fa9762a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day09">
+      <UniqueIdentifier>{67e0f074-2ef3-4f2f-bb1b-153c12cf3249}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Day01\Day01_SonarSweep.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\Day02_Dive.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\DiveCmdProcessor.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\Day03_BinaryDiagnostic.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\BingoBoard.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\BingoBoardProcessor.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\Day04_GiantSquid.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\Day05_HydrothermalVenture.cpp">
+      <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\HydroVentProcessor.cpp">
+      <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\Day06_Lanternfish.cpp">
+      <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\Day07_TheTreacheryOfWhales.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Day08_SevenSegmentSearch.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\SignalPatternProcessor.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\Day09_SmokeBasin.cpp">
+      <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\HeatMapProcessor.cpp">
+      <Filter>Day09</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Day01\Day01_SonarSweep.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\Day02_Dive.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\DiveCmd.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\DiveCmdProcessor.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\Day03_BinaryDiagnostic.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\BingoBoard.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\BingoBoardProcessor.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\Day04_GiantSquid.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\Day05_HydrothermalVenture.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\HydroVentLine.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\HydroVentProcessor.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\Day06_Lanternfish.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\Day07_TheTreacheryOfWhales.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\Day08_SevenSegmentSearch.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\SignalPatternProcessor.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\SignalPatternObservation.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day09\Day09_SmokeBasin.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
+    <ClInclude Include="Day09\HeatMapProcessor.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
