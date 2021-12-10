@@ -11,13 +11,15 @@ namespace AdventOfCode::Year2021::Day08
 		for (const std::string& noteEntry : input)
 		{
 			std::istringstream iss(noteEntry);
+			std::string pattern;
+
 			SignalPatternObservation sigPatterns;
 
 			// Patterns for all 10 digits:
 			for (int i = 0; i < 10; ++i)
 			{
-				iss >> sigPatterns.UniquePatterns[i];
-				std::sort(sigPatterns.UniquePatterns[i].begin(), sigPatterns.UniquePatterns[i].end());
+				iss >> pattern;
+				sigPatterns.UniquePatterns[i].insert(pattern.begin(), pattern.end());
 			}
 
 			// Discard separator:
@@ -27,8 +29,8 @@ namespace AdventOfCode::Year2021::Day08
 			// Displayed digits (4 digit displays):
 			for (int i = 0; i < 4; ++i)
 			{
-				iss >> sigPatterns.DisplayedDigits[i];
-				std::sort(sigPatterns.DisplayedDigits[i].begin(), sigPatterns.DisplayedDigits[i].end());
+				iss >> pattern;
+				sigPatterns.DisplayedDigits[i].insert(pattern.begin(), pattern.end());
 			}
 
 			// Add pattern:
