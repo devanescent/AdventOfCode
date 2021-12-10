@@ -32,6 +32,9 @@
     <Filter Include="Day09">
       <UniqueIdentifier>{67e0f074-2ef3-4f2f-bb1b-153c12cf3249}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day10">
+      <UniqueIdentifier>{6205781b-a59d-4333-96d5-93bf8667273d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -78,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="Day09\HeatMapProcessor.cpp">
       <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_SyntaxScoring.cpp">
+      <Filter>Day10</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +140,9 @@
     </ClInclude>
     <ClInclude Include="Day09\HeatMapProcessor.h">
       <Filter>Day09</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\Day10_SyntaxScoring.h">
+      <Filter>Day10</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

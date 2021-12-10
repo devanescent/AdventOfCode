@@ -39,6 +39,7 @@
     <ClCompile Include="Day08\SignalPatternProcessor.cpp" />
     <ClCompile Include="Day09\Day09_SmokeBasin.cpp" />
     <ClCompile Include="Day09\HeatMapProcessor.cpp" />
+    <ClCompile Include="Day10\Day10_SyntaxScoring.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_SonarSweep.h" />
@@ -59,6 +60,7 @@
     <ClInclude Include="Day08\SignalPatternObservation.h" />
     <ClInclude Include="Day09\Day09_SmokeBasin.h" />
     <ClInclude Include="Day09\HeatMapProcessor.h" />
+    <ClInclude Include="Day10\Day10_SyntaxScoring.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
