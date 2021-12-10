@@ -15,7 +15,10 @@ namespace AdventOfCode::Year2021::Day04
 		int Value;
 		bool IsMarked;
 
-		bool operator==(const BingoBoardNum& other) const = default;
+		bool operator==(const BingoBoardNum& other) const
+		{
+			return Value == other.Value && IsMarked == other.IsMarked;
+		}
 	};
 
 	/// <summary>
@@ -26,7 +29,10 @@ namespace AdventOfCode::Year2021::Day04
 	public:
 		std::vector<std::vector<BingoBoardNum>> Num;
 
-		bool operator==(const BingoBoard& other) const = default;
+		bool operator==(const BingoBoard& other) const
+		{
+			return Num == other.Num;
+		}
 
 		std::string ToString() const
 		{

@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <format>
 
 namespace AdventOfCode::Year2021::Day02
 {
@@ -20,11 +19,16 @@ namespace AdventOfCode::Year2021::Day02
 		DiveCmdDirection Dir;
 		int Value;
 
-		bool operator==(const DiveCmd& other) const = default;
+		bool operator==(const DiveCmd& other) const
+		{
+			return Dir == other.Dir && Value == other.Value;
+		}
 
 		std::string ToString() const
 		{
-			return std::format("{} {}", static_cast<char>(Dir), Value);
+			char buf[256];
+			snprintf(buf, sizeof(buf), "%c %d", static_cast<char>(Dir), Value);
+			return std::string(buf);
 		}
 	};
 }

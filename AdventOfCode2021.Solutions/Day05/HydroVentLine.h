@@ -64,7 +64,10 @@ namespace AdventOfCode::Year2021::Day05
 			return allPoints;
 		}
 
-		bool operator==(const HydroVentLine& other) const = default;
+		bool operator==(const HydroVentLine& other) const
+		{
+			return m_start == other.m_start && m_end == other.m_end;
+		}
 
 		std::string ToString() const
 		{

@@ -20,7 +20,10 @@ namespace AdventOfCode::Year2021::Day09
 			IsMinimum &= canBeMin;
 		}
 
-		bool operator==(const HeatMapNode& other) const = default;
+		bool operator==(const HeatMapNode& other) const
+		{
+			return Height == other.Height && IsMinimum == other.IsMinimum;
+		}
 
 		std::string ToString() const
 		{

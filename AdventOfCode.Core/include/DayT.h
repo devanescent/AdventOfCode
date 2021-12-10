@@ -8,7 +8,7 @@ namespace AdventOfCode
 {
 	// -----------------------------------------------------------------------------------
 	// templated base class for specific input processing
-	template <typename TInput, InputProcessor<TInput> TProcessor>
+	template <typename TInput, typename TProcessor>
 	class DayT : public Day
 	{
 	public:

@@ -14,9 +14,12 @@ namespace AdventOfCode::Year2020::Day06
 				m_answers.insert(answer);
 		}
 
-		int NumberOfUniqueAnswers() const { return m_answers.size(); }
+		int NumberOfUniqueAnswers() const { return static_cast<int>(m_answers.size()); }
 
-		bool operator==(const AnswerSet& other) const = default;
+		bool operator==(const AnswerSet& other) const
+		{
+			return m_answers == other.m_answers;
+		}
 
 		std::string ToString() const
 		{

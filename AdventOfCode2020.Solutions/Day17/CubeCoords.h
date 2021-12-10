@@ -20,7 +20,10 @@ namespace AdventOfCode::Year2020::Day17
 				return Z < rhs.Z;
 		}
 
-		bool operator==(const CubeCoords& other) const = default;
+		bool operator==(const CubeCoords& other) const
+		{
+			return X == other.X && Y == other.Y && Z == other.Z;
+		}
 
 		std::string ToString() const
 		{

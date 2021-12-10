@@ -20,7 +20,10 @@ namespace AdventOfCode::Year2020::Day24
 		}
 
 		// for comparing in Assert
-		bool operator==(const HexCoords& other) const = default;
+		bool operator==(const HexCoords& other) const
+		{
+			return m_swne == other.m_swne && m_nwse == other.m_nwse;
+		}
 
 		std::string ToString() const
 		{

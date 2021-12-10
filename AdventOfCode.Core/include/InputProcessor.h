@@ -5,13 +5,6 @@
 
 namespace AdventOfCode
 {
-	// Concept for input processors:
-	template <typename TProcessor, typename TProcResult>
-	concept InputProcessor = requires(TProcessor p, const std::vector<std::string>& input)
-	{
-		{ p.Process(input) } -> std::same_as<std::vector<TProcResult>>;
-	};
-
 	// Base class for input processors
 	template <typename TResult>
 	class InputProcessorBase

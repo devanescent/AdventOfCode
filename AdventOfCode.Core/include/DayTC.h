@@ -6,7 +6,7 @@ namespace AdventOfCode
 {
 	// -----------------------------------------------------------------------------------
 	//  templated base class with additional object (context) besides the list
-	template <typename TInput, typename TContext, InputProcessorWithContext<TInput, TContext> TProcessor>
+	template <typename TInput, typename TContext, typename TProcessor>
 	class DayTC : public Day
 	{
 	public:

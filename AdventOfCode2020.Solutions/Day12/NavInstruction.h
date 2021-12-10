@@ -78,7 +78,10 @@ namespace AdventOfCode::Year2020::Day12
 			}
 		}
 
-		bool operator==(const NavInstruction& other) const = default;
+		bool operator==(const NavInstruction& other) const
+		{
+			return m_direction == other.m_direction && m_value == other.m_value;
+		}
 
 		std::string ToString() const
 		{

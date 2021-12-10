@@ -14,12 +14,18 @@ namespace AdventOfCode::Year2020::Day02
 		bool IsValid()
 		{
 			char reqLetter = m_requiredLetter;
-			int occ = std::count_if(m_password.begin(), m_password.end(), [reqLetter](char letter) { return letter == reqLetter; });
+			int occ = static_cast<int>(std::count_if(m_password.begin(), m_password.end(), [reqLetter](char letter) { return letter == reqLetter; }));
 
 			return occ >= m_minOccurance && occ <= m_maxOccurance;
 		}
 
-		bool operator==(const PasswordPolicy& other) const = default;
+		bool operator==(const PasswordPolicy& other) const
+		{
+			return m_requiredLetter == other.m_requiredLetter &&
+				m_minOccurance == other.m_minOccurance &&
+				m_maxOccurance == other.m_maxOccurance &&
+				m_password == other.m_password;
+		}
 
 		std::string ToString() const
 		{

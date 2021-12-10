@@ -56,7 +56,10 @@ namespace AdventOfCode::Year2020::Day14
 			ctx.SetMemory(m_address, m_value);
 		}
 
-		bool operator==(const InitializationInstruction& other) const = default;
+		bool operator==(const InitializationInstruction& other) const
+		{
+			return m_address == other.m_address && m_value == other.m_value;
+		}
 
 		std::string ToString() const
 		{

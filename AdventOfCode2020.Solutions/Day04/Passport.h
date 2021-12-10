@@ -19,7 +19,17 @@ namespace AdventOfCode::Year2020::Day04
 				m_hairColor.empty() || m_eyeColor.empty() || m_passportID.empty());
 		}
 
-		bool operator==(const Passport& other) const = default;
+		bool operator==(const Passport& other) const
+		{
+			return m_birthYear == other.m_birthYear &&
+				m_issueYear == other.m_issueYear &&
+				m_expirationYear == other.m_expirationYear &&
+				m_height == other.m_height &&
+				m_hairColor == other.m_hairColor &&
+				m_eyeColor == other.m_eyeColor &&
+				m_passportID == other.m_passportID &&
+				m_countryID == other.m_countryID;
+		}
 
 		std::string ToString() const
 		{

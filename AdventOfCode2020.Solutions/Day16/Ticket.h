@@ -22,7 +22,10 @@ namespace AdventOfCode::Year2020::Day16
 				return val > m_lowerLimit && val < m_upperLimit;
 		}
 
-		bool operator==(const ValueInterval& other) const = default;
+		bool operator==(const ValueInterval& other) const
+		{
+			return m_upperLimit == other.m_upperLimit && m_lowerLimit == other.m_lowerLimit && m_isClosed == other.m_isClosed;
+		}
 
 		std::string ToString() const
 		{

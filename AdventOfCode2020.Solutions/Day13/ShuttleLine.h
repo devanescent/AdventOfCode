@@ -26,7 +26,10 @@ namespace AdventOfCode::Year2020::Day13
 			}
 		}
 
-		bool operator==(const ShuttleLine& other) const = default;
+		bool operator==(const ShuttleLine& other) const
+		{
+			return m_lineNo == other.m_lineNo;
+		}
 
 		std::string ToString() const
 		{

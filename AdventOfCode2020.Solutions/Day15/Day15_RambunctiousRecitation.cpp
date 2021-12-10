@@ -28,7 +28,7 @@ namespace AdventOfCode::Year2020::Day15
 				{
 					// Find last element in previous turns (search from back -> reverse iterator)
 					// -> will give -1 if item is encountered the first time
-					prevPos = input.rend() - std::find(input.rbegin() + 1, input.rend(), lastElem) - 1;
+					prevPos = static_cast<int>(std::distance(std::find(input.rbegin() + 1, input.rend(), lastElem), input.rend())) - 1;
 				}
 
 				// Add to lookup:

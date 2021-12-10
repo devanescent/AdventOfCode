@@ -44,7 +44,10 @@ namespace AdventOfCode::Year2020::Day20
 			return false;
 		}
 
-		bool operator==(const Tile& other) const = default;
+		bool operator==(const Tile& other) const
+		{
+			return m_id == other.m_id;
+		}
 
 		std::string ToString() const
 		{
