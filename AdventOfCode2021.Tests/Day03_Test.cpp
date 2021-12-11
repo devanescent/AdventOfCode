@@ -42,6 +42,18 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(198ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			BinaryDiagnostic day03;
+
+			// Act:
+			uint64_t result = day03.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(230ull, result);
+		}
 	};
 
 	std::vector<std::string> Day03::inputData = std::vector<std::string>();
