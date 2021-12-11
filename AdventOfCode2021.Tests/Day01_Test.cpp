@@ -40,6 +40,18 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(7ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			SonarSweep day01;
+
+			// Act:
+			uint64_t result = day01.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(5ull, result);
+		}
 	};
 
 	std::vector<std::string> Day01::inputData = std::vector<std::string>();

@@ -14,5 +14,6 @@ namespace AdventOfCode::Year2021::Day01
 
 	protected:
 		uint64_t ExecutePart1(std::vector<int> report) override;
+		uint64_t ExecutePart2(std::vector<int> report) override;
 	};
 }
