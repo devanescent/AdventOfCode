@@ -50,7 +50,7 @@ namespace AdventOfCode::Year2021::Tests
 			uint64_t result = day08.GetResultOnPart2(inputData);
 
 			// Assert:
-			Assert::AreEqual(0ull /*TODO*/, result);
+			Assert::AreEqual(61229ull, result);
 		}
 	};
 

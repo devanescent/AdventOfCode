@@ -33,6 +33,7 @@ namespace AdventOfCode::Year2021::Day08
 
 	uint64_t SevenSegmentSearch::ExecutePart2(std::vector<SignalPatternObservation> patterns)
 	{
+		uint64_t totalSum = 0;
 		for (SignalPatternObservation& obs : patterns)
 		{
 			// Mappings for patterns to digits:
@@ -75,14 +76,13 @@ namespace AdventOfCode::Year2021::Day08
 			SignalPattern digit2Pattern = obs.FindPatternByExclusion(5, digit3Pattern, digit5Pattern);
 			patternToDigit[digit2Pattern] = 2;
 
-			// Calculate the displayed number:
-			int resultingNumber = 0;
+			// Add the displayed number to the total sum:
 			for (int i = 0, f = 1000; i < 4; ++i, f /= 10)
 			{
-				resultingNumber += patternToDigit[obs.DisplayedDigits[i]] * f;
+				totalSum += patternToDigit[obs.DisplayedDigits[i]] * f;
 			}
 		}	
 
-		return 0ull;
+		return totalSum;
 	}
 }
