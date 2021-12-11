@@ -40,6 +40,18 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(26397ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			SyntaxScoring day10;
+
+			// Act:
+			uint64_t result = day10.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(288957ull, result);
+		}
 	};
 
 	std::vector<std::string> Day10::inputData = std::vector<std::string>();

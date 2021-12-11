@@ -9,7 +9,8 @@ namespace AdventOfCode::Year2021::Day10
 		SyntaxScoring();
 
 		uint64_t GetResultOnPart1(const std::vector<std::string> input) override;
+		uint64_t GetResultOnPart2(const std::vector<std::string> input) override;
 	};
 
-	uint64_t GetCorruptionScore(const std::string& chunkLine);
+	std::pair<uint64_t, uint64_t> GetScore(const std::string& chunkLine);
 }
