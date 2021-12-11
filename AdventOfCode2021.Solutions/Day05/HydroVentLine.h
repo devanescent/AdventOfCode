@@ -57,7 +57,7 @@ namespace AdventOfCode::Year2021::Day05
 				int xStep = xStart < xEnd ? 1 : -1;
 				int yStep = yStart < yEnd ? 1 : -1;
 
-				for (int x = xStart, y = yStart; y <= yEnd, x <= xEnd; x += xStep, y += yStep)
+				for (int x = xStart, y = yStart; x != xEnd + xStep, y != yEnd + yStep; x += xStep, y += yStep)
 					allPoints.emplace_back(x, y);
 			}
 

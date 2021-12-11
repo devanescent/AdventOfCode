@@ -59,6 +59,18 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(5ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			HydrothermalVenture day05;
+
+			// Act:
+			uint64_t result = day05.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(12ull, result);
+		}
 	};
 
 	std::vector<std::string> Day05::inputData = std::vector<std::string>();
