@@ -44,4 +44,23 @@ namespace AdventOfCode
 
 		return intList;
 	}
+
+	// IntArrayProcessor: converts input to 2D array structure
+	std::vector<std::vector<int>> IntArrayProcessor::Process(std::vector<std::string> input)
+	{
+		std::vector<std::vector<int>> result;
+		result.reserve(input.size());
+
+		std::transform(input.begin(), input.end(), std::back_inserter(result),
+			[](const std::string& line)
+			{
+				std::vector<int> ints;
+				ints.reserve(line.size());
+				std::transform(line.begin(), line.end(), std::back_inserter(ints), [](char c) { return c - '0'; });
+				return ints;
+			}
+		);
+
+		return result;
+	}
 }

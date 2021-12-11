@@ -17,6 +17,11 @@ namespace AdventOfCode
 		std::vector<int> Process(std::vector<std::string> input) override;
 	};
 
+	class IntArrayProcessor : public InputProcessorBase<std::vector<int>>
+	{
+	public:
+		std::vector<std::vector<int>> Process(std::vector<std::string> input) override;
+	};
 
 	template<> std::vector<int> IntProcessor<IntProcessingMode::ValuePerLine>::Process(std::vector<std::string> input);
 	template<> std::vector<int> IntProcessor<IntProcessingMode::ValuesAsSingleLine>::Process(std::vector<std::string> input);

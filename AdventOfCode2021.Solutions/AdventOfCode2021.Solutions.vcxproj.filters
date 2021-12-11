@@ -35,6 +35,9 @@
     <Filter Include="Day10">
       <UniqueIdentifier>{6205781b-a59d-4333-96d5-93bf8667273d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day11">
+      <UniqueIdentifier>{78dc84d6-1f91-44bf-b101-f6c0c29dcc32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -84,6 +87,9 @@
     </ClCompile>
     <ClCompile Include="Day10\Day10_SyntaxScoring.cpp">
       <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\Day11_DumboOctopus.cpp">
+      <Filter>Day11</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +149,9 @@
     </ClInclude>
     <ClInclude Include="Day10\Day10_SyntaxScoring.h">
       <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\Day11_DumboOctopus.h">
+      <Filter>Day11</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
