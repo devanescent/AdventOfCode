@@ -20,29 +20,35 @@ namespace AdventOfCode::Year2021::Day04
 		std::vector<BingoBoard> boards;
 		{
 			BingoBoard board;
+			int colIx = 0;
+			int rowIx = 0;
 			for (size_t i = 2; i < input.size(); ++i)	// skip first line (drawn nums) and separating empty line
 			{
 				if (!input[i].empty())
 				{
-					std::vector<BingoBoardNum> boardLine;
-
 					// Fill board line:
 					std::istringstream boardLineStr(input[i]);
 					std::string boardNumStr;
+
 					while (std::getline(boardLineStr, boardNumStr, ' '))
 					{
 						if (!boardNumStr.empty())	// because multiple spaces are used in board input
-							boardLine.push_back(std::stoi(boardNumStr));
+						{
+							board.Num[rowIx][colIx].Value = std::stoi(boardNumStr);
+							++colIx;
+						}
 					}
 
-					// Add line to board:
-					board.Num.push_back(boardLine);
+					// Next line:
+					++rowIx;
+					colIx = 0;
 				}
 				else
 				{
 					// Board is finished:
 					boards.push_back(board);
-					board = BingoBoard();
+					colIx = 0;
+					rowIx = 0;
 				}
 			}
 

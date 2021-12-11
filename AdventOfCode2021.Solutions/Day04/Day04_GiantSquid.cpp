@@ -6,19 +6,43 @@ namespace AdventOfCode::Year2021::Day04
 
 	uint64_t GiantSquid::ExecutePart1(std::vector<BingoBoard> boards, std::vector<int> drawnNumbers)
 	{
-		int numbersUsed = 0;
 		for (int n : drawnNumbers)
 		{
-			++numbersUsed;
 			for (BingoBoard& bb : boards)
 			{
-				// Only check for wins after at least 5 numbers were used:
-				if (auto score = bb.CalculateScore(n, numbersUsed >= 5))
-					return *score;	// first board that wins
+				bb.AddNumber(n);
+				if (bb.HasWon)
+					return bb.CalculateScore();
 			}
 		}
 
 		// No board has won:
+		return 0ull;
+	}
+
+	uint64_t GiantSquid::ExecutePart2(std::vector<BingoBoard> boards, std::vector<int> drawnNumbers)
+	{
+		for (int n : drawnNumbers)
+		{
+			for (auto b = boards.begin(); b != boards.end(); /* increment manually done because of erase*/)
+			{
+				if (!b->HasWon)
+				{
+					b->AddNumber(n);
+					++b;
+				}
+				else
+				{
+					// If last board, return its score, otherwise remove from list:
+					if (boards.size() == 1)
+						return boards[0].CalculateScore();
+					else
+						b = boards.erase(b);
+				}
+			}
+		}
+
+		// No result:
 		return 0ull;
 	}
 }

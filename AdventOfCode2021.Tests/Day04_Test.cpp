@@ -61,28 +61,28 @@ namespace AdventOfCode::Year2021::Tests
 			Assert::AreEqual(
 				BingoBoard
 				{ 
-					std::vector<std::vector<BingoBoardNum>>
-					{
-						{22, 13, 17, 11,  0},
-						{ 8,  2, 23,  4, 24},
-						{ 21, 9, 14, 16,  7},
-						{ 6, 10,  3, 18,  5},
-						{ 1, 12, 20, 15, 19}
-					}
+					std::array<std::array<BingoBoardNum, 5>, 5>
+					{ {
+						{ {22, 13, 17, 11,  0} },
+						{ { 8,  2, 23,  4, 24} },
+						{ { 21, 9, 14, 16,  7} },
+						{ { 6, 10,  3, 18,  5} },
+						{ { 1, 12, 20, 15, 19} }
+					} }
 				}, result.first[0]
 			);
 
 			Assert::AreEqual(
 				BingoBoard
 				{ 
-					std::vector<std::vector<BingoBoardNum>>
-					{
-						{14, 21, 17, 24,  4},
-						{10, 16, 15,  9, 19},
-						{18,  8, 23, 26, 20},
-						{22, 11, 13,  6,  5},
-						{ 2,  0, 12,  3,  7}
-					}
+					std::array<std::array<BingoBoardNum, 5>, 5>
+					{ {
+						{ {14, 21, 17, 24,  4} },
+						{ {10, 16, 15,  9, 19} },
+						{ {18,  8, 23, 26, 20} },
+						{ {22, 11, 13,  6,  5} },
+						{ { 2,  0, 12,  3,  7} }
+					} }
 				}, result.first[2]
 			);
 
@@ -99,6 +99,18 @@ namespace AdventOfCode::Year2021::Tests
 
 			// Assert:
 			Assert::AreEqual(4512ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			GiantSquid day04;
+
+			// Act:
+			uint64_t result = day04.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(1924ull, result);
 		}
 	};
 

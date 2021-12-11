@@ -11,5 +11,6 @@ namespace AdventOfCode::Year2021::Day04
 
 	protected:
 		uint64_t ExecutePart1(std::vector<BingoBoard> boards, std::vector<int> drawnNumbers) override;
+		uint64_t ExecutePart2(std::vector<BingoBoard> boards, std::vector<int> drawnNumbers) override;
 	};
 }

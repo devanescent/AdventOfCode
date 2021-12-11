@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include <array>
 #include <string>
 #include <optional>
 
@@ -10,10 +10,11 @@ namespace AdventOfCode::Year2021::Day04
 	/// </summary>
 	struct BingoBoardNum
 	{
-		BingoBoardNum(int val) : Value(val), IsMarked(false) {}
+		BingoBoardNum(int num) : Value(num), IsMarked(false) {}
+		BingoBoardNum() : BingoBoardNum(0) {}
 
-		int Value;
-		bool IsMarked;
+		int Value = 0;
+		bool IsMarked = false;
 
 		bool operator==(const BingoBoardNum& other) const
 		{
@@ -27,7 +28,11 @@ namespace AdventOfCode::Year2021::Day04
 	class BingoBoard
 	{
 	public:
-		std::vector<std::vector<BingoBoardNum>> Num;
+		std::array<std::array<BingoBoardNum, 5>, 5> Num;
+
+		int NumberOfMarks = 0;
+		int LastAddedNumber = 0;
+		bool HasWon = false;
 
 		bool operator==(const BingoBoard& other) const
 		{
@@ -52,22 +57,7 @@ namespace AdventOfCode::Year2021::Day04
 			return boardStr;
 		}
 
-		/// <summary>
-		/// Inserts the next number in the board and additionally can also calculate the score of the bingo board.
-		/// </summary>
-		/// <param name="nextNum">: Next number to add to the bingo board</param>
-		/// <param name="checkIfWon">: Optionally, also check if the board has won</param>
-		/// <returns>
-		/// Returns a value if at least one horizontal or vertical line is completely marked. 
-		/// Returns no value if the board has not won yet.
-		/// </returns>
-		std::optional<uint64_t> CalculateScore(int nextNum, bool checkIfWon);
-
-	private:
-		/// <summary>
-		/// Calculates the sum of all unmarked values of the bingo board.
-		/// </summary>
-		/// <returns>Sum of all unmarked values.</returns>
-		int GetUnmarkedSum();
+		void AddNumber(int nextNum);
+		uint64_t CalculateScore();
 	};
 }
