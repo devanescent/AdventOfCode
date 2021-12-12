@@ -38,6 +38,9 @@
     <Filter Include="Day11">
       <UniqueIdentifier>{78dc84d6-1f91-44bf-b101-f6c0c29dcc32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day12">
+      <UniqueIdentifier>{40ebeec8-aec7-4f86-90bd-41775772f2d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -90,6 +93,12 @@
     </ClCompile>
     <ClCompile Include="Day11\Day11_DumboOctopus.cpp">
       <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_PassagePathing.cpp">
+      <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\CaveConnectionProcessor.cpp">
+      <Filter>Day12</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +161,15 @@
     </ClInclude>
     <ClInclude Include="Day11\Day11_DumboOctopus.h">
       <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\Day12_PassagePathing.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\CaveConnection.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\CaveConnectionProcessor.h">
+      <Filter>Day12</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
