@@ -99,6 +99,42 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(226ull, result);
 		}
+
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			PassagePathing day12;
+
+			// Act:
+			uint64_t result = day12.GetResultOnPart2(inputData1);
+
+			// Assert:
+			Assert::AreEqual(36ull, result);
+		}
+
+		TEST_METHOD(CheckExample2_Part2)
+		{
+			// Arrange:
+			PassagePathing day12;
+
+			// Act:
+			uint64_t result = day12.GetResultOnPart2(inputData2);
+
+			// Assert:
+			Assert::AreEqual(103ull, result);
+		}
+
+		TEST_METHOD(CheckExample3_Part2)
+		{
+			// Arrange:
+			PassagePathing day12;
+
+			// Act:
+			uint64_t result = day12.GetResultOnPart2(inputData3);
+
+			// Assert:
+			Assert::AreEqual(3509ull, result);
+		}
 	};
 
 	std::vector<std::string> Day12::inputData1 = std::vector<std::string>();
