@@ -43,6 +43,8 @@
     <ClCompile Include="Day11\Day11_DumboOctopus.cpp" />
     <ClCompile Include="Day12\CaveConnectionProcessor.cpp" />
     <ClCompile Include="Day12\Day12_PassagePathing.cpp" />
+    <ClCompile Include="Day13\Day13_TransparentOrigami.cpp" />
+    <ClCompile Include="Day13\OrigamiProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_SonarSweep.h" />
@@ -68,6 +70,9 @@
     <ClInclude Include="Day12\CaveConnection.h" />
     <ClInclude Include="Day12\CaveConnectionProcessor.h" />
     <ClInclude Include="Day12\Day12_PassagePathing.h" />
+    <ClInclude Include="Day13\Day13_TransparentOrigami.h" />
+    <ClInclude Include="Day13\FoldInstruction.h" />
+    <ClInclude Include="Day13\OrigamiProcessor.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

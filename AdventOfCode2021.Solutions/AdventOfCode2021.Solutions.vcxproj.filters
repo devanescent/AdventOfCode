@@ -41,6 +41,9 @@
     <Filter Include="Day12">
       <UniqueIdentifier>{40ebeec8-aec7-4f86-90bd-41775772f2d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day13">
+      <UniqueIdentifier>{142edf91-9378-4a34-8b0e-200eed7cdc6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -99,6 +102,12 @@
     </ClCompile>
     <ClCompile Include="Day12\CaveConnectionProcessor.cpp">
       <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Day13_TransparentOrigami.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\OrigamiProcessor.cpp">
+      <Filter>Day13</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +179,15 @@
     </ClInclude>
     <ClInclude Include="Day12\CaveConnectionProcessor.h">
       <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\Day13_TransparentOrigami.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\FoldInstruction.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\OrigamiProcessor.h">
+      <Filter>Day13</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
