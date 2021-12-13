@@ -11,5 +11,10 @@ namespace AdventOfCode::Year2021::Day13
 
 	protected:
 		uint64_t ExecutePart1(std::vector<FoldInstruction> foldInstrs, OrigamiPaper paper) override;
+		uint64_t ExecutePart2(std::vector<FoldInstruction> foldInstrs, OrigamiPaper paper) override;
+
+	private:
+		void FoldPaper(OrigamiPaper& paper, const FoldInstruction& foldInstr);
+		void PrintResult(OrigamiPaper& foldedPaper);
 	};
 }

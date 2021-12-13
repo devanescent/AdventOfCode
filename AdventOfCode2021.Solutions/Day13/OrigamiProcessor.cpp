@@ -1,4 +1,5 @@
 #include "OrigamiProcessor.h"
+#include <algorithm>
 #include <sstream>
 
 namespace AdventOfCode::Year2021::Day13

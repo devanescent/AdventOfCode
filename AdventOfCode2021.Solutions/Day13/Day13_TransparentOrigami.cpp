@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <numeric>
 #include <functional>
+#include <iostream>
 
 namespace AdventOfCode::Year2021::Day13
 {
@@ -9,11 +10,30 @@ namespace AdventOfCode::Year2021::Day13
 
 	uint64_t TransparentOrigami::ExecutePart1(std::vector<FoldInstruction> foldInstrs, OrigamiPaper paper)
 	{
-		// Expecting: folding is always by half, so the paper always perfectly overlaps
+		// Apply first fold:
+		FoldPaper(paper, foldInstrs[0]);
 
-		// First fold:
-		const FoldInstruction& foldInstr = foldInstrs[0];
+		// Count number of dots (fields where value is true):
+		return std::accumulate(paper.begin(), paper.end(), 0ull,
+			[](uint64_t count, const auto& row)
+			{
+				return count + std::count(row.begin(), row.end(), true);
+			}
+		);
+	}
 
+	uint64_t TransparentOrigami::ExecutePart2(std::vector<FoldInstruction> foldInstrs, OrigamiPaper paper)
+	{
+		for (const auto& foldInstr : foldInstrs)
+			FoldPaper(paper, foldInstr);
+
+		PrintResult(paper);
+		return 0ull;  // result can be read from console window
+	}
+
+	// Apply the given fold instruction to the paper:
+	void TransparentOrigami::FoldPaper(OrigamiPaper& paper, const FoldInstruction& foldInstr)
+	{
 		if (foldInstr.Direction == FoldDirection::Horizontal)
 		{
 			// For each row: merge the (reversed) second half (to the right of the fold) into the first half
@@ -48,14 +68,17 @@ namespace AdventOfCode::Year2021::Day13
 			// Remove bottom rows (including the fold):
 			paper.erase(foldIt, paper.end());
 		}
+	}
 
-		// Count number of dots (fields where value is true):
-		return std::accumulate(paper.begin(), paper.end(), 0ull,
-			[](uint64_t count, const auto& row)
-			{
-				return count + std::count(row.begin(), row.end(), true);
-			}
-		);
+	// Print the folded paper to read the letters:
+	void TransparentOrigami::PrintResult(OrigamiPaper& foldedPaper)
+	{
+		for (const auto& row : foldedPaper)
+		{
+			std::vector<char> cString;
+			std::transform(row.begin(), row.end(), std::back_inserter(cString), [](bool b) {return b ? '#' : '.'; });
+			std::cout << std::string(cString.begin(), cString.end()) << "\n";
+		}
 	}
 }
 
