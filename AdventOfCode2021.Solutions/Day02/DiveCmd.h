@@ -16,8 +16,8 @@ namespace AdventOfCode::Year2021::Day02
 		DiveCmd(DiveCmdDirection dir, int value) : Dir(dir), Value(value) {}
 		DiveCmd() : DiveCmd(DiveCmdDirection::Forward, 0) {}
 
-		DiveCmdDirection Dir;
-		int Value;
+		const DiveCmdDirection Dir;
+		const int Value;
 
 		bool operator==(const DiveCmd& other) const
 		{

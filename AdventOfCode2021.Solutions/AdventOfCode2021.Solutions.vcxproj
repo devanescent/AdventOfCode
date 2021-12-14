@@ -53,6 +53,7 @@
     <ClInclude Include="Day02\Day02_Dive.h" />
     <ClInclude Include="Day02\DiveCmd.h" />
     <ClInclude Include="Day02\DiveCmdProcessor.h" />
+    <ClInclude Include="Day02\DivePos.h" />
     <ClInclude Include="Day03\Day03_BinaryDiagnostic.h" />
     <ClInclude Include="Day04\BingoBoard.h" />
     <ClInclude Include="Day04\BingoBoardProcessor.h" />

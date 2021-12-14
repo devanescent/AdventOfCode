@@ -204,5 +204,8 @@
     <ClInclude Include="Day14\PolymerProcessor.h">
       <Filter>Day14</Filter>
     </ClInclude>
+    <ClInclude Include="Day02\DivePos.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
