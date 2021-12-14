@@ -45,6 +45,8 @@
     <ClCompile Include="Day12\Day12_PassagePathing.cpp" />
     <ClCompile Include="Day13\Day13_TransparentOrigami.cpp" />
     <ClCompile Include="Day13\OrigamiProcessor.cpp" />
+    <ClCompile Include="Day14\Day14_ExtendedPolymerization.cpp" />
+    <ClCompile Include="Day14\PolymerProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_SonarSweep.h" />
@@ -73,6 +75,8 @@
     <ClInclude Include="Day13\Day13_TransparentOrigami.h" />
     <ClInclude Include="Day13\FoldInstruction.h" />
     <ClInclude Include="Day13\OrigamiProcessor.h" />
+    <ClInclude Include="Day14\Day14_ExtendedPolymerization.h" />
+    <ClInclude Include="Day14\PolymerProcessor.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

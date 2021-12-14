@@ -44,6 +44,9 @@
     <Filter Include="Day13">
       <UniqueIdentifier>{142edf91-9378-4a34-8b0e-200eed7cdc6a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day14">
+      <UniqueIdentifier>{30bdd9a0-6277-43ff-ae5a-edfd43457562}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -108,6 +111,12 @@
     </ClCompile>
     <ClCompile Include="Day13\OrigamiProcessor.cpp">
       <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\Day14_ExtendedPolymerization.cpp">
+      <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\PolymerProcessor.cpp">
+      <Filter>Day14</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +197,12 @@
     </ClInclude>
     <ClInclude Include="Day13\OrigamiProcessor.h">
       <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\Day14_ExtendedPolymerization.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\PolymerProcessor.h">
+      <Filter>Day14</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
