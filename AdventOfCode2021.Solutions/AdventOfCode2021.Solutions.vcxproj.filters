@@ -47,6 +47,9 @@
     <Filter Include="Day14">
       <UniqueIdentifier>{30bdd9a0-6277-43ff-ae5a-edfd43457562}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day16">
+      <UniqueIdentifier>{c1528fe4-7d79-4f5d-8fcf-dbaaa1c72b99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -117,6 +120,9 @@
     </ClCompile>
     <ClCompile Include="Day14\PolymerProcessor.cpp">
       <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\Day16_PacketDecoder.cpp">
+      <Filter>Day16</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="Day02\DivePos.h">
       <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Day16_PacketDecoder.h">
+      <Filter>Day16</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
