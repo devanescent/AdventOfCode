@@ -9,9 +9,12 @@ namespace AdventOfCode::Year2021::Day16
 		PacketDecoder();
 
 		uint64_t GetResultOnPart1(const std::vector<std::string> input) override;
+		uint64_t GetResultOnPart2(const std::vector<std::string> input) override;
 
 	private:
-		void DecodePackets(const std::string& packet, int& dataIx, std::vector<int>& versions);
+		uint64_t DecodePackets(const std::string& packet, int& dataIx, std::vector<int>& versions);
+		uint64_t ProcessLiteralPacket(const std::string& packet, int& dataIx);
+
 		int DecodeBinaryPacketPart(const std::string& packet, int& dataStart, int dataLen);
 	};
 }

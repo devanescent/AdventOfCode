@@ -1,6 +1,8 @@
 #include "Day16_PacketDecoder.h"
 #include <bitset>
 #include <numeric>
+#include <functional>
+#include <algorithm>
 
 namespace AdventOfCode::Year2021::Day16
 {
@@ -8,8 +10,14 @@ namespace AdventOfCode::Year2021::Day16
 
 	enum class PacketTypeID
 	{
-		Literal = 4
-		/*otherwise Operator*/
+		Sum = 0,
+		Product = 1,
+		Minimum = 2,
+		Maximum = 3,
+		Literal = 4,
+		GreaterThan = 5,
+		LessThan = 6,
+		Equal = 7
 	};
 
 	enum class LengthTypeID
@@ -44,12 +52,33 @@ namespace AdventOfCode::Year2021::Day16
 	}
 
 	// ---------------------------------------------------------------------------
+	// Part 2:
+	// ---------------------------------------------------------------------------
+	uint64_t PacketDecoder::GetResultOnPart2(const std::vector<std::string> input)
+	{
+		// Convert Hex representation to binary representation
+		const std::string& packet(input[0]);
+		std::string binaryPacket;
+
+		for (const char hexchar : packet)
+		{
+			int val = (hexchar >= 'A') ? (hexchar - 'A' + 10) : (hexchar - '0');
+			std::bitset<4> binVal(val);
+			binaryPacket += binVal.to_string();
+		}
+
+		// Decode packet:
+		std::vector<int> versions;
+		int dataIx = 0;
+		return DecodePackets(binaryPacket, dataIx, versions);
+	}
+
+	// ---------------------------------------------------------------------------
 	// DecodePackets
-	// Processes packet (and recursivly, subpackets), returns the data index of
-	// the next packet
+	// Processes packet (and recursivly, subpackets), returns value of packet
 	// Adds all version numbers to passed vector
 	// ---------------------------------------------------------------------------
-	void PacketDecoder::DecodePackets(const std::string& packet, int& dataIx, std::vector<int>& versions)
+	uint64_t PacketDecoder::DecodePackets(const std::string& packet, int& dataIx, std::vector<int>& versions)
 	{
 		int version = DecodeBinaryPacketPart(packet, dataIx, 3);
 		versions.push_back(version);
@@ -59,18 +88,13 @@ namespace AdventOfCode::Year2021::Day16
 		// Literal:
 		if (packetTypeID == PacketTypeID::Literal)
 		{
-			bool hasNextPacket;
-			do
-			{
-				hasNextPacket = packet[dataIx] == '1';
-				dataIx += 1;
-
-				int num = DecodeBinaryPacketPart(packet, dataIx, 4);
-			} while (hasNextPacket);
+			return ProcessLiteralPacket(packet, dataIx);
 		}
 		// Operator
 		else
 		{
+			std::vector<uint64_t> values;
+
 			LengthTypeID lengthTypeId = static_cast<LengthTypeID>(DecodeBinaryPacketPart(packet, dataIx, 1));
 
 			if (lengthTypeId == LengthTypeID::SubPacketLength)
@@ -80,7 +104,7 @@ namespace AdventOfCode::Year2021::Day16
 
 				// Process subpackets:
 				while (dataIx < subPacketEnd)
-					DecodePackets(packet, dataIx, versions);
+					values.push_back(DecodePackets(packet, dataIx, versions));
 			}
 			else if (lengthTypeId == LengthTypeID::SubPacketNum)
 			{
@@ -88,9 +112,61 @@ namespace AdventOfCode::Year2021::Day16
 				
 				// Process subpackets:
 				for (int n = 0; n < subPacketCount; ++n)
-					DecodePackets(packet, dataIx, versions);
+					values.push_back(DecodePackets(packet, dataIx, versions));
 			}
+
+			// Process values:
+			switch (packetTypeID)
+			{
+				case AdventOfCode::Year2021::Day16::PacketTypeID::Sum:
+				return std::accumulate(values.begin(), values.end(), 0ull, std::plus<>());
+
+				case AdventOfCode::Year2021::Day16::PacketTypeID::Product:
+				return std::accumulate(values.begin(), values.end(), 1ull, std::multiplies<>());
+
+				case AdventOfCode::Year2021::Day16::PacketTypeID::Minimum:
+				return std::accumulate(values.begin(), values.end(), UINT64_MAX, [](const auto& a, const auto& b) { return std::min(a, b); });
+
+				case AdventOfCode::Year2021::Day16::PacketTypeID::Maximum:
+				return std::accumulate(values.begin(), values.end(), 0ull, [](const auto& a, const auto& b) { return std::max(a, b); });
+
+				case AdventOfCode::Year2021::Day16::PacketTypeID::GreaterThan:
+				return static_cast<uint64_t>(values[0] > values[1]);
+
+				case AdventOfCode::Year2021::Day16::PacketTypeID::LessThan:
+				return static_cast<uint64_t>(values[0] < values[1]);
+
+				case AdventOfCode::Year2021::Day16::PacketTypeID::Equal:
+				return static_cast<uint64_t>(values[0] == values[1]);
+			}
+
+			return 42ull;
 		}
+	}
+
+	// ---------------------------------------------------------------------------
+	// ProcessLiteralPacket
+	// Gets a number value from a literal packet
+	// ---------------------------------------------------------------------------
+	uint64_t PacketDecoder::ProcessLiteralPacket(const std::string& packet, int& dataIx)
+	{
+		bool hasNextPacket;
+		uint64_t litVal = 0;
+
+		do
+		{
+			// Check if last packet:
+			hasNextPacket = packet[dataIx] == '1';
+			dataIx += 1;
+
+			// Make room for next bits:
+			litVal = litVal << 4;
+
+			// Add bits:
+			litVal |= DecodeBinaryPacketPart(packet, dataIx, 4);
+		} while (hasNextPacket);
+
+		return litVal;
 	}
 
 	// ---------------------------------------------------------------------------
