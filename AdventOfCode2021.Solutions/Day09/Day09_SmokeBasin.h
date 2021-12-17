@@ -10,6 +10,10 @@ namespace AdventOfCode::Year2021::Day09
 		SmokeBasin();
 
 	protected:
-		uint64_t ExecutePart1(std::vector<std::vector<HeatMapNode>> heatMap) override;
+		uint64_t ExecutePart1(HeatMap heatMap) override;
+		uint64_t ExecutePart2(HeatMap heatMap) override;
+
+	private:
+		int GetBasinSize(HeatMap& map, int x, int y);
 	};
 }

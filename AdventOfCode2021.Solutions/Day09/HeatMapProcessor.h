@@ -33,9 +33,11 @@ namespace AdventOfCode::Year2021::Day09
 		}
 	};
 
+	using HeatMap = std::vector<std::vector<HeatMapNode>>;
+
 	class HeatMapProcessor : public InputProcessorBase<std::vector<HeatMapNode>>
 	{
 	public:
-		virtual std::vector<std::vector<HeatMapNode>> Process(std::vector<std::string> input) override;
+		virtual HeatMap Process(std::vector<std::string> input) override;
 	};
 }

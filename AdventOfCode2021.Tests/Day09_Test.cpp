@@ -54,6 +54,18 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(15ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			SmokeBasin day09;
+
+			// Act:
+			uint64_t result = day09.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(1134ull, result);
+		}
 	};
 
 	std::vector<std::string> Day09::inputData = std::vector<std::string>();
