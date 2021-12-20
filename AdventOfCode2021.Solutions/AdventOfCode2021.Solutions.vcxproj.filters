@@ -59,6 +59,9 @@
     <Filter Include="Day20">
       <UniqueIdentifier>{29c21fab-5925-41a5-8a87-35f8f48d1c8a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day17">
+      <UniqueIdentifier>{b3e39b4f-01f1-4b85-99c6-7fd326839588}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -150,6 +153,9 @@
     </ClCompile>
     <ClCompile Include="Day20\TrenchImageProcessor.cpp">
       <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_TrickShot.cpp">
+      <Filter>Day17</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +269,9 @@
     </ClInclude>
     <ClInclude Include="Day20\TrenchImageProcessor.h">
       <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\Day17_TrickShot.h">
+      <Filter>Day17</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
