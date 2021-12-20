@@ -28,6 +28,7 @@ namespace AdventOfCode::Year2021::Tests
 				"2311944581"
 			};
 		}
+
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
@@ -38,6 +39,18 @@ namespace AdventOfCode::Year2021::Tests
 
 			// Assert:
 			Assert::AreEqual(40ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			Chiton day15;
+
+			// Act:
+			uint64_t result = day15.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(315ull, result);
 		}
 	};
 

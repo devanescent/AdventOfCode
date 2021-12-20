@@ -12,7 +12,50 @@ namespace AdventOfCode::Year2021::Day15
 	// ---------------------------------------------------------------------------
 	uint64_t Chiton::ExecutePart1(std::vector<std::vector<int>> cave)
 	{
-		// A* algorithm:
+		return FindLowestRiskPath(cave);
+	}
+
+	// ---------------------------------------------------------------------------
+	// Part 2:
+	// ---------------------------------------------------------------------------
+	uint64_t Chiton::ExecutePart2(std::vector<std::vector<int>> cave)
+	{
+		int origHeight = static_cast<int>(cave.size());
+		int origWidth = static_cast<int>(cave[0].size());
+		
+		// Extend each original row to the right:
+		for (auto& row : cave)
+		{
+			row.reserve(origWidth * 5);
+			for (int x = origWidth; x < origWidth * 5; ++x)
+			{
+				int nextNum = row[x - origWidth] % 9 + 1; // wraps around to '1' after '9'
+				row.emplace_back(nextNum);
+			}
+		}
+
+		// Extend down:
+		for (int y = origHeight; y < origHeight * 5; ++y)
+		{
+			std::vector<int> nextRow;
+			nextRow.reserve(origWidth * 5);
+
+			std::transform(cave[y-origHeight].begin(), cave[y-origHeight].end(),std::back_inserter(nextRow),
+				[](int i) { return i % 9 + 1; }
+			);
+
+			cave.emplace_back(nextRow);
+		}
+
+		return FindLowestRiskPath(cave);
+	}
+
+	// ---------------------------------------------------------------------------
+	// FindLowestRiskPath
+	// ---------------------------------------------------------------------------
+	uint64_t Chiton::FindLowestRiskPath(const std::vector<std::vector<int>>& cave)
+	{
+		// Based on Dijkstra algorithm:
 		std::set<CavePosition> openList;
 		std::set<CavePosition> visitedList;
 
@@ -42,9 +85,9 @@ namespace AdventOfCode::Year2021::Day15
 				// -> member function find() does not work correctly, because only coordinates are to be considered (not risk) when checking if visited
 				else if (std::find_if(visitedList.begin(), visitedList.end(),
 					[&nextPos](const CavePosition& cPos)
-					{
-						return cPos.XPos == nextPos.XPos && cPos.YPos == nextPos.YPos;
-					}) == visitedList.end())
+				{
+					return cPos.XPos == nextPos.XPos && cPos.YPos == nextPos.YPos;
+				}) == visitedList.end())
 				{
 					// Position has not been visited yet:
 					visitedList.insert(nextPos);
