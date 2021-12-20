@@ -48,6 +48,9 @@
     <ClCompile Include="Day14\Day14_ExtendedPolymerization.cpp" />
     <ClCompile Include="Day14\PolymerProcessor.cpp" />
     <ClCompile Include="Day16\Day16_PacketDecoder.cpp" />
+    <ClCompile Include="Day18\Day18_Snailfish.cpp" />
+    <ClCompile Include="Day18\SnailfishNum.cpp" />
+    <ClCompile Include="Day18\SnailfishNumberProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_SonarSweep.h" />
@@ -80,6 +83,9 @@
     <ClInclude Include="Day14\Day14_ExtendedPolymerization.h" />
     <ClInclude Include="Day14\PolymerProcessor.h" />
     <ClInclude Include="Day16\Day16_PacketDecoder.h" />
+    <ClInclude Include="Day18\Day18_Snailfish.h" />
+    <ClInclude Include="Day18\SnailfishNum.h" />
+    <ClInclude Include="Day18\SnailfishNumberProcessor.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
