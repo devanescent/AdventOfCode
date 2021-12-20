@@ -53,6 +53,9 @@
     <Filter Include="Day18">
       <UniqueIdentifier>{f1f481e2-b71c-4559-8416-bf69fb290580}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day15">
+      <UniqueIdentifier>{76edd79f-42f7-4e33-965c-775f80714b88}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -135,6 +138,9 @@
     </ClCompile>
     <ClCompile Include="Day18\SnailfishNum.cpp">
       <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_Chiton.cpp">
+      <Filter>Day15</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +242,12 @@
     </ClInclude>
     <ClInclude Include="Day18\SnailfishNum.h">
       <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\Day15_Chiton.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\CavePosition.h">
+      <Filter>Day15</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

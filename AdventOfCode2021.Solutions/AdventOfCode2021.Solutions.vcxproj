@@ -47,6 +47,7 @@
     <ClCompile Include="Day13\OrigamiProcessor.cpp" />
     <ClCompile Include="Day14\Day14_ExtendedPolymerization.cpp" />
     <ClCompile Include="Day14\PolymerProcessor.cpp" />
+    <ClCompile Include="Day15\Day15_Chiton.cpp" />
     <ClCompile Include="Day16\Day16_PacketDecoder.cpp" />
     <ClCompile Include="Day18\Day18_Snailfish.cpp" />
     <ClCompile Include="Day18\SnailfishNum.cpp" />
@@ -82,6 +83,8 @@
     <ClInclude Include="Day13\OrigamiProcessor.h" />
     <ClInclude Include="Day14\Day14_ExtendedPolymerization.h" />
     <ClInclude Include="Day14\PolymerProcessor.h" />
+    <ClInclude Include="Day15\CavePosition.h" />
+    <ClInclude Include="Day15\Day15_Chiton.h" />
     <ClInclude Include="Day16\Day16_PacketDecoder.h" />
     <ClInclude Include="Day18\Day18_Snailfish.h" />
     <ClInclude Include="Day18\SnailfishNum.h" />
