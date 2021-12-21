@@ -9,5 +9,6 @@ namespace AdventOfCode::Year2021::Day21
 		DiracDice();
 
 		uint64_t GetResultOnPart1(const std::vector<std::string> input) override;
+		uint64_t GetResultOnPart2(const std::vector<std::string> input) override;
 	};
 }

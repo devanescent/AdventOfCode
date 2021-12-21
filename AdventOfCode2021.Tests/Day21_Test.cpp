@@ -33,17 +33,17 @@ namespace AdventOfCode::Year2021::Tests
 			Assert::AreEqual(739785ull, result);
 		}
 
-		//TEST_METHOD(CheckExample_Part2)
-		//{
-		//	// Arrange:
-		//	TrenchMap day20;
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			DiracDice day21;
 
-		//	// Act:
-		//	uint64_t result = day20.GetResultOnPart2(inputData);
+			// Act:
+			uint64_t result = day21.GetResultOnPart2(inputData);
 
-		//	// Assert:
-		//	Assert::AreEqual(3351ull, result);
-		//}
+			// Assert:
+			Assert::AreEqual(444356092776315ull, result);
+		}
 	};
 
 	std::vector<std::string> Day21::inputData = std::vector<std::string>();
