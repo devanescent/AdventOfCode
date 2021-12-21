@@ -62,6 +62,9 @@
     <Filter Include="Day17">
       <UniqueIdentifier>{b3e39b4f-01f1-4b85-99c6-7fd326839588}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day21">
+      <UniqueIdentifier>{2fd74522-a937-4860-929c-8644b0288dbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -156,6 +159,9 @@
     </ClCompile>
     <ClCompile Include="Day17\Day17_TrickShot.cpp">
       <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21\Day21_DiracDice.cpp">
+      <Filter>Day21</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +278,9 @@
     </ClInclude>
     <ClInclude Include="Day17\Day17_TrickShot.h">
       <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21\Day21_DiracDice.h">
+      <Filter>Day21</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
