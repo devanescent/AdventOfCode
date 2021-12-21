@@ -128,6 +128,12 @@ namespace AdventOfCode::Year2021::Tests
 			Assert::AreEqual(4140ull, result);
 		}
 
+		TEST_METHOD(FindMaxMagnitude)
+		{
+			Snailfish day18;
+			auto result = day18.GetResultOnPart2(inputData4);
+			Assert::AreEqual(3993ull, result);
+		}
 	};
 
 	std::vector<std::string> Day18::inputData = std::vector<std::string>();

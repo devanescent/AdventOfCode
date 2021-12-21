@@ -105,14 +105,10 @@ namespace AdventOfCode::Year2021::Day18
 	// ---------------------------------------------------------------------------
 	void SnailfishNum::Reduce()
 	{
-		bool reduce = true;
-
-		while (reduce)
+		do
 		{
-			// First, check for explodes; if non happened, check for splits
-			if (!Explode())
-				reduce = Split(); // After every split, first check again for explodes
-		}
+			while (Explode());
+		} while (Split());
 	}
 
 	// ---------------------------------------------------------------------------

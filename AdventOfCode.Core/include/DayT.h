@@ -26,7 +26,6 @@ namespace AdventOfCode
 		virtual uint64_t ExecutePart1(std::vector<TInput> input) = 0;
 		virtual uint64_t ExecutePart2(std::vector<TInput> input) { return 0ull; }
 
-	private:
 		TProcessor m_proc;
 	};
 }
