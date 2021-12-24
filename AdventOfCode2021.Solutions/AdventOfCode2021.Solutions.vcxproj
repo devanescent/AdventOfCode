@@ -56,6 +56,8 @@
     <ClCompile Include="Day20\Day20_TrenchMap.cpp" />
     <ClCompile Include="Day20\TrenchImageProcessor.cpp" />
     <ClCompile Include="Day21\Day21_DiracDice.cpp" />
+    <ClCompile Include="Day22\Day22_ReactorReboot.cpp" />
+    <ClCompile Include="Day22\RebootStepProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_SonarSweep.h" />
@@ -97,6 +99,8 @@
     <ClInclude Include="Day20\Day20_TrenchMap.h" />
     <ClInclude Include="Day20\TrenchImageProcessor.h" />
     <ClInclude Include="Day21\Day21_DiracDice.h" />
+    <ClInclude Include="Day22\Day22_ReactorReboot.h" />
+    <ClInclude Include="Day22\RebootStepProcessor.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -65,6 +65,9 @@
     <Filter Include="Day21">
       <UniqueIdentifier>{2fd74522-a937-4860-929c-8644b0288dbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day22">
+      <UniqueIdentifier>{ecbb64d2-2d67-4dbc-b717-550556c66264}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -162,6 +165,12 @@
     </ClCompile>
     <ClCompile Include="Day21\Day21_DiracDice.cpp">
       <Filter>Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\Day22_ReactorReboot.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\RebootStepProcessor.cpp">
+      <Filter>Day22</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +290,12 @@
     </ClInclude>
     <ClInclude Include="Day21\Day21_DiracDice.h">
       <Filter>Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\Day22_ReactorReboot.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\RebootStepProcessor.h">
+      <Filter>Day22</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
