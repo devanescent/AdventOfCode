@@ -13,8 +13,8 @@ namespace AdventOfCode
 		int					GetDayNo() { return m_dayNo; }
 		const char*			GetName() { return m_dayName; }
 
-		virtual uint64_t	GetResultOnPart1(const std::vector<std::string> input) = 0;
-		virtual uint64_t	GetResultOnPart2(const std::vector<std::string> input) { return 0ull; }
+		virtual uint64_t	GetResultOnPart1(std::vector<std::string> input) = 0;
+		virtual uint64_t	GetResultOnPart2(std::vector<std::string> input) { return 0ull; }
 
 	protected:
 		Day(int no, const char* name) :

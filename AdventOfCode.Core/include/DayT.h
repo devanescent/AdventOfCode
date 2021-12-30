@@ -15,8 +15,8 @@ namespace AdventOfCode
 		virtual ~DayT() = default;
 
 		// Override for processing string input - delegates to specialized processor
-		uint64_t GetResultOnPart1(const std::vector<std::string> input) override { return ExecutePart1(m_proc.Process(input)); }
-		uint64_t GetResultOnPart2(const std::vector<std::string> input) override { return ExecutePart2(m_proc.Process(input)); }
+		uint64_t GetResultOnPart1(std::vector<std::string> input) override { return ExecutePart1(m_proc.Process(std::move(input))); }
+		uint64_t GetResultOnPart2(std::vector<std::string> input) override { return ExecutePart2(m_proc.Process(std::move(input))); }
 
 	protected:
 		// Constructor

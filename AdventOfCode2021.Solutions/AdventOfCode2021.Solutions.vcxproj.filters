@@ -68,6 +68,9 @@
     <Filter Include="Day22">
       <UniqueIdentifier>{ecbb64d2-2d67-4dbc-b717-550556c66264}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day25">
+      <UniqueIdentifier>{e1cd7746-ecde-40eb-9a60-7f608eb3dcf0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -171,6 +174,9 @@
     </ClCompile>
     <ClCompile Include="Day22\RebootStepProcessor.cpp">
       <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\Day25_SeaCucumber.cpp">
+      <Filter>Day25</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +302,9 @@
     </ClInclude>
     <ClInclude Include="Day22\RebootStepProcessor.h">
       <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\Day25_SeaCucumber.h">
+      <Filter>Day25</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

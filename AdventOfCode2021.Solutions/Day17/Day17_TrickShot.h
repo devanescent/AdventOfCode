@@ -8,6 +8,6 @@ namespace AdventOfCode::Year2021::Day17
 	public:
 		TrickShot();
 
-		virtual uint64_t GetResultOnPart1(const std::vector<std::string> input);
+		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
 	};
 }
