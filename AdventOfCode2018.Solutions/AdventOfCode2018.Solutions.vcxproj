@@ -28,6 +28,8 @@
     <ClCompile Include="Day04\GuardDutyRecord.cpp" />
     <ClCompile Include="Day04\GuardDutyRecordProcessor.cpp" />
     <ClCompile Include="Day05\Day05_AlchemicalReduction.cpp" />
+    <ClCompile Include="Day07\Day07_TheSumOfItsParts.cpp" />
+    <ClCompile Include="Day07\InstructionProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -40,6 +42,9 @@
     <ClInclude Include="Day04\GuardDutyRecord.h" />
     <ClInclude Include="Day04\GuardDutyRecordProcessor.h" />
     <ClInclude Include="Day05\Day05_AlchemicalReduction.h" />
+    <ClInclude Include="Day07\Day07_TheSumOfItsParts.h" />
+    <ClInclude Include="Day07\InstructionProcessor.h" />
+    <ClInclude Include="Day07\InstructionStep.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">

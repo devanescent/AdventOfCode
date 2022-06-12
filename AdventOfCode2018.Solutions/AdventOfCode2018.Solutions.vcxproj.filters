@@ -20,6 +20,9 @@
     <Filter Include="Day05">
       <UniqueIdentifier>{d74aa921-07ed-4288-b107-d86665bdeddc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day07">
+      <UniqueIdentifier>{6adaeafd-7291-4ae6-a17a-62497518cca2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -48,6 +51,12 @@
     </ClCompile>
     <ClCompile Include="Day05\Day05_AlchemicalReduction.cpp">
       <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\Day07_TheSumOfItsParts.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\InstructionProcessor.cpp">
+      <Filter>Day07</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +89,15 @@
     </ClInclude>
     <ClInclude Include="Day05\Day05_AlchemicalReduction.h">
       <Filter>Day05</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\Day07_TheSumOfItsParts.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\InstructionStep.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\InstructionProcessor.h">
+      <Filter>Day07</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
