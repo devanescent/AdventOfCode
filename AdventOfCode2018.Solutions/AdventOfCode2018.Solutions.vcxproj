@@ -24,6 +24,9 @@
     <ClCompile Include="Day03\Day03_NoMatterHowYouSliceIt.cpp" />
     <ClCompile Include="Day03\RectangleClaimProcessor.cpp" />
     <ClCompile Include="Day03\RectangleSweep.cpp" />
+    <ClCompile Include="Day04\Day04_ReposeRecord.cpp" />
+    <ClCompile Include="Day04\GuardDutyRecord.cpp" />
+    <ClCompile Include="Day04\GuardDutyRecordProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -32,6 +35,9 @@
     <ClInclude Include="Day03\RectangleClaim.h" />
     <ClInclude Include="Day03\RectangleClaimProcessor.h" />
     <ClInclude Include="Day03\RectangleSweep.h" />
+    <ClInclude Include="Day04\Day04_ReposeRecord.h" />
+    <ClInclude Include="Day04\GuardDutyRecord.h" />
+    <ClInclude Include="Day04\GuardDutyRecordProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
