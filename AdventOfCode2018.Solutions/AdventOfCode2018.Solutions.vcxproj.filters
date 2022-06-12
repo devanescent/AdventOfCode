@@ -17,6 +17,9 @@
     <Filter Include="Day04">
       <UniqueIdentifier>{48c243e0-cbee-46ed-a4be-d93409da8834}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day05">
+      <UniqueIdentifier>{d74aa921-07ed-4288-b107-d86665bdeddc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -42,6 +45,9 @@
     </ClCompile>
     <ClCompile Include="Day04\GuardDutyRecord.cpp">
       <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\Day05_AlchemicalReduction.cpp">
+      <Filter>Day05</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +77,9 @@
     </ClInclude>
     <ClInclude Include="Day04\GuardDutyRecordProcessor.h">
       <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\Day05_AlchemicalReduction.h">
+      <Filter>Day05</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

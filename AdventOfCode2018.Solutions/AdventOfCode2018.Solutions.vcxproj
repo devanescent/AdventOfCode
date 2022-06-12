@@ -27,6 +27,7 @@
     <ClCompile Include="Day04\Day04_ReposeRecord.cpp" />
     <ClCompile Include="Day04\GuardDutyRecord.cpp" />
     <ClCompile Include="Day04\GuardDutyRecordProcessor.cpp" />
+    <ClCompile Include="Day05\Day05_AlchemicalReduction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -38,6 +39,7 @@
     <ClInclude Include="Day04\Day04_ReposeRecord.h" />
     <ClInclude Include="Day04\GuardDutyRecord.h" />
     <ClInclude Include="Day04\GuardDutyRecordProcessor.h" />
+    <ClInclude Include="Day05\Day05_AlchemicalReduction.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
