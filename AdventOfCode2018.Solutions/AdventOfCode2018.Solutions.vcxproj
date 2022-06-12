@@ -21,10 +21,17 @@
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp" />
     <ClCompile Include="Day02\Day02_InventoryManagementSystem.cpp" />
+    <ClCompile Include="Day03\Day03_NoMatterHowYouSliceIt.cpp" />
+    <ClCompile Include="Day03\RectangleClaimProcessor.cpp" />
+    <ClCompile Include="Day03\RectangleSweep.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
     <ClInclude Include="Day02\Day02_InventoryManagementSystem.h" />
+    <ClInclude Include="Day03\Day03_NoMatterHowYouSliceIt.h" />
+    <ClInclude Include="Day03\RectangleClaim.h" />
+    <ClInclude Include="Day03\RectangleClaimProcessor.h" />
+    <ClInclude Include="Day03\RectangleSweep.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">

@@ -11,6 +11,9 @@
     <Filter Include="Day02">
       <UniqueIdentifier>{45527035-96c3-43d2-8d0e-166a9eac478e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day03">
+      <UniqueIdentifier>{8de5aa3b-8848-4cb9-9996-5f9d1e80504a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -19,6 +22,15 @@
     <ClCompile Include="Day02\Day02_InventoryManagementSystem.cpp">
       <Filter>Day02</Filter>
     </ClCompile>
+    <ClCompile Include="Day03\Day03_NoMatterHowYouSliceIt.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\RectangleClaimProcessor.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\RectangleSweep.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h">
@@ -26,6 +38,18 @@
     </ClInclude>
     <ClInclude Include="Day02\Day02_InventoryManagementSystem.h">
       <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\Day03_NoMatterHowYouSliceIt.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\RectangleClaim.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\RectangleClaimProcessor.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\RectangleSweep.h">
+      <Filter>Day03</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
