@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day23
 {
-	class CrabCups : public DayT<int, IntProcessor<IntProcessingMode::ValuesAsDigits>>
+	class CrabCups : public DayT<IntProcessor<IntProcessingMode::ValuesAsDigits>>
 	{
 	public:
 		CrabCups(int numberOfMoves);

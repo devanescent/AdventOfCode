@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day12
 {
-	class RainRisk : public DayT<NavInstruction, NavInstructionProcessor>
+	class RainRisk : public DayT<NavInstructionProcessor>
 	{
 	public:
 		RainRisk(NavDirection startingDirection);

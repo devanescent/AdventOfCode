@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day04
 {
-	class PassportProcessing : public DayT<Passport, PassportProcessor>
+	class PassportProcessing : public DayT<PassportProcessor>
 	{
 	public:
 		PassportProcessing();

@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day11
 {
-	class DumboOctopus : public DayT<std::vector<int>, IntArrayProcessor>
+	class DumboOctopus : public DayT<IntArrayProcessor>
 	{
 	public:
 		DumboOctopus();

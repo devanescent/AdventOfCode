@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day08
 {
-	class SevenSegmentSearch : public DayT<SignalPatternObservation, SignalPatternProcessor>
+	class SevenSegmentSearch : public DayT<SignalPatternProcessor>
 	{
 	public:
 		SevenSegmentSearch();

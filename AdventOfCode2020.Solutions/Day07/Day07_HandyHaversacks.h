@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day07
 {
-	class HandyHaversacks : public DayT<Bag*, BagProcessor>
+	class HandyHaversacks : public DayT<BagProcessor>
 	{
 	public:
 		HandyHaversacks(std::string bagName);

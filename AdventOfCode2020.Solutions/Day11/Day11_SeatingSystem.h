@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day11
 {
-	class SeatingSystem : public DayT<SeatRow, SeatingProcessor>
+	class SeatingSystem : public DayT<SeatingProcessor>
 	{
 	public:
 		SeatingSystem();

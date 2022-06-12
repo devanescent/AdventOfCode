@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2020::Day25
 {
-	class ComboBreaker : public DayT<int, IntProcessor<IntProcessingMode::ValuePerLine>>
+	class ComboBreaker : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{
 	public:
 		ComboBreaker();

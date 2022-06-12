@@ -9,7 +9,7 @@ namespace AdventOfCode::Year2021::Day02
 	// ---------------------------------------------------------------------------
 	// Day02: Dive! 
 	// ---------------------------------------------------------------------------
-	class Dive : public DayT<DiveCmd, DiveCmdProcessor>
+	class Dive : public DayT<DiveCmdProcessor>
 	{
 	public:
 		Dive();

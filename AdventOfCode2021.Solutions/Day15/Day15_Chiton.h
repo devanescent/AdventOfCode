@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day15
 {
-	class Chiton : public DayT<std::vector<int>, IntArrayProcessor>
+	class Chiton : public DayT<IntArrayProcessor>
 	{
 	public:
 		Chiton();

@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day06
 {
-	class CustomCustoms : public DayT<AnswerSet, AnswerProcessor>
+	class CustomCustoms : public DayT<AnswerProcessor>
 	{
 	public:
 		CustomCustoms();

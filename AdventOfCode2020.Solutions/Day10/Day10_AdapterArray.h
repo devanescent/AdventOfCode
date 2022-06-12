@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2020::Day10
 {
-	class AdapterArray : public DayT<int, IntProcessor<IntProcessingMode::ValuePerLine>>
+	class AdapterArray : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{
 	public:
 		AdapterArray();

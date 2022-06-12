@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2020::Day15
 {
-	class RambunctiousRecitation : public DayT<int, IntProcessor<IntProcessingMode::ValuesAsSingleLine>>
+	class RambunctiousRecitation : public DayT<IntProcessor<IntProcessingMode::ValuesAsSingleLine>>
 	{
 	public:
 		RambunctiousRecitation(int numberOfTurns);

@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day20
 {
-	class JurassicJigsaw : public DayT<Tile, TileProcessor>
+	class JurassicJigsaw : public DayT<TileProcessor>
 	{
 	public:
 		JurassicJigsaw();

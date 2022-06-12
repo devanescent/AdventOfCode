@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2020::Day09
 {
-	class EncodingError : public DayT<int, IntProcessor<IntProcessingMode::ValuePerLine>>
+	class EncodingError : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{
 	public:
 		EncodingError(int preambleLen);

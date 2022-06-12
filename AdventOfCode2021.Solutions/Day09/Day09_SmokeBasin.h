@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day09
 {
-	class SmokeBasin : public DayT<std::vector<HeatMapNode>, HeatMapProcessor>
+	class SmokeBasin : public DayT<HeatMapProcessor>
 	{
 	public:
 		SmokeBasin();

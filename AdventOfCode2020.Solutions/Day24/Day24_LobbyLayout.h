@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day24
 {
-	class LobbyLayout : public DayT<HexCoords, HexProcessor>
+	class LobbyLayout : public DayT<HexProcessor>
 	{
 	public:
 		LobbyLayout();

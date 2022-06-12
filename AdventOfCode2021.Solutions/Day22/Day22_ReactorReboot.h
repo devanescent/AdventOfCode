@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day22
 {
-	class ReactorReboot : public DayT<RebootStep, RebootStepProcessor>
+	class ReactorReboot : public DayT<RebootStepProcessor>
 	{
 	public:
 		ReactorReboot();

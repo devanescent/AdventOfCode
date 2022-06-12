@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2018::Day03
 	// ---------------------------------------------------------------------------
 	// Day01: ReportRepair 
 	// ---------------------------------------------------------------------------
-	class NoMatterHowYouSliceIt : public DayT<RectangleClaim, RectangleClaimProcessor>
+	class NoMatterHowYouSliceIt : public DayT<RectangleClaimProcessor>
 	{
 	public:
 		NoMatterHowYouSliceIt();

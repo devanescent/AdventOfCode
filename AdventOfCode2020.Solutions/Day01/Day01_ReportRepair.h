@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2020::Day01
 	// ---------------------------------------------------------------------------
 	// Day01: ReportRepair 
 	// ---------------------------------------------------------------------------
-	class ReportRepair : public DayT<int, IntProcessor<IntProcessingMode::ValuePerLine>>
+	class ReportRepair : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{
 	public:
 		ReportRepair(int targetSum);

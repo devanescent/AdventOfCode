@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day22
 {
-	class CrabCombat : public DayT<Deck, DeckProcessor>
+	class CrabCombat : public DayT<DeckProcessor>
 	{
 	public:
 		CrabCombat();

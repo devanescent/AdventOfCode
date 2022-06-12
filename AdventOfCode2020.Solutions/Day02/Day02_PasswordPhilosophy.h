@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day02
 {
-	class PasswordPhilosophy : public DayT<PasswordPolicy, PasswortPolicyProcessor>
+	class PasswordPhilosophy : public DayT<PasswortPolicyProcessor>
 	{
 	public:
 		PasswordPhilosophy();

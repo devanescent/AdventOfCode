@@ -10,6 +10,7 @@ namespace AdventOfCode
 	class InputProcessorBase
 	{
 	public:
+		using result_type = TResult;
 		virtual std::vector<TResult> Process(std::vector<std::string> input) = 0;
 
 	protected:

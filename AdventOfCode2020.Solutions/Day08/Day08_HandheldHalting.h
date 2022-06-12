@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day08
 {
-	class HandheldHalting : public DayT<Instruction, InstructionProcessor>
+	class HandheldHalting : public DayT<InstructionProcessor>
 	{
 	public:
 		HandheldHalting();

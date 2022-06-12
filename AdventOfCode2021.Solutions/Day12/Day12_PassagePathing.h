@@ -8,7 +8,7 @@ namespace AdventOfCode::Year2021::Day12
 	using CaveMap = std::map<std::string, std::vector<std::string>>;
 
 
-	class PassagePathing : public DayT<CaveConnection, CaveConnectionProcessor>
+	class PassagePathing : public DayT<CaveConnectionProcessor>
 	{
 	public:
 		PassagePathing();

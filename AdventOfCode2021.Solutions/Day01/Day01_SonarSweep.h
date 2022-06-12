@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2021::Day01
 	// ---------------------------------------------------------------------------
 	// Day01: SonarSweep 
 	// ---------------------------------------------------------------------------
-	class SonarSweep : public DayT<int, IntProcessor<IntProcessingMode::ValuePerLine>>
+	class SonarSweep : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{
 	public:
 		SonarSweep();

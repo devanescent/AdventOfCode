@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2020::Day18
 {
-	class OperationOrder : public DayT<std::string, MathExpressionProcessor>
+	class OperationOrder : public DayT<MathExpressionProcessor>
 	{
 	public:
 		OperationOrder();

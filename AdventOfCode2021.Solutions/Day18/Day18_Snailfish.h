@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day18
 {
-	class Snailfish : public DayT<std::unique_ptr<SnailfishNum>, SnailfishNumberProcessor>
+	class Snailfish : public DayT<SnailfishNumberProcessor>
 	{
 	public:
 		Snailfish();

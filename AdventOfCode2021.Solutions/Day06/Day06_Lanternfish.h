@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day06
 {
-	class Lanternfish : public DayT<int, IntProcessor<IntProcessingMode::ValuesAsSingleLine>>
+	class Lanternfish : public DayT<IntProcessor<IntProcessingMode::ValuesAsSingleLine>>
 	{
 	public:
 		Lanternfish();

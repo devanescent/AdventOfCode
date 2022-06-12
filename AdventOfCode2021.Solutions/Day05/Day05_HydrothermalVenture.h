@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2021::Day05
 {
-	class HydrothermalVenture : public DayT<HydroVentLine, HydroVentProcessor>
+	class HydrothermalVenture : public DayT<HydroVentProcessor>
 	{
 	public:
 		HydrothermalVenture();

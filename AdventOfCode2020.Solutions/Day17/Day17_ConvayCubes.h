@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day17
 {
-	class ConvayCubes : public DayT<CubeCoords, CubeProcessor>
+	class ConvayCubes : public DayT<CubeProcessor>
 	{
 	public:
 		ConvayCubes(int cycles);
