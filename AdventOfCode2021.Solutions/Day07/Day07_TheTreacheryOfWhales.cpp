@@ -1,5 +1,6 @@
 #include "Day07_TheTreacheryOfWhales.h"
 #include <algorithm>
+#include <cmath>
 #include <numeric>
 #include <map>
 
@@ -58,7 +59,7 @@ namespace AdventOfCode::Year2021::Day07
 
 	uint64_t TheTreacheryOfWhales::ExecutePart2(std::vector<int> crabPositions)
 	{
-		int average = std::round(std::accumulate(crabPositions.begin(), crabPositions.end(), 0.0) / static_cast<int>(crabPositions.size()));
+		int average = std::lround(std::accumulate(crabPositions.begin(), crabPositions.end(), 0.0) / static_cast<int>(crabPositions.size()));
 
 		// Calculate a few values around the average to find the minimum:
 		uint64_t	minimumFuel = UINT64_MAX;

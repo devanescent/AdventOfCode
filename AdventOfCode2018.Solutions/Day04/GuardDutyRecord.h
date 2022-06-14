@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <map>
 #include <numeric>
+#include <string>
 
 namespace AdventOfCode::Year2018::Day04
 {

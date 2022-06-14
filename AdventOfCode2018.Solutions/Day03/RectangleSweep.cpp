@@ -1,5 +1,6 @@
 #include "RectangleSweep.h"
 #include <algorithm>
+#include <iterator>
 #include <list>
 
 namespace AdventOfCode::Year2018::Day03
