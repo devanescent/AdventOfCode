@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day07
 {
-	class TheTreacheryOfWhales : public DayT<IntProcessor<IntProcessingMode::ValuesAsSingleLine>>
+	class TheTreacheryOfWhales : public DayT<IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine>>
 	{
 	public:
 		TheTreacheryOfWhales();

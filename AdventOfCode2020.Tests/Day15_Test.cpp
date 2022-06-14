@@ -29,7 +29,7 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(ParseInput)
 		{
 			// Arrange:
-			IntProcessor<IntProcessingMode::ValuesAsSingleLine> intProc;
+			IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine> intProc;
 
 			// Act:
 			std::vector<int> result = intProc.Process(inputData);

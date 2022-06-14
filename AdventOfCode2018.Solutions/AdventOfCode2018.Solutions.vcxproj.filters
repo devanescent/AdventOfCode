@@ -29,6 +29,9 @@
     <Filter Include="Day11">
       <UniqueIdentifier>{78d6c7a5-4d1b-4e72-9453-6cdf6f191ce5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day08">
+      <UniqueIdentifier>{5893d30b-a65a-4f34-b167-754f81f413b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -69,6 +72,9 @@
     </ClCompile>
     <ClCompile Include="Day11\Day11_ChronalCharge.cpp">
       <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Day08_MemoryManeuver.cpp">
+      <Filter>Day08</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +122,9 @@
     </ClInclude>
     <ClInclude Include="Day11\Day11_ChronalCharge.h">
       <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\Day08_MemoryManeuver.h">
+      <Filter>Day08</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

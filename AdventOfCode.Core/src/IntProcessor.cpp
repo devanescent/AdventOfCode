@@ -28,8 +28,8 @@ namespace AdventOfCode
 		return intList;
 	}
 
-	// IntProcessingMode::ValuesAsSingleLine
-	std::vector<int> IntProcessor<IntProcessingMode::ValuesAsSingleLine>::Process(const std::vector<std::string> input)
+	// IntProcessingMode::ValuesAsCommaSeparatedLine
+	std::vector<int> IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine>::Process(const std::vector<std::string> input)
 	{
 		std::vector<int> intList;
 
@@ -39,6 +39,23 @@ namespace AdventOfCode
 			std::string valStr;
 
 			while (std::getline(iss, valStr, ','))
+				intList.push_back(std::stoi(valStr));
+		}
+
+		return intList;
+	}
+
+	// IntProcessingMode::ValuesAsSpaceSeparatedLine
+	std::vector<int> IntProcessor<IntProcessingMode::ValuesAsSpaceSeparatedLine>::Process(const std::vector<std::string> input)
+	{
+		std::vector<int> intList;
+
+		if (!input.empty())
+		{
+			std::istringstream iss = std::istringstream(input[0]);
+			std::string valStr;
+
+			while (std::getline(iss, valStr, ' '))
 				intList.push_back(std::stoi(valStr));
 		}
 
