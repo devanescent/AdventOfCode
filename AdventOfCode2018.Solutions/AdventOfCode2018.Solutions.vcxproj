@@ -31,6 +31,7 @@
     <ClCompile Include="Day07\Day07_TheSumOfItsParts.cpp" />
     <ClCompile Include="Day07\InstructionProcessor.cpp" />
     <ClCompile Include="Day09\Day09_MarbleMania.cpp" />
+    <ClCompile Include="Day11\Day11_ChronalCharge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -47,6 +48,7 @@
     <ClInclude Include="Day07\InstructionProcessor.h" />
     <ClInclude Include="Day07\InstructionStep.h" />
     <ClInclude Include="Day09\Day09_MarbleMania.h" />
+    <ClInclude Include="Day11\Day11_ChronalCharge.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">

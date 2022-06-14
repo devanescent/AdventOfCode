@@ -26,6 +26,9 @@
     <Filter Include="Day09">
       <UniqueIdentifier>{b8e9a084-f139-407d-86fd-95d7147dedd0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day11">
+      <UniqueIdentifier>{78d6c7a5-4d1b-4e72-9453-6cdf6f191ce5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -63,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="Day09\Day09_MarbleMania.cpp">
       <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\Day11_ChronalCharge.cpp">
+      <Filter>Day11</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +113,9 @@
     </ClInclude>
     <ClInclude Include="Day09\Day09_MarbleMania.h">
       <Filter>Day09</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\Day11_ChronalCharge.h">
+      <Filter>Day11</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
