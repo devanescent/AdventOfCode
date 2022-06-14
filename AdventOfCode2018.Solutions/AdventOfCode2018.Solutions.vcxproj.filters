@@ -23,6 +23,9 @@
     <Filter Include="Day07">
       <UniqueIdentifier>{6adaeafd-7291-4ae6-a17a-62497518cca2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day09">
+      <UniqueIdentifier>{b8e9a084-f139-407d-86fd-95d7147dedd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -57,6 +60,9 @@
     </ClCompile>
     <ClCompile Include="Day07\InstructionProcessor.cpp">
       <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\Day09_MarbleMania.cpp">
+      <Filter>Day09</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="Day07\InstructionProcessor.h">
       <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day09\Day09_MarbleMania.h">
+      <Filter>Day09</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
