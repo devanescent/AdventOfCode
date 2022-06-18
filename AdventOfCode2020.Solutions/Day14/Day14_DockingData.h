@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day14
 {
-	class DockingData : public DayTC<InitializationInstruction, InitializationContext, InitializationProcessor>
+	class DockingData : public DayTC<InitializationProcessor>
 	{
 	public:
 		DockingData();

@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day04
 {
-	class GiantSquid : public DayTC<BingoBoard, std::vector<int>, BingoProcessor>
+	class GiantSquid : public DayTC<BingoProcessor>
 	{
 	public:
 		GiantSquid();

@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day20
 {
-	class TrenchMap : public DayTC<std::string, std::string, TrenchImageProcessor>
+	class TrenchMap : public DayTC<TrenchImageProcessor>
 	{
 	public:
 		TrenchMap();

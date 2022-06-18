@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day13 
 {
-	class ShuttleSearch : public DayTC<ShuttleLine, int, ShuttleLineProcessor>
+	class ShuttleSearch : public DayTC<ShuttleLineProcessor>
 	{
 	public:
 		ShuttleSearch();

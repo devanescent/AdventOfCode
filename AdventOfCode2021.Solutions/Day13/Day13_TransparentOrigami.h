@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day13
 {
-	class TransparentOrigami : public DayTC<FoldInstruction, OrigamiPaper, OrigamiProcessor>
+	class TransparentOrigami : public DayTC<OrigamiProcessor>
 	{
 	public:
 		TransparentOrigami();

@@ -5,7 +5,7 @@
 
 namespace AdventOfCode::Year2020::Day16
 {
-	class TicketTranslation : public DayTC<Ticket, TicketRules, TicketProcessor>
+	class TicketTranslation : public DayTC<TicketProcessor>
 	{
 	public:
 		TicketTranslation();

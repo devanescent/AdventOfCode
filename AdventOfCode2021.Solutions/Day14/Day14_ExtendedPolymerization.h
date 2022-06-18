@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2021::Day14
 {
-	class ExtendedPolymerization : public DayTC<PolymerRule, std::string, PolymerProcessor>
+	class ExtendedPolymerization : public DayTC<PolymerProcessor>
 	{
 	public:
 		ExtendedPolymerization();
