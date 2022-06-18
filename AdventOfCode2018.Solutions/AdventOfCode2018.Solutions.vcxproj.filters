@@ -14,7 +14,7 @@
     <Filter Include="Day03">
       <UniqueIdentifier>{8de5aa3b-8848-4cb9-9996-5f9d1e80504a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Day04">
+	<Filter Include="Day04">
       <UniqueIdentifier>{48c243e0-cbee-46ed-a4be-d93409da8834}</UniqueIdentifier>
     </Filter>
     <Filter Include="Day05">
@@ -23,14 +23,17 @@
     <Filter Include="Day07">
       <UniqueIdentifier>{6adaeafd-7291-4ae6-a17a-62497518cca2}</UniqueIdentifier>
     </Filter>
+	<Filter Include="Day08">
+      <UniqueIdentifier>{5893d30b-a65a-4f34-b167-754f81f413b0}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Day09">
       <UniqueIdentifier>{b8e9a084-f139-407d-86fd-95d7147dedd0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Day11">
       <UniqueIdentifier>{78d6c7a5-4d1b-4e72-9453-6cdf6f191ce5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Day08">
-      <UniqueIdentifier>{5893d30b-a65a-4f34-b167-754f81f413b0}</UniqueIdentifier>
+    <Filter Include="Day13">
+      <UniqueIdentifier>{57897af1-d780-4a5b-8175-d440fca5a84b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -67,14 +70,20 @@
     <ClCompile Include="Day07\InstructionProcessor.cpp">
       <Filter>Day07</Filter>
     </ClCompile>
+	<ClCompile Include="Day08\Day08_MemoryManeuver.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
     <ClCompile Include="Day09\Day09_MarbleMania.cpp">
       <Filter>Day09</Filter>
     </ClCompile>
     <ClCompile Include="Day11\Day11_ChronalCharge.cpp">
       <Filter>Day11</Filter>
     </ClCompile>
-    <ClCompile Include="Day08\Day08_MemoryManeuver.cpp">
-      <Filter>Day08</Filter>
+    <ClCompile Include="Day13\Day13_MineCartMadness.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\CartAndTracksProcessor.cpp">
+      <Filter>Day13</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,14 +126,23 @@
     <ClInclude Include="Day07\InstructionProcessor.h">
       <Filter>Day07</Filter>
     </ClInclude>
+    <ClInclude Include="Day08\Day08_MemoryManeuver.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
     <ClInclude Include="Day09\Day09_MarbleMania.h">
       <Filter>Day09</Filter>
     </ClInclude>
     <ClInclude Include="Day11\Day11_ChronalCharge.h">
       <Filter>Day11</Filter>
     </ClInclude>
-    <ClInclude Include="Day08\Day08_MemoryManeuver.h">
-      <Filter>Day08</Filter>
+    <ClInclude Include="Day13\Day13_MineCartMadness.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\CartAndTracks.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\CartAndTracksProcessor.h">
+      <Filter>Day13</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

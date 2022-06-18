@@ -33,6 +33,8 @@
     <ClCompile Include="Day08\Day08_MemoryManeuver.cpp" />
     <ClCompile Include="Day09\Day09_MarbleMania.cpp" />
     <ClCompile Include="Day11\Day11_ChronalCharge.cpp" />
+    <ClCompile Include="Day13\CartAndTracksProcessor.cpp" />
+    <ClCompile Include="Day13\Day13_MineCartMadness.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -51,6 +53,9 @@
     <ClInclude Include="Day08\Day08_MemoryManeuver.h" />
     <ClInclude Include="Day09\Day09_MarbleMania.h" />
     <ClInclude Include="Day11\Day11_ChronalCharge.h" />
+    <ClInclude Include="Day13\CartAndTracks.h" />
+    <ClInclude Include="Day13\CartAndTracksProcessor.h" />
+    <ClInclude Include="Day13\Day13_MineCartMadness.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
