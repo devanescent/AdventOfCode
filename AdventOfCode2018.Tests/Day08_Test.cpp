@@ -27,7 +27,19 @@ namespace AdventOfCode::Year2018::Tests
 
 			// Assert:
 			Assert::AreEqual(138ull, result);
-		}		
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			MemoryManeuver sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(66ull, result);
+		}
 	};
 
 	std::vector<std::string> Year2018_Day08::inputData = std::vector<std::string>();

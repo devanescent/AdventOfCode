@@ -12,5 +12,6 @@ namespace AdventOfCode::Year2018::Day11
 	public:
 		ChronalCharge();
 		uint64_t GetResultOnPart1(const std::vector<std::string> input) override;
+		uint64_t GetResultOnPart2(const std::vector<std::string> input) override;
 	};
 }

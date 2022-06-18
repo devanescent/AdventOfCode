@@ -12,5 +12,6 @@ namespace AdventOfCode::Year2018::Day08
 	public:
 		MemoryManeuver();
 		uint64_t ExecutePart1(std::vector<int> rootNodeData) override;
+		uint64_t ExecutePart2(std::vector<int> rootNodeData) override;
 	};
 }

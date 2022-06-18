@@ -12,7 +12,31 @@ namespace AdventOfCode::Year2018::Day08
 		void SetMetadata(std::vector<int>::iterator metaBegin, std::vector<int>::iterator metaEnd) 
 		{ m_metadata = std::vector<int>(metaBegin, metaEnd); }
 
-		int GetMetaSum() const { return std::accumulate(m_metadata.begin(), m_metadata.end(), 0); }
+		// Return the sum of all meta values:
+		int GetMetaValueSum() const 
+		{ 
+			return std::accumulate(m_metadata.begin(), m_metadata.end(), 0); 
+		}
+
+		// Use meta value as index, return sum of child values:
+		int GetChildValueSum() const
+		{
+			if (m_children.size() == 0)
+				return GetMetaValueSum();
+			else
+			{
+				int value = 0;
+
+				for (int childIx : m_metadata)
+				{
+					// Meta value 1 refers to first child, etc.
+					if (m_children.size() >= childIx)
+						value += m_children[childIx - 1]->GetChildValueSum();
+				}
+
+				return value;
+			}
+		}
 
 		template <typename TFunc, typename TAggregate>
 		TAggregate AggregateNodes(TFunc func, TAggregate initValue) const
@@ -59,6 +83,15 @@ namespace AdventOfCode::Year2018::Day08
 
 		// Sum metadata:
 		return rootNode->AggregateNodes([](uint64_t value, const Node& node)
-			{ return value + node.GetMetaSum(); }, 0ull);
+			{ return value + node.GetMetaValueSum(); }, 0ull);
+	}
+
+	uint64_t MemoryManeuver::ExecutePart2(std::vector<int> rootNodeData)
+	{
+		auto data = rootNodeData.begin();
+		auto rootNode = ProcessNode(data);
+
+		// Sum values of childs:
+		return rootNode->GetChildValueSum();
 	}
 }

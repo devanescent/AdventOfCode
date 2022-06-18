@@ -83,4 +83,49 @@ namespace AdventOfCode::Year2018::Day11
 
 		return 0;
 	}
+
+	uint64_t ChronalCharge::GetResultOnPart2(const std::vector<std::string> input)
+	{
+		int gridId = atoi(input[0].c_str());
+
+		int maxTotalPower = 0;
+		std::pair<int, int> maxPowerLocation;
+		int sqaureSIze = 0;
+
+		// Fill array with values:
+		Array2D<int> grid(300, 300, 0);
+		for (int x = 0; x < 300; ++x)
+		{
+			for (int y = 0; y < 300; ++y)
+			{
+				// Calculate power level for this cell:
+				int powerLvl = ((((x + 10) * y + gridId) * (x + 10) / 100) % 10) - 5;
+
+				// Build summed-area table:
+				grid[x][y] = powerLvl
+					+ (x > 0 ? grid[x - 1][y] : 0)
+					+ (y > 0 ? grid[x][y - 1] : 0)
+					- (x > 0 && y > 0 ? grid[x - 1][y - 1] : 0);
+
+				// Keep track of maximum for possible sqaure sizes at this point:
+				for (int s = 1; s <= std::min(x + 1, y + 1); s++)
+				{
+					int totalPower = grid[x][y]
+						- (x >= s ? grid[x - s][y] : 0)
+						- (y >= s ? grid[x][y - s] : 0)
+						+ (x >= s && y >= s ? grid[x - s][y - s] : 0);
+
+					if (totalPower > maxTotalPower)
+					{
+						maxTotalPower = totalPower;
+						maxPowerLocation = std::make_pair(x - s + 1, y - s + 1);
+						sqaureSIze = s;
+					}
+				}
+
+			}
+		}
+
+		return 0;
+	}
 }

@@ -30,12 +30,8 @@ namespace AdventOfCode::Year2018::Day09
 		}
 	}
 
-	uint64_t MarbleMania::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t FindWinningScore(int numPlayers, int lastMarble)
 	{
-		int numPlayers;
-		int lastMarble;
-		sscanf_s(input[0].c_str(), "%d players; last marble is worth %d points", &numPlayers, &lastMarble);
-
 		std::vector<uint64_t> playerScores(numPlayers);
 		std::list<int> placedMarbles = { 0 };
 		auto currentMarble = placedMarbles.begin();
@@ -55,7 +51,7 @@ namespace AdventOfCode::Year2018::Day09
 
 				// Remove marble and make marble immediately clockwise to it the new current marble:
 				currentMarble = placedMarbles.erase(currentMarble);
-				
+
 				// If the last marble in the list was erased, the next current marble is the first one:
 				if (currentMarble == placedMarbles.end())
 					currentMarble = placedMarbles.begin();
@@ -65,7 +61,7 @@ namespace AdventOfCode::Year2018::Day09
 				// Find position for insert and place marble:
 				AdvanceClockwise(placedMarbles, currentMarble, 2);
 				currentMarble = placedMarbles.insert(currentMarble, marble);
-			}			
+			}
 
 			// next player:
 			player = (player % numPlayers) + 1;	// -> maps to 1..NumOfPlayers
@@ -73,5 +69,23 @@ namespace AdventOfCode::Year2018::Day09
 
 		// Return maximum score:
 		return *std::max_element(playerScores.begin(), playerScores.end());
+	}
+
+	uint64_t MarbleMania::GetResultOnPart1(const std::vector<std::string> input)
+	{
+		int numPlayers;
+		int lastMarble;
+		sscanf_s(input[0].c_str(), "%d players; last marble is worth %d points", &numPlayers, &lastMarble);
+
+		return FindWinningScore(numPlayers, lastMarble);
+	}
+
+	uint64_t MarbleMania::GetResultOnPart2(const std::vector<std::string> input)
+	{
+		int numPlayers;
+		int lastMarble;
+		sscanf_s(input[0].c_str(), "%d players; last marble is worth %d points", &numPlayers, &lastMarble);
+
+		return FindWinningScore(numPlayers, lastMarble * 100);
 	}
 }
