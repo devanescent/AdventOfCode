@@ -5,7 +5,7 @@
 namespace AdventOfCode::Year2018::Day08
 {
 	// ---------------------------------------------------------------------------
-	// Day08: MemoryManeuver 
+	// Day08: Memory Maneuver 
 	// ---------------------------------------------------------------------------
 	class MemoryManeuver : public DayT<IntProcessor<IntProcessingMode::ValuesAsSpaceSeparatedLine>>
 	{

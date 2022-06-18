@@ -4,7 +4,7 @@
 namespace AdventOfCode::Year2018::Day05
 {
 	// ---------------------------------------------------------------------------
-	// Day01: ReportRepair 
+	// Day05: Alchemical Reduction 
 	// ---------------------------------------------------------------------------
 	class AlchemicalReduction : public Day
 	{

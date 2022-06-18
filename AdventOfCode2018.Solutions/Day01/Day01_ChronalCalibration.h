@@ -5,7 +5,7 @@
 namespace AdventOfCode::Year2018::Day01
 {
 	// ---------------------------------------------------------------------------
-	// Day01: ReportRepair 
+	// Day01: Chronal Calibration 
 	// ---------------------------------------------------------------------------
 	class ChronalCalibration : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{

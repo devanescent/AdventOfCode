@@ -5,7 +5,7 @@
 namespace AdventOfCode::Year2018::Day03
 {
 	// ---------------------------------------------------------------------------
-	// Day01: ReportRepair 
+	// Day03: No Matter How You Slice It 
 	// ---------------------------------------------------------------------------
 	class NoMatterHowYouSliceIt : public DayT<RectangleClaimProcessor>
 	{

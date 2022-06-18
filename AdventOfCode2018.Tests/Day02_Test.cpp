@@ -6,7 +6,7 @@ using namespace AdventOfCode::Year2018::Day02;
 
 namespace AdventOfCode::Year2018::Tests
 {
-	TEST_CLASS(Day02)
+	TEST_CLASS(Year2018_Day02)
 	{
 	private:
 		static std::vector<std::string> inputData;
@@ -39,5 +39,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Day02::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day02::inputData = std::vector<std::string>();
 }

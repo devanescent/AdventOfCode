@@ -5,7 +5,7 @@
 namespace AdventOfCode::Year2018::Day04
 {
 	// ---------------------------------------------------------------------------
-	// Day01: ReportRepair 
+	// Day04: Repose Record 
 	// ---------------------------------------------------------------------------
 	class ReposeRecord : public DayT<GuardDutyRecordProcessor>
 	{

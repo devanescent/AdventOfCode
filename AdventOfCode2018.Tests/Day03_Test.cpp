@@ -5,7 +5,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day03;
 
 template<> static std::wstring Microsoft::VisualStudio::CppUnitTestFramework::
-ToString<RectangleClaim>(const RectangleClaim& pp) { return to_wstring(pp.ToString()); }
+ToString<RectangleClaim>(const RectangleClaim& rc) { return to_wstring(rc.ToString()); }
 
 namespace AdventOfCode::Year2018::Tests
 {

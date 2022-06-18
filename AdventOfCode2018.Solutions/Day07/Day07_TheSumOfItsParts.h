@@ -5,7 +5,7 @@
 namespace AdventOfCode::Year2018::Day07
 {
 	// ---------------------------------------------------------------------------
-	// Day 07: TheSumOfItsParts 
+	// Day 07: The Sum Of Its Parts 
 	// ---------------------------------------------------------------------------
 	class TheSumOfItsParts : public DayT<InstructionProcessor>
 	{

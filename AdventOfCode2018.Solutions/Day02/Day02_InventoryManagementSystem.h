@@ -4,7 +4,7 @@
 namespace AdventOfCode::Year2018::Day02
 {
 	// ---------------------------------------------------------------------------
-	// Day01: ReportRepair 
+	// Day02: Inventory Management System 
 	// ---------------------------------------------------------------------------
 	class InventoryManagementSystem : public Day
 	{

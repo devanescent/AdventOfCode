@@ -5,7 +5,7 @@
 namespace AdventOfCode::Year2018::Day13
 {
 	// ---------------------------------------------------------------------------
-	// Day 13: MineCartMadness
+	// Day 13: Mine Cart Madness
 	// ---------------------------------------------------------------------------
 	class MineCartMadness : public DayTC<CartsAndTracksProcessor>
 	{

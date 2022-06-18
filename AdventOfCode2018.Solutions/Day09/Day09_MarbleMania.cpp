@@ -55,6 +55,10 @@ namespace AdventOfCode::Year2018::Day09
 
 				// Remove marble and make marble immediately clockwise to it the new current marble:
 				currentMarble = placedMarbles.erase(currentMarble);
+				
+				// If the last marble in the list was erased, the next current marble is the first one:
+				if (currentMarble == placedMarbles.end())
+					currentMarble = placedMarbles.begin();
 			}
 			else
 			{
