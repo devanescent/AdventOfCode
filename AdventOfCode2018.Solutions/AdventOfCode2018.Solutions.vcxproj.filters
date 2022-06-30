@@ -38,6 +38,9 @@
     <Filter Include="Day12">
       <UniqueIdentifier>{393c9f3c-a05e-4493-8e24-d2135aade346}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day10">
+      <UniqueIdentifier>{52dbd1c1-3826-4f94-a142-3c27590f2fb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -93,6 +96,12 @@
     </ClCompile>
     <ClCompile Include="Day12\PottedPlantProcessor.cpp">
       <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_TheStarsAlign.cpp">
+      <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\PointOfLightProcessor.cpp">
+      <Filter>Day10</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +170,15 @@
     </ClInclude>
     <ClInclude Include="Day12\PottedPlants.h">
       <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\Day10_TheStarsAlign.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\PointOfLight.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\PointOfLightProcessor.h">
+      <Filter>Day10</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
