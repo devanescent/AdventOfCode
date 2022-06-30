@@ -14,7 +14,7 @@
     <Filter Include="Day03">
       <UniqueIdentifier>{8de5aa3b-8848-4cb9-9996-5f9d1e80504a}</UniqueIdentifier>
     </Filter>
-	<Filter Include="Day04">
+    <Filter Include="Day04">
       <UniqueIdentifier>{48c243e0-cbee-46ed-a4be-d93409da8834}</UniqueIdentifier>
     </Filter>
     <Filter Include="Day05">
@@ -23,7 +23,7 @@
     <Filter Include="Day07">
       <UniqueIdentifier>{6adaeafd-7291-4ae6-a17a-62497518cca2}</UniqueIdentifier>
     </Filter>
-	<Filter Include="Day08">
+    <Filter Include="Day08">
       <UniqueIdentifier>{5893d30b-a65a-4f34-b167-754f81f413b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Day09">
@@ -34,6 +34,9 @@
     </Filter>
     <Filter Include="Day13">
       <UniqueIdentifier>{57897af1-d780-4a5b-8175-d440fca5a84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day12">
+      <UniqueIdentifier>{393c9f3c-a05e-4493-8e24-d2135aade346}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +73,7 @@
     <ClCompile Include="Day07\InstructionProcessor.cpp">
       <Filter>Day07</Filter>
     </ClCompile>
-	<ClCompile Include="Day08\Day08_MemoryManeuver.cpp">
+    <ClCompile Include="Day08\Day08_MemoryManeuver.cpp">
       <Filter>Day08</Filter>
     </ClCompile>
     <ClCompile Include="Day09\Day09_MarbleMania.cpp">
@@ -84,6 +87,12 @@
     </ClCompile>
     <ClCompile Include="Day13\CartAndTracksProcessor.cpp">
       <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_SubterraneanSustainability.cpp">
+      <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\PottedPlantProcessor.cpp">
+      <Filter>Day12</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +152,15 @@
     </ClInclude>
     <ClInclude Include="Day13\CartAndTracksProcessor.h">
       <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\Day12_SubterraneanSustainability.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\PottedPlantProcessor.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\PottedPlants.h">
+      <Filter>Day12</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

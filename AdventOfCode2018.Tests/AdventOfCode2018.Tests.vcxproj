@@ -178,6 +178,7 @@
     <ClCompile Include="Day08_Test.cpp" />
     <ClCompile Include="Day09_Test.cpp" />
     <ClCompile Include="Day11_Test.cpp" />
+    <ClCompile Include="Day12_Test.cpp" />
     <ClCompile Include="Day13_Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

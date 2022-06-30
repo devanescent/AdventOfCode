@@ -4,12 +4,13 @@
 
 namespace AdventOfCode
 {
-	template <class TResult, class TContext>
+	template <typename TResult, typename TContext, typename TResultContainer = std::vector<TResult>>
 	class InputProcessorWithContextBase
 	{
 	public:
 		using result_type = TResult;
 		using context_type = TContext;
-		virtual std::pair<std::vector<TResult>, TContext> Process(std::vector<std::string> input) = 0;
+		using container_type = TResultContainer;
+		virtual std::pair<TResultContainer, TContext> Process(std::vector<std::string> input) = 0;
 	};
 }
