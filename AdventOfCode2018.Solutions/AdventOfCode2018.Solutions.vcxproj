@@ -39,6 +39,7 @@
     <ClCompile Include="Day12\PottedPlantProcessor.cpp" />
     <ClCompile Include="Day13\CartAndTracksProcessor.cpp" />
     <ClCompile Include="Day13\Day13_MineCartMadness.cpp" />
+    <ClCompile Include="Day14\Day14_ChocolateCharts.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -66,6 +67,7 @@
     <ClInclude Include="Day13\CartAndTracks.h" />
     <ClInclude Include="Day13\CartAndTracksProcessor.h" />
     <ClInclude Include="Day13\Day13_MineCartMadness.h" />
+    <ClInclude Include="Day14\Day14_ChocolateCharts.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">

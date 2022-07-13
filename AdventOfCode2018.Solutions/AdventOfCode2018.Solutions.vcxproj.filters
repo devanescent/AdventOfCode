@@ -41,6 +41,9 @@
     <Filter Include="Day10">
       <UniqueIdentifier>{52dbd1c1-3826-4f94-a142-3c27590f2fb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day14">
+      <UniqueIdentifier>{a32655bd-fac0-49a0-95d1-6979b4af9ebb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -102,6 +105,9 @@
     </ClCompile>
     <ClCompile Include="Day10\PointOfLightProcessor.cpp">
       <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\Day14_ChocolateCharts.cpp">
+      <Filter>Day14</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +185,9 @@
     </ClInclude>
     <ClInclude Include="Day10\PointOfLightProcessor.h">
       <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\Day14_ChocolateCharts.h">
+      <Filter>Day14</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
