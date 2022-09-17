@@ -42,6 +42,9 @@
     <ClCompile Include="Day14\Day14_ChocolateCharts.cpp" />
     <ClCompile Include="Day16\ComputationSampleProcessor.cpp" />
     <ClCompile Include="Day16\Day16_ChronalClassification.cpp" />
+    <ClCompile Include="Day23\Day23_ExperimentalEmergencyTeleportation.cpp" />
+    <ClCompile Include="Day23\NanobotBox.cpp" />
+    <ClCompile Include="Day23\NanobotProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -75,6 +78,10 @@
     <ClInclude Include="Day16\Day16_ChronalClassification.h" />
     <ClInclude Include="Day16\Instruction.h" />
     <ClInclude Include="Day16\Register.h" />
+    <ClInclude Include="Day23\Day23_ExperimentalEmergencyTeleportation.h" />
+    <ClInclude Include="Day23\Nanobot.h" />
+    <ClInclude Include="Day23\NanobotBox.h" />
+    <ClInclude Include="Day23\NanobotProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">

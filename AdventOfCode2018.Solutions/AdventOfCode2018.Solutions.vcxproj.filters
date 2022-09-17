@@ -47,6 +47,9 @@
     <Filter Include="Day16">
       <UniqueIdentifier>{c8ad3328-5298-4c91-aacd-93c3882cd876}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day23">
+      <UniqueIdentifier>{b5d1ae96-07f8-4c4b-94e6-9ec13795d0ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -117,6 +120,15 @@
     </ClCompile>
     <ClCompile Include="Day16\ComputationSampleProcessor.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\Day23_ExperimentalEmergencyTeleportation.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\NanobotProcessor.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\NanobotBox.cpp">
+      <Filter>Day23</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +224,18 @@
     </ClInclude>
     <ClInclude Include="Day16\ComputationSample.h">
       <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Day23_ExperimentalEmergencyTeleportation.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\NanobotProcessor.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Nanobot.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\NanobotBox.h">
+      <Filter>Day23</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
