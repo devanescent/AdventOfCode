@@ -50,6 +50,9 @@
     <Filter Include="Day23">
       <UniqueIdentifier>{b5d1ae96-07f8-4c4b-94e6-9ec13795d0ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day24">
+      <UniqueIdentifier>{969924f7-3168-4f3a-8ea4-90b2d8c7f665}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -129,6 +132,12 @@
     </ClCompile>
     <ClCompile Include="Day23\NanobotBox.cpp">
       <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\Day24_ImmuneSystemSimulator20XX.cpp">
+      <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\ArmyProcessor.cpp">
+      <Filter>Day24</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +245,15 @@
     </ClInclude>
     <ClInclude Include="Day23\NanobotBox.h">
       <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\Day24_ImmuneSystemSimulator20XX.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\ArmyProcessor.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\Army.h">
+      <Filter>Day24</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -45,6 +45,8 @@
     <ClCompile Include="Day23\Day23_ExperimentalEmergencyTeleportation.cpp" />
     <ClCompile Include="Day23\NanobotBox.cpp" />
     <ClCompile Include="Day23\NanobotProcessor.cpp" />
+    <ClCompile Include="Day24\ArmyProcessor.cpp" />
+    <ClCompile Include="Day24\Day24_ImmuneSystemSimulator20XX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h" />
@@ -82,6 +84,9 @@
     <ClInclude Include="Day23\Nanobot.h" />
     <ClInclude Include="Day23\NanobotBox.h" />
     <ClInclude Include="Day23\NanobotProcessor.h" />
+    <ClInclude Include="Day24\Army.h" />
+    <ClInclude Include="Day24\ArmyProcessor.h" />
+    <ClInclude Include="Day24\Day24_ImmuneSystemSimulator20XX.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
