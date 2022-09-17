@@ -44,6 +44,9 @@
     <Filter Include="Day14">
       <UniqueIdentifier>{a32655bd-fac0-49a0-95d1-6979b4af9ebb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day16">
+      <UniqueIdentifier>{c8ad3328-5298-4c91-aacd-93c3882cd876}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -108,6 +111,12 @@
     </ClCompile>
     <ClCompile Include="Day14\Day14_ChocolateCharts.cpp">
       <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\Day16_ChronalClassification.cpp">
+      <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\ComputationSampleProcessor.cpp">
+      <Filter>Day16</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +197,21 @@
     </ClInclude>
     <ClInclude Include="Day14\Day14_ChocolateCharts.h">
       <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Day16_ChronalClassification.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\ComputationSampleProcessor.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Instruction.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Register.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\ComputationSample.h">
+      <Filter>Day16</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
