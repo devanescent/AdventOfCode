@@ -56,6 +56,9 @@
     <Filter Include="Day25">
       <UniqueIdentifier>{f3a710be-00ff-4750-9a84-bb15cab89827}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day18">
+      <UniqueIdentifier>{90f37973-91cc-4303-bdab-3d6bcc567081}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -147,6 +150,9 @@
     </ClCompile>
     <ClCompile Include="Day25\SpacetimeProcessor.cpp">
       <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp">
+      <Filter>Day18</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +278,9 @@
     </ClInclude>
     <ClInclude Include="Day25\SpacetimeProcessor.h">
       <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\Day18_SettlersOfTheNorthPole.h">
+      <Filter>Day18</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
