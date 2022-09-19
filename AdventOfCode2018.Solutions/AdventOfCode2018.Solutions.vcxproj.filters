@@ -53,6 +53,9 @@
     <Filter Include="Day24">
       <UniqueIdentifier>{969924f7-3168-4f3a-8ea4-90b2d8c7f665}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day25">
+      <UniqueIdentifier>{f3a710be-00ff-4750-9a84-bb15cab89827}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -138,6 +141,12 @@
     </ClCompile>
     <ClCompile Include="Day24\ArmyProcessor.cpp">
       <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\Day25_FourDimensionalAdventure.cpp">
+      <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\SpacetimeProcessor.cpp">
+      <Filter>Day25</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -254,6 +263,15 @@
     </ClInclude>
     <ClInclude Include="Day24\Army.h">
       <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\Day25_FourDimensionalAdventure.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\SpacetimeFixpoint.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\SpacetimeProcessor.h">
+      <Filter>Day25</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

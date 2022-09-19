@@ -144,6 +144,7 @@
     <ClCompile Include="Day14_Test.cpp" />
     <ClCompile Include="Day23_Test.cpp" />
     <ClCompile Include="Day24_Test.cpp" />
+    <ClCompile Include="Day25_Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_2019|x64'">Create</PrecompiledHeader>
