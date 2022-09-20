@@ -59,6 +59,9 @@
     <Filter Include="Day18">
       <UniqueIdentifier>{90f37973-91cc-4303-bdab-3d6bcc567081}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day22">
+      <UniqueIdentifier>{1bdfac83-748e-4387-8d10-31720ecd966d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -153,6 +156,12 @@
     </ClCompile>
     <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp">
       <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\Day22_ModeMaze.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\CaveMap.cpp">
+      <Filter>Day22</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +290,12 @@
     </ClInclude>
     <ClInclude Include="Day18\Day18_SettlersOfTheNorthPole.h">
       <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\Day22_ModeMaze.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\CaveMap.h">
+      <Filter>Day22</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
