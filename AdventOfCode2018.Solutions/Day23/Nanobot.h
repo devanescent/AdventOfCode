@@ -11,10 +11,10 @@ namespace AdventOfCode::Year2018::Day23
 		int m_y;
 		int m_z;
 
-		int m_signalRadius;
+		unsigned int m_signalRadius;
 
 	public:
-		Nanobot(int x, int y, int z, int sigR) :
+		Nanobot(int x, int y, int z, unsigned int sigR) :
 			m_x(x), m_y(y), m_z(z), m_signalRadius(sigR)
 		{}
 
@@ -22,9 +22,9 @@ namespace AdventOfCode::Year2018::Day23
 		int Y() const { return m_y; }
 		int Z() const { return m_z; }
 
-		int GetSignalRadius() const { return m_signalRadius; }
+		unsigned int GetSignalRadius() const { return m_signalRadius; }
 
-		int GetDistanceTo(const Nanobot& other) const
+		unsigned int GetDistanceTo(const Nanobot& other) const
 		{
 			return std::abs(m_x - other.m_x) + std::abs(m_y - other.m_y) + std::abs(m_z - other.m_z);
 		}

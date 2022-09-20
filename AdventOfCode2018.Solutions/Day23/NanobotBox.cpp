@@ -1,4 +1,5 @@
 #include "NanobotBox.h"
+#include <algorithm>
 
 namespace AdventOfCode::Year2018::Day23
 {
@@ -95,12 +96,12 @@ namespace AdventOfCode::Year2018::Day23
 	NanobotBox::NanobotBox(BoundingBox box, const std::vector<Nanobot>& nanobots) :
 		m_box(std::move(box))
 	{
-		m_nanoBotsInReach = std::count_if(nanobots.begin(), nanobots.end(),
+		m_nanoBotsInReach = static_cast<unsigned int>(std::count_if(nanobots.begin(), nanobots.end(),
 			[&](const Nanobot& n)
 			{
 				return m_box.GetDistanceTo(n.X(), n.Y(), n.Z()) <= n.GetSignalRadius();
 			}
-		);
+		));
 	}
 
 	std::vector<NanobotBox> NanobotBox::Split(const std::vector<Nanobot>& nanobots) const
