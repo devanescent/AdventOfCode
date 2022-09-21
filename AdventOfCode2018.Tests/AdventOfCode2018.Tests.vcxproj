@@ -142,7 +142,9 @@
     <ClCompile Include="Day12_Test.cpp" />
     <ClCompile Include="Day13_Test.cpp" />
     <ClCompile Include="Day14_Test.cpp" />
+    <ClCompile Include="Day16_Test.cpp" />
     <ClCompile Include="Day18_Test.cpp" />
+    <ClCompile Include="Day19_Test.cpp" />
     <ClCompile Include="Day22_Test.cpp" />
     <ClCompile Include="Day23_Test.cpp" />
     <ClCompile Include="Day24_Test.cpp" />

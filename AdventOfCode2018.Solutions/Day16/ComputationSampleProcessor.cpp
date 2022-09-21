@@ -14,11 +14,17 @@ namespace AdventOfCode::Year2018::Day16
 			else if (input[l].empty())
 				continue; // Skip single empty lines
 
-			Register regBefore(input[l].substr(9));
-			Register regAfter(input[l + 2].substr(9));
-			Instruction instr(input[l + 1]);
 
-			samples.emplace_back(regBefore, regAfter, instr);
+			// Instruction format: all numbers separated by spaces
+			int opCode, A, B, C;
+			std::istringstream iss(input[l + 1]);
+			iss >> opCode >> A >> B >> C;
+
+			samples.emplace_back(
+				input[l].substr(9),     // register before
+				input[l + 2].substr(9), // register after
+				Instruction(static_cast<OpCode>(opCode), A, B, C) // Instruction - this may result in the wrong opcode, which will be corrected later
+			);
 		}
 
 		return samples;

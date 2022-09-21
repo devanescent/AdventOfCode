@@ -1,12 +1,12 @@
-#include "InstructionProcessor.h"
+#include "AssemblyStepsProcessor.h"
 #include <map>
 
 namespace AdventOfCode::Year2018::Day07
 {
-	std::vector<InstructionStep> InstructionProcessor::Process(std::vector<std::string> input)
+	std::vector<AssemblyStep> AssemblyStepsProcessor::Process(std::vector<std::string> input)
 	{
-		// Prepare al 26 steps:
-		std::map<char, InstructionStep> steps;
+		// Prepare all 26 steps:
+		std::map<char, AssemblyStep> steps;
 
 		// Assign precoditions:
 		for (const std::string& instr : input)
@@ -28,7 +28,7 @@ namespace AdventOfCode::Year2018::Day07
 		}
 
 		// Extract values from map into vector:
-		std::vector<InstructionStep> stepsAsVec;
+		std::vector<AssemblyStep> stepsAsVec;
 		stepsAsVec.reserve(steps.size());
 		std::transform(steps.begin(), steps.end(), std::back_inserter(stepsAsVec),
 			[](const auto& s) { return s.second; }

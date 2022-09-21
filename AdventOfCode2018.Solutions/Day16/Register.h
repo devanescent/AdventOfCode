@@ -31,14 +31,19 @@ namespace AdventOfCode::Year2018::Day16
 		eqrr
 	};
 
+	// For extracting opcodes by name from a stringstream
+	std::istringstream& operator>>(std::istringstream& in, OpCode& opCode);
+
+	template<int N>
 	class Register
 	{
 	public:
-		Register(int r0, int r1, int r2, int r3) :
-			m_regValues{ r0, r1, r2, r3 }
-		{ }
+		Register() :
+			m_regValues{ 0 }
+		{}
 
-		Register(const std::string& regStr)
+		Register(const std::string& regStr) :
+			m_regValues()
 		{
 			char comma;
 			std::istringstream iss(regStr);
@@ -54,12 +59,12 @@ namespace AdventOfCode::Year2018::Day16
 			return m_regValues[index];
 		}
 
-		bool operator==(const Register& other) const
+		bool operator==(const Register<N>& other) const
 		{
 			return m_regValues == other.m_regValues;
 		}
 
 	private:
-		std::array<int, 4> m_regValues;
+		std::array<int, N> m_regValues;
 	};
 }

@@ -5,13 +5,12 @@
 
 namespace AdventOfCode::Year2018::Day07
 {
-	class InstructionStep
-	{
+	class AssemblyStep {
 	public:
-		InstructionStep(char id) : m_id(id)
+		AssemblyStep(char id) : m_id(id)
 		{}
 
-		bool operator<(const InstructionStep& other) const
+		bool operator<(const AssemblyStep& other) const
 		{
 			return m_id < other.m_id;
 		}

@@ -25,7 +25,7 @@
     <ClCompile Include="Day04\GuardDutyRecordProcessor.cpp" />
     <ClCompile Include="Day05\Day05_AlchemicalReduction.cpp" />
     <ClCompile Include="Day07\Day07_TheSumOfItsParts.cpp" />
-    <ClCompile Include="Day07\InstructionProcessor.cpp" />
+    <ClCompile Include="Day07\AssemblyStepsProcessor.cpp" />
     <ClCompile Include="Day08\Day08_MemoryManeuver.cpp" />
     <ClCompile Include="Day09\Day09_MarbleMania.cpp" />
     <ClCompile Include="Day10\Day10_TheStarsAlign.cpp" />
@@ -38,7 +38,10 @@
     <ClCompile Include="Day14\Day14_ChocolateCharts.cpp" />
     <ClCompile Include="Day16\ComputationSampleProcessor.cpp" />
     <ClCompile Include="Day16\Day16_ChronalClassification.cpp" />
+    <ClCompile Include="Day16\Instruction.cpp" />
     <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp" />
+    <ClCompile Include="Day19\Day19_GoWithTheFlow.cpp" />
+    <ClCompile Include="Day19\InstructionProcessor.cpp" />
     <ClCompile Include="Day22\CaveMap.cpp" />
     <ClCompile Include="Day22\CaveScanProcessor.cpp" />
     <ClCompile Include="Day22\Day22_ModeMaze.cpp" />
@@ -62,8 +65,8 @@
     <ClInclude Include="Day04\GuardDutyRecordProcessor.h" />
     <ClInclude Include="Day05\Day05_AlchemicalReduction.h" />
     <ClInclude Include="Day07\Day07_TheSumOfItsParts.h" />
-    <ClInclude Include="Day07\InstructionProcessor.h" />
-    <ClInclude Include="Day07\InstructionStep.h" />
+    <ClInclude Include="Day07\AssemblyStepsProcessor.h" />
+    <ClInclude Include="Day07\AssemblyStep.h" />
     <ClInclude Include="Day08\Day08_MemoryManeuver.h" />
     <ClInclude Include="Day09\Day09_MarbleMania.h" />
     <ClInclude Include="Day10\Day10_TheStarsAlign.h" />
@@ -83,6 +86,8 @@
     <ClInclude Include="Day16\Instruction.h" />
     <ClInclude Include="Day16\Register.h" />
     <ClInclude Include="Day18\Day18_SettlersOfTheNorthPole.h" />
+    <ClInclude Include="Day19\Day19_GoWithTheFlow.h" />
+    <ClInclude Include="Day19\InstructionProcessor.h" />
     <ClInclude Include="Day22\CaveMap.h" />
     <ClInclude Include="Day22\CaveScanProcessor.h" />
     <ClInclude Include="Day22\Day22_ModeMaze.h" />

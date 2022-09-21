@@ -8,7 +8,7 @@ namespace AdventOfCode::Year2018::Day16
 	class ComputationSample
 	{
 	public:
-		ComputationSample(Register beforeExec, Register afterExec, Instruction instr) :
+		ComputationSample(Register<4> beforeExec, Register<4> afterExec, Instruction instr) :
 			m_beforeExecution(beforeExec), m_afterExecution(afterExec), m_instruction(instr)
 		{ }
 
@@ -25,16 +25,16 @@ namespace AdventOfCode::Year2018::Day16
 			return validOpCodes;
 		}
 
-		int GetActualOpCode() const { return m_instruction.GetActualOpCode(); }
+		OpCode GetActualOpCode() const { return m_instruction.GetActualOpCode(); }
 
 	private:
-		Register m_beforeExecution;
-		Register m_afterExecution;
+		Register<4> m_beforeExecution;
+		Register<4> m_afterExecution;
 		Instruction m_instruction;
 
 		bool TestOpCode(OpCode op) const
 		{
-			Register actualResult = m_instruction.ApplyToRegisterAs(op, m_beforeExecution);
+			Register<4> actualResult = m_instruction.ApplyToRegisterAs(op, m_beforeExecution);
 			return actualResult == m_afterExecution;
 		}
 	};

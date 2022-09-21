@@ -9,12 +9,12 @@ namespace AdventOfCode::Year2018::Day07
 		DayT(7, "The Sum of Its Parts"), m_numWorkers(numWorkers), m_workTimeOffset(workTimeOffset)
 	{}
 
-	uint64_t TheSumOfItsParts::ExecutePart1(std::vector<InstructionStep> steps)
+	uint64_t TheSumOfItsParts::ExecutePart1(std::vector<AssemblyStep> steps)
 	{
 		std::string result;
 
-		std::set<InstructionStep> unavailableSteps(steps.begin(), steps.end());
-		std::set<InstructionStep> availableSteps;
+		std::set<AssemblyStep> unavailableSteps(steps.begin(), steps.end());
+		std::set<AssemblyStep> availableSteps;
 		
 		while (!unavailableSteps.empty() || !availableSteps.empty())
 		{
@@ -40,16 +40,16 @@ namespace AdventOfCode::Year2018::Day07
 		return 0;
 	}
 
-	uint64_t TheSumOfItsParts::ExecutePart2(std::vector<InstructionStep> steps)
+	uint64_t TheSumOfItsParts::ExecutePart2(std::vector<AssemblyStep> steps)
 	{
 		std::string result;
 		uint64_t totalTime = 0;
 
-		std::set<InstructionStep> unavailableSteps(steps.begin(), steps.end());
-		std::set<InstructionStep> availableSteps;
+		std::set<AssemblyStep> unavailableSteps(steps.begin(), steps.end());
+		std::set<AssemblyStep> availableSteps;
 
 		// Time worked on instructions (ordering of keys not neccessary):
-		std::map<InstructionStep, int> workedOnSteps;
+		std::map<AssemblyStep, int> workedOnSteps;
 
 		while (!unavailableSteps.empty() || !availableSteps.empty() || !workedOnSteps.empty())
 		{
@@ -76,7 +76,7 @@ namespace AdventOfCode::Year2018::Day07
 
 			// Work on the steps:
 			// Find element with smallest remaining work time:
-			auto workTimeLeft = [&](const std::pair<const InstructionStep, int>& workItem)
+			auto workTimeLeft = [&](const std::pair<const AssemblyStep, int>& workItem)
 			{
 				// 'A' - '@' == 1, so that 'A' resolves to workTimeOffset + 1, 'B' to workTimeOffset + 2, ...
 				return workItem.second >= (workItem.first.ID() - '@') + m_workTimeOffset
