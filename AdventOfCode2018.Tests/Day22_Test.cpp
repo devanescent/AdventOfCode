@@ -9,12 +9,12 @@ namespace AdventOfCode::Year2018::Tests
 	TEST_CLASS(Year2018_Day22)
 	{
 	private:
-		static std::vector<std::string> example1Data;
+		static std::vector<std::string> exampleData;
 
 	public:
 		TEST_CLASS_INITIALIZE(Init)
 		{
-			example1Data = std::vector<std::string>
+			exampleData = std::vector<std::string>
 			{
 				"depth: 510",
 				"target: 10,10"
@@ -26,12 +26,24 @@ namespace AdventOfCode::Year2018::Tests
 			ModeMaze sut;
 
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(example1Data);
+			uint64_t result = sut.GetResultOnPart1(exampleData);
 
 			// Assert:
 			Assert::AreEqual(114ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			ModeMaze sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(exampleData);
+
+			// Assert:
+			Assert::AreEqual(45ull, result);
+		}
 	};
 
-	std::vector<std::string> Year2018_Day22::example1Data = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day22::exampleData = std::vector<std::string>();
 }

@@ -163,6 +163,9 @@
     <ClCompile Include="Day22\CaveMap.cpp">
       <Filter>Day22</Filter>
     </ClCompile>
+    <ClCompile Include="Day22\CaveScanProcessor.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h">
@@ -295,6 +298,9 @@
       <Filter>Day22</Filter>
     </ClInclude>
     <ClInclude Include="Day22\CaveMap.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\CaveScanProcessor.h">
       <Filter>Day22</Filter>
     </ClInclude>
   </ItemGroup>

@@ -40,6 +40,7 @@
     <ClCompile Include="Day16\Day16_ChronalClassification.cpp" />
     <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp" />
     <ClCompile Include="Day22\CaveMap.cpp" />
+    <ClCompile Include="Day22\CaveScanProcessor.cpp" />
     <ClCompile Include="Day22\Day22_ModeMaze.cpp" />
     <ClCompile Include="Day23\Day23_ExperimentalEmergencyTeleportation.cpp" />
     <ClCompile Include="Day23\NanobotBox.cpp" />
@@ -83,6 +84,7 @@
     <ClInclude Include="Day16\Register.h" />
     <ClInclude Include="Day18\Day18_SettlersOfTheNorthPole.h" />
     <ClInclude Include="Day22\CaveMap.h" />
+    <ClInclude Include="Day22\CaveScanProcessor.h" />
     <ClInclude Include="Day22\Day22_ModeMaze.h" />
     <ClInclude Include="Day23\Day23_ExperimentalEmergencyTeleportation.h" />
     <ClInclude Include="Day23\Nanobot.h" />
