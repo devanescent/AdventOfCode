@@ -7,6 +7,8 @@ namespace AdventOfCode::Year2018::Day16
 {
 	enum class OpCode
 	{
+		unknown, 
+
 		addr,
 		addi,
 
@@ -47,14 +49,14 @@ namespace AdventOfCode::Year2018::Day16
 		{
 			char comma;
 			std::istringstream iss(regStr);
-			for (int& r : m_regValues)
+			for (unsigned int& r : m_regValues)
 			{
 				iss >> r;
 				iss >> comma;
 			}
 		}
 
-		int& operator[](int index)
+		unsigned int& operator[](int index)
 		{
 			return m_regValues[index];
 		}
@@ -65,6 +67,6 @@ namespace AdventOfCode::Year2018::Day16
 		}
 
 	private:
-		std::array<int, N> m_regValues;
+		std::array<unsigned int, N> m_regValues;
 	};
 }

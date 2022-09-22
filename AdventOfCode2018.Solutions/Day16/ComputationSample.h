@@ -15,7 +15,7 @@ namespace AdventOfCode::Year2018::Day16
 		std::set<OpCode> GetValidOpCodes() const
 		{
 			std::set<OpCode> validOpCodes;
-			for (int op = 0; op <= 15; ++op)
+			for (int op = 1; op <= 16; ++op)
 			{
 				OpCode opCode = static_cast<OpCode>(op);
 				if (TestOpCode(opCode))
@@ -25,7 +25,7 @@ namespace AdventOfCode::Year2018::Day16
 			return validOpCodes;
 		}
 
-		OpCode GetActualOpCode() const { return m_instruction.GetActualOpCode(); }
+		int GetNumericOpCode() const { return m_instruction.GetNumericOpCode(); }
 
 	private:
 		Register<4> m_beforeExecution;
