@@ -11,7 +11,8 @@ namespace AdventOfCode::Year2018::Day18
 	public:
 		SettlersOfTheNorthPole();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
+		uint64_t GetResultOnPart1(std::vector<std::string> ground) override;
+		uint64_t GetResultOnPart2(std::vector<std::string> ground) override;
 
 	private:
 		enum class AcreType : char

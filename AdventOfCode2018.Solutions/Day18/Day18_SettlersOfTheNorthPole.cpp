@@ -1,4 +1,5 @@
 #include "Day18_SettlersOfTheNorthPole.h"
+#include <algorithm>
 
 namespace AdventOfCode::Year2018::Day18
 {
@@ -11,6 +12,29 @@ namespace AdventOfCode::Year2018::Day18
 			ground = TransformGround(ground);
 
 		return GetResourceValue(ground);
+	}
+
+	uint64_t SettlersOfTheNorthPole::GetResultOnPart2(std::vector<std::string> ground)
+	{
+		// Let run long enough that the ground transforms in a cyclic pattern:
+		for (int t = 0; t < 1000; ++t)
+			ground = TransformGround(ground);
+
+		// Find the cycle period:
+		std::vector<std::vector<std::string>> prevPatterns;
+
+		// Compare first pattern to current pattern to find out when the pattern repeats:
+		while (prevPatterns.empty() || prevPatterns[0] != ground)
+		{
+			prevPatterns.push_back(ground);
+			ground = TransformGround(ground);
+		}
+
+		// Number of patterns after which it repeats:
+		size_t cycle = prevPatterns.size();
+		
+		// Find pattern after 1'000'000'000 (-1000 for initial transformations that were not looked at):
+		return GetResourceValue(prevPatterns[(1'000'000'000 - 1000) % cycle]);
 	}
 
 	std::vector<std::string> SettlersOfTheNorthPole::TransformGround(const std::vector<std::string>& ground)
