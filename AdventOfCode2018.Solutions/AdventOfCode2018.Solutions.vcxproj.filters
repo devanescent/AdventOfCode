@@ -65,6 +65,9 @@
     <Filter Include="Day19">
       <UniqueIdentifier>{77d93125-4f5d-4d7f-aa8c-58bb984fddc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day15">
+      <UniqueIdentifier>{9ab31f78-a24d-415b-a7a3-6471df95f4fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -177,6 +180,12 @@
     </ClCompile>
     <ClCompile Include="Day16\Instruction.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_BeverageBandits.cpp">
+      <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Battle.cpp">
+      <Filter>Day15</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +329,15 @@
     </ClInclude>
     <ClInclude Include="Day19\InstructionProcessor.h">
       <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\Day15_BeverageBandits.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\Battle.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\Unit.h">
+      <Filter>Day15</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

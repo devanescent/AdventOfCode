@@ -92,6 +92,9 @@
     <ClCompile Include="Day19_Test.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Day15_Test.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AdventOfCode2018.Tests.rc">
