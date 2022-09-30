@@ -68,6 +68,9 @@
     <Filter Include="Day15">
       <UniqueIdentifier>{9ab31f78-a24d-415b-a7a3-6471df95f4fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day06">
+      <UniqueIdentifier>{47dfd9a9-cfa6-45cc-957e-98d1aa6c2e1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -186,6 +189,12 @@
     </ClCompile>
     <ClCompile Include="Day15\Battle.cpp">
       <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\CoordinateProcessor.cpp">
+      <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\Day06_ChronalCoordinates.cpp">
+      <Filter>Day06</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -338,6 +347,15 @@
     </ClInclude>
     <ClInclude Include="Day15\Unit.h">
       <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\Coord.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\CoordinateProcessor.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\Day06_ChronalCoordinates.h">
+      <Filter>Day06</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

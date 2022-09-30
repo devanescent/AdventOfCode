@@ -24,6 +24,8 @@
     <ClCompile Include="Day04\GuardDutyRecord.cpp" />
     <ClCompile Include="Day04\GuardDutyRecordProcessor.cpp" />
     <ClCompile Include="Day05\Day05_AlchemicalReduction.cpp" />
+    <ClCompile Include="Day06\CoordinateProcessor.cpp" />
+    <ClCompile Include="Day06\Day06_ChronalCoordinates.cpp" />
     <ClCompile Include="Day07\Day07_TheSumOfItsParts.cpp" />
     <ClCompile Include="Day07\AssemblyStepsProcessor.cpp" />
     <ClCompile Include="Day08\Day08_MemoryManeuver.cpp" />
@@ -66,6 +68,9 @@
     <ClInclude Include="Day04\GuardDutyRecord.h" />
     <ClInclude Include="Day04\GuardDutyRecordProcessor.h" />
     <ClInclude Include="Day05\Day05_AlchemicalReduction.h" />
+    <ClInclude Include="Day06\Coord.h" />
+    <ClInclude Include="Day06\CoordinateProcessor.h" />
+    <ClInclude Include="Day06\Day06_ChronalCoordinates.h" />
     <ClInclude Include="Day07\Day07_TheSumOfItsParts.h" />
     <ClInclude Include="Day07\AssemblyStepsProcessor.h" />
     <ClInclude Include="Day07\AssemblyStep.h" />
