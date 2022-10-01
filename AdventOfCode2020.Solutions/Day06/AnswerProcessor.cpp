@@ -6,8 +6,21 @@ namespace AdventOfCode::Year2020::Day06
 	{
 		std::vector<AnswerSet> answerSets;
 
-		for (std::string answers : JoinLines(input))
-			answerSets.push_back(AnswerSet(answers));
+		AnswerSet answerSet;
+		for (const std::string& answers : input)
+		{
+			// Empty lines separate groups:
+			if (!answers.empty())
+				answerSet.Add(answers);
+			else
+			{
+				answerSets.emplace_back(answerSet);
+				answerSet = AnswerSet();
+			}
+		}
+
+		// Last one:
+		answerSets.emplace_back(answerSet);
 
 		return answerSets;
 	}

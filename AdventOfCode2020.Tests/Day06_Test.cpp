@@ -46,11 +46,11 @@ namespace AdventOfCode::Year2020::Tests
 			std::vector<AnswerSet> result = ansProc.Process(inputData);
 
 			// Assert:
-			Assert::AreEqual(AnswerSet("abc"), result[0], L"Answer set no.1 incorrect!");
-			Assert::AreEqual(AnswerSet("abc"), result[1], L"Answer set no.2 incorrect!");
-			Assert::AreEqual(AnswerSet("abc"), result[2], L"Answer set no.3 incorrect!");
-			Assert::AreEqual(AnswerSet("a"), result[3], L"Answer set no.4 incorrect!");
-			Assert::AreEqual(AnswerSet("b"), result[4], L"Answer set no.5 incorrect!");
+			Assert::AreEqual(AnswerSet({ "abc" }), result[0], L"Answer set no.1 incorrect!");
+			Assert::AreEqual(AnswerSet({ "a", "b", "c" }), result[1], L"Answer set no.2 incorrect!");
+			Assert::AreEqual(AnswerSet({ "ab", "ac" }), result[2], L"Answer set no.3 incorrect!");
+			Assert::AreEqual(AnswerSet({ "a", "a", "a", "a" }), result[3], L"Answer set no.4 incorrect!");
+			Assert::AreEqual(AnswerSet({ "b" }), result[4], L"Answer set no.5 incorrect!");
 		}
 
 		TEST_METHOD(CheckExample_Part1)
@@ -63,6 +63,18 @@ namespace AdventOfCode::Year2020::Tests
 
 			// Assert:
 			Assert::AreEqual(11ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			CustomCustoms day06;
+
+			// Act:
+			uint64_t result = day06.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(6ull, result);
 		}
 	};
 

@@ -12,5 +12,6 @@ namespace AdventOfCode::Year2020::Day06
 
 	protected:
 		uint64_t ExecutePart1(std::vector<AnswerSet> answerSets) override;
+		uint64_t ExecutePart2(std::vector<AnswerSet> answerSets) override;
 	};
 }
