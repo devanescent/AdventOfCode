@@ -12,11 +12,50 @@ namespace AdventOfCode::Year2020::Day04
 			m_hairColor(hairColor), m_eyeColor(eyeColor), m_passportID(passportID), m_countryID(countryID)
 		{}
 
-		// Checks if passport is valid, ignores empty 'CountryID' field
-		bool IsValid()
+		enum class ValidateData
 		{
-			return !(m_birthYear.empty() || m_issueYear.empty() || m_expirationYear.empty() || m_height.empty() ||
-				m_hairColor.empty() || m_eyeColor.empty() || m_passportID.empty());
+			Enabled,
+			Disabled
+		};
+
+		bool IsValid(ValidateData validateData)
+		{
+			if (m_birthYear.empty() || m_issueYear.empty() || m_expirationYear.empty() || m_height.empty() ||
+				m_hairColor.empty() || m_eyeColor.empty() || m_passportID.empty())
+			{
+				// Missing a field other than 'cid':
+				return false;
+			}
+			else if (validateData == ValidateData::Enabled)
+			{
+				// Also validate the data:
+				int birthyear = atoi(m_birthYear.c_str());
+				if (birthyear < 1920 || birthyear > 2002) return false;
+
+				int issueYear = atoi(m_issueYear.c_str());
+				if (issueYear < 2010 || issueYear > 2020) return false;
+
+				int expirationYear = atoi(m_expirationYear.c_str());
+				if (expirationYear < 2020 || expirationYear > 2030) return false;
+
+				int height = atoi(m_height.c_str());
+				std::string heightUnit = m_height.substr(m_height.length() - 2);
+				if (heightUnit != "cm" && heightUnit != "in") return false;
+				else if (heightUnit == "cm" && (height < 150 || height > 193)) return false;
+				else if (heightUnit == "in" && (height < 59 || height > 76)) return false;
+
+				// Length: 7 ('#' + 6-digit color)
+				if (m_hairColor.length() != 7 || m_hairColor[0] != '#' || 
+					m_hairColor.substr(1).find_first_not_of("abcdef0123456789") != std::string::npos) return false;
+
+				if (m_eyeColor != "amb" && m_eyeColor != "blu" && m_eyeColor != "brn" && m_eyeColor != "gry" &&
+					m_eyeColor != "grn" && m_eyeColor != "hzl" && m_eyeColor != "oth") return false;
+
+				if (m_passportID.length() != 9 || m_passportID.find_first_not_of("0123456789") != std::string::npos) return false;
+			}
+			
+			// Otherwise, passport is valid:
+			return true;
 		}
 
 		bool operator==(const Passport& other) const
