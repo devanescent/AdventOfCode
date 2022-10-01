@@ -10,12 +10,10 @@ namespace AdventOfCode::Year2020::Day01
 	class ReportRepair : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
 	{
 	public:
-		ReportRepair(int targetSum);
+		ReportRepair();
 
 	protected:
 		uint64_t ExecutePart1(std::vector<int> report) override;
-
-	private:
-		int m_targetSum;
+		uint64_t ExecutePart2(std::vector<int> report) override;
 	};
 }
