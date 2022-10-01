@@ -49,14 +49,14 @@ namespace AdventOfCode::Year2018::Day16
 		{
 			char comma;
 			std::istringstream iss(regStr);
-			for (unsigned int& r : m_regValues)
+			for (uint64_t& r : m_regValues)
 			{
 				iss >> r;
 				iss >> comma;
 			}
 		}
 
-		unsigned int& operator[](int index)
+		uint64_t& operator[](int index)
 		{
 			return m_regValues[index];
 		}
@@ -67,6 +67,6 @@ namespace AdventOfCode::Year2018::Day16
 		}
 
 	private:
-		std::array<unsigned int, N> m_regValues;
+		std::array<uint64_t, N> m_regValues;
 	};
 }
