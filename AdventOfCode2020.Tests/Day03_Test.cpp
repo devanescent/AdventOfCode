@@ -33,13 +33,25 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			TobogganTrajectory day03 = TobogganTrajectory(3, 1);
+			TobogganTrajectory sut;
 
 			// Act:
-			uint64_t result = day03.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(7ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			TobogganTrajectory sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(336ull, result);
 		}
 	};
 
