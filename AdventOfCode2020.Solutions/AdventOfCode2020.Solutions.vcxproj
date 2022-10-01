@@ -26,6 +26,7 @@
     <ClCompile Include="Day03\Day03_TobogganTrajectory.cpp" />
     <ClCompile Include="Day04\Day04_PassportProcessing.cpp" />
     <ClCompile Include="Day04\PassportProcessor.cpp" />
+    <ClCompile Include="Day05\BoardingPassProcessor.cpp" />
     <ClCompile Include="Day05\Day05_BinaryBoarding.cpp" />
     <ClCompile Include="Day06\AnswerProcessor.cpp" />
     <ClCompile Include="Day06\Day06_CustomCustoms.cpp" />
@@ -69,6 +70,7 @@
     <ClInclude Include="Day04\Day04_PassportProcessing.h" />
     <ClInclude Include="Day04\Passport.h" />
     <ClInclude Include="Day04\PassportProcessor.h" />
+    <ClInclude Include="Day05\BoardingPassProcessor.h" />
     <ClInclude Include="Day05\Day05_BinaryBoarding.h" />
     <ClInclude Include="Day06\AnswerProcessor.h" />
     <ClInclude Include="Day06\AnswerSet.h" />

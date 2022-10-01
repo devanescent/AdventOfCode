@@ -199,6 +199,9 @@
     <ClCompile Include="Day25\Day25_ComboBreaker.cpp">
       <Filter>Day25</Filter>
     </ClCompile>
+    <ClCompile Include="Day05\BoardingPassProcessor.cpp">
+      <Filter>Day05</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ReportRepair.h">
@@ -362,6 +365,9 @@
     </ClInclude>
     <ClInclude Include="Day25\Day25_ComboBreaker.h">
       <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\BoardingPassProcessor.h">
+      <Filter>Day05</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

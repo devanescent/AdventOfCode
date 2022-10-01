@@ -26,10 +26,10 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			BinaryBoarding day05 = BinaryBoarding(128, 8);
+			BinaryBoarding sut;
 
 			// Act:
-			uint64_t result = day05.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(820ull, result);

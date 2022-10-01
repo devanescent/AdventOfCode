@@ -1,42 +1,26 @@
 #include "Day05_BinaryBoarding.h"
 #include <algorithm>
-#include <cmath>
 
 namespace AdventOfCode::Year2020::Day05
 {
-	BinaryBoarding::BinaryBoarding(int rowNum, int colNum) : Day(5, "Binary Boarding"), 
-		m_rowNum(rowNum), m_colNum(colNum)
-	{}
+	BinaryBoarding::BinaryBoarding() : DayT(5, "Binary Boarding") {}
 
-	uint64_t BinaryBoarding::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t BinaryBoarding::ExecutePart1(std::vector<int> seatIDs)
 	{
-		if (input.empty())
-			return 0;
-
-		// find seat ID for each boarding pass
-		std::vector<int> seatIDs;
-		seatIDs.reserve(input.size());
-		std::transform(input.begin(), input.end(), std::back_inserter(seatIDs), [&](std::string pass) { return GetSeatID(pass); });
-
-		// return maximum of all ids
 		return *(std::max_element(seatIDs.begin(), seatIDs.end()));
 	}
 
-	int BinaryBoarding::GetSeatID(std::string seatPartioning)
+	uint64_t BinaryBoarding::ExecutePart2(std::vector<int> seatIDs)
 	{
-		// convert to binary representation
-		std::replace(seatPartioning.begin(), seatPartioning.end(), 'F', '0');
-		std::replace(seatPartioning.begin(), seatPartioning.end(), 'B', '1');
-		std::replace(seatPartioning.begin(), seatPartioning.end(), 'L', '0');
-		std::replace(seatPartioning.begin(), seatPartioning.end(), 'R', '1');
+		std::sort(seatIDs.begin(), seatIDs.end());
+		auto result = std::adjacent_find(seatIDs.begin(), seatIDs.end(),
+			[](const int& id1, const int& id2)
+			{
+				// Find the gap in the list of seat ids:
+				return id2 != id1 + 1;
+			}
+		);
 
-		// row: logb(rowNum) digits from front
-		long row = std::strtol(seatPartioning.substr(0, (int)std::logb(m_rowNum)).c_str(), nullptr, 2);
-
-		// col: logb(colNum) digits from back
-		long col = std::strtol(seatPartioning.substr(seatPartioning.size() - (int)std::logb(m_colNum)).c_str(), nullptr, 2);
-
-		// seat ID
-		return row * 8 + col;
+		return static_cast<uint64_t>(*result) + 1;
 	}
 }

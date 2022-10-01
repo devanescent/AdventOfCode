@@ -1,19 +1,15 @@
 #pragma once
-#include "Day.h"
+#include "DayT.h"
+#include "BoardingPassProcessor.h"
 
 namespace AdventOfCode::Year2020::Day05
 {
-	class BinaryBoarding : public Day
+	class BinaryBoarding : public DayT< BoardingPassProcessor>
 	{
 	public:
-		BinaryBoarding(int rowNum, int colNum);
+		BinaryBoarding();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
-
-	private:
-		int m_rowNum;
-		int m_colNum;
-
-		int GetSeatID(std::string seatPartioning);
+		uint64_t ExecutePart1(std::vector<int> seatIDs) override;
+		uint64_t ExecutePart2(std::vector<int> seatIDs) override;
 	};
 }
