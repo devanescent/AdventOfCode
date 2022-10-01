@@ -7,35 +7,20 @@ namespace AdventOfCode::Year2020::Day07
 	class Bag
 	{
 	public:
-		Bag(std::string name) : 
-			m_name(name), m_isMarked(false)
-		{}
+		Bag(std::string name) : m_name(std::move(name)) {}
 
-		const std::string& GetName() { return m_name; }
+		const std::string& GetName() const { return m_name; }
 
-		void AddContainer(Bag* container)
+		void AddBagToContent(std::string name, int count)
 		{
-			m_containers.insert(container);
+			m_containedBags.emplace_back(name, count);
 		}
 
-		int CountUniqueContainers()
-		{
-			int count = 0;
-			for (Bag* b : m_containers)
-			{
-				if (!b->m_isMarked)
-				{
-					b->m_isMarked = true;
-					count += (1 + b->CountUniqueContainers());
-				}
-			}
-
-			return count;
-		}
+		std::vector<std::pair<std::string, int>>::const_iterator begin() const { return m_containedBags.begin(); }
+		std::vector<std::pair<std::string, int>>::const_iterator end() const { return m_containedBags.end(); }
 
 	private:
 		std::string m_name;
-		bool m_isMarked;
-		std::set<Bag*> m_containers;
+		std::vector<std::pair<std::string, int>> m_containedBags; // Name + Count
 	};
 }

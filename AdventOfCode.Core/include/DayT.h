@@ -23,8 +23,8 @@ namespace AdventOfCode
 		DayT(int no, const char* name) : Day(no, name) {}
 
 		// Process specific input - to be overwritten by the derived class
-		virtual uint64_t ExecutePart1(std::vector<typename TProcessor::result_type> input) = 0;
-		virtual uint64_t ExecutePart2(std::vector<typename TProcessor::result_type> input) { return 0ull; }
+		virtual uint64_t ExecutePart1(typename TProcessor::container_type input) = 0;
+		virtual uint64_t ExecutePart2(typename TProcessor::container_type input) { return 0ull; }
 
 		TProcessor m_proc;
 	};

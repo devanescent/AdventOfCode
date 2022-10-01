@@ -5,71 +5,42 @@
 
 namespace AdventOfCode::Year2020::Day07
 {
-	std::vector<Bag*> BagProcessor::Process(std::vector<std::string> input)
+	std::map<std::string, Bag> BagProcessor::Process(std::vector<std::string> input)
 	{
-		std::map<std::string, Bag*> bagsByName;
+		std::map<std::string, Bag> bags;
 
-		for (const std::string& line : input)
+		// RegEx: beginning of the line: words and / or spaces, followed by the term ' bags contain'
+		// -> gets the name from the bag mentioned at the beginning
+		std::regex containerPattern = std::regex("^((?:[a-z]| )+) bags contain ");
+
+		// RegEx: number with words and / or spaces, followed by the term 'bag(s)'
+		// -> gets all bag names listed as content
+		std::regex containedPattern = std::regex("([0-9]+) ((?:[a-z]| )+) bags?");
+
+		for (std::string& line : input)
 		{
-			// Helper: Finds bag or inserts it, if not exists
-			auto FindOrInsert = [&bagsByName](std::string bag)
+			std::smatch matches;
+			if (std::regex_search(line, matches, containerPattern))
 			{
-				auto it = bagsByName.find(bag);
-				if (it == bagsByName.end())
-					it = bagsByName.insert(bagsByName.begin(), std::make_pair(bag, new Bag(bag)));
+				// Container bag:
+				std::string bagName = matches[1].str();
+				Bag bag(bagName);
+				line = matches.suffix();
 
-				return it;
-			};
+				// Contents:
+				while (std::regex_search(line, matches, containedPattern))
+				{
+					if (matches[2].str() != "no other")
+						bag.AddBagToContent(matches[2].str(), atoi(matches[1].str().c_str()));
+					
+					line = matches.suffix();
+				}
 
-			// Container:
-			std::string containerBagName = GetContainerBag(line);
-			auto container = FindOrInsert(containerBagName);
-
-			// Contents: reference to their container(s)
-			for (const std::string contentBagName : GetContainedBags(line))
-			{
-				auto content = FindOrInsert(contentBagName);
-				content->second->AddContainer(container->second);
+				bags.emplace(bagName, bag);
 			}
 		}
 
-		// transform values from map in vector:
-		std::vector<Bag*> bags;
-		bags.reserve(input.size());
-		std::transform(bagsByName.begin(), bagsByName.end(), std::back_inserter(bags), 
-			[](const std::pair<std::string, Bag*>& b) { return b.second; });
-
 		return bags;
-	}
-
-	std::string BagProcessor::GetContainerBag(const std::string& bagRule) const
-	{
-		// RegEx: beginning of the line: words and / or spaces, followed by the term ' bags contain' (positive lookahead)
-		// gets the name from the bag mentioned at the beginning
-		std::regex containerPattern = std::regex("^(?:[a-z]| )+(?= bags contain)");
-
-		std::smatch matches;
-		if (std::regex_search(bagRule, matches, containerPattern))
-			return matches[0].str();
-		else
-			return "";
-	}
-
-	std::vector<std::string> BagProcessor::GetContainedBags(const std::string& bagRule) const
-	{
-		// RegEx: number with words and / or spaces, followed by the term 'bag(s)' (positive lookahead)
-		// gets all bag names listed as content
-		std::regex containerPattern = std::regex("[0-9]+ ((?:[a-z]| )+)(?= bags?)");
-
-		std::vector<std::string> bagContents;
-		std::smatch matches;
-		if (std::regex_search(bagRule, matches, containerPattern))
-		{
-			for (auto& m : matches)
-				bagContents.push_back(m.str());
-		}
-
-		return bagContents;
 	}
 }
 

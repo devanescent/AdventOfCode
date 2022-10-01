@@ -6,12 +6,13 @@
 namespace AdventOfCode
 {
 	// Base class for input processors
-	template <typename TResult>
+	template <typename TResult, typename TResultContainer = std::vector<TResult>>
 	class InputProcessorBase
 	{
 	public:
 		using result_type = TResult;
-		virtual std::vector<TResult> Process(std::vector<std::string> input) = 0;
+		using container_type = TResultContainer;
+		virtual typename TResultContainer Process(std::vector<std::string> input) = 0;
 
 	protected:
 		// Joins sets of lines together; sets are seperated by empty lines
