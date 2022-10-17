@@ -8,13 +8,14 @@ namespace AdventOfCode::Year2020::Tests
 {
 	TEST_CLASS(Day07)
 	{
-	private:
-		static std::vector<std::string> inputData;
-
 	public:
-		TEST_CLASS_INITIALIZE(Init)
+		TEST_METHOD(CheckExample_Part1)
 		{
-			inputData = std::vector<std::string>
+			// Arrange:
+			HandyHaversacks sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart1(
 			{
 				"light red bags contain 1 bright white bag, 2 muted yellow bags.",
 				"dark orange bags contain 3 bright white bags, 4 muted yellow bags.",
@@ -25,34 +26,31 @@ namespace AdventOfCode::Year2020::Tests
 				"vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.",
 				"faded blue bags contain no other bags.",
 				"dotted black bags contain no other bags."
-			};
-		}
-
-		TEST_METHOD(ParseInput)
-		{
-			// Arrange:
-			BagProcessor bagProc;
-
-			// Act:
-			std::vector<Bag*> result = bagProc.Process(inputData);
-
-			// Assert
-			// TODO...
-			Assert::IsTrue(true);
-		}
-
-		TEST_METHOD(CheckExample_Part1)
-		{
-			// Arrange:
-			HandyHaversacks day07 = HandyHaversacks("shiny gold");
-
-			// Act:
-			uint64_t result = day07.GetResultOnPart1(inputData);
+			});
 
 			// Assert:
 			Assert::AreEqual(4ull, result);
 		}
-	};
 
-	std::vector<std::string> Day07::inputData = std::vector<std::string>();
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			HandyHaversacks sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(
+			{
+				"shiny gold bags contain 2 dark red bags.",
+				"dark red bags contain 2 dark orange bags.",
+				"dark orange bags contain 2 dark yellow bags.",
+				"dark yellow bags contain 2 dark green bags.",
+				"dark green bags contain 2 dark blue bags.",
+				"dark blue bags contain 2 dark violet bags.",
+				"dark violet bags contain no other bags."
+			});
+
+			// Assert:
+			Assert::AreEqual(126ull, result);
+		}
+	};
 }
