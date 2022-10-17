@@ -28,4 +28,10 @@ namespace AdventOfCode
 	template<> std::vector<int> IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine>::Process(std::vector<std::string> input);
 	template<> std::vector<int> IntProcessor<IntProcessingMode::ValuesAsSpaceSeparatedLine>::Process(std::vector<std::string> input);
 	template<> std::vector<int> IntProcessor<IntProcessingMode::ValuesAsDigits>::Process(std::vector<std::string> input);
+
+	class LargeIntProcessor : public InputProcessorBase<uint64_t>
+	{
+	public:
+		std::vector<uint64_t> Process(std::vector<std::string> input) override;
+	};
 }

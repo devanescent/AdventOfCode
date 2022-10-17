@@ -4,16 +4,17 @@
 
 namespace AdventOfCode::Year2020::Day09
 {
-	class EncodingError : public DayT<IntProcessor<IntProcessingMode::ValuePerLine>>
+	class EncodingError : public DayT<LargeIntProcessor>
 	{
 	public:
-		EncodingError(int preambleLen);
+		EncodingError(size_t preambleLen = 25);
 
 	protected:
-		uint64_t ExecutePart1(std::vector<int> input) override;
+		uint64_t ExecutePart1(std::vector<uint64_t> input) override;
+		uint64_t ExecutePart2(std::vector<uint64_t> input) override;
 
 	private:
-		int m_preambleLen;
+		size_t m_preambleLen;
 	};
 }
 

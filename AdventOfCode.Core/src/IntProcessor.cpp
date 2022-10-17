@@ -23,7 +23,7 @@ namespace AdventOfCode
 		std::vector<int> intList;
 		intList.reserve(input.size());
 
-		std::transform(input.begin(), input.end(), std::back_inserter(intList), [](const std::string s) { return std::stoi(s); });
+		std::transform(input.begin(), input.end(), std::back_inserter(intList), [](const std::string& s) { return std::stoi(s); });
 
 		return intList;
 	}
@@ -79,5 +79,15 @@ namespace AdventOfCode
 		);
 
 		return result;
+	}
+
+	std::vector<uint64_t> LargeIntProcessor::Process(std::vector<std::string> input)
+	{
+		std::vector<uint64_t> lIntList;
+		lIntList.reserve(input.size());
+
+		std::transform(input.begin(), input.end(), std::back_inserter(lIntList), [](const std::string& s) { return std::stoull(s); });
+
+		return lIntList;
 	}
 }

@@ -42,13 +42,25 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			EncodingError day09 = EncodingError(5);
+			EncodingError sut(5);
 
 			// Act:
-			uint64_t result = day09.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(127ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			EncodingError sut(5);
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(62ull, result);
 		}
 	};
 
