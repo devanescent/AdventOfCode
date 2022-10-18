@@ -49,13 +49,25 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			SeatingSystem day11;
+			SeatingSystem sut;
 
 			// Act:
-			uint64_t result = day11.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(37ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			SeatingSystem sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(26ull, result);
 		}
 	};
 
