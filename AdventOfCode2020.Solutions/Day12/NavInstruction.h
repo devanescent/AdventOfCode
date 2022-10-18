@@ -18,7 +18,6 @@ namespace AdventOfCode::Year2020::Day12
 	// ---------------------------------------------------------------------------
 	class NavigationContext
 	{
-
 	public:
 		NavigationContext(NavDirection initialOrientation) :
 			m_northSouthPosition(0), m_eastWestPosition(0), m_orientation(initialOrientation)
@@ -26,13 +25,13 @@ namespace AdventOfCode::Year2020::Day12
 
 		int GetDistanceFromOrigin() { return std::abs(m_northSouthPosition) + std::abs(m_eastWestPosition); }
 		
-		void MoveNorth(int val) { m_northSouthPosition -= val; }
-		void MoveEast(int val) { m_eastWestPosition += val; }
-		void MoveSouth(int val) { m_northSouthPosition += val; }
-		void MoveWest(int val) { m_eastWestPosition -= val; }
-		void TurnLeft() { m_orientation = static_cast<NavDirection>((static_cast<int>(m_orientation) + 3) % 4); }
-		void TurnRight() { m_orientation = static_cast<NavDirection>((static_cast<int>(m_orientation) + 1) % 4); }
-		void MoveForward(int val)
+		virtual void MoveNorth(int val) { m_northSouthPosition -= val; }
+		virtual void MoveEast(int val) { m_eastWestPosition += val; }
+		virtual void MoveSouth(int val) { m_northSouthPosition += val; }
+		virtual void MoveWest(int val) { m_eastWestPosition -= val; }
+		virtual void TurnLeft() { m_orientation = static_cast<NavDirection>((static_cast<int>(m_orientation) + 3) % 4); }
+		virtual void TurnRight() { m_orientation = static_cast<NavDirection>((static_cast<int>(m_orientation) + 1) % 4); }
+		virtual void MoveForward(int val)
 		{
 			switch (m_orientation)
 			{
@@ -43,10 +42,54 @@ namespace AdventOfCode::Year2020::Day12
 			}
 		}
 
-	private:
-		NavDirection	m_orientation;				// only N, E, S, W
+	protected:
 		int				m_northSouthPosition;
 		int				m_eastWestPosition;
+
+	private:
+		NavDirection	m_orientation;				// only N, E, S, W
+	};
+
+	// ---------------------------------------------------------------------------
+	class NavigationWaypointContext : public NavigationContext
+	{
+	public:
+		NavigationWaypointContext(int wayPointNS, int wayPointEW) : 
+			NavigationContext(NavDirection::F), // Orientation does not influence movement of ship anymore
+			m_wayPointNSPosition(wayPointNS), m_wayPointEWPosition(wayPointEW)
+		{}
+
+		// N, E, S, W move waypoint instead of ship:
+		void MoveNorth(int val) override { m_wayPointNSPosition -= val; }
+		void MoveEast(int val) override { m_wayPointEWPosition += val; }
+		void MoveSouth(int val) override { m_wayPointNSPosition += val; }
+		void MoveWest(int val) override { m_wayPointEWPosition -= val; }
+
+		// Move in direction of waypoint the given number of times:
+		void MoveForward(int val) override
+		{
+			m_northSouthPosition += m_wayPointNSPosition * val;
+			m_eastWestPosition += m_wayPointEWPosition * val;
+		}
+
+		void TurnLeft() override
+		{ 
+			int newWayPointNS = -m_wayPointEWPosition;
+			int newWayPointEW = m_wayPointNSPosition;
+			m_wayPointNSPosition = newWayPointNS;
+			m_wayPointEWPosition = newWayPointEW;
+		}
+		void TurnRight() override 
+		{
+			int newWayPointNS = m_wayPointEWPosition;
+			int newWayPointEW = -m_wayPointNSPosition;
+			m_wayPointNSPosition = newWayPointNS;
+			m_wayPointEWPosition = newWayPointEW;
+		}
+
+	private:
+		int m_wayPointNSPosition;
+		int m_wayPointEWPosition;
 	};
 
 	// ---------------------------------------------------------------------------

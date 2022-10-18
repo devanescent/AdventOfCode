@@ -8,10 +8,11 @@ namespace AdventOfCode::Year2020::Day12
 	class RainRisk : public DayT<NavInstructionProcessor>
 	{
 	public:
-		RainRisk(NavDirection startingDirection);
+		RainRisk();
 
 	protected:
 		uint64_t ExecutePart1(std::vector<NavInstruction> navInstrs) override;
+		uint64_t ExecutePart2(std::vector<NavInstruction> navInstrs) override;
 	};
 }
 
