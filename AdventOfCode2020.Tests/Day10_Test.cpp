@@ -61,6 +61,18 @@ namespace AdventOfCode::Year2020::Tests
 			// Assert:
 			Assert::AreEqual(220ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			AdapterArray day10;
+
+			// Act:
+			uint64_t result = day10.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(19208ull, result);
+		}
 	};
 
 	std::vector<std::string> Day10::inputData = std::vector<std::string>();
