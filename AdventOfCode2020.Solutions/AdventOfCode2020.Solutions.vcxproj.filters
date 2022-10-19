@@ -369,5 +369,8 @@
     <ClInclude Include="Day05\BoardingPassProcessor.h">
       <Filter>Day05</Filter>
     </ClInclude>
+    <ClInclude Include="Day14\InitializationContext.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

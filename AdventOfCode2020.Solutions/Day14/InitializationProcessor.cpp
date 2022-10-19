@@ -4,47 +4,36 @@
 
 namespace AdventOfCode::Year2020::Day14
 {
-	std::pair<std::vector<InitializationInstruction>, InitializationContext> InitializationProcessor::Process(std::vector<std::string> input)
+	std::vector<InitializationInstruction> InitializationProcessor::Process(std::vector<std::string> input)
 	{
-		uint64_t bitmask_set = 0;
-		uint64_t bitmask_clear = 0;
-
 		std::vector<InitializationInstruction> instrs;
 
-		if (!input.empty())
+		// Each intruction either updates the bitmask or writes a value to memory:
+		for (const std::string& line : input)
 		{
-			// setmask:
-			std::string mask = input[0];
-			std::replace(mask.begin(), mask.end(), 'X', '0');
-			bitmask_set = std::strtoul(mask.c_str() + 7, nullptr, 2);	// +7: ignore the "mask = " part at the beginning
+			auto startsWith = [](const std::string& s, const std::string& prefix) -> bool { return s.rfind(prefix, 0) == 0; };
 
-			// clearmask:
-			mask = input[0];
-			std::replace(mask.begin(), mask.end(), 'X', '1');
-			bitmask_clear = std::strtoul(mask.c_str() + 7, nullptr, 2);
-
-			// instructions:
 			std::regex instrPattern = std::regex("mem\\[([0-9]+)\\] = ([0-9]+)");
 			std::smatch matches;
 
-			// Iterate instructions from end, because later instructions on the same memory address 
-			// overwrite previous instructions (which therefore do not need to be processed)
-			for (auto it = input.rbegin(); it != input.rend() - 1; ++it)
+			if (startsWith(line, "mask"))
+			{
+				// Add "mask" instruction:
+				instrs.emplace_back(line.substr(7));
+			}
+			else if (startsWith(line, "mem"))
 			{
 				// Number of matches == 3: the whole string plus the two capture groups
-				if (std::regex_search(*it, matches, instrPattern) && matches.size() == 3)
+				if (std::regex_search(line, matches, instrPattern) && matches.size() == 3)
 				{
-					int addr = atoi(matches[1].str().c_str());
-					int val = atoi(matches[2].str().c_str());
-
-					// only add instruction if there is no instruction at this memory address yet:
-					if (std::find_if(instrs.begin(), instrs.end(), [addr](const InitializationInstruction& ins) { return ins.GetAddress() == addr; }) == instrs.end())
-						instrs.push_back(InitializationInstruction(addr, val));
+					uint64_t addr = std::strtoull(matches[1].str().c_str(), nullptr, 10);
+					uint64_t val = std::strtoull(matches[2].str().c_str(), nullptr, 10);
+					instrs.emplace_back(addr, val);
 				}
 			}
 		}
 		
-		return std::make_pair(instrs, InitializationContext(bitmask_set, bitmask_clear));
+		return instrs;
 	}
 }
 

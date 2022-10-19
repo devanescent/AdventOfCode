@@ -94,6 +94,7 @@
     <ClInclude Include="Day13\ShuttleLine.h" />
     <ClInclude Include="Day13\ShuttleLineProcessor.h" />
     <ClInclude Include="Day14\Day14_DockingData.h" />
+    <ClInclude Include="Day14\InitializationContext.h" />
     <ClInclude Include="Day14\InitializationInstruction.h" />
     <ClInclude Include="Day14\InitializationProcessor.h" />
     <ClInclude Include="Day15\Day15_RambunctiousRecitation.h" />

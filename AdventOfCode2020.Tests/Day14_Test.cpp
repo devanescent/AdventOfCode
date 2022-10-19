@@ -32,47 +32,42 @@ namespace AdventOfCode::Year2020::Tests
 			InitializationProcessor inProc;
 
 			// Act:
-			std::pair<std::vector<InitializationInstruction>, InitializationContext> result = inProc.Process(inputData);
-
-			// Assert: (note: instructions are processed in reverse order, only the first one for each memory address is kept)
-			Assert::AreEqual(InitializationInstruction(8, 0), result.first[0], L"Instruction no.1 incorrect!");
-			Assert::AreEqual(InitializationInstruction(7, 101), result.first[1], L"Instruction no.2 incorrect!");
-		}
-
-		TEST_METHOD(CheckContext_SetBits)
-		{
-			// Arrange:
-			InitializationContext ctx(0b00000111, 0b11111111);	// sets last three bits to 1, no bits are cleared
-			
-			// Act:
-			ctx.SetMemory(1, 1);
+			std::vector<InitializationInstruction> result = inProc.Process(inputData);
 
 			// Assert:
-			Assert::AreEqual((uint64_t)0b111, ctx.GetMemorySum());
-		}
-
-		TEST_METHOD(CheckContext_ClearBits)
-		{
-			// Arrange:
-			InitializationContext ctx(0b00000000, 0b11111100);	// clears last two bits, no extra bits are set
-
-			// Act:
-			ctx.SetMemory(1, 0b111);
-
-			// Assert:
-			Assert::AreEqual((uint64_t)0b100, ctx.GetMemorySum());
+			Assert::AreEqual(InitializationInstruction("XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X"), result[0], L"Instruction no.1 incorrect!");
+			Assert::AreEqual(InitializationInstruction(8, 11), result[1], L"Instruction no.2 incorrect!");
+			Assert::AreEqual(InitializationInstruction(7, 101), result[2], L"Instruction no.3 incorrect!");
 		}
 
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			DockingData day14;
+			DockingData sut;
 
 			// Act:
-			uint64_t result = day14.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(165ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			DockingData sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(
+			{
+				"mask = 000000000000000000000000000000X1001X",
+				"mem[42] = 100",
+				"mask = 00000000000000000000000000000000X0XX",
+				"mem[26] = 1",
+			});
+
+			// Assert:
+			Assert::AreEqual(208ull, result);
 		}
 	};
 

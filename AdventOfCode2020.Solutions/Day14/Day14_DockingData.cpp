@@ -2,14 +2,26 @@
 
 namespace AdventOfCode::Year2020::Day14
 {
-	DockingData::DockingData() : DayTC(14, "Docking Data") {}
+	DockingData::DockingData() : DayT(14, "Docking Data") {}
 
-	uint64_t DockingData::ExecutePart1(std::vector<InitializationInstruction> instrs, InitializationContext instrCtx)
+	uint64_t DockingData::ExecutePart1(std::vector<InitializationInstruction> instrs)
 	{
-		for (auto& instr : instrs)
-			instr.Execute(instrCtx);
+		InitializationContext ctx;
 
-		return instrCtx.GetMemorySum();
+		for (auto& instr : instrs)
+			instr.Execute(ctx);
+
+		return ctx.GetMemorySum();
+	}
+
+	uint64_t DockingData::ExecutePart2(std::vector<InitializationInstruction> instrs)
+	{
+		InitializationContextV2 ctx;
+
+		for (auto& instr : instrs)
+			instr.Execute(ctx);
+
+		return ctx.GetMemorySum();
 	}
 }
 

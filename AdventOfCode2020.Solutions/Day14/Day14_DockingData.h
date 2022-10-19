@@ -1,17 +1,17 @@
 #pragma once
-#include "DayTC.h"
-#include "InitializationInstruction.h"
+#include "DayT.h"
 #include "InitializationProcessor.h"
 
 namespace AdventOfCode::Year2020::Day14
 {
-	class DockingData : public DayTC<InitializationProcessor>
+	class DockingData : public DayT<InitializationProcessor>
 	{
 	public:
 		DockingData();
 
 	protected:
-		uint64_t ExecutePart1(std::vector<InitializationInstruction> instrs, InitializationContext instrCtx) override;
+		uint64_t ExecutePart1(std::vector<InitializationInstruction> instrs) override;
+		uint64_t ExecutePart2(std::vector<InitializationInstruction> instrs) override;
 	};
 }
 

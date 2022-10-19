@@ -1,13 +1,13 @@
 #pragma once
-#include "InputProcessorWithContext.h"
+#include "InputProcessor.h"
 #include "InitializationInstruction.h"
 
 namespace AdventOfCode::Year2020::Day14
 {
-	class InitializationProcessor : public InputProcessorWithContextBase<InitializationInstruction, InitializationContext>
+	class InitializationProcessor : public InputProcessorBase<InitializationInstruction>
 	{
 	public:
-		std::pair<std::vector<InitializationInstruction>, InitializationContext> Process(std::vector<std::string> input) override;
+		std::vector<InitializationInstruction> Process(std::vector<std::string> input) override;
 	};
 }
 
