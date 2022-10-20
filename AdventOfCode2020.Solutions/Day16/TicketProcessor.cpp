@@ -49,7 +49,7 @@ namespace AdventOfCode::Year2020::Day16
 				// Parse ticket data afterwards:
 				else
 				{
-					if (line.empty() || line.rfind(':', std::string::npos) != std::string::npos)
+					if (line.empty() || line.back() == ':')
 						continue;	// skip labels "your ticket:" and "nearby tickets:" as well as empty lines
 					else
 					{

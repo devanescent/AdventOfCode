@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <map>
+#include <set>
 
 namespace AdventOfCode::Year2020::Day16
 {
@@ -83,6 +85,8 @@ namespace AdventOfCode::Year2020::Day16
 			m_fieldName(name), m_allowedValues(ranges)
 		{}
 
+		const std::string& Name() const { return m_fieldName; }
+
 		bool IsAllowed(int val)
 		{
 			for (const ValueInterval& vi : m_allowedValues)
@@ -123,28 +127,51 @@ namespace AdventOfCode::Year2020::Day16
 			m_fields(fields)
 		{}
 
-		// Checks the given Ticket against all rules and return the error rate:
-		// the sum of all values that do not match any of the rules
-		int Validate(const Ticket& ticket)
+		// Checks the given Ticket against all rules, returns true if the ticket is valid, false otherwise.
+		// Additionally returns the error rate: the sum of all values that do not match any of the rules.
+		bool Validate(const Ticket& ticket, int& errorRate)
 		{
-			int errorRate = 0;
+			bool isTicketValid = true;
+
+			errorRate = 0;
 			for (int val : ticket.Values())
 			{
-				bool isValid = false;
+				bool isFieldValid = false;
 				for (TicketField& tField : m_fields)
 				{
 					if (tField.IsAllowed(val))
 					{
-						isValid = true;
+						isFieldValid = true;
 						break;	// no need checking the rest of the rules for this value
 					}
 				}
 
-				if (!isValid)
+				if (!isFieldValid)
+				{
+					isTicketValid = false;
 					errorRate += val;
+				}
 			}
 
-			return errorRate;
+			return isTicketValid;
+		}
+
+		std::map<std::string, std::set<int>> MatchValuesToFields(const Ticket& ticket)
+		{
+			// For each rule by name, check which values (by index) of the ticket match this rule
+			std::map<std::string, std::set<int>> matchingValueIndices;
+
+			for (TicketField& tField : m_fields)
+			{
+				const auto& tValues = ticket.Values();
+				for (int i = 0; i < tValues.size(); ++i)
+				{
+					if (tField.IsAllowed(tValues[i]))
+						matchingValueIndices[tField.Name()].insert(i);
+				}
+			}
+
+			return matchingValueIndices;
 		}
 
 		bool operator==(const TicketRules& other) const
