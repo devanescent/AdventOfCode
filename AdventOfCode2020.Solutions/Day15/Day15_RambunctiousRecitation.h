@@ -11,6 +11,7 @@ namespace AdventOfCode::Year2020::Day15
 
 	protected:
 		uint64_t ExecutePart1(std::vector<int> input) override;
+		uint64_t ExecutePart2(std::vector<int> input) override;
 
 	private:
 		int m_numberOfTurns;

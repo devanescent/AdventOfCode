@@ -8,31 +8,14 @@ namespace AdventOfCode::Year2020::Tests
 {
 	TEST_CLASS(Day15)
 	{
-	private:
-		static std::vector<std::string> inputData;
-		static std::vector<std::string> inputData2;
-
 	public:
-		TEST_CLASS_INITIALIZE(Init)
-		{
-			inputData = std::vector<std::string>
-			{
-				"0,3,6"
-			};
-
-			inputData2 = std::vector<std::string>
-			{
-				"3,2,1"
-			};
-		}
-
 		TEST_METHOD(ParseInput)
 		{
 			// Arrange:
 			IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine> intProc;
 
 			// Act:
-			std::vector<int> result = intProc.Process(inputData);
+			std::vector<int> result = intProc.Process({ "0,3,6" });
 
 			// Assert:
 			Assert::AreEqual(0, result[0]);
@@ -46,7 +29,7 @@ namespace AdventOfCode::Year2020::Tests
 			RambunctiousRecitation day15(10);
 
 			// Act:
-			uint64_t result = day15.GetResultOnPart1(inputData);
+			uint64_t result = day15.GetResultOnPart1({ "0,3,6" });
 
 			// Assert:
 			Assert::AreEqual(0ull, result);
@@ -58,13 +41,22 @@ namespace AdventOfCode::Year2020::Tests
 			RambunctiousRecitation day15(2020);
 
 			// Act:
-			uint64_t result = day15.GetResultOnPart1(inputData2);
+			uint64_t result = day15.GetResultOnPart1({ "0,3,6" });
 
 			// Assert:
-			Assert::AreEqual(438ull, result);
+			Assert::AreEqual(436ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			RambunctiousRecitation day15(30000000);
+
+			// Act:
+			uint64_t result = day15.GetResultOnPart2({ "0,3,6" });
+
+			// Assert:
+			Assert::AreEqual(175594ull, result);
 		}
 	};
-
-	std::vector<std::string> Day15::inputData = std::vector<std::string>();
-	std::vector<std::string> Day15::inputData2 = std::vector<std::string>();
 }

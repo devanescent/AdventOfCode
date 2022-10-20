@@ -10,42 +10,40 @@ namespace AdventOfCode::Year2020::Day15
 
 	uint64_t RambunctiousRecitation::ExecutePart1(std::vector<int> input)
 	{
-		if (!input.empty())
+		std::map<uint64_t /*value*/, uint64_t /*turn*/> lookup;	// remember turn in which the value last occured
+
+		// Process starting numbers
+		for (uint64_t i = 0; i < input.size(); ++i)
+			lookup[input[i]] = i + 1; // Turns are counted from 1 on
+			
+		// Assuming no duplicates in the initial number, the next number spoken will be zero
+		uint64_t currentNum = 0;
+
+		for (uint64_t turn = input.size() + 1; turn < m_numberOfTurns; ++turn)
 		{
-			input.reserve(m_numberOfTurns);						// so that push_back does not invalidate iterators
-			std::map<int /*value*/, int /*last pos*/> lookup;	// remember value positions for better performance
+			auto prev = lookup.find(currentNum);
 
-			int currentSize;
-			while ((currentSize = (int)input.size()) < m_numberOfTurns)
+			if (prev == lookup.end())
 			{
-				int lastElem = input.back();
-				int prevPos;
-
-				auto lookupIt = lookup.find(lastElem);
-				if (lookupIt != lookup.end())
-					prevPos = lookupIt->second;
-				else
-				{
-					// Find last element in previous turns (search from back -> reverse iterator)
-					// -> will give -1 if item is encountered the first time
-					prevPos = static_cast<int>(std::distance(std::find(input.rbegin() + 1, input.rend(), lastElem), input.rend())) - 1;
-				}
-
-				// Add to lookup:
-				lookup[lastElem] = currentSize - 1;
-
-				// Last element has not been used before: add 0 to end
-				if (prevPos == -1)
-					input.push_back(0);
-
-				// Element has been used before: calculate how many turns ago that was
-				else
-					input.push_back(currentSize - prevPos - 1);
+				// Number has not occured before
+				lookup[currentNum] = turn;
+				currentNum = 0;
 			}
-
-			return input.back();
+			else
+			{
+				// Next number is difference between now and last time it occured
+				uint64_t nextNum = turn - prev->second;
+				lookup[currentNum] = turn;
+				currentNum = nextNum;
+			}
 		}
 
-		return 0;
+		return currentNum;
+	}
+
+	uint64_t RambunctiousRecitation::ExecutePart2(std::vector<int> input)
+	{
+		// Same as Part 1, just with more turns:
+		return ExecutePart1(input);
 	}
 }
