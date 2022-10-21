@@ -202,6 +202,12 @@
     <ClCompile Include="Day05\BoardingPassProcessor.cpp">
       <Filter>Day05</Filter>
     </ClCompile>
+    <ClCompile Include="Day19\Day19_MonsterMessages.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\MessageRuleProcessor.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ReportRepair.h">
@@ -371,6 +377,15 @@
     </ClInclude>
     <ClInclude Include="Day14\InitializationContext.h">
       <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\Day19_MonsterMessages.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\MessageRuleProcessor.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\MessageRules.h">
+      <Filter>Day19</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
