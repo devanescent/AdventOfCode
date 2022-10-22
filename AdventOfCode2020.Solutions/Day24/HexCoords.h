@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 namespace AdventOfCode::Year2020::Day24
 {
@@ -9,6 +10,20 @@ namespace AdventOfCode::Year2020::Day24
 		HexCoords(int swne, int nwse) :
 			m_swne(swne), m_nwse(nwse)
 		{}
+
+		std::vector<HexCoords> GetNeighbours() const
+		{
+			std::vector<HexCoords> neighbours;
+
+			neighbours.emplace_back(m_swne + 1, m_nwse);		// NE
+			neighbours.emplace_back(m_swne + 1, m_nwse + 1);	// E
+			neighbours.emplace_back(m_swne, m_nwse + 1);		// SE
+			neighbours.emplace_back(m_swne - 1, m_nwse);		// SW
+			neighbours.emplace_back(m_swne - 1, m_nwse - 1);	// W
+			neighbours.emplace_back(m_swne, m_nwse - 1);		// NW
+
+			return neighbours;
+		}
 
 		// for using as key in map
 		bool operator<(const HexCoords& rhs) const

@@ -59,13 +59,25 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			LobbyLayout day24;
+			LobbyLayout sut;
 
 			// Act:
-			uint64_t result = day24.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(10ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			LobbyLayout sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(2208ull, result);
 		}
 	};
 

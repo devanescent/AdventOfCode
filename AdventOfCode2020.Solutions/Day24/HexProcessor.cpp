@@ -12,7 +12,7 @@ namespace AdventOfCode::Year2020::Day24
 
 	HexCoords HexProcessor::ParseDirections(const std::string& directions)
 	{
-		bool isDiag = false;		// for direction consisting of two letters (ne, nw, se, sw)
+		bool isDiag = false; // for direction consisting of two letters (ne, nw, se, sw)
 		bool isNorth;
 		int swne = 0;
 		int nwse = 0;
