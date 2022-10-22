@@ -37,13 +37,25 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			CrabCups day23(100);
+			CrabCups day23;
 
 			// Act:
 			uint64_t result = day23.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(67384529ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			CrabCups day23;
+
+			// Act:
+			uint64_t result = day23.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(149245887792ull, result);
 		}
 	};
 
