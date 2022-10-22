@@ -8,13 +8,11 @@ namespace AdventOfCode::Year2020::Day17
 	class ConvayCubes : public DayT<CubeProcessor>
 	{
 	public:
-		ConvayCubes(int cycles);
+		ConvayCubes();
 
 	protected:
 		uint64_t ExecutePart1(std::vector<CubeCoords> activeCubes) override;
-
-	private:
-		int m_cycles;
+		uint64_t ExecutePart2(std::vector<CubeCoords> activeCubes) override;
 	};
 }
 

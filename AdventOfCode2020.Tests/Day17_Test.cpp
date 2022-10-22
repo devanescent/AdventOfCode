@@ -42,13 +42,25 @@ namespace AdventOfCode::Year2020::Tests
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			ConvayCubes day17(6);
+			ConvayCubes sut;
 
 			// Act:
-			uint64_t result = day17.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(112ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			ConvayCubes sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(848ull, result);
 		}
 	};
 
