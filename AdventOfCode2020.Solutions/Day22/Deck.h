@@ -6,25 +6,30 @@ namespace AdventOfCode::Year2020::Day22
 	class Deck
 	{
 	public:
-		Deck(std::deque<uint64_t> cards) :
+		Deck(std::deque<int> cards) :
 			m_cards(cards)
 		{}
 
-		uint64_t PopTop()
+		int DrawCard()
 		{
-			uint64_t top = m_cards.front();
+			int top = m_cards.front();
 			m_cards.pop_front();
 			return top;
 		}
 
-		void AddBack(uint64_t card)
+		void AddCardToBack(int card)
 		{
 			m_cards.push_back(card);
 		}
 
-		bool ContainsCards()
+		int GetCardCount()
 		{
-			return !m_cards.empty();
+			return static_cast<int>(m_cards.size());
+		}
+
+		Deck CopyDeck(int numberOfCards)
+		{
+			return Deck({ m_cards.begin(), m_cards.begin() + numberOfCards });
 		}
 
 		uint64_t GetScore()
@@ -58,6 +63,6 @@ namespace AdventOfCode::Year2020::Day22
 		}
 
 	private:
-		std::deque<uint64_t> m_cards;
+		std::deque<int> m_cards;
 	};
 }
