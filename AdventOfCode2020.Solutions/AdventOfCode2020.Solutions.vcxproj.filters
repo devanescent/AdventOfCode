@@ -118,9 +118,6 @@
     <ClCompile Include="Day08\Day08_HandheldHalting.cpp">
       <Filter>Day08</Filter>
     </ClCompile>
-    <ClCompile Include="Day08\Instruction.cpp">
-      <Filter>Day08</Filter>
-    </ClCompile>
     <ClCompile Include="Day08\InstructionProcessor.cpp">
       <Filter>Day08</Filter>
     </ClCompile>

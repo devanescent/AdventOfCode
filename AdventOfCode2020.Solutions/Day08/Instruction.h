@@ -15,12 +15,49 @@ namespace AdventOfCode::Year2020::Day08
 			JMP
 		};
 
-		Instruction(InstrType type, int arg);
-		bool Execute(std::vector<Instruction>::iterator& stackPtr, ExecutionContext& context);
+		Instruction(int index, InstrType type, int arg) :
+			m_index(index), m_type(type), m_arg(arg)
+		{}
+
+		// Executes the current instruction, returns index of the next instruction to be executed:
+		int Execute(ExecutionContext& context) const
+		{
+			context.SetInstructionAsExecuted(m_index);
+
+			int nextIndex;
+			switch (m_type)
+			{
+				case InstrType::JMP:
+					nextIndex = m_index + m_arg;
+					break;
+				case InstrType::ACC:
+					context.ChangeAccumulator(m_arg);
+					/*fall-through*/
+				case InstrType::NOP:
+				default:
+					nextIndex = m_index + 1;
+					break;
+			}
+
+			return nextIndex;
+		}
+
+		bool IsJMPorNOP() const
+		{
+			return (m_type == InstrType::JMP) || (m_type == InstrType::NOP);
+		}
+
+		void SwapJMPandNOP()
+		{
+			if (m_type == InstrType::NOP)
+				m_type = InstrType::JMP;
+			else if (m_type == InstrType::JMP)
+				m_type = InstrType::NOP;
+		}
 
 		bool operator==(const Instruction& other) const
 		{
-			return m_type == other.m_type && m_arg == other.m_arg;
+			return m_index == other.m_index && m_type == other.m_type && m_arg == other.m_arg;
 		}
 
 		std::string ToString() const
@@ -31,8 +68,8 @@ namespace AdventOfCode::Year2020::Day08
 		}
 
 	private:
+		int			m_index;
 		InstrType	m_type;
 		int			m_arg;
-		bool		m_wasExecuted;
 	};
 }

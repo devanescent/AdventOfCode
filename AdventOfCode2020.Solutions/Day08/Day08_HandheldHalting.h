@@ -12,5 +12,6 @@ namespace AdventOfCode::Year2020::Day08
 
 	protected:
 		uint64_t ExecutePart1(std::vector<Instruction> instructions) override;
+		uint64_t ExecutePart2(std::vector<Instruction> instructions) override;
 	};
 }

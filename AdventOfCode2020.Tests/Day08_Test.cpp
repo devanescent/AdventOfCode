@@ -40,21 +40,33 @@ namespace AdventOfCode::Year2020::Tests
 			std::vector<Instruction> result = instrProc.Process(inputData);
 
 			// Assert:
-			Assert::AreEqual(Instruction(Instruction::InstrType::NOP, 0), result[0], L"Instruction data no.1 incorrect!");
-			Assert::AreEqual(Instruction(Instruction::InstrType::JMP, 4), result[2], L"Instruction data no.3 incorrect!");
-			Assert::AreEqual(Instruction(Instruction::InstrType::ACC, -99), result[5], L"Instruction data no.6 incorrect!");
+			Assert::AreEqual(Instruction(0, Instruction::InstrType::NOP, 0), result[0], L"Instruction data no.1 incorrect!");
+			Assert::AreEqual(Instruction(2, Instruction::InstrType::JMP, 4), result[2], L"Instruction data no.3 incorrect!");
+			Assert::AreEqual(Instruction(5, Instruction::InstrType::ACC, -99), result[5], L"Instruction data no.6 incorrect!");
 		}
 
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
-			HandheldHalting day08;
+			HandheldHalting sut;
 
 			// Act:
-			uint64_t result = day08.GetResultOnPart1(inputData);
+			uint64_t result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
 			Assert::AreEqual(5ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			HandheldHalting sut;
+
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(8ull, result);
 		}
 	};
 

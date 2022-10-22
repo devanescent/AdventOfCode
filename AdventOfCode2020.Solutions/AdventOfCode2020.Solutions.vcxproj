@@ -33,7 +33,6 @@
     <ClCompile Include="Day07\BagProcessor.cpp" />
     <ClCompile Include="Day07\Day07_HandyHaversacks.cpp" />
     <ClCompile Include="Day08\Day08_HandheldHalting.cpp" />
-    <ClCompile Include="Day08\Instruction.cpp" />
     <ClCompile Include="Day08\InstructionProcessor.cpp" />
     <ClCompile Include="Day09\Day09_EncodingError.cpp" />
     <ClCompile Include="Day10\Day10_AdapterArray.cpp" />
