@@ -11,6 +11,6 @@ namespace AdventOfCode::Year2020::Day20
 		JurassicJigsaw();
 
 	protected:
-		uint64_t ExecutePart1(std::vector<Tile> input) override;
+		uint64_t ExecutePart1(std::vector<Tile> tiles) override;
 	};
 }

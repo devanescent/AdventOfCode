@@ -149,8 +149,9 @@ namespace AdventOfCode::Year2020::Tests
 			Tile t2(2, "xyz", "123", "abc", "nmo");
 			Tile t3(3, "opq", "rst", "uvw", "zyx");
 
-			Assert::IsTrue(t1.Match(&t2));
-			Assert::IsTrue(t2.Match(&t3));
+			Assert::IsTrue(t1.Match(t2));
+			Assert::IsTrue(t2.Match(t3));
+			Assert::IsFalse(t1.Match(t3));
 		}
 
 		TEST_METHOD(CheckExample_Part1)
