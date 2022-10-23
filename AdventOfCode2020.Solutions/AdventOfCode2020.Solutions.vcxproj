@@ -54,6 +54,8 @@
     <ClCompile Include="Day19\MessageRuleProcessor.cpp" />
     <ClCompile Include="Day20\Day20_JurassicJigsaw.cpp" />
     <ClCompile Include="Day20\TileProcessor.cpp" />
+    <ClCompile Include="Day21\Day21_AllergenAssessment.cpp" />
+    <ClCompile Include="Day21\FoodProcessor.cpp" />
     <ClCompile Include="Day22\Day22_CrabCombat.cpp" />
     <ClCompile Include="Day22\DeckProcessor.cpp" />
     <ClCompile Include="Day23\Day23_CrabCups.cpp" />
@@ -111,6 +113,9 @@
     <ClInclude Include="Day20\Day20_JurassicJigsaw.h" />
     <ClInclude Include="Day20\Tile.h" />
     <ClInclude Include="Day20\TileProcessor.h" />
+    <ClInclude Include="Day21\Day21_AllergenAssessment.h" />
+    <ClInclude Include="Day21\Food.h" />
+    <ClInclude Include="Day21\FoodProcessor.h" />
     <ClInclude Include="Day22\Day22_CrabCombat.h" />
     <ClInclude Include="Day22\Deck.h" />
     <ClInclude Include="Day22\DeckProcessor.h" />

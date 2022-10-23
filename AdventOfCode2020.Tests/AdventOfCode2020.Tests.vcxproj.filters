@@ -107,6 +107,9 @@
     <ClCompile Include="Day19_Test.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Day21_Test.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AdventOfCode2020.Tests.rc">
