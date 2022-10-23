@@ -50,7 +50,6 @@
     <ClCompile Include="Day17\CubeProcessor.cpp" />
     <ClCompile Include="Day17\Day17_ConvayCubes.cpp" />
     <ClCompile Include="Day18\Day18_OperationOrder.cpp" />
-    <ClCompile Include="Day18\MathExpressionProcessor.cpp" />
     <ClCompile Include="Day19\Day19_MonsterMessages.cpp" />
     <ClCompile Include="Day19\MessageRuleProcessor.cpp" />
     <ClCompile Include="Day20\Day20_JurassicJigsaw.cpp" />
@@ -106,7 +105,6 @@
     <ClInclude Include="Day17\CubeProcessor.h" />
     <ClInclude Include="Day17\Day17_ConvayCubes.h" />
     <ClInclude Include="Day18\Day18_OperationOrder.h" />
-    <ClInclude Include="Day18\MathExpressionProcessor.h" />
     <ClInclude Include="Day19\Day19_MonsterMessages.h" />
     <ClInclude Include="Day19\MessageRuleProcessor.h" />
     <ClInclude Include="Day19\MessageRules.h" />

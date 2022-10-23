@@ -169,9 +169,6 @@
     <ClCompile Include="Day18\Day18_OperationOrder.cpp">
       <Filter>Day18</Filter>
     </ClCompile>
-    <ClCompile Include="Day18\MathExpressionProcessor.cpp">
-      <Filter>Day18</Filter>
-    </ClCompile>
     <ClCompile Include="Day20\Day20_JurassicJigsaw.cpp">
       <Filter>Day20</Filter>
     </ClCompile>
@@ -328,9 +325,6 @@
       <Filter>Day17</Filter>
     </ClInclude>
     <ClInclude Include="Day18\Day18_OperationOrder.h">
-      <Filter>Day18</Filter>
-    </ClInclude>
-    <ClInclude Include="Day18\MathExpressionProcessor.h">
       <Filter>Day18</Filter>
     </ClInclude>
     <ClInclude Include="Day20\Day20_JurassicJigsaw.h">

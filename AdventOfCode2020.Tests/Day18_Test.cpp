@@ -24,20 +24,6 @@ namespace AdventOfCode::Year2020::Tests
 			};
 		}
 
-		TEST_METHOD(ParseInput)
-		{
-			// Arrange:
-			MathExpressionProcessor mathProc;
-
-			// Act:
-			std::vector<std::string> result = mathProc.Process(inputData);
-
-			// Assert
-			Assert::AreEqual(std::string("23*45*+"), result[0], L"Expression no.1 incorrect!");
-			Assert::AreEqual(std::string("583*9+3+4*3*+"), result[2], L"Expression no.3 incorrect!");
-			Assert::AreEqual(std::string("24+9*69+8*6+*6+2+4+2*"), result[4], L"Expression no.5 incorrect!");
-		}
-
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
@@ -48,6 +34,18 @@ namespace AdventOfCode::Year2020::Tests
 
 			// Assert:
 			Assert::AreEqual(26386ull, result);
+		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			OperationOrder day18;
+
+			// Act:
+			uint64_t result = day18.GetResultOnPart2(inputData);
+
+			// Assert:
+			Assert::AreEqual(693942ull, result);
 		}
 	};
 
