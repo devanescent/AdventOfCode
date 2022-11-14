@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<Project>
+    <PropertyGroup>
+        <BaseOutputPath>..\obj\</BaseOutputPath>
+        <BaseIntermediateOutputPath>..\obj\AdventOfCode.ProjectHelper</BaseIntermediateOutputPath>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+    </PropertyGroup>
+</Project>

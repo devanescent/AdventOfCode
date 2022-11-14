@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32901.82
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2020.Solutions", "AdventOfCode2020.Solutions\AdventOfCode2020.Solutions.vcxproj", "{6E6D4998-F770-40DF-BB86-7FC0221C5B27}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2018.Solutions", "AdventOfCode2018.Solutions\AdventOfCode2018.Solutions.vcxproj", "{B30A2A41-93C4-4889-8CE9-194BD0F714E0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2018.Tests", "AdventOfCode2018.Tests\AdventOfCode2018.Tests.vcxproj", "{1B06F401-D798-4325-B499-3FE7FE1150FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode.ProjectHelper", "AdventOfCode.ProjectHelper\AdventOfCode.ProjectHelper.csproj", "{6304404E-E3FB-462F-80FE-5BB7F36F1502}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{1B06F401-D798-4325-B499-3FE7FE1150FF}.Debug|x64.Build.0 = Debug|x64
 		{1B06F401-D798-4325-B499-3FE7FE1150FF}.Release|x64.ActiveCfg = Release|x64
 		{1B06F401-D798-4325-B499-3FE7FE1150FF}.Release|x64.Build.0 = Release|x64
+		{6304404E-E3FB-462F-80FE-5BB7F36F1502}.Debug_2019|x64.ActiveCfg = Debug|x64
+		{6304404E-E3FB-462F-80FE-5BB7F36F1502}.Debug|x64.ActiveCfg = Debug|x64
+		{6304404E-E3FB-462F-80FE-5BB7F36F1502}.Debug|x64.Build.0 = Debug|x64
+		{6304404E-E3FB-462F-80FE-5BB7F36F1502}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
