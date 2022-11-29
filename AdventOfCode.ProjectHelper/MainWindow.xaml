@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdventOfCode.ProjectHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Width="700" SizeToContent="Height">
+        Title="MainWindow" Width="750" SizeToContent="Height">
 	<Grid>
 		<StackPanel Orientation="Vertical">
 			<GroupBox>
@@ -24,14 +24,14 @@
 						<TextBox Text="{Binding Title}" Width="250" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
 					</StackPanel>
 					<GroupBox Header="Add the following STL includes to the source file:">
-						<StackPanel Orientation="Vertical">
+						<UniformGrid Width="300" HorizontalAlignment="Left">
 							<CheckBox IsChecked="{Binding DaySTL.UseStdAlgorithm}" Content="&lt;algorithm&gt;"/>
 							<CheckBox IsChecked="{Binding DaySTL.UseStdDeque}" Content="&lt;deque&gt;"/>
 							<CheckBox IsChecked="{Binding DaySTL.UseStdMap}" Content="&lt;map&gt;"/>
 							<CheckBox IsChecked="{Binding DaySTL.UseStdNumeric}" Content="&lt;numeric&gt;"/>
 							<CheckBox IsChecked="{Binding DaySTL.UseStdSet}" Content="&lt;set&gt;"/>
 							<CheckBox IsChecked="{Binding DaySTL.UseStdStack}" Content="&lt;stack&gt;"/>
-						</StackPanel>
+						</UniformGrid>
 					</GroupBox>
 				</StackPanel>
 			</GroupBox>
@@ -41,17 +41,22 @@
 					<CheckBox x:Name="cbEnableProcessor" VerticalAlignment="Center" Content="Use processor:" FontSize="18"/>
 				</GroupBox.Header>
 				<StackPanel Orientation="Vertical" IsEnabled="{Binding ElementName=cbEnableProcessor, Path=IsChecked}">
-					<StackPanel Orientation="Horizontal" Margin="10,0">
-						<Label Content="Processor name:" FontSize="14" />
+					<StackPanel Orientation="Horizontal">
+						<Label Content="Processor name:" Width="120" FontSize="14" />
 						<TextBox Text="{Binding Processor}" Width="250" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
 					</StackPanel>
-					<StackPanel Orientation="Horizontal" Margin="10,0">
-						<Label Content="Result name:" FontSize="14" />
+					<StackPanel Orientation="Horizontal">
+                        <Label Content="Result name:" Width="120" FontSize="14" />
 						<TextBox Text="{Binding Result}" Width="150" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
-						<Label Content="Context:" FontSize="14" Margin="30,0,0,0"/>
-						<TextBox Text="{Binding Context}" Width="150" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
-						<CheckBox IsChecked="{Binding CreateContextType}" Content="Create context as new type" VerticalAlignment="Center" Margin="10,0,0,0"/>
-					</StackPanel>
+                        <CheckBox IsChecked="{Binding CreateResultType}" Content="Create result as new type" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <CheckBox IsChecked="{Binding ResultOptions.EqualsOperator}" Content="Add equals operator" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <CheckBox IsChecked="{Binding ResultOptions.ToStringMethod}" Content="Add ToString()" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Context:" Width="120" FontSize="14"/>
+                        <TextBox Text="{Binding Context}" Width="150" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
+                        <CheckBox IsChecked="{Binding CreateContextType}" Content="Create context as new type" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
 					<GroupBox Header="Add the following STL includes to the processor source file:">
 						<StackPanel Orientation="Vertical">
 							<CheckBox IsChecked="{Binding ProcSTL.UseStdAlgorithm}" Content="&lt;algorithm&gt;"/>

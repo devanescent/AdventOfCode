@@ -5,6 +5,12 @@ using System.Text;
 
 namespace AdventOfCode.ProjectHelper
 {
+	public class ResultOptions
+	{
+		public bool EqualsOperator { get; set; }
+		public bool ToStringMethod { get; set; }
+	}
+
 	public class ProcessorCreator
 	{
 		private string _day = string.Empty;
@@ -13,7 +19,9 @@ namespace AdventOfCode.ProjectHelper
 		private string _processorName = string.Empty;
 		private string _resultName = string.Empty;
 		private string _contextName = string.Empty;
+		private bool _createResultType = false;
 		private bool _createContextType = false;
+		private ResultOptions _resultOptions;
 
 		public ProcessorCreator() { }
 
@@ -24,10 +32,17 @@ namespace AdventOfCode.ProjectHelper
 			return this;
 		}
 
-		public ProcessorCreator WithProcessor(string processorName, string resultName)
+		public ProcessorCreator WithProcessor(string processorName, string resultName, bool createType)
 		{
 			_processorName = processorName;
 			_resultName = resultName;
+			_createResultType = createType;
+			return this;
+		}
+
+		public ProcessorCreator WithResultOptions(ResultOptions options)
+		{
+			_resultOptions = options;
 			return this;
 		}
 
@@ -43,12 +58,38 @@ namespace AdventOfCode.ProjectHelper
 			using (StreamWriter sw = new StreamWriter(outStream, Encoding.UTF8))
 			{
 				sw.WriteLine("#pragma once");
+				if (_resultOptions?.ToStringMethod ?? false)
+					sw.WriteLine("#include <string>");
+
 				AddBlank(sw);
 
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
 				{
 					using (_ = new ClassDeclarationWriter(_resultName, DefaultCtor.None, sw))
-					{ }
+					{ 
+						if (_resultOptions != null)
+						{
+							sw.WriteLine("\tpublic:");
+							if (_resultOptions.EqualsOperator)
+							{
+								AddBlank(sw);
+								sw.WriteLine($"\t\tbool operator==(const {_resultName}& other) const");
+								sw.WriteLine("\t\t{");
+								sw.WriteLine("\t\t\treturn false;");
+								sw.WriteLine("\t\t}");
+							}
+
+							if (_resultOptions.ToStringMethod)
+							{
+								AddBlank(sw);
+								sw.WriteLine($"\t\tstd::string ToString() const");
+								sw.WriteLine("\t\t{");
+								sw.WriteLine("\t\t\tstd::string out;");
+								sw.WriteLine("\t\t\treturn out;");
+								sw.WriteLine("\t\t}");
+							}
+						}
+					}
 				}
 			}
 
@@ -65,7 +106,7 @@ namespace AdventOfCode.ProjectHelper
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
 				{
 					string processorBaseClassName, processorBaseClassParam;
-					if (_contextName != string.Empty)
+					if (!string.IsNullOrEmpty(_contextName))
 					{
 						processorBaseClassName = "InputProcessorWithContextBase";
 						processorBaseClassParam = $"<{_resultName}, {_contextName}>";
@@ -128,12 +169,13 @@ namespace AdventOfCode.ProjectHelper
 		{
 			sw.WriteLine("#pragma once");
 
-			if (_contextName != string.Empty)
+			if (!string.IsNullOrEmpty(_contextName))
 				sw.WriteLine("#include \"InputProcessorWithContext.h\"");
 			else
 				sw.WriteLine("#include \"InputProcessor.h\"");
 
-			sw.WriteLine($"#include \"{_resultName}.h\"");
+			if (_createResultType)
+				sw.WriteLine($"#include \"{_resultName}.h\"");
 
 			if (_createContextType)
 				sw.WriteLine($"#include \"{_contextName}.h\"");
@@ -152,7 +194,7 @@ namespace AdventOfCode.ProjectHelper
 		{
 			// Processing method:
 			sw.WriteLine("\tpublic:");
-			if (_contextName != string.Empty)
+			if (!string.IsNullOrEmpty(_contextName))
 				sw.WriteLine($"\t\tstd::pair<std::vector<{_resultName}>, {_contextName}> Process(std::vector<std::string> input) override;");
 			else
 				sw.WriteLine($"\t\tstd::vector<{_resultName}> Process(std::vector<std::string> input) override;");
@@ -161,7 +203,7 @@ namespace AdventOfCode.ProjectHelper
 		private void AddProcessingMethodImpl(StreamWriter sw)
 		{
 			string processingReturnType;
-			if (_contextName != string.Empty)
+			if (!string.IsNullOrEmpty(_contextName))
 				processingReturnType = $"std::pair<std::vector<{_resultName}>, {_contextName}>";
 			else
 				processingReturnType = $"std::vector<{_resultName}>";

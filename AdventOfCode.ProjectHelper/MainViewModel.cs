@@ -15,7 +15,9 @@ namespace AdventOfCode.ProjectHelper
 		public string Result { get; set; }
 		public string Context { get; set; }
 		public bool CreateContextType { get; set; }
+		public bool CreateResultType { get; set; }
 		public ProcessorSTLIncludes ProcSTL { get; set; } = new ProcessorSTLIncludes();
+		public ResultOptions ResultOptions { get; set; } = new ResultOptions();
 
 		public void CreateFiles()
 		{
@@ -50,17 +52,21 @@ namespace AdventOfCode.ProjectHelper
 			}
 
 			// Processor:
-			if (Processor != string.Empty)
+			if (!string.IsNullOrEmpty(Processor))
 			{
 				ProcessorCreator ProcessorCreator = new ProcessorCreator()
 				.ForDay(Day, Year)
-				.WithProcessor(Processor, Result)
+				.WithProcessor(Processor, Result, CreateResultType)
+				.WithResultOptions(ResultOptions)
 				.WithContext(Context, CreateContextType);
 
-				using (FileStream processingResultFile = File.Create(@$"{dirPath}\{Result}.h"))
+				if (CreateResultType)
 				{
-					ProcessorCreator.CreateHeaderResult(processingResultFile);
-					prjUpdater.AddHeaderFile(Path.GetFileName(processingResultFile.Name));
+					using (FileStream processingResultFile = File.Create(@$"{dirPath}\{Result}.h"))
+					{
+						ProcessorCreator.CreateHeaderResult(processingResultFile);
+						prjUpdater.AddHeaderFile(Path.GetFileName(processingResultFile.Name));
+					}
 				}
 
 				using (FileStream ProcessorHeaderFile = File.Create(@$"{dirPath}\{Processor}.h"))
@@ -75,7 +81,7 @@ namespace AdventOfCode.ProjectHelper
 					prjUpdater.AddSourceFile(Path.GetFileName(ProcessorSourceFile.Name));
 				}
 
-				if (Context != string.Empty)
+				if (!string.IsNullOrEmpty(Context))
 				{
 					using (FileStream ContextFile = File.Create(@$"{dirPath}\{Context}.h"))
 					{
