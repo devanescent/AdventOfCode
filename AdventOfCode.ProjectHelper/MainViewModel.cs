@@ -1,8 +1,35 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Windows.Data;
 
 namespace AdventOfCode.ProjectHelper
 {
+	public class TextToLinesConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			List<string> lines = value as List<string>;
+			if (lines != null && lines.Count > 0)
+				return string.Join(Environment.NewLine, lines);
+			else
+				return string.Empty;
+		}
+
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			string text = value as string;
+
+			if (!string.IsNullOrEmpty(text))
+				return text.Split(Environment.NewLine).ToList();
+			else
+				return new List<string>();
+		}
+	}
+
 	public class MainViewModel
 	{
 		public string Year { get; set; }
@@ -19,6 +46,8 @@ namespace AdventOfCode.ProjectHelper
 		public ProcessorSTLIncludes ProcSTL { get; set; } = new ProcessorSTLIncludes();
 		public ResultOptions ResultOptions { get; set; } = new ResultOptions();
 
+		public ObservableCollection<TestCase> TestCaseList { get; set; } = new ObservableCollection<TestCase>() { new TestCase() };
+
 		public void CreateFiles()
 		{
 			string TitleWithoutBlanks = string.Concat(Title.Where(c => c != ' '));
@@ -27,8 +56,10 @@ namespace AdventOfCode.ProjectHelper
 			if (Processor != string.Empty) DayBaseInclude += "T";
 			if (Context != string.Empty) DayBaseInclude += "C";
 
-			string dirPath = @$"..\..\AdventOfCode{Year}.Solutions\Day{Day}";
-			Directory.CreateDirectory(dirPath);
+			string solutionDirPath = @$"..\..\AdventOfCode{Year}.Solutions\Day{Day}";
+			string testDirPath = @$"..\..\AdventOfCode{Year}.Tests";
+
+			Directory.CreateDirectory(solutionDirPath);
 
 
 			ProjectFilesUpdater prjUpdater = new ProjectFilesUpdater(Year, Day);
@@ -37,18 +68,25 @@ namespace AdventOfCode.ProjectHelper
 			DayFileCreator DayFileCreator = new DayFileCreator()
 					.ForDay(Day, Year)
 					.WithTitle(Title)
-					.WithProcessor(Processor, Result);
+					.WithProcessor(Processor, Result)
+					.WithTestCases(TestCaseList.ToList());
 
-			using (FileStream DayHeaderFile = File.Create(@$"{dirPath}\Day{Day}_{TitleWithoutBlanks}.h"))
+			using (FileStream dayHeaderFile = File.Create(@$"{solutionDirPath}\Day{Day}_{TitleWithoutBlanks}.h"))
 			{
-				DayFileCreator.CreateHeader(DayHeaderFile);
-				prjUpdater.AddHeaderFile(Path.GetFileName(DayHeaderFile.Name));
+				DayFileCreator.CreateHeader(dayHeaderFile);
+				prjUpdater.AddHeaderFile(Path.GetFileName(dayHeaderFile.Name));
 			}
 
-			using (FileStream DaySourceFile = File.Create(@$"{dirPath}\Day{Day}_{TitleWithoutBlanks}.cpp"))
+			using (FileStream daySourceFile = File.Create(@$"{solutionDirPath}\Day{Day}_{TitleWithoutBlanks}.cpp"))
 			{
-				DayFileCreator.CreateSource(DaySourceFile, DaySTL);
-				prjUpdater.AddSourceFile(Path.GetFileName(DaySourceFile.Name));
+				DayFileCreator.CreateSource(daySourceFile, DaySTL);
+				prjUpdater.AddSourceFile(Path.GetFileName(daySourceFile.Name));
+			}
+
+			using (FileStream testFile = File.Create(@$"{testDirPath}\Day{Day}_Test.cpp"))
+			{
+				DayFileCreator.CreateTest(testFile);
+				prjUpdater.AddTestFile(Path.GetFileName(testFile.Name));
 			}
 
 			// Processor:
@@ -62,20 +100,20 @@ namespace AdventOfCode.ProjectHelper
 
 				if (CreateResultType)
 				{
-					using (FileStream processingResultFile = File.Create(@$"{dirPath}\{Result}.h"))
+					using (FileStream processingResultFile = File.Create(@$"{solutionDirPath}\{Result}.h"))
 					{
 						ProcessorCreator.CreateHeaderResult(processingResultFile);
 						prjUpdater.AddHeaderFile(Path.GetFileName(processingResultFile.Name));
 					}
 				}
 
-				using (FileStream ProcessorHeaderFile = File.Create(@$"{dirPath}\{Processor}.h"))
+				using (FileStream ProcessorHeaderFile = File.Create(@$"{solutionDirPath}\{Processor}.h"))
 				{
 					ProcessorCreator.CreateHeader(ProcessorHeaderFile);
 					prjUpdater.AddHeaderFile(Path.GetFileName(ProcessorHeaderFile.Name));
 				}
 
-				using (FileStream ProcessorSourceFile = File.Create(@$"{dirPath}\{Processor}.cpp"))
+				using (FileStream ProcessorSourceFile = File.Create(@$"{solutionDirPath}\{Processor}.cpp"))
 				{
 					ProcessorCreator.CreateSource(ProcessorSourceFile, ProcSTL);
 					prjUpdater.AddSourceFile(Path.GetFileName(ProcessorSourceFile.Name));
@@ -83,7 +121,7 @@ namespace AdventOfCode.ProjectHelper
 
 				if (!string.IsNullOrEmpty(Context))
 				{
-					using (FileStream ContextFile = File.Create(@$"{dirPath}\{Context}.h"))
+					using (FileStream ContextFile = File.Create(@$"{solutionDirPath}\{Context}.h"))
 					{
 						ProcessorCreator.CreateContext(ContextFile);
 						prjUpdater.AddHeaderFile(Path.GetFileName(ContextFile.Name));

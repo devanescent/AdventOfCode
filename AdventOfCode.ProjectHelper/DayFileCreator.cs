@@ -1,16 +1,26 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace AdventOfCode.ProjectHelper
 {
+	public class TestCase
+	{
+		public int Part { get; set; }
+		public List<string> Data { get; set; }
+		public string Result { get; set; }
+	}
+
 	public class DayFileCreator
 	{
 		private string _day = string.Empty;
 		private string _year = string.Empty;
 
 		private string _title = string.Empty;
-		private string _classNameWithoutBlanks;
+		private string _titleWithoutBlanks;
 
 		private string _processorName = string.Empty;
 		private string _resultName = string.Empty;
@@ -18,6 +28,9 @@ namespace AdventOfCode.ProjectHelper
 
 		private string _baseClassName;
 		private string _baseClassParameter = string.Empty;
+
+		private List<TestCase> _testCases = new List<TestCase>();
+
 
 		public DayFileCreator() { }
 
@@ -31,7 +44,7 @@ namespace AdventOfCode.ProjectHelper
 		public DayFileCreator WithTitle(string title)
 		{
 			_title = title;
-			_classNameWithoutBlanks = string.Concat(title.Where(c => c != ' '));
+			_titleWithoutBlanks = string.Concat(title.Where(c => c != ' '));
 			return this;
 		}
 
@@ -52,6 +65,12 @@ namespace AdventOfCode.ProjectHelper
 			return this;
 		}
 
+		public DayFileCreator WithTestCases(List<TestCase> testCaseList)
+		{
+			_testCases= testCaseList;
+			return this;
+		}
+
 		public Result CreateHeader(Stream outStream)
 		{
 			if (string.IsNullOrEmpty(_year) || string.IsNullOrEmpty(_day))
@@ -68,7 +87,7 @@ namespace AdventOfCode.ProjectHelper
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
 				{
 					AddCommentDecorator(sw);
-					using (_ = new ClassDeclarationWriter(_classNameWithoutBlanks, _baseClassName, _baseClassParameter, DefaultCtor.Create, sw))
+					using (_ = new ClassDeclarationWriter(_titleWithoutBlanks, _baseClassName, _baseClassParameter, DefaultCtor.Create, sw))
 					{
 						if (!string.IsNullOrEmpty(_processorName))
 							sw.WriteLine("\tprotected:");
@@ -102,6 +121,70 @@ namespace AdventOfCode.ProjectHelper
 					AddSolutionMethodImpl(sw, 1);
 					AddBlank(sw);
 					AddSolutionMethodImpl(sw, 2);
+				}
+			}
+
+			return Result.OK();
+		}
+
+		public Result CreateTest(Stream outStream)
+		{
+			if (string.IsNullOrEmpty(_year) || string.IsNullOrEmpty(_day))
+				return Result.Error("No valid date (year and / or day missing)!");
+
+			if (string.IsNullOrEmpty(_title))
+				return Result.Error("No valid title!");
+
+			using (StreamWriter sw = new StreamWriter(outStream, Encoding.UTF8))
+			{
+				// AddSourceIncludes(sw, stlIncludes);
+				sw.WriteLine("#include \"stdafx.h\"");
+				sw.WriteLine($"#include \"Day{_day}\\Day{_day}_{_titleWithoutBlanks}.h\"");
+				AddBlank(sw);
+
+				sw.WriteLine("using namespace Microsoft::VisualStudio::CppUnitTestFramework;");
+				sw.WriteLine($"using namespace AdventOfCode::Year{_year}::Day{_day};");
+				AddBlank(sw);
+
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Tests", sw))
+				{
+					using (_ = new TestClassDeclarationWriter(_year, _day, sw))
+					{
+						sw.WriteLine("\tprivate:");
+
+						for (int i = 1; i <= _testCases.Count; ++i)
+						{
+							sw.WriteLine($"\t\tstatic std::vector<std::string> inputData{i};");
+						}	
+						AddBlank(sw);
+						sw.WriteLine("\tpublic:");
+
+						// Initialize input data:
+						using (_ = new TestMethodDeclarationWriter("TEST_CLASS_INITIALIZE", "Init", sw))
+						{
+							for (int i = 1; i <= _testCases.Count; ++i)
+							{
+								sw.WriteLine($"\t\t\tinputData{i} = std::vector<std::string>");
+								sw.WriteLine("\t\t\t{");
+
+								foreach (string inputLine in _testCases[i - 1].Data)
+									sw.WriteLine($"\t\t\t\t\"{inputLine}\"" + (inputLine != _testCases[i - 1].Data.Last() ? "," : ""));
+
+								sw.WriteLine("\t\t\t};");
+								AddBlank(sw);
+							}
+						}
+
+						// Check Examples:
+						AddTestCase(sw, 1);
+						AddTestCase(sw, 2);
+					}
+
+					// Static initializers:
+					for (int i = 1; i <= _testCases.Count; ++i)
+					{
+						sw.WriteLine($"\tstd::vector<std::string> Year{_year}_Day{_day}::inputData{i} = std::vector<std::string>();");
+					}
 				}
 			}
 
@@ -147,7 +230,7 @@ namespace AdventOfCode.ProjectHelper
 
 		private void AddSourceIncludes(StreamWriter sw, DaySTLIncludes stlIncludes)
 		{
-			sw.WriteLine($"#include \"Day{_day}_{_classNameWithoutBlanks}.h\"");
+			sw.WriteLine($"#include \"Day{_day}_{_titleWithoutBlanks}.h\"");
 			if (stlIncludes.UseStdAlgorithm) sw.WriteLine($"#include <algorithm>");
 			if (stlIncludes.UseStdDeque) sw.WriteLine($"#include <deque>");
 			if (stlIncludes.UseStdMap) sw.WriteLine($"#include <map>");
@@ -158,7 +241,7 @@ namespace AdventOfCode.ProjectHelper
 
 		private void AddConstructorImpl(StreamWriter sw)
 		{
-			sw.WriteLine($"\t{_classNameWithoutBlanks}::{_classNameWithoutBlanks}() : {_baseClassName}({_day}, \"{_title}\") {{ }}");
+			sw.WriteLine($"\t{_titleWithoutBlanks}::{_titleWithoutBlanks}() : {_baseClassName}({_day}, \"{_title}\") {{ }}");
 		}
 
 		private void AddSolutionMethodImpl(StreamWriter sw, int part)
@@ -166,9 +249,9 @@ namespace AdventOfCode.ProjectHelper
 			if (_processorName != string.Empty)
 			{
 				if (_contextName != string.Empty)
-					sw.WriteLine($"\tuint64_t {_classNameWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
+					sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
 				else
-					sw.WriteLine($"\tuint64_t {_classNameWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
+					sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
 			}
 			else
 				sw.WriteLine($"\tuint64_t GetResultOnPart{part}(std::vector<std::string> input)");
@@ -176,6 +259,30 @@ namespace AdventOfCode.ProjectHelper
 			sw.WriteLine("\t{");
 			sw.WriteLine("\t\treturn uint64_t();");
 			sw.WriteLine("\t}");
+		}
+
+		private void AddTestCase(StreamWriter sw, int part)
+		{
+			int testCaseNo = 1;
+			foreach(TestCase tc in _testCases.Where(tc => tc.Part == part))
+			{
+				using (_ = new TestMethodDeclarationWriter("TEST_METHOD", $"CheckExample{testCaseNo}_Part{part}", sw))
+				{
+					sw.WriteLine("\t\t\t// Arrange:");
+					sw.WriteLine($"\t\t\t{_titleWithoutBlanks} sut;");
+
+					sw.WriteLine("\t\t\t// Act:");
+
+					int inputDataNo = _testCases.IndexOf(tc) + 1;
+					sw.WriteLine($"\t\t\tuint64_t result = sut.GetResultOnPart{part}(inputData{inputDataNo});");
+
+					sw.WriteLine("\t\t\t// Assert:");
+					sw.WriteLine($"\t\t\tAssert::AreEqual({tc.Result}ull, result);");
+
+					++testCaseNo;
+				}
+				AddBlank(sw);
+			}
 		}
 	}
 }

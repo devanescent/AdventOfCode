@@ -20,7 +20,6 @@ namespace AdventOfCode.ProjectHelper
 		public ClassDeclarationWriter(string className, string baseClassName, string baseClassParam, DefaultCtor createCtor, StreamWriter sw)
 		{
 			_sw = sw;
-
 			_indent = new string('\t', 1);
 
 			// Declaration
@@ -40,7 +39,6 @@ namespace AdventOfCode.ProjectHelper
 		public ClassDeclarationWriter(string className, DefaultCtor createCtor, StreamWriter sw)
 		{
 			_sw = sw;
-
 			_indent = new string('\t', 1);
 
 			// Declaration

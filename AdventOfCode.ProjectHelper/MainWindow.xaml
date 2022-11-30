@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:AdventOfCode.ProjectHelper"
         mc:Ignorable="d"
         Title="MainWindow" Width="750" SizeToContent="Height">
+    <Window.Resources>
+        <local:TextToLinesConverter x:Key="TextToLinesConv"/>
+    </Window.Resources>
 	<Grid>
 		<StackPanel Orientation="Vertical">
 			<GroupBox>
@@ -38,7 +41,7 @@
 
 			<GroupBox>
 				<GroupBox.Header>
-					<CheckBox x:Name="cbEnableProcessor" VerticalAlignment="Center" Content="Use processor:" FontSize="18"/>
+					<CheckBox x:Name="cbEnableProcessor" VerticalContentAlignment="Center" Content="Use processor:" FontSize="18"/>
 				</GroupBox.Header>
 				<StackPanel Orientation="Vertical" IsEnabled="{Binding ElementName=cbEnableProcessor, Path=IsChecked}">
 					<StackPanel Orientation="Horizontal">
@@ -66,6 +69,40 @@
 					</GroupBox>
 				</StackPanel>
 			</GroupBox>
+
+            <GroupBox>
+                <GroupBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Label VerticalAlignment="Center" Content="Test cases:" FontSize="18"/>
+                        <Button Content="+" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="25" Height="25" Click="AddTestCase_Click"/>
+                    </StackPanel>
+                </GroupBox.Header>
+                <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+                    <ItemsControl ItemsSource="{Binding TestCaseList}" MinHeight="150">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type local:TestCase}">
+                                <DockPanel LastChildFill="True" MinWidth="100" Margin="3">
+                                    <DockPanel DockPanel.Dock="Top">
+                                        <Button DockPanel.Dock="Right" Content="X" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="25" Height="25" Click="DeleteTextCase_Click"/>
+                                        <TextBlock Text="Part: " VerticalAlignment="Center"/>
+                                        <TextBox Text="{Binding Part}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                                    </DockPanel>
+                                    <DockPanel DockPanel.Dock="Bottom">
+                                        <TextBlock Text="Result: "/>
+                                        <TextBox Text="{Binding Result}"/>
+                                    </DockPanel>
+                                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Data, Converter={StaticResource TextToLinesConv}}" Margin="0,3" />
+                                </DockPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </GroupBox>
 
 			<DockPanel LastChildFill="False">
 				<Button Content="Create files" DockPanel.Dock="Right" FontSize="14" Margin="10" Width="100" Height="25" Click="CreateFiles_Click"/>

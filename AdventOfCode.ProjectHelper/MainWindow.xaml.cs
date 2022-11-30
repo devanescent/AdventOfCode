@@ -32,11 +32,23 @@ namespace AdventOfCode.ProjectHelper
 		}
 
 		private void CreateFiles_Click(object sender, RoutedEventArgs e)
-		{
-			
+		{			
 			mvm.CreateFiles();
 			MessageBox.Show("Files created successfully!", "Create files", MessageBoxButton.OK);
 			Application.Current.Shutdown();
+		}
+
+		private void DeleteTextCase_Click(object sender, RoutedEventArgs e)
+		{
+			Control ctrl = sender as Control;
+			TestCase tc = ctrl.DataContext as TestCase;
+
+			mvm.TestCaseList.Remove(tc);
+		}
+
+		private void AddTestCase_Click(object sender, RoutedEventArgs e)
+		{
+			mvm.TestCaseList.Add(new TestCase());
 		}
 	}
 }
