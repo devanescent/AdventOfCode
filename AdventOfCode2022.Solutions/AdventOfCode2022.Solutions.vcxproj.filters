@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Day01">
+      <Filter>{63d08d2c-8cf4-48db-9065-cab559dad007}</Filter>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="placeholder.h" />
+    <ClInclude Include="Day01\Day01_MyFirstDay.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+    <ClInclude Include="Day01\MyProc.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="placeholder.cpp" />
+    <ClCompile Include="Day01\Day01_MyFirstDay.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day01\MyProc.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
