@@ -19,10 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Day01\CarriedCalories.h" />
     <ClInclude Include="Solutions2022.h" />
+    <ClInclude Include="Day01\Day01_CalorieCounting.h" />
+    <ClInclude Include="Day01\CalorieProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Solutions2022.cpp" />
+    <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
+    <ClCompile Include="Day01\CalorieProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

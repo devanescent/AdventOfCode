@@ -10,21 +10,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="placeholder.h" />
-    <ClInclude Include="Day01\Day01_MyFirstDay.h">
+    <ClInclude Include="Day01\Day01_CalorieCounting.h">
       <Filter>Day01</Filter>
     </ClInclude>
-    <ClInclude Include="Day01\MyProc.h">
+    <ClInclude Include="Day01\CalorieProcessor.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions2022.h" />
+    <ClInclude Include="Day01\CarriedCalories.h">
       <Filter>Day01</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="placeholder.cpp" />
-    <ClCompile Include="Day01\Day01_MyFirstDay.cpp">
+    <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
       <Filter>Day01</Filter>
     </ClCompile>
-    <ClCompile Include="Day01\MyProc.cpp">
+    <ClCompile Include="Day01\CalorieProcessor.cpp">
       <Filter>Day01</Filter>
     </ClCompile>
+    <ClCompile Include="Solutions2022.cpp" />
   </ItemGroup>
 </Project>
