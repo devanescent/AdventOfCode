@@ -8,6 +8,9 @@
     <Filter Include="Day01">
       <Filter>{63d08d2c-8cf4-48db-9065-cab559dad007}</Filter>
     </Filter>
+    <Filter Include="Day02">
+      <Filter>{dfecfcca-ee29-4e1c-b0b0-d6af22da86f4}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -20,6 +23,15 @@
     <ClInclude Include="Day01\CarriedCalories.h">
       <Filter>Day01</Filter>
     </ClInclude>
+    <ClInclude Include="Day02\Day02_RockPaperScissors.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\RockPaperScissorsRound.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\StrategyGuideProcessor.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -29,5 +41,11 @@
       <Filter>Day01</Filter>
     </ClCompile>
     <ClCompile Include="Solutions2022.cpp" />
+    <ClCompile Include="Day02\Day02_RockPaperScissors.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\StrategyGuideProcessor.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
