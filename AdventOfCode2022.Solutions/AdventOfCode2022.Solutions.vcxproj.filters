@@ -11,6 +11,9 @@
     <Filter Include="Day02">
       <Filter>{dfecfcca-ee29-4e1c-b0b0-d6af22da86f4}</Filter>
     </Filter>
+    <Filter Include="Day03">
+      <Filter>{70bf3cba-73e0-41ca-965f-7e4b40ea5d0e}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -32,6 +35,15 @@
     <ClInclude Include="Day02\StrategyGuideProcessor.h">
       <Filter>Day02</Filter>
     </ClInclude>
+    <ClInclude Include="Day03\Day03_RucksackReorganization.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\Rucksack.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\RucksackProcessor.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -46,6 +58,12 @@
     </ClCompile>
     <ClCompile Include="Day02\StrategyGuideProcessor.cpp">
       <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\Day03_RucksackReorganization.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\RucksackProcessor.cpp">
+      <Filter>Day03</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
