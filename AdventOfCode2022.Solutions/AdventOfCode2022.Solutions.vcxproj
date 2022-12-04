@@ -29,6 +29,9 @@
     <ClInclude Include="Day03\Day03_RucksackReorganization.h" />
     <ClInclude Include="Day03\Rucksack.h" />
     <ClInclude Include="Day03\RucksackProcessor.h" />
+    <ClInclude Include="Day04\Day04_CampCleanup.h" />
+    <ClInclude Include="Day04\SectionAssignments.h" />
+    <ClInclude Include="Day04\SectionAssignmentsProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Solutions2022.cpp" />
@@ -38,6 +41,8 @@
     <ClCompile Include="Day02\StrategyGuideProcessor.cpp" />
     <ClCompile Include="Day03\Day03_RucksackReorganization.cpp" />
     <ClCompile Include="Day03\RucksackProcessor.cpp" />
+    <ClCompile Include="Day04\Day04_CampCleanup.cpp" />
+    <ClCompile Include="Day04\SectionAssignmentsProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
