@@ -40,6 +40,9 @@
     <ClInclude Include="Day04\Day04_CampCleanup.h" />
     <ClInclude Include="Day04\SectionAssignments.h" />
     <ClInclude Include="Day04\SectionAssignmentsProcessor.h" />
+    <ClInclude Include="Day05\Day05_SupplyStacks.h" />
+    <ClInclude Include="Day05\CraneStep.h" />
+    <ClInclude Include="Day05\CraneStepProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
@@ -50,6 +53,8 @@
     <ClCompile Include="Day03\RucksackProcessor.cpp" />
     <ClCompile Include="Day04\Day04_CampCleanup.cpp" />
     <ClCompile Include="Day04\SectionAssignmentsProcessor.cpp" />
+    <ClCompile Include="Day05\Day05_SupplyStacks.cpp" />
+    <ClCompile Include="Day05\CraneStepProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
