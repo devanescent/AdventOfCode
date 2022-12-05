@@ -99,6 +99,7 @@
     <ClInclude Include="Day22\Day22_ReactorReboot.h" />
     <ClInclude Include="Day22\RebootStepProcessor.h" />
     <ClInclude Include="Day25\Day25_SeaCucumber.h" />
+    <ClInclude Include="Solutions2021.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

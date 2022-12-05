@@ -125,16 +125,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="Input.txt" />
-    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InputProvider.h" />
+    <ClInclude Include="SolutionFactory.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCodeRunner.cpp" />
-    <ClCompile Include="InputProvider.cpp" />
+    <ClCompile Include="SolutionFactory.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

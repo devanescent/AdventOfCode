@@ -125,6 +125,7 @@
     <ClInclude Include="Day24\HexCoords.h" />
     <ClInclude Include="Day24\HexProcessor.h" />
     <ClInclude Include="Day25\Day25_ComboBreaker.h" />
+    <ClInclude Include="Solutions2020.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

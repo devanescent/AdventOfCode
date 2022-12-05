@@ -393,5 +393,6 @@
     <ClInclude Include="Day21\Food.h">
       <Filter>Day21</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions2020.h" />
   </ItemGroup>
 </Project>

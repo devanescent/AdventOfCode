@@ -306,5 +306,6 @@
     <ClInclude Include="Day25\Day25_SeaCucumber.h">
       <Filter>Day25</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions2021.h" />
   </ItemGroup>
 </Project>

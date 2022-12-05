@@ -64,7 +64,6 @@
     <ClCompile Include="Day01\CalorieProcessor.cpp">
       <Filter>Day01</Filter>
     </ClCompile>
-    <ClCompile Include="Solutions2022.cpp" />
     <ClCompile Include="Day02\Day02_RockPaperScissors.cpp">
       <Filter>Day02</Filter>
     </ClCompile>

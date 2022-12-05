@@ -1,33 +1,60 @@
-// AdventOfCodeRunner.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
-//
-
 #include "stdafx.h"
+#include <vector>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <format>
+#include "SolutionFactory.h"
 
-#include "InputProvider.h"
+using namespace AdventOfCode;
 
-int main()
+// ---------------------------------------------------------------------------
+// ReadLinesFromFile: Process input file to string lines
+// ---------------------------------------------------------------------------
+std::vector<std::string> ReadLinesFromFile()
 {
-	//printf("+----------------------------------------------------------------------+\n");
-	//printf("|                         ADVENT OF CODE 2020                          |\n");
-	//printf("+------+---------------------------+-----------------+-----------------+\n");
-	//printf("| Date | Name                      | Result (Part 1) | Result (Part 2) |\n");
-	//printf("+------+---------------------------+-----------------+-----------------+\n");
+	std::vector<std::string> lines;
+	lines.reserve(1000);
 
-	//InputProvider inProv;
-	//Year2020::Solutions solutions2020;
-	//Year2021::Solutions solutions2021;
+	std::ifstream inFile("Input.txt");
+	std::string line;
+	while (std::getline(inFile, line))
+		lines.push_back(line);
 
-	//// Print all solutions:
-	//for (const auto& day : solutions2020.m_days)
-	//{
-	//	// TODO: read input from file for each Day:
-	//	uint64_t resultPart1 = day->GetResultOnPart1(inProv.ReadLinesFromFile("input1.txt"));
-	//	uint64_t resultPart2 = day->GetResultOnPart2(inProv.ReadLinesFromFile("input2.txt"));
+	return lines;
+}
 
-	//	printf("|  %02d  | %-25s | %-15llu | %-15llu |\n", day->GetDayNo(), day->GetName(), resultPart1, resultPart2);
-	//	printf("+------+---------------------------+-----------------+-----------------+\n");
-	//}
+// ---------------------------------------------------------------------------
+// main
+// ---------------------------------------------------------------------------
+int main(int argc, char* argv[])
+{
+	// TODO: read from command line
+	int pYear = 2022;
+	int pDay = 1;
 
-	//return 0;
+	// Solution of the given year / day:
+	auto day = SolutionFactory().GetYear(pYear)->GetDay(pDay);
+
+	// Read input and get results:
+	auto lines = ReadLinesFromFile();
+	auto res1 = day->GetResultOnPart1(lines);
+	auto res2 = day->GetResultOnPart2(lines);
+
+	// Pretty-print results to screen:
+	std::cout
+		<< "+----------------------------------------------------------------------+\n"
+		<< std::format("|                         ADVENT OF CODE {:4}                          |\n", pYear)
+		<< "+------+---------------------------+-----------------+-----------------+\n"
+		<< "| Date | Name                      | Result (Part 1) | Result (Part 2) |\n"
+		<< "+------+---------------------------+-----------------+-----------------+\n";
+
+	std::cout << std::format("|  {:02}  | {:25} | {:15} | {:15} |\n", day->GetDayNo(), day->GetName(), res1, res2);
+	std::cout << "+------+---------------------------+-----------------+-----------------+\n";
+
+	// Wait for keypress (in particular, when debugger is running):
+	std::cout << "\nPress enter to exit...\n";
+	std::cin.ignore();
+	return 0;
 }
 

@@ -369,5 +369,6 @@
     <ClInclude Include="Day19\Program.h">
       <Filter>Day19</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions2018.h" />
   </ItemGroup>
 </Project>
