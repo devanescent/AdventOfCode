@@ -20,6 +20,9 @@
     <Filter Include="Day05">
       <Filter>{df5c68f3-7775-4fd7-9dc9-55cf880ae2cb}</Filter>
     </Filter>
+    <Filter Include="Day06">
+      <Filter>{d2312602-5fe5-4ef8-a5f6-1d5af844afa3}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -68,6 +71,9 @@
     <ClInclude Include="Day05\CraneStepProcessor.h">
       <Filter>Day05</Filter>
     </ClInclude>
+    <ClInclude Include="Day06\Day06_TuningTrouble.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -99,6 +105,9 @@
     </ClCompile>
     <ClCompile Include="Day05\CraneStepProcessor.cpp">
       <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\Day06_TuningTrouble.cpp">
+      <Filter>Day06</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
