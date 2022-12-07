@@ -7,6 +7,7 @@
 #include "Day04\Day04_CampCleanup.h"
 #include "Day05\Day05_SupplyStacks.h"
 #include "Day06\Day06_TuningTrouble.h"
+#include "Day07\Day07_NoSpaceLeftOnDevice.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -22,6 +23,7 @@ namespace AdventOfCode::Year2022
 				case 4:		return std::make_unique<Day04::CampCleanup>();
 				case 5:		return std::make_unique<Day05::SupplyStacks>();
 				case 6:		return std::make_unique<Day06::TuningTrouble>();
+				case 7:		return std::make_unique<Day07::NoSpaceLeftOnDevice>();
 				default:	return nullptr;
 			}
 		}

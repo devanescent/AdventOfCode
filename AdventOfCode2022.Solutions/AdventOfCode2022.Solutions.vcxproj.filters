@@ -23,6 +23,9 @@
     <Filter Include="Day06">
       <Filter>{d2312602-5fe5-4ef8-a5f6-1d5af844afa3}</Filter>
     </Filter>
+    <Filter Include="Day07">
+      <Filter>{0864a956-aba4-4d0a-a43e-486114d4ddb2}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -74,6 +77,15 @@
     <ClInclude Include="Day06\Day06_TuningTrouble.h">
       <Filter>Day06</Filter>
     </ClInclude>
+    <ClInclude Include="Day07\Day07_NoSpaceLeftOnDevice.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\FileSystem.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\FilesystemProcessor.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -108,6 +120,12 @@
     </ClCompile>
     <ClCompile Include="Day06\Day06_TuningTrouble.cpp">
       <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\Day07_NoSpaceLeftOnDevice.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\FilesystemProcessor.cpp">
+      <Filter>Day07</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
