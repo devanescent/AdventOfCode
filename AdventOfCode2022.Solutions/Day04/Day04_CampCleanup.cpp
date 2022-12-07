@@ -3,7 +3,7 @@
 
 namespace AdventOfCode::Year2022::Day04
 {
-	CampCleanup::CampCleanup() : DayT(04, "Camp Cleanup") { }
+	CampCleanup::CampCleanup() : DayT(4, "Camp Cleanup") { }
 
 	uint64_t CampCleanup::ExecutePart1(std::vector<SectionAssignments> sectionAssignments)
 	{

@@ -7,8 +7,8 @@ namespace AdventOfCode.ProjectHelper
 {
 	public class ProjectFilesUpdater
 	{
-		private string _day;
-		private string _year;
+		private int _day;
+		private int _year;
 		private string _solutionPrjPath;
 		private string _testPrjPath;
 
@@ -17,7 +17,7 @@ namespace AdventOfCode.ProjectHelper
 
 		XDocument _testPrjFile;
 		XDocument _testPrjFileFilters;
-		public ProjectFilesUpdater(string year, string day)
+		public ProjectFilesUpdater(int year, int day)
 		{
 			_year = year;
 			_day = day;
@@ -38,7 +38,7 @@ namespace AdventOfCode.ProjectHelper
 			var filterGroup = itemGroups.First(elem => elem.Elements().Any(d => d.Name.LocalName == "Filter"));
 
 			// Create a new filter entry and add it to the group:
-			XElement newFilter = CreateFilterEntry(proj.GetDefaultNamespace(), "Filter", $"Day{day}", "UniqueIdentifier", $"{{{Guid.NewGuid()}}}");
+			XElement newFilter = CreateFilterEntry(proj.GetDefaultNamespace(), "Filter", $"Day{day:D2}", "UniqueIdentifier", $"{{{Guid.NewGuid()}}}");
 			filterGroup.Add(newFilter);
 		}
 
@@ -47,13 +47,13 @@ namespace AdventOfCode.ProjectHelper
 			// Add to project:
 			XElement headerGroup = FindElementByChildNames(_solutionPrjFile, "ItemGroup", "ClInclude");
 			XElement newHeaderEntry = new XElement(_solutionPrjFile.Root.GetDefaultNamespace() + "ClInclude");
-			newHeaderEntry.Add(new XAttribute("Include", @$"Day{_day}\{headerFile}"));
+			newHeaderEntry.Add(new XAttribute("Include", @$"Day{_day:D2}\{headerFile}"));
 			headerGroup.Add(newHeaderEntry);
 
 			// Add to project filters:
 			XElement filterGroup = FindElementByChildNames(_solutionPrjFileFilters, "ItemGroup", "ClInclude");
 
-			XElement newFilter = CreateFilterEntry(_solutionPrjFileFilters.Root.GetDefaultNamespace(), "ClInclude", @$"Day{_day}\{headerFile}", "Filter", $"Day{_day}");
+			XElement newFilter = CreateFilterEntry(_solutionPrjFileFilters.Root.GetDefaultNamespace(), "ClInclude", @$"Day{_day:D2}\{headerFile}", "Filter", $"Day{_day:D2}");
 			filterGroup.Add(newFilter);
 		}
 
@@ -62,12 +62,12 @@ namespace AdventOfCode.ProjectHelper
 			// Add to project:
 			XElement sourceGroup = FindElementByChildNames(_solutionPrjFile, "ItemGroup", "ClCompile");
 			XElement newSourceEntry = new XElement(_solutionPrjFile.Root.GetDefaultNamespace() + "ClCompile");
-			newSourceEntry.Add(new XAttribute("Include", @$"Day{_day}\{srcFile}"));
+			newSourceEntry.Add(new XAttribute("Include", @$"Day{_day:D2}\{srcFile}"));
 			sourceGroup.Add(newSourceEntry);
 
 			// Add to project filters:
 			XElement filterGroup = FindElementByChildNames(_solutionPrjFileFilters, "ItemGroup", "ClCompile");
-			XElement newFilter = CreateFilterEntry(_solutionPrjFileFilters.Root.GetDefaultNamespace(), "ClCompile", @$"Day{_day}\{srcFile}", "Filter", $"Day{_day}");
+			XElement newFilter = CreateFilterEntry(_solutionPrjFileFilters.Root.GetDefaultNamespace(), "ClCompile", @$"Day{_day:D2}\{srcFile}", "Filter", $"Day{_day:D2}");
 			filterGroup.Add(newFilter);
 		}
 

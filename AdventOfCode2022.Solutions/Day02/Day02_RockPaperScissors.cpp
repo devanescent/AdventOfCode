@@ -3,7 +3,7 @@
 
 namespace AdventOfCode::Year2022::Day02
 {
-	RockPaperScissors::RockPaperScissors() : DayT(02, "Rock Paper Scissors") { }
+	RockPaperScissors::RockPaperScissors() : DayT(2, "Rock Paper Scissors") { }
 
 	uint64_t RockPaperScissors::ExecutePart1(std::vector<RockPaperScissorsRound> rounds)
 	{

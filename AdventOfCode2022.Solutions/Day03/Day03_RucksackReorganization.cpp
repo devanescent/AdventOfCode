@@ -3,7 +3,7 @@
 
 namespace AdventOfCode::Year2022::Day03
 {
-	RucksackReorganization::RucksackReorganization() : DayT(03, "Rucksack Reorganization") { }
+	RucksackReorganization::RucksackReorganization() : DayT(3, "Rucksack Reorganization") { }
 
 	int GetItemPrio(Rucksack::Item item)
 	{

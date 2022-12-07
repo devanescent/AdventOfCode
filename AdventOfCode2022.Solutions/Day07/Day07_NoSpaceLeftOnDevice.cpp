@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2022::Day07
 {
-	NoSpaceLeftOnDevice::NoSpaceLeftOnDevice() : DayT(07, "No Space Left On Device") { }
+	NoSpaceLeftOnDevice::NoSpaceLeftOnDevice() : DayT(7, "No Space Left On Device") { }
 
 	uint64_t NoSpaceLeftOnDevice::ExecutePart1(std::vector<Directory> input)
 	{

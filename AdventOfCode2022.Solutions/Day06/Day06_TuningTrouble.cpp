@@ -3,7 +3,7 @@
 
 namespace AdventOfCode::Year2022::Day06
 {
-	TuningTrouble::TuningTrouble() : Day(06, "Tuning Trouble") { }
+	TuningTrouble::TuningTrouble() : Day(6, "Tuning Trouble") { }
 
 	uint64_t FindPacketMarker(const std::string& dataStream, int numberOfUniqueChars)
 	{

@@ -13,7 +13,7 @@ namespace AdventOfCode.ProjectHelper
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			List<string> lines = value as List<string>;
-			if (lines != null && lines.Count > 0)
+			if (lines != null && lines.Any())
 				return string.Join(Environment.NewLine, lines);
 			else
 				return string.Empty;
@@ -32,8 +32,8 @@ namespace AdventOfCode.ProjectHelper
 
 	public class MainViewModel
 	{
-		public string Year { get; set; }
-		public string Day { get; set; }
+		public int Year { get; set; }
+		public int Day { get; set; }
 		public string Title { get; set; }
 
 		public DaySTLIncludes DaySTL { get; set; } = new DaySTLIncludes();
@@ -41,89 +41,104 @@ namespace AdventOfCode.ProjectHelper
 		public string Processor { get; set; }
 		public string Result { get; set; }
 		public string Context { get; set; }
-		public bool CreateContextType { get; set; }
-		public bool CreateResultType { get; set; }
+		public bool CreateContextType { get; set; } = true;
+		public bool CreateResultType { get; set; } = true;
 		public ProcessorSTLIncludes ProcSTL { get; set; } = new ProcessorSTLIncludes();
 		public ResultOptions ResultOptions { get; set; } = new ResultOptions();
 
 		public ObservableCollection<TestCase> TestCaseList { get; set; } = new ObservableCollection<TestCase>() { new TestCase() };
 
+		public MainViewModel()
+		{
+			Day = DateTime.Today.Day;
+			Year = DateTime.Today.Year;
+		}
+
 		public void CreateFiles()
 		{
-			string TitleWithoutBlanks = string.Concat(Title.Where(c => c != ' '));
+			// Capitalize each word and join without blanks
+			string _titleWithoutBlanks = string.Join("", 
+				Title.Split(' ').Select(word => { return char.ToUpper(word[0]) + word.Substring(1); })
+			);
 
-			string DayBaseInclude = "Day";
-			if (Processor != string.Empty) DayBaseInclude += "T";
-			if (Context != string.Empty) DayBaseInclude += "C";
-
-			string solutionDirPath = @$"..\..\AdventOfCode{Year}.Solutions\Day{Day}";
+			string solutionDirPath = @$"..\..\AdventOfCode{Year}.Solutions\Day{Day:D2}";
 			string testDirPath = @$"..\..\AdventOfCode{Year}.Tests";
 
 			Directory.CreateDirectory(solutionDirPath);
 
-
+			// To add created files to projects:
 			ProjectFilesUpdater prjUpdater = new ProjectFilesUpdater(Year, Day);
 
 			// Main files:
-			DayFileCreator DayFileCreator = new DayFileCreator()
+			DayFileCreator dayFileCreator = new DayFileCreator()
 					.ForDay(Day, Year)
-					.WithTitle(Title)
-					.WithProcessor(Processor, Result)
-					.WithTestCases(TestCaseList.ToList());
+					.WithTitle(Title);
 
-			using (FileStream dayHeaderFile = File.Create(@$"{solutionDirPath}\Day{Day}_{TitleWithoutBlanks}.h"))
+			if (!string.IsNullOrEmpty(Processor))
+				dayFileCreator.WithProcessor(Processor, Result);
+
+			if (!string.IsNullOrEmpty(Context))
+				dayFileCreator.WithContext(Context);
+
+			using (FileStream dayHeaderFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{_titleWithoutBlanks}.h"))
 			{
-				DayFileCreator.CreateHeader(dayHeaderFile);
+				dayFileCreator.CreateHeader(dayHeaderFile);
 				prjUpdater.AddHeaderFile(Path.GetFileName(dayHeaderFile.Name));
 			}
 
-			using (FileStream daySourceFile = File.Create(@$"{solutionDirPath}\Day{Day}_{TitleWithoutBlanks}.cpp"))
+			using (FileStream daySourceFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{_titleWithoutBlanks}.cpp"))
 			{
-				DayFileCreator.CreateSource(daySourceFile, DaySTL);
+				dayFileCreator.CreateSource(daySourceFile, DaySTL);
 				prjUpdater.AddSourceFile(Path.GetFileName(daySourceFile.Name));
 			}
 
-			using (FileStream testFile = File.Create(@$"{testDirPath}\Day{Day}_Test.cpp"))
+			if (TestCaseList.Any())
 			{
-				DayFileCreator.CreateTest(testFile);
-				prjUpdater.AddTestFile(Path.GetFileName(testFile.Name));
+				using (FileStream testFile = File.Create(@$"{testDirPath}\Day{Day:D2}_Test.cpp"))
+				{
+					dayFileCreator.WithTestCases(TestCaseList.ToList());
+					dayFileCreator.CreateTest(testFile);
+					prjUpdater.AddTestFile(Path.GetFileName(testFile.Name));
+				}
 			}
-
+			
 			// Processor:
 			if (!string.IsNullOrEmpty(Processor))
 			{
-				ProcessorCreator ProcessorCreator = new ProcessorCreator()
+				ProcessorCreator processorCreator = new ProcessorCreator()
 				.ForDay(Day, Year)
 				.WithProcessor(Processor, Result, CreateResultType)
-				.WithResultOptions(ResultOptions)
-				.WithContext(Context, CreateContextType);
+				.WithResultOptions(ResultOptions);
+
+				if (!string.IsNullOrEmpty(Context))
+					processorCreator.WithContext(Context, CreateContextType);
 
 				if (CreateResultType)
 				{
 					using (FileStream processingResultFile = File.Create(@$"{solutionDirPath}\{Result}.h"))
 					{
-						ProcessorCreator.CreateHeaderResult(processingResultFile);
+						processorCreator.CreateHeaderResult(processingResultFile);
 						prjUpdater.AddHeaderFile(Path.GetFileName(processingResultFile.Name));
 					}
 				}
 
 				using (FileStream ProcessorHeaderFile = File.Create(@$"{solutionDirPath}\{Processor}.h"))
 				{
-					ProcessorCreator.CreateHeader(ProcessorHeaderFile);
+					processorCreator.CreateHeader(ProcessorHeaderFile);
 					prjUpdater.AddHeaderFile(Path.GetFileName(ProcessorHeaderFile.Name));
 				}
 
 				using (FileStream ProcessorSourceFile = File.Create(@$"{solutionDirPath}\{Processor}.cpp"))
 				{
-					ProcessorCreator.CreateSource(ProcessorSourceFile, ProcSTL);
+					processorCreator.CreateSource(ProcessorSourceFile, ProcSTL);
 					prjUpdater.AddSourceFile(Path.GetFileName(ProcessorSourceFile.Name));
 				}
 
-				if (!string.IsNullOrEmpty(Context))
+				if (CreateContextType)
 				{
 					using (FileStream ContextFile = File.Create(@$"{solutionDirPath}\{Context}.h"))
 					{
-						ProcessorCreator.CreateContext(ContextFile);
+						processorCreator.CreateContext(ContextFile);
 						prjUpdater.AddHeaderFile(Path.GetFileName(ContextFile.Name));
 					}
 				}

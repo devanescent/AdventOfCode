@@ -13,8 +13,8 @@ namespace AdventOfCode.ProjectHelper
 
 	public class ProcessorCreator
 	{
-		private string _day = string.Empty;
-		private string _year = string.Empty;
+		private int _day;
+		private int _year;
 
 		private string _processorName = string.Empty;
 		private string _resultName = string.Empty;
@@ -25,7 +25,7 @@ namespace AdventOfCode.ProjectHelper
 
 		public ProcessorCreator() { }
 
-		public ProcessorCreator ForDay(string day, string year)
+		public ProcessorCreator ForDay(int day, int year)
 		{
 			_day = day;
 			_year = year;
@@ -63,7 +63,7 @@ namespace AdventOfCode.ProjectHelper
 
 				AddBlank(sw);
 
-				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					using (_ = new ClassDeclarationWriter(_resultName, DefaultCtor.None, sw))
 					{ 
@@ -103,7 +103,7 @@ namespace AdventOfCode.ProjectHelper
 				AddHeaderIncludes(sw);
 				AddBlank(sw);
 
-				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					string processorBaseClassName, processorBaseClassParam;
 					if (!string.IsNullOrEmpty(_contextName))
@@ -134,7 +134,7 @@ namespace AdventOfCode.ProjectHelper
 				AddSourceIncludes(sw, stlIncludes);
 				AddBlank(sw);
 
-				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					AddProcessingMethodImpl(sw);
 				}
@@ -150,7 +150,7 @@ namespace AdventOfCode.ProjectHelper
 				sw.WriteLine("#pragma once");
 				AddBlank(sw);
 
-				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					using (_ = new ClassDeclarationWriter(_contextName, DefaultCtor.None, sw))
 					{ }

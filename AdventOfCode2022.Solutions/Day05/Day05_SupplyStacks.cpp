@@ -3,7 +3,7 @@
 
 namespace AdventOfCode::Year2022::Day05
 {
-	SupplyStacks::SupplyStacks() : DayTC(05, "Supply Stacks") { }
+	SupplyStacks::SupplyStacks() : DayTC(5, "Supply Stacks") { }
 
 	uint64_t SupplyStacks::ExecutePart1(std::vector<CraneStep> steps, CrateStacks stacks)
 	{

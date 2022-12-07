@@ -4,7 +4,7 @@
 
 namespace AdventOfCode::Year2022::Day01
 {
-	CalorieCounting::CalorieCounting() : DayT(01, "Calorie Counting") { }
+	CalorieCounting::CalorieCounting() : DayT(1, "Calorie Counting") { }
 
 	uint64_t CalorieCounting::ExecutePart1(std::vector<CarriedCalories> calories)
 	{

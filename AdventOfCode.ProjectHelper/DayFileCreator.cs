@@ -16,8 +16,8 @@ namespace AdventOfCode.ProjectHelper
 
 	public class DayFileCreator
 	{
-		private string _day = string.Empty;
-		private string _year = string.Empty;
+		private int _day;
+		private int _year;
 
 		private string _title = string.Empty;
 		private string _titleWithoutBlanks;
@@ -34,10 +34,11 @@ namespace AdventOfCode.ProjectHelper
 
 		public DayFileCreator() { }
 
-		public DayFileCreator ForDay(string day, string year)
+		public DayFileCreator ForDay(int day, int year)
 		{
 			_day = day;
 			_year = year;
+			_baseClassName = "Day";
 			return this;
 		}
 
@@ -73,7 +74,7 @@ namespace AdventOfCode.ProjectHelper
 
 		public Result CreateHeader(Stream outStream)
 		{
-			if (string.IsNullOrEmpty(_year) || string.IsNullOrEmpty(_day))
+			if (_year == 0 || _day == 0)
 				return Result.Error("No valid date (year and / or day missing)!");
 
 			if (string.IsNullOrEmpty(_title))
@@ -84,7 +85,7 @@ namespace AdventOfCode.ProjectHelper
 				AddHeaderIncludes(sw);
 				AddBlank(sw);
 
-				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					AddCommentDecorator(sw);
 					using (_ = new ClassDeclarationWriter(_titleWithoutBlanks, _baseClassName, _baseClassParameter, DefaultCtor.Create, sw))
@@ -103,7 +104,7 @@ namespace AdventOfCode.ProjectHelper
 
 		public Result CreateSource(Stream outStream, DaySTLIncludes stlIncludes)
 		{
-			if (string.IsNullOrEmpty(_year) || string.IsNullOrEmpty(_day))
+			if (_year == 0 || _day == 0)
 				return Result.Error("No valid date (year and / or day missing)!");
 
 			if (string.IsNullOrEmpty(_title))
@@ -114,7 +115,7 @@ namespace AdventOfCode.ProjectHelper
 				AddSourceIncludes(sw, stlIncludes);
 				AddBlank(sw);
 
-				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day}", sw))
+				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					AddConstructorImpl(sw);
 					AddBlank(sw);
@@ -129,7 +130,7 @@ namespace AdventOfCode.ProjectHelper
 
 		public Result CreateTest(Stream outStream)
 		{
-			if (string.IsNullOrEmpty(_year) || string.IsNullOrEmpty(_day))
+			if (_year == 0 || _day == 0)
 				return Result.Error("No valid date (year and / or day missing)!");
 
 			if (string.IsNullOrEmpty(_title))
@@ -139,11 +140,11 @@ namespace AdventOfCode.ProjectHelper
 			{
 				// AddSourceIncludes(sw, stlIncludes);
 				sw.WriteLine("#include \"stdafx.h\"");
-				sw.WriteLine($"#include \"Day{_day}\\Day{_day}_{_titleWithoutBlanks}.h\"");
+				sw.WriteLine($"#include \"Day{_day:D2}\\Day{_day:D2}_{_titleWithoutBlanks}.h\"");
 				AddBlank(sw);
 
 				sw.WriteLine("using namespace Microsoft::VisualStudio::CppUnitTestFramework;");
-				sw.WriteLine($"using namespace AdventOfCode::Year{_year}::Day{_day};");
+				sw.WriteLine($"using namespace AdventOfCode::Year{_year}::Day{_day:D2};");
 				AddBlank(sw);
 
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Tests", sw))
@@ -183,7 +184,7 @@ namespace AdventOfCode.ProjectHelper
 					// Static initializers:
 					for (int i = 1; i <= _testCases.Count; ++i)
 					{
-						sw.WriteLine($"\tstd::vector<std::string> Year{_year}_Day{_day}::inputData{i} = std::vector<std::string>();");
+						sw.WriteLine($"\tstd::vector<std::string> Year{_year}_Day{_day:D2}::inputData{i} = std::vector<std::string>();");
 					}
 				}
 			}
@@ -210,7 +211,7 @@ namespace AdventOfCode.ProjectHelper
 			string indent = new string('\t', 1);
 
 			sw.WriteLine($"{indent}// ---------------------------------------------------------------------------");
-			sw.WriteLine($"{indent}// Day{_day}: {_title}");
+			sw.WriteLine($"{indent}// Day{_day:D2}: {_title}");
 			sw.WriteLine($"{indent}// ---------------------------------------------------------------------------");
 		}
 
@@ -230,7 +231,7 @@ namespace AdventOfCode.ProjectHelper
 
 		private void AddSourceIncludes(StreamWriter sw, DaySTLIncludes stlIncludes)
 		{
-			sw.WriteLine($"#include \"Day{_day}_{_titleWithoutBlanks}.h\"");
+			sw.WriteLine($"#include \"Day{_day:D2}_{_titleWithoutBlanks}.h\"");
 			if (stlIncludes.UseStdAlgorithm) sw.WriteLine($"#include <algorithm>");
 			if (stlIncludes.UseStdDeque) sw.WriteLine($"#include <deque>");
 			if (stlIncludes.UseStdMap) sw.WriteLine($"#include <map>");
@@ -254,7 +255,7 @@ namespace AdventOfCode.ProjectHelper
 					sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
 			}
 			else
-				sw.WriteLine($"\tuint64_t GetResultOnPart{part}(std::vector<std::string> input)");
+				sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::GetResultOnPart{part}(std::vector<std::string> input)");
 
 			sw.WriteLine("\t{");
 			sw.WriteLine("\t\treturn uint64_t();");
