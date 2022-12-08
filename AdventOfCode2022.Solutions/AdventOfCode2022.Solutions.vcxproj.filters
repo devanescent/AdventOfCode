@@ -26,6 +26,9 @@
     <Filter Include="Day07">
       <Filter>{0864a956-aba4-4d0a-a43e-486114d4ddb2}</Filter>
     </Filter>
+    <Filter Include="Day08">
+      <Filter>{e349e57d-6851-4526-9943-0b06258af369}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -86,6 +89,9 @@
     <ClInclude Include="Day07\FilesystemProcessor.h">
       <Filter>Day07</Filter>
     </ClInclude>
+    <ClInclude Include="Day08\Day08_TreetopTreeHouse.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -126,6 +132,9 @@
     </ClCompile>
     <ClCompile Include="Day07\FilesystemProcessor.cpp">
       <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Day08_TreetopTreeHouse.cpp">
+      <Filter>Day08</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
