@@ -70,14 +70,14 @@
 				</StackPanel>
 			</GroupBox>
 
-            <GroupBox>
+            <GroupBox MaxHeight="500">
                 <GroupBox.Header>
                     <StackPanel Orientation="Horizontal">
                         <Label VerticalAlignment="Center" Content="Test cases:" FontSize="18"/>
                         <Button Content="+" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="25" Height="25" Click="AddTestCase_Click"/>
                     </StackPanel>
                 </GroupBox.Header>
-                <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+                <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto">
                     <ItemsControl ItemsSource="{Binding TestCaseList}" MinHeight="150">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>

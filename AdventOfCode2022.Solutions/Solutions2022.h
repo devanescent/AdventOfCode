@@ -10,6 +10,7 @@
 #include "Day07\Day07_NoSpaceLeftOnDevice.h"
 #include "Day08\Day08_TreetopTreeHouse.h"
 #include "Day09\Day09_RopeBridge.h"
+#include "Day10\Day10_CathodeRayTube.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -28,6 +29,7 @@ namespace AdventOfCode::Year2022
 				case 7:		return std::make_unique<Day07::NoSpaceLeftOnDevice>();
 				case 8:		return std::make_unique<Day08::TreetopTreeHouse>();
 				case 9:		return std::make_unique<Day09::RopeBridge>();
+				case 10:	return std::make_unique<Day10::CathodeRayTube>();
 				default:	return nullptr;
 			}
 		}

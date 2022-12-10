@@ -32,6 +32,9 @@
     <Filter Include="Day09">
       <Filter>{6d661fe7-1c03-4861-8a52-bf8a6e9838bd}</Filter>
     </Filter>
+    <Filter Include="Day10">
+      <Filter>{44000fa3-6b34-4898-9be3-e88462bae689}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -104,6 +107,15 @@
     <ClInclude Include="Day09\RopeMovementProcessor.h">
       <Filter>Day09</Filter>
     </ClInclude>
+    <ClInclude Include="Day10\Day10_CathodeRayTube.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\Instruction.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\InstructionProcessor.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -153,6 +165,12 @@
     </ClCompile>
     <ClCompile Include="Day09\RopeMovementProcessor.cpp">
       <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_CathodeRayTube.cpp">
+      <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\InstructionProcessor.cpp">
+      <Filter>Day10</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
