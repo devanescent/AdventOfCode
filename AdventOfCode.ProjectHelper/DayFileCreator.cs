@@ -20,7 +20,7 @@ namespace AdventOfCode.ProjectHelper
 		private int _year;
 
 		private string _title = string.Empty;
-		private string _titleWithoutBlanks;
+		public string TitleWithoutBlanks { get; private set; }
 
 		private string _processorName = string.Empty;
 		private string _resultName = string.Empty;
@@ -45,7 +45,11 @@ namespace AdventOfCode.ProjectHelper
 		public DayFileCreator WithTitle(string title)
 		{
 			_title = title;
-			_titleWithoutBlanks = string.Concat(title.Where(c => c != ' '));
+
+			// Capitalize each word and join without blanks
+			TitleWithoutBlanks = string.Join("",
+				title.Split(' ').Select(word => { return char.ToUpper(word[0]) + word.Substring(1); })
+			);
 			return this;
 		}
 
@@ -88,7 +92,7 @@ namespace AdventOfCode.ProjectHelper
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					AddCommentDecorator(sw);
-					using (_ = new ClassDeclarationWriter(_titleWithoutBlanks, _baseClassName, _baseClassParameter, DefaultCtor.Create, sw))
+					using (_ = new ClassDeclarationWriter(TitleWithoutBlanks, _baseClassName, _baseClassParameter, DefaultCtor.Create, sw))
 					{
 						if (!string.IsNullOrEmpty(_processorName))
 							sw.WriteLine("\tprotected:");
@@ -140,7 +144,7 @@ namespace AdventOfCode.ProjectHelper
 			{
 				// AddSourceIncludes(sw, stlIncludes);
 				sw.WriteLine("#include \"stdafx.h\"");
-				sw.WriteLine($"#include \"Day{_day:D2}\\Day{_day:D2}_{_titleWithoutBlanks}.h\"");
+				sw.WriteLine($"#include \"Day{_day:D2}\\Day{_day:D2}_{TitleWithoutBlanks}.h\"");
 				AddBlank(sw);
 
 				sw.WriteLine("using namespace Microsoft::VisualStudio::CppUnitTestFramework;");
@@ -192,6 +196,17 @@ namespace AdventOfCode.ProjectHelper
 			return Result.OK();
 		}
 
+		public void AddToSolutionHeader(List<string> lines)
+		{
+			// Insert include statement after the end of the existing include block:
+			int lastInclude = lines.IndexOf(lines.Last(l => l.StartsWith("#include")));
+			lines.Insert(lastInclude + 1, $"#include \"Day{_day:D2}\\Day{_day:D2}_{TitleWithoutBlanks}.h\"");
+
+			// Insert case for this day before the 'default' case:
+			int defaultCase = lines.IndexOf(lines.Single(l => l.Contains("default:\treturn nullptr;")));
+			lines.Insert(defaultCase, $"\t\t\t\tcase {_day:D2}:\treturn std::make_unique<Day{_day:D2}::{TitleWithoutBlanks}>();");
+		}
+
 		private void AddBlank(StreamWriter sw)
 		{
 			sw.WriteLine();
@@ -231,7 +246,7 @@ namespace AdventOfCode.ProjectHelper
 
 		private void AddSourceIncludes(StreamWriter sw, DaySTLIncludes stlIncludes)
 		{
-			sw.WriteLine($"#include \"Day{_day:D2}_{_titleWithoutBlanks}.h\"");
+			sw.WriteLine($"#include \"Day{_day:D2}_{TitleWithoutBlanks}.h\"");
 			if (stlIncludes.UseStdAlgorithm) sw.WriteLine($"#include <algorithm>");
 			if (stlIncludes.UseStdDeque) sw.WriteLine($"#include <deque>");
 			if (stlIncludes.UseStdMap) sw.WriteLine($"#include <map>");
@@ -242,7 +257,7 @@ namespace AdventOfCode.ProjectHelper
 
 		private void AddConstructorImpl(StreamWriter sw)
 		{
-			sw.WriteLine($"\t{_titleWithoutBlanks}::{_titleWithoutBlanks}() : {_baseClassName}({_day}, \"{_title}\") {{ }}");
+			sw.WriteLine($"\t{TitleWithoutBlanks}::{TitleWithoutBlanks}() : {_baseClassName}({_day}, \"{_title}\") {{ }}");
 		}
 
 		private void AddSolutionMethodImpl(StreamWriter sw, int part)
@@ -250,12 +265,12 @@ namespace AdventOfCode.ProjectHelper
 			if (_processorName != string.Empty)
 			{
 				if (_contextName != string.Empty)
-					sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
+					sw.WriteLine($"\tuint64_t {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
 				else
-					sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
+					sw.WriteLine($"\tuint64_t {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
 			}
 			else
-				sw.WriteLine($"\tuint64_t {_titleWithoutBlanks}::GetResultOnPart{part}(std::vector<std::string> input)");
+				sw.WriteLine($"\tuint64_t {TitleWithoutBlanks}::GetResultOnPart{part}(std::vector<std::string> input)");
 
 			sw.WriteLine("\t{");
 			sw.WriteLine("\t\treturn uint64_t();");
@@ -270,7 +285,7 @@ namespace AdventOfCode.ProjectHelper
 				using (_ = new TestMethodDeclarationWriter("TEST_METHOD", $"CheckExample{testCaseNo}_Part{part}", sw))
 				{
 					sw.WriteLine("\t\t\t// Arrange:");
-					sw.WriteLine($"\t\t\t{_titleWithoutBlanks} sut;");
+					sw.WriteLine($"\t\t\t{TitleWithoutBlanks} sut;");
 
 					sw.WriteLine("\t\t\t// Act:");
 

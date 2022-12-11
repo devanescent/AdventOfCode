@@ -8,28 +8,6 @@ using System.Windows.Data;
 
 namespace AdventOfCode.ProjectHelper
 {
-	public class TextToLinesConverter : IValueConverter
-	{
-		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			List<string> lines = value as List<string>;
-			if (lines != null && lines.Any())
-				return string.Join(Environment.NewLine, lines);
-			else
-				return string.Empty;
-		}
-
-		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			string text = value as string;
-
-			if (!string.IsNullOrEmpty(text))
-				return text.Split(Environment.NewLine).ToList();
-			else
-				return new List<string>();
-		}
-	}
-
 	public class MainViewModel
 	{
 		public int Year { get; set; }
@@ -56,11 +34,6 @@ namespace AdventOfCode.ProjectHelper
 
 		public void CreateFiles()
 		{
-			// Capitalize each word and join without blanks
-			string _titleWithoutBlanks = string.Join("", 
-				Title.Split(' ').Select(word => { return char.ToUpper(word[0]) + word.Substring(1); })
-			);
-
 			string solutionDirPath = @$"..\..\AdventOfCode{Year}.Solutions\Day{Day:D2}";
 			string testDirPath = @$"..\..\AdventOfCode{Year}.Tests";
 
@@ -80,17 +53,22 @@ namespace AdventOfCode.ProjectHelper
 			if (!string.IsNullOrEmpty(Context))
 				dayFileCreator.WithContext(Context);
 
-			using (FileStream dayHeaderFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{_titleWithoutBlanks}.h"))
+			using (FileStream dayHeaderFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{dayFileCreator.TitleWithoutBlanks}.h"))
 			{
 				dayFileCreator.CreateHeader(dayHeaderFile);
 				prjUpdater.AddHeaderFile(Path.GetFileName(dayHeaderFile.Name));
 			}
 
-			using (FileStream daySourceFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{_titleWithoutBlanks}.cpp"))
+			using (FileStream daySourceFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{dayFileCreator.TitleWithoutBlanks}.cpp"))
 			{
 				dayFileCreator.CreateSource(daySourceFile, DaySTL);
 				prjUpdater.AddSourceFile(Path.GetFileName(daySourceFile.Name));
 			}
+
+			List<string> lines = File.ReadAllLines(@$"{solutionDirPath}\..\Solutions{Year}.h").ToList();
+			dayFileCreator.AddToSolutionHeader(lines);
+			File.WriteAllLines(@$"{solutionDirPath}\..\Solutions{Year}.h", lines.ToArray());
+			
 
 			if (TestCaseList.Any())
 			{
