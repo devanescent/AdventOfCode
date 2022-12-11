@@ -35,6 +35,9 @@
     <Filter Include="Day10">
       <Filter>{44000fa3-6b34-4898-9be3-e88462bae689}</Filter>
     </Filter>
+    <Filter Include="Day11">
+      <Filter>{92ab0341-f0a7-4444-9560-56e454deac98}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -116,6 +119,15 @@
     <ClInclude Include="Day10\InstructionProcessor.h">
       <Filter>Day10</Filter>
     </ClInclude>
+    <ClInclude Include="Day11\Day11_MonkeyInTheMiddle.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\Monkey.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\MonkeyProcessor.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -171,6 +183,12 @@
     </ClCompile>
     <ClCompile Include="Day10\InstructionProcessor.cpp">
       <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\Day11_MonkeyInTheMiddle.cpp">
+      <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\MonkeyProcessor.cpp">
+      <Filter>Day11</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

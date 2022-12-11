@@ -54,6 +54,9 @@
     <ClInclude Include="Day10\Day10_CathodeRayTube.h" />
     <ClInclude Include="Day10\Instruction.h" />
     <ClInclude Include="Day10\InstructionProcessor.h" />
+    <ClInclude Include="Day11\Day11_MonkeyInTheMiddle.h" />
+    <ClInclude Include="Day11\Monkey.h" />
+    <ClInclude Include="Day11\MonkeyProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
@@ -74,6 +77,8 @@
     <ClCompile Include="Day09\RopeMovementProcessor.cpp" />
     <ClCompile Include="Day10\Day10_CathodeRayTube.cpp" />
     <ClCompile Include="Day10\InstructionProcessor.cpp" />
+    <ClCompile Include="Day11\Day11_MonkeyInTheMiddle.cpp" />
+    <ClCompile Include="Day11\MonkeyProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
