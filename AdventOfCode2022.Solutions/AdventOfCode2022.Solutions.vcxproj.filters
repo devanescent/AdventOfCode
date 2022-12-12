@@ -38,6 +38,9 @@
     <Filter Include="Day11">
       <Filter>{92ab0341-f0a7-4444-9560-56e454deac98}</Filter>
     </Filter>
+    <Filter Include="Day12">
+      <Filter>{9a02c27a-9ef3-4fb2-95e7-1c65d83935c3}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -128,6 +131,9 @@
     <ClInclude Include="Day11\MonkeyProcessor.h">
       <Filter>Day11</Filter>
     </ClInclude>
+    <ClInclude Include="Day12\Day12_HillClimbingAlgorithm.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -189,6 +195,9 @@
     </ClCompile>
     <ClCompile Include="Day11\MonkeyProcessor.cpp">
       <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_HillClimbingAlgorithm.cpp">
+      <Filter>Day12</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
