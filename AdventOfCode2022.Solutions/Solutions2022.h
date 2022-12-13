@@ -13,6 +13,7 @@
 #include "Day10\Day10_CathodeRayTube.h"
 #include "Day11\Day11_MonkeyInTheMiddle.h"
 #include "Day12\Day12_HillClimbingAlgorithm.h"
+#include "Day13\Day13_DistressSignal.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -34,6 +35,7 @@ namespace AdventOfCode::Year2022
 				case 10:	return std::make_unique<Day10::CathodeRayTube>();
 				case 11:	return std::make_unique<Day11::MonkeyInTheMiddle>();
 				case 12:	return std::make_unique<Day12::HillClimbingAlgorithm>();
+				case 13:	return std::make_unique<Day13::DistressSignal>();
 				default:	return nullptr;
 			}
 		}

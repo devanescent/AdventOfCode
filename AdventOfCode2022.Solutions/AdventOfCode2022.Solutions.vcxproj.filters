@@ -41,6 +41,9 @@
     <Filter Include="Day12">
       <Filter>{9a02c27a-9ef3-4fb2-95e7-1c65d83935c3}</Filter>
     </Filter>
+    <Filter Include="Day13">
+      <Filter>{af38a162-9fe2-4970-b129-dfe0b776f3ec}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -134,6 +137,15 @@
     <ClInclude Include="Day12\Day12_HillClimbingAlgorithm.h">
       <Filter>Day12</Filter>
     </ClInclude>
+    <ClInclude Include="Day13\Day13_DistressSignal.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\PacketProcessor.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\Packet.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -198,6 +210,15 @@
     </ClCompile>
     <ClCompile Include="Day12\Day12_HillClimbingAlgorithm.cpp">
       <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Day13_DistressSignal.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\PacketProcessor.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Packet.cpp">
+      <Filter>Day13</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
