@@ -44,6 +44,9 @@
     <Filter Include="Day13">
       <Filter>{af38a162-9fe2-4970-b129-dfe0b776f3ec}</Filter>
     </Filter>
+    <Filter Include="Day14">
+      <Filter>{b6b227ab-b599-4ef7-b270-fb7249fa1e13}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -146,6 +149,15 @@
     <ClInclude Include="Day13\Packet.h">
       <Filter>Day13</Filter>
     </ClInclude>
+    <ClInclude Include="Day14\Day14_RegolithReservoir.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\RockPath.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\RockPathProcessor.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -219,6 +231,12 @@
     </ClCompile>
     <ClCompile Include="Day13\Packet.cpp">
       <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\Day14_RegolithReservoir.cpp">
+      <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\RockPathProcessor.cpp">
+      <Filter>Day14</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

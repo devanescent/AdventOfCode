@@ -14,6 +14,7 @@
 #include "Day11\Day11_MonkeyInTheMiddle.h"
 #include "Day12\Day12_HillClimbingAlgorithm.h"
 #include "Day13\Day13_DistressSignal.h"
+#include "Day14\Day14_RegolithReservoir.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -36,6 +37,7 @@ namespace AdventOfCode::Year2022
 				case 11:	return std::make_unique<Day11::MonkeyInTheMiddle>();
 				case 12:	return std::make_unique<Day12::HillClimbingAlgorithm>();
 				case 13:	return std::make_unique<Day13::DistressSignal>();
+				case 14:	return std::make_unique<Day14::RegolithReservoir>();
 				default:	return nullptr;
 			}
 		}
