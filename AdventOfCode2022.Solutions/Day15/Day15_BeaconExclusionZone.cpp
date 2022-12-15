@@ -86,14 +86,14 @@ namespace AdventOfCode::Year2022::Day15
 		);
 
 		// Get all unique beacons from the sensors:
-		std::set<Point> beacons;
+		std::set<Point<int64_t>> beacons;
 		std::transform(sensors.begin(), sensors.end(), std::inserter(beacons, beacons.end()),
 			[](const Sensor& s) { return s.ClosestBeacon; }
 		);
 
 		// Reduce number of possible positions by one for each beacon that exists in this line:
 		auto beaconNumInRow = std::count_if(beacons.begin(), beacons.end(),
-			[this](const Point& beacon)
+			[this](const Point<int64_t>& beacon)
 			{ return beacon.Y == m_row; }
 		);
 

@@ -6,8 +6,8 @@ namespace AdventOfCode::Year2022::Day15
 	class Sensor
 	{
 	public:
-		Point Pos;
-		Point ClosestBeacon;
+		Point<int64_t> Pos;
+		Point<int64_t> ClosestBeacon;
 
 		int64_t SignalRadius() const
 		{

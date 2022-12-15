@@ -8,11 +8,12 @@ namespace AdventOfCode::Year2022::Day09
 	uint64_t RopeBridge::ExecutePart1(std::vector<RopeMovement> movements)
 	{
 		// Head and tail initially overlap
-		auto head = std::make_pair(0, 0);
-		auto tail = head;
+		Point<int> head{ 0, 0 };
+		Point<int> tail = head;
 
 		// Coordinates visited by the tail:
-		std::set<std::pair<int, int>> visitedPositions{ tail };
+		std::set<Point<int>> visitedPositions;
+		visitedPositions.insert(tail);
 
 		for (const RopeMovement& mvm : movements)
 		{
@@ -29,10 +30,11 @@ namespace AdventOfCode::Year2022::Day09
 
 	uint64_t RopeBridge::ExecutePart2(std::vector<RopeMovement> movements)
 	{
-		std::vector<std::pair<int, int>> knots(10, std::make_pair(0, 0));
+		std::vector<Point<int>> knots(10, { 0, 0 });
 
 		// Coordinates visited by the last knot:
-		std::set<std::pair<int, int>> visitedPositions{ knots.back() };
+		std::set<Point<int>> visitedPositions;
+		visitedPositions.insert(knots.back());
 
 		for (const RopeMovement& mvm : movements)
 		{

@@ -14,10 +14,10 @@ namespace AdventOfCode::Year2022::Day15
 		for (const std::string& line : input)
 		{
 			std::regex_search(line, matches, sensorPattern);
-			Point sensorPos(std::stoi(matches[1].str()), std::stoi(matches[2].str()));
+			Point<int64_t> sensorPos(std::stoi(matches[1].str()), std::stoi(matches[2].str()));
 
 			std::regex_search(line, matches, beaconPattern);
-			Point beaconPos(std::stoi(matches[1].str()), std::stoi(matches[2].str()));
+			Point<int64_t> beaconPos(std::stoi(matches[1].str()), std::stoi(matches[2].str()));
 
 			sensors.emplace_back(sensorPos, beaconPos);
 		}

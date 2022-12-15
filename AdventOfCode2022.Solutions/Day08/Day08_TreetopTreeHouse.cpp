@@ -1,4 +1,5 @@
 ﻿#include "Day08_TreetopTreeHouse.h"
+#include "Point.h"
 #include <set>
 
 namespace AdventOfCode::Year2022::Day08
@@ -8,7 +9,7 @@ namespace AdventOfCode::Year2022::Day08
 	uint64_t TreetopTreeHouse::GetResultOnPart1(std::vector<std::string> input)
 	{
 		// Collect coordinates of all visible trees
-		std::set<std::pair<int, int>> visibleTrees;
+		std::set<Point<int>> visibleTrees;
 
 		// Ignore trees on the outer border in the following - these are all visible!
 		// Rows:
@@ -20,7 +21,7 @@ namespace AdventOfCode::Year2022::Day08
 			{
 				if (input[row][x] > leftMax)
 				{
-					visibleTrees.insert(std::make_pair(x, row));
+					visibleTrees.emplace(x, row);
 					leftMax = input[row][x];
 				}
 			}
@@ -31,7 +32,7 @@ namespace AdventOfCode::Year2022::Day08
 			{
 				if (input[row][x] > rightMax)
 				{
-					visibleTrees.insert(std::make_pair(x, row));
+					visibleTrees.emplace(x, row);
 					rightMax = input[row][x];
 				}
 			}
@@ -46,7 +47,7 @@ namespace AdventOfCode::Year2022::Day08
 			{
 				if (input[y][col] > topMax)
 				{
-					visibleTrees.insert(std::make_pair(col, y));
+					visibleTrees.emplace(col, y);
 					topMax = input[y][col];
 				}
 			}
@@ -57,7 +58,7 @@ namespace AdventOfCode::Year2022::Day08
 			{
 				if (input[y][col] > bottomMax)
 				{
-					visibleTrees.insert(std::make_pair(col, y));
+					visibleTrees.emplace(col, y);
 					bottomMax = input[y][col];
 				}
 			}

@@ -7,6 +7,6 @@ namespace AdventOfCode::Year2022::Day14
 	class RockPath
 	{
 	public:
-		std::vector<Point> Path;
+		std::vector<Point<int>> Path;
 	};
 }

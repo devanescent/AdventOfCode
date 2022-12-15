@@ -24,7 +24,7 @@ namespace AdventOfCode::Year2022::Day14
 			Rock
 		};
 
-		std::map<Point, GroundType> m_groundStructure;
+		std::map<Point<int>, GroundType> m_groundStructure;
 		int m_lowestRockLevel;
 
 		void UpdateRockStructure(const RockPath& rocks);

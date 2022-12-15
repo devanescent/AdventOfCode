@@ -3,24 +3,27 @@
 
 namespace AdventOfCode
 {
+	template<typename T>
 	struct Point
 	{
-		int X;
-		int Y;
+		T X;
+		T Y;
 
 		Point() : X(0), Y(0) {}
-		Point(int x, int y) : X(x), Y(y) {}
+		Point(T x, T y) : X(x), Y(y) {}
 
-		Point WithX(int x) const { return Point{ x, Y }; }
-		Point WithY(int y) const { return Point{ X, y }; }
+		Point WithX(T x) const { return Point{ x, Y }; }
+		Point WithY(T y) const { return Point{ X, y }; }
 
-		Point MoveXBy(int dx) const { return Point{ X + dx, Y }; }
-		Point MoveYBy(int dy) const { return Point{ X, Y + dy }; }
+		Point MoveXBy(T dx) const { return Point{ X + dx, Y }; }
+		Point MoveYBy(T dy) const { return Point{ X, Y + dy }; }
 		Point MoveBy(int dx, int dy) const { return Point{ X + dx, Y + dy }; }
 
-		int DistanceTo(const Point& other) const
+		T DistanceTo(const Point& other) const
 		{
-			return std::abs(X - other.X) + std::abs(Y - other.Y);
+			T dx = X > other.X ? X - other.X : other.X - X;
+			T dy = Y > other.Y ? Y - other.Y : other.Y - Y;
+			return dx + dy;
 		}
 
 		// Make points sortable, e.g. for using in a map
