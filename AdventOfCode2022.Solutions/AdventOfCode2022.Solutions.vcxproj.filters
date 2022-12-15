@@ -47,6 +47,9 @@
     <Filter Include="Day14">
       <Filter>{b6b227ab-b599-4ef7-b270-fb7249fa1e13}</Filter>
     </Filter>
+    <Filter Include="Day15">
+      <Filter>{12f14b39-3f14-4d93-9223-48f948e9c2ce}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -158,6 +161,15 @@
     <ClInclude Include="Day14\RockPathProcessor.h">
       <Filter>Day14</Filter>
     </ClInclude>
+    <ClInclude Include="Day15\Day15_BeaconExclusionZone.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\Sensor.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\SensorProcessor.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -237,6 +249,12 @@
     </ClCompile>
     <ClCompile Include="Day14\RockPathProcessor.cpp">
       <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_BeaconExclusionZone.cpp">
+      <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\SensorProcessor.cpp">
+      <Filter>Day15</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

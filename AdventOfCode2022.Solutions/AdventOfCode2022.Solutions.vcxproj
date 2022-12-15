@@ -64,6 +64,9 @@
     <ClInclude Include="Day14\Day14_RegolithReservoir.h" />
     <ClInclude Include="Day14\RockPath.h" />
     <ClInclude Include="Day14\RockPathProcessor.h" />
+    <ClInclude Include="Day15\Day15_BeaconExclusionZone.h" />
+    <ClInclude Include="Day15\Sensor.h" />
+    <ClInclude Include="Day15\SensorProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
@@ -92,6 +95,8 @@
     <ClCompile Include="Day13\PacketProcessor.cpp" />
     <ClCompile Include="Day14\Day14_RegolithReservoir.cpp" />
     <ClCompile Include="Day14\RockPathProcessor.cpp" />
+    <ClCompile Include="Day15\Day15_BeaconExclusionZone.cpp" />
+    <ClCompile Include="Day15\SensorProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

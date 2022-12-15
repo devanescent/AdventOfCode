@@ -22,6 +22,7 @@
     <ClInclude Include="include\InputProcessorWithContext.h" />
     <ClInclude Include="include\IntProcessor.h" />
     <ClInclude Include="include\Point.h" />
+    <ClInclude Include="include\Range.h" />
     <ClInclude Include="include\Solutions.h" />
     <ClInclude Include="include\Utils.h" />
   </ItemGroup>
