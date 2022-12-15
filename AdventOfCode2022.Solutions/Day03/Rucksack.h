@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <algorithm>
+#include <iterator>
 #include <set>
 #include <vector>
 
@@ -22,20 +23,8 @@ namespace AdventOfCode::Year2022::Day03
 			// second half of the characters represent items in the second compartment.
 			auto mid = m_items.begin() + m_items.size() / 2;
 
-			// Find single item in both compartments:
-			std::multiset<Item> firstCompartment(m_items.begin(), mid);
-			std::multiset<Item> secondCompartment(mid, m_items.end());
-
-			// Find duplicate item:
-			std::vector<Item> duplicateItem;
-
-			std::set_intersection(
-				firstCompartment.begin(), firstCompartment.end(),
-				secondCompartment.begin(), secondCompartment.end(),
-				std::back_inserter(duplicateItem)
-			);
-
-			return duplicateItem[0]; // should only be one single item
+			// Find single item from the first half that's also in the second half:
+			return *std::find_first_of(m_items.begin(), mid, mid + 1, m_items.end());
 		}
 
 
@@ -44,7 +33,6 @@ namespace AdventOfCode::Year2022::Day03
 		{
 			std::multiset<Item> items1(m_items.begin(), m_items.end());
 			std::multiset<Item> items2(r1.m_items.begin(), r1.m_items.end());
-			std::multiset<Item> items3(r2.m_items.begin(), r2.m_items.end());
 
 			// First, intersect first two rucksacks:
 			std::multiset<Item> r1_r2;
@@ -54,15 +42,8 @@ namespace AdventOfCode::Year2022::Day03
 				std::inserter(r1_r2, r1_r2.begin())
 			);
 
-			// Second, intersect with the third rucksack to find the badge:
-			std::vector<Item> badges;
-			std::set_intersection(
-				r1_r2.begin(), r1_r2.end(),
-				items3.begin(), items3.end(),
-				std::back_inserter(badges)
-			);
-
-			return badges[0];
+			// Second, find the first item from the third rucksack that's contained in th above set:
+			return *std::find_first_of(r2.m_items.begin(), r2.m_items.end(), r1_r2.begin(), r1_r2.end());
 		}
 
 	private:

@@ -3,6 +3,12 @@
 
 namespace AdventOfCode
 {
+	enum class DistanceMetric
+	{
+		Manhattan, // Distance is sum of distances of all coordinates
+		Maximum	   // Distance is maximum value of distances of all coordinates
+	};
+
 	template<typename T>
 	struct Point
 	{
@@ -19,11 +25,20 @@ namespace AdventOfCode
 		Point MoveYBy(T dy) const { return Point{ X, Y + dy }; }
 		Point MoveBy(int dx, int dy) const { return Point{ X + dx, Y + dy }; }
 
-		T DistanceTo(const Point& other) const
+		T DistanceTo(const Point& other, DistanceMetric metric = DistanceMetric::Manhattan) const
 		{
 			T dx = X > other.X ? X - other.X : other.X - X;
 			T dy = Y > other.Y ? Y - other.Y : other.Y - Y;
-			return dx + dy;
+
+			switch (metric)
+			{
+				case DistanceMetric::Manhattan:
+					return dx + dy;
+				case DistanceMetric::Maximum:
+					return std::max(dx, dy);
+				default:
+					return T();
+			}
 		}
 
 		// Make points sortable, e.g. for using in a map

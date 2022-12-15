@@ -10,7 +10,7 @@ namespace AdventOfCode::Year2022::Day01
 		for (const std::string& line : input)
 		{
 			if (!line.empty())
-				calories.AddCalories(atoi(line.c_str()));
+				calories.AddCalories(std::stoi(line));
 			else
 			{
 				allCalories.emplace_back(calories);

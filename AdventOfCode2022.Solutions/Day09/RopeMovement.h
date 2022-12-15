@@ -15,11 +15,11 @@ namespace AdventOfCode::Year2022::Day09
 	class RopeMovement
 	{
 	public:
-		RopeMovement(Direction dir, int distance) :
-			m_direction(dir), m_distance(distance)
+		RopeMovement(Direction dir, int times) :
+			m_direction(dir), m_times(times)
 		{ }
 
-		int GetDistance() const { return m_distance; }
+		int Times() const { return m_times; }
 
 		void MoveHead(Point<int>& head) const
 		{
@@ -37,9 +37,10 @@ namespace AdventOfCode::Year2022::Day09
 			head.Y += dy;
 		}
 
-		void MoveTail(const Point<int>& head, Point<int>& tail) const
+		// Return true if tail actually moved, false otherwise
+		bool MoveTail(const Point<int>& head, Point<int>& tail) const
 		{
-			if (GetDistance(head, tail) > 1)
+			if (head.DistanceTo(tail, DistanceMetric::Maximum) > 1)
 			{
 				if (head.X == tail.X)
 				{
@@ -73,20 +74,14 @@ namespace AdventOfCode::Year2022::Day09
 						tail.X = head.X;
 					}
 				}
+				return true;
 			}
+			else
+				return false;
 		}
 
 	private:
 		Direction m_direction;
-		int m_distance;
-
-		int GetDistance(const Point<int>& head, const Point<int>& tail) const
-		{
-			int dx = std::abs(head.X - tail.X);
-			int dy = std::abs(head.Y - tail.Y);
-
-			// Use sqrt to "reduce" diagonal distance to 1:
-			return static_cast<int>(std::sqrt(dx * dx + dy * dy));
-		}
+		int m_times;
 	};
 }

@@ -19,7 +19,7 @@ namespace AdventOfCode::Year2022::Day11
 				Monkey& monkey = monkeys[monkeyIx];
 
 				// Count how many times each monkey inspected items:
-				inspectedItems[monkeyIx] += monkey.Items.size();
+				inspectedItems[monkeyIx] += static_cast<int>(monkey.Items.size());
 
 				while (!monkey.Items.empty())
 				{
@@ -36,10 +36,7 @@ namespace AdventOfCode::Year2022::Day11
 		// Monkey business:
 		std::vector<uint64_t> inspections;
 		std::transform(inspectedItems.begin(), inspectedItems.end(), std::back_inserter(inspections),
-			[](const auto& ins)
-			{
-				return ins.second;
-			}
+			[](const auto& ins) { return ins.second; }
 		);
 
 		std::sort(inspections.begin(), inspections.end(), std::greater<>());
@@ -55,10 +52,7 @@ namespace AdventOfCode::Year2022::Day11
 	{
 		// Get product of all division tests for reducing worry levels:
 		uint64_t reduceValue = std::accumulate(monkeys.begin(), monkeys.end(), 1ull,
-			[](uint64_t factor, const Monkey& m)
-			{
-				return factor * m.TestDivisor;
-			});
+			[](uint64_t factor, const Monkey& m) { return factor * m.TestDivisor; });
 
 		return CalculateMonkeyBusinessLevel(monkeys, 10000, [reduceValue](uint64_t worryLevel) { return worryLevel % reduceValue; });
 	}

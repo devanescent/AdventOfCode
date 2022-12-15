@@ -65,7 +65,7 @@ namespace AdventOfCode::Year2022::Day08
 		}
 
 		// Add number of trees at the outer border to number of visible trees from the inner area:
-		int outerTrees = input.size() * 2 + input[0].length() * 2 - 4; // Edges minus corners
+		auto outerTrees = input.size() * 2 + input[0].length() * 2 - 4; // Edges minus corners
 		return visibleTrees.size() + outerTrees;
 	}
 

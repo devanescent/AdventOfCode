@@ -17,15 +17,30 @@ namespace AdventOfCode::Year2022::Day09
 
 		for (const RopeMovement& mvm : movements)
 		{
-			for (int i = 0; i < mvm.GetDistance(); ++i)
+			for (int i = 0; i < mvm.Times(); ++i)
 			{
 				mvm.MoveHead(head);
-				mvm.MoveTail(head, tail);
-				visitedPositions.insert(tail);
+				if (mvm.MoveTail(head, tail))
+					visitedPositions.insert(tail);
 			}
 		}
 
 		return visitedPositions.size();
+	}
+
+	// Returns true if the last end of the tail moved, false otherwise
+	bool MoveRope(std::vector<Point<int>>& knots, const RopeMovement& mvm)
+	{
+		mvm.MoveHead(knots[0]);
+
+		// Move remaining knots of the rope:
+		for (int j = 1; j < 10; ++j)
+		{
+			if (!mvm.MoveTail(knots[j - 1], knots[j]))
+				return false;
+		}
+
+		return true;
 	}
 
 	uint64_t RopeBridge::ExecutePart2(std::vector<RopeMovement> movements)
@@ -38,15 +53,10 @@ namespace AdventOfCode::Year2022::Day09
 
 		for (const RopeMovement& mvm : movements)
 		{
-			for (int i = 0; i < mvm.GetDistance(); ++i)
+			for (int i = 0; i < mvm.Times(); ++i)
 			{
-				mvm.MoveHead(knots[0]);
-
-				// Move remaining knots of the rope:
-				for (int j = 1; j < 10; ++j)
-					mvm.MoveTail(knots[j - 1], knots[j]);
-
-				visitedPositions.insert(knots.back());
+				if (MoveRope(knots, mvm))
+					visitedPositions.insert(knots.back());
 			}
 		}
 
