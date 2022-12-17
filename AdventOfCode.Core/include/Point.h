@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+#include <functional>
 
 namespace AdventOfCode
 {
@@ -56,3 +57,13 @@ namespace AdventOfCode
 		}
 	};
 }
+
+// Specialization of hash function to use Point in e.g. unordered_set
+template<typename T>
+struct std::hash<AdventOfCode::Point<T>>
+{
+	std::size_t operator()(AdventOfCode::Point<T> const& p) const noexcept
+	{
+		return p.X ^ p.Y;
+	}
+};

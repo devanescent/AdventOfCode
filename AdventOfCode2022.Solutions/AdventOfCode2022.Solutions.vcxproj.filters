@@ -53,6 +53,9 @@
     <Filter Include="Day16">
       <Filter>{7728b858-627a-4e02-b4c8-0e2976d7bde9}</Filter>
     </Filter>
+    <Filter Include="Day17">
+      <Filter>{4725cbbb-f399-4c89-9b48-c1aa3377817b}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -182,6 +185,12 @@
     <ClInclude Include="Day16\ValveProcessor.h">
       <Filter>Day16</Filter>
     </ClInclude>
+    <ClInclude Include="Day17\Day17_PyroclasticFlow.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\Rock.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -273,6 +282,9 @@
     </ClCompile>
     <ClCompile Include="Day16\ValveProcessor.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_PyroclasticFlow.cpp">
+      <Filter>Day17</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
