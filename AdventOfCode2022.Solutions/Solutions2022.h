@@ -16,6 +16,7 @@
 #include "Day13\Day13_DistressSignal.h"
 #include "Day14\Day14_RegolithReservoir.h"
 #include "Day15\Day15_BeaconExclusionZone.h"
+#include "Day16\Day16_ProboscideaVolcanium.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -40,6 +41,7 @@ namespace AdventOfCode::Year2022
 				case 13:	return std::make_unique<Day13::DistressSignal>();
 				case 14:	return std::make_unique<Day14::RegolithReservoir>();
 				case 15:	return std::make_unique<Day15::BeaconExclusionZone>();
+				case 16:	return std::make_unique<Day16::ProboscideaVolcanium>();
 				default:	return nullptr;
 			}
 		}

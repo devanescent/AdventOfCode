@@ -67,6 +67,9 @@
     <ClInclude Include="Day15\Day15_BeaconExclusionZone.h" />
     <ClInclude Include="Day15\Sensor.h" />
     <ClInclude Include="Day15\SensorProcessor.h" />
+    <ClInclude Include="Day16\Day16_ProboscideaVolcanium.h" />
+    <ClInclude Include="Day16\Valve.h" />
+    <ClInclude Include="Day16\ValveProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
@@ -97,6 +100,8 @@
     <ClCompile Include="Day14\RockPathProcessor.cpp" />
     <ClCompile Include="Day15\Day15_BeaconExclusionZone.cpp" />
     <ClCompile Include="Day15\SensorProcessor.cpp" />
+    <ClCompile Include="Day16\Day16_ProboscideaVolcanium.cpp" />
+    <ClCompile Include="Day16\ValveProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
