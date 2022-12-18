@@ -56,6 +56,9 @@
     <Filter Include="Day17">
       <Filter>{4725cbbb-f399-4c89-9b48-c1aa3377817b}</Filter>
     </Filter>
+    <Filter Include="Day18">
+      <Filter>{d92405e0-8613-45d6-b439-1e77b71114e2}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -191,6 +194,15 @@
     <ClInclude Include="Day17\Rock.h">
       <Filter>Day17</Filter>
     </ClInclude>
+    <ClInclude Include="Day18\Day18_BoilingBoulders.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\Cube.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\CubeProcessor.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -285,6 +297,12 @@
     </ClCompile>
     <ClCompile Include="Day17\Day17_PyroclasticFlow.cpp">
       <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\Day18_BoilingBoulders.cpp">
+      <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\CubeProcessor.cpp">
+      <Filter>Day18</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

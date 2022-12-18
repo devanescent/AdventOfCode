@@ -18,6 +18,7 @@
 #include "Day15\Day15_BeaconExclusionZone.h"
 #include "Day16\Day16_ProboscideaVolcanium.h"
 #include "Day17\Day17_PyroclasticFlow.h"
+#include "Day18\Day18_BoilingBoulders.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -44,6 +45,7 @@ namespace AdventOfCode::Year2022
 				case 15:	return std::make_unique<Day15::BeaconExclusionZone>();
 				case 16:	return std::make_unique<Day16::ProboscideaVolcanium>();
 				case 17:	return std::make_unique<Day17::PyroclasticFlow>();
+				case 18:	return std::make_unique<Day18::BoilingBoulders>();
 				default:	return nullptr;
 			}
 		}
