@@ -75,6 +75,7 @@
     <ClInclude Include="Day18\Day18_BoilingBoulders.h" />
     <ClInclude Include="Day18\Cube.h" />
     <ClInclude Include="Day18\CubeProcessor.h" />
+    <ClInclude Include="Day20\Day20_GrovePositioningSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
@@ -110,6 +111,7 @@
     <ClCompile Include="Day17\Day17_PyroclasticFlow.cpp" />
     <ClCompile Include="Day18\Day18_BoilingBoulders.cpp" />
     <ClCompile Include="Day18\CubeProcessor.cpp" />
+    <ClCompile Include="Day20\Day20_GrovePositioningSystem.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

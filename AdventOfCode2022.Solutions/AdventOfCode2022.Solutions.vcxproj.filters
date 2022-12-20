@@ -59,6 +59,9 @@
     <Filter Include="Day18">
       <Filter>{d92405e0-8613-45d6-b439-1e77b71114e2}</Filter>
     </Filter>
+    <Filter Include="Day20">
+      <Filter>{979f4934-472d-472c-8e1c-46c4fa42f147}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -203,6 +206,9 @@
     <ClInclude Include="Day18\CubeProcessor.h">
       <Filter>Day18</Filter>
     </ClInclude>
+    <ClInclude Include="Day20\Day20_GrovePositioningSystem.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -303,6 +309,9 @@
     </ClCompile>
     <ClCompile Include="Day18\CubeProcessor.cpp">
       <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\Day20_GrovePositioningSystem.cpp">
+      <Filter>Day20</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
