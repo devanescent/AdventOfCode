@@ -21,6 +21,7 @@
 #include "Day18\Day18_BoilingBoulders.h"
 #include "Day20\Day20_GrovePositioningSystem.h"
 #include "Day21\Day21_MonkeyMath.h"
+#include "Day22\Day22_MonkeyMap.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -50,6 +51,7 @@ namespace AdventOfCode::Year2022
 				case 18:	return std::make_unique<Day18::BoilingBoulders>();
 				case 20:	return std::make_unique<Day20::GrovePositioningSystem>();
 				case 21:	return std::make_unique<Day21::MonkeyMath>();
+				case 22:	return std::make_unique<Day22::MonkeyMap>();
 				default:	return nullptr;
 			}
 		}

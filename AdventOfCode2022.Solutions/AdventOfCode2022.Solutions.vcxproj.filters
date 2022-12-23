@@ -65,6 +65,9 @@
     <Filter Include="Day21">
       <Filter>{1bbfa27f-c296-4737-a6ff-1768ee403dac}</Filter>
     </Filter>
+    <Filter Include="Day22">
+      <Filter>{b1ff5f4a-bf67-4739-b66d-6d7100fb133d}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -221,6 +224,18 @@
     <ClInclude Include="Day21\MonkeyMathProcessor.h">
       <Filter>Day21</Filter>
     </ClInclude>
+    <ClInclude Include="Day22\Day22_MonkeyMap.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\MoveInstruction.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\MonkeyMapProcessor.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\JungleMap.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -330,6 +345,12 @@
     </ClCompile>
     <ClCompile Include="Day21\MonkeyMathProcessor.cpp">
       <Filter>Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\Day22_MonkeyMap.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\MonkeyMapProcessor.cpp">
+      <Filter>Day22</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

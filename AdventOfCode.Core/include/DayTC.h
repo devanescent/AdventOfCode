@@ -16,14 +16,14 @@ namespace AdventOfCode
 		uint64_t GetResultOnPart1(std::vector<std::string> input) override
 		{
 			std::pair<typename TProcessor::container_type, typename TProcessor::context_type> res = m_proc.Process(input);
-			return ExecutePart1(res.first, res.second);
+			return ExecutePart1(std::move(res.first), std::move(res.second));
 		}
 
 		// Override for processing string input - delegates to specialized processor
 		uint64_t GetResultOnPart2(std::vector<std::string> input) override
 		{
 			std::pair<typename TProcessor::container_type, typename TProcessor::context_type> res = m_proc.Process(input);
-			return ExecutePart2(res.first, res.second);
+			return ExecutePart2(std::move(res.first), std::move(res.second));
 		}
 
 	protected:

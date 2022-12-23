@@ -9,7 +9,7 @@ namespace AdventOfCode
         T Start;
         T End;
 
-        Range(T start, T end) : Start(start), End(end)
+        Range(T start = 0, T end = 0) : Start(start), End(end)
         {
             if (Start > End) std::swap(Start, End);
         }
