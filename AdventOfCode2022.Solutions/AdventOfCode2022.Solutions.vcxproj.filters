@@ -68,6 +68,9 @@
     <Filter Include="Day22">
       <Filter>{b1ff5f4a-bf67-4739-b66d-6d7100fb133d}</Filter>
     </Filter>
+    <Filter Include="Day23">
+      <Filter>{09e14cbd-b15b-4e7f-ab1e-d003964a31d3}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -236,6 +239,18 @@
     <ClInclude Include="Day22\JungleMap.h">
       <Filter>Day22</Filter>
     </ClInclude>
+    <ClInclude Include="Day23\Day23_UnstableDiffusion.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Elf.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\GroveProcessor.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Grove.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -352,5 +367,12 @@
     <ClCompile Include="Day22\MonkeyMapProcessor.cpp">
       <Filter>Day22</Filter>
     </ClCompile>
+    <ClCompile Include="Day23\Day23_UnstableDiffusion.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\GroveProcessor.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\Grove.cpp" />
   </ItemGroup>
 </Project>

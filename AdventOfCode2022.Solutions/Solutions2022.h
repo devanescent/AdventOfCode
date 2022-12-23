@@ -22,6 +22,7 @@
 #include "Day20\Day20_GrovePositioningSystem.h"
 #include "Day21\Day21_MonkeyMath.h"
 #include "Day22\Day22_MonkeyMap.h"
+#include "Day23\Day23_UnstableDiffusion.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -52,6 +53,7 @@ namespace AdventOfCode::Year2022
 				case 20:	return std::make_unique<Day20::GrovePositioningSystem>();
 				case 21:	return std::make_unique<Day21::MonkeyMath>();
 				case 22:	return std::make_unique<Day22::MonkeyMap>();
+				case 23:	return std::make_unique<Day23::UnstableDiffusion>();
 				default:	return nullptr;
 			}
 		}
