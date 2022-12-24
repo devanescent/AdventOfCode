@@ -71,6 +71,9 @@
     <Filter Include="Day23">
       <Filter>{09e14cbd-b15b-4e7f-ab1e-d003964a31d3}</Filter>
     </Filter>
+    <Filter Include="Day24">
+      <Filter>{a0a053f3-d8da-47fa-ba15-c75b8746b6a2}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -251,6 +254,15 @@
     <ClInclude Include="Day23\Grove.h">
       <Filter>Day23</Filter>
     </ClInclude>
+    <ClInclude Include="Day24\Day24_BlizzardBasin.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\Blizzard.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\BlizzardProcessor.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -374,5 +386,11 @@
       <Filter>Day23</Filter>
     </ClCompile>
     <ClCompile Include="Day23\Grove.cpp" />
+    <ClCompile Include="Day24\Day24_BlizzardBasin.cpp">
+      <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\BlizzardProcessor.cpp">
+      <Filter>Day24</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
