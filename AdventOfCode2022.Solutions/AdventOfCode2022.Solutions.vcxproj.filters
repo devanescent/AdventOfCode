@@ -74,6 +74,9 @@
     <Filter Include="Day24">
       <Filter>{a0a053f3-d8da-47fa-ba15-c75b8746b6a2}</Filter>
     </Filter>
+    <Filter Include="Day25">
+      <Filter>{1df2bd89-82f8-4ba5-bc81-34be7dd10417}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_CalorieCounting.h">
@@ -263,6 +266,15 @@
     <ClInclude Include="Day24\BlizzardProcessor.h">
       <Filter>Day24</Filter>
     </ClInclude>
+    <ClInclude Include="Day25\Day25_FullOfHotAir.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\SNAFUNumber.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\SNAFUProcessor.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -391,6 +403,12 @@
     </ClCompile>
     <ClCompile Include="Day24\BlizzardProcessor.cpp">
       <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\Day25_FullOfHotAir.cpp">
+      <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\SNAFUProcessor.cpp">
+      <Filter>Day25</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -24,6 +24,7 @@
 #include "Day22\Day22_MonkeyMap.h"
 #include "Day23\Day23_UnstableDiffusion.h"
 #include "Day24\Day24_BlizzardBasin.h"
+#include "Day25\Day25_FullOfHotAir.h"
 
 namespace AdventOfCode::Year2022
 {
@@ -56,6 +57,7 @@ namespace AdventOfCode::Year2022
 				case 22:	return std::make_unique<Day22::MonkeyMap>();
 				case 23:	return std::make_unique<Day23::UnstableDiffusion>();
 				case 24:	return std::make_unique<Day24::BlizzardBasin>();
+				case 25:	return std::make_unique<Day25::FullOfHotAir>();
 				default:	return nullptr;
 			}
 		}

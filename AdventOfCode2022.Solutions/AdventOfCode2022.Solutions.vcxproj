@@ -90,6 +90,9 @@
     <ClInclude Include="Day24\Day24_BlizzardBasin.h" />
     <ClInclude Include="Day24\Blizzard.h" />
     <ClInclude Include="Day24\BlizzardProcessor.h" />
+    <ClInclude Include="Day25\Day25_FullOfHotAir.h" />
+    <ClInclude Include="Day25\SNAFUNumber.h" />
+    <ClInclude Include="Day25\SNAFUProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
@@ -135,6 +138,8 @@
     <ClCompile Include="Day23\GroveProcessor.cpp" />
     <ClCompile Include="Day24\Day24_BlizzardBasin.cpp" />
     <ClCompile Include="Day24\BlizzardProcessor.cpp" />
+    <ClCompile Include="Day25\Day25_FullOfHotAir.cpp" />
+    <ClCompile Include="Day25\SNAFUProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
