@@ -39,6 +39,16 @@ namespace AdventOfCode::Year2022::Tests
 			Assert::AreEqual(1651ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			ProboscideaVolcanium sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData1);
+			// Assert:
+			Assert::AreEqual(1707ull, result);
+		};
+
 	};
 	std::vector<std::string> Year2022_Day16::inputData1 = std::vector<std::string>();
 }
