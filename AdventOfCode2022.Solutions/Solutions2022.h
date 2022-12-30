@@ -19,6 +19,7 @@
 #include "Day16\Day16_ProboscideaVolcanium.h"
 #include "Day17\Day17_PyroclasticFlow.h"
 #include "Day18\Day18_BoilingBoulders.h"
+#include "Day19\Day19_NotEnoughMinerals.h"
 #include "Day20\Day20_GrovePositioningSystem.h"
 #include "Day21\Day21_MonkeyMath.h"
 #include "Day22\Day22_MonkeyMap.h"
@@ -52,6 +53,7 @@ namespace AdventOfCode::Year2022
 				case 16:	return std::make_unique<Day16::ProboscideaVolcanium>();
 				case 17:	return std::make_unique<Day17::PyroclasticFlow>();
 				case 18:	return std::make_unique<Day18::BoilingBoulders>();
+				case 19:	return std::make_unique<Day19::NotEnoughMinerals>();
 				case 20:	return std::make_unique<Day20::GrovePositioningSystem>();
 				case 21:	return std::make_unique<Day21::MonkeyMath>();
 				case 22:	return std::make_unique<Day22::MonkeyMap>();

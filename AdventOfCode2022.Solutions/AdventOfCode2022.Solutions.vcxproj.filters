@@ -59,6 +59,9 @@
     <Filter Include="Day18">
       <Filter>{d92405e0-8613-45d6-b439-1e77b71114e2}</Filter>
     </Filter>
+    <Filter Include="Day19">
+      <Filter>{ef64c0a5-4e65-41cf-8483-442e04c44568}</Filter>
+    </Filter>
     <Filter Include="Day20">
       <Filter>{979f4934-472d-472c-8e1c-46c4fa42f147}</Filter>
     </Filter>
@@ -275,6 +278,15 @@
     <ClInclude Include="Day25\SNAFUProcessor.h">
       <Filter>Day25</Filter>
     </ClInclude>
+    <ClInclude Include="Day19\Blueprint.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\BlueprintProcessor.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\Day19_NotEnoughMinerals.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_CalorieCounting.cpp">
@@ -409,6 +421,12 @@
     </ClCompile>
     <ClCompile Include="Day25\SNAFUProcessor.cpp">
       <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\BlueprintProcessor.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\Day19_NotEnoughMinerals.cpp">
+      <Filter>Day19</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
