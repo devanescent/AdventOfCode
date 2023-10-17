@@ -5,6 +5,7 @@
 #include "Day02\Day02_CorruptionChecksum.h"
 #include "Day03\Day03_SpiralMemory.h"
 #include "Day04\Day04_HighEntropyPassphrases.h"
+#include "Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -18,6 +19,7 @@ namespace AdventOfCode::Year2017
 				case 02:	return std::make_unique<Day02::CorruptionChecksum>();
 				case 03:	return std::make_unique<Day03::SpiralMemory>();
 				case 04:	return std::make_unique<Day04::HighEntropyPassphrases>();
+				case 05:	return std::make_unique<Day05::AMazeOfTwistyTrampolinesAllAlike>();
 				default:	return nullptr;
 			}
 		}

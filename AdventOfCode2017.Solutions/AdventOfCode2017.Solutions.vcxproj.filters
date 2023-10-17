@@ -17,6 +17,9 @@
     <Filter Include="Day04">
       <Filter>{4549e4ce-e4b5-42b1-9a13-fef181b19b05}</Filter>
     </Filter>
+    <Filter Include="Day05">
+      <Filter>{ee4dfd2f-d361-4e70-a782-50eabf0630b2}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -38,6 +41,9 @@
     <ClInclude Include="Day04\PassphraseProcessor.h">
       <Filter>Day04</Filter>
     </ClInclude>
+    <ClInclude Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -57,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="Day04\PassphraseProcessor.cpp">
       <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.cpp">
+      <Filter>Day05</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
