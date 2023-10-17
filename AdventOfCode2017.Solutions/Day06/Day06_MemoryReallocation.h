@@ -14,5 +14,8 @@ namespace AdventOfCode::Year2017::Day06
 
 		uint64_t ExecutePart1(std::vector<int> memoryBanks) override;
 		uint64_t ExecutePart2(std::vector<int> memoryBanks) override;
+
+	private:
+		void RedistributeBlocks(std::vector<int>& memoryBanks);
 	};
 }

@@ -16,9 +16,8 @@ namespace AdventOfCode::Year2017::Tests
 		{
 			inputData1 = std::vector<std::string>
 			{
-				"0 2 7 0"
+				"0	2	7	0"
 			};
-
 		};
 		TEST_METHOD(CheckExample1_Part1)
 		{
@@ -30,6 +29,15 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(5ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			MemoryReallocation sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData1);
+			// Assert:
+			Assert::AreEqual(4ull, result);
+		};
 	};
 	std::vector<std::string> Year2017_Day06::inputData1 = std::vector<std::string>();
 }

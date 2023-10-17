@@ -55,7 +55,7 @@ namespace AdventOfCode
 			std::istringstream iss = std::istringstream(input[0]);
 			std::string valStr;
 
-			while (std::getline(iss, valStr, ' '))
+			while (iss >> valStr)
 				intList.push_back(std::stoi(valStr));
 		}
 
