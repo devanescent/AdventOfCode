@@ -5,8 +5,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Day01">
+      <Filter>{d0c18793-4503-4141-b3b9-4d8bcfea5b72}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
+    <ClInclude Include="Day01\Day01_InverseCaptcha.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

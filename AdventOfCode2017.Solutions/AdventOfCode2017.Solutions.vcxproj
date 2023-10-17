@@ -28,11 +28,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
+    <ClInclude Include="Day01\Day01_InverseCaptcha.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
       <Project>{e12387bc-ae11-4ece-b865-bc4bd1374889}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Day01\Day01_InverseCaptcha.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
