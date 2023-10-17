@@ -1,5 +1,6 @@
 ﻿#include "Day03_SpiralMemory.h"
-#include <cmath>
+#include "Point.h"
+#include <map>
 
 namespace AdventOfCode::Year2017::Day03
 {
@@ -32,6 +33,59 @@ namespace AdventOfCode::Year2017::Day03
 
 	uint64_t SpiralMemory::GetResultOnPart2(std::vector<std::string> input)
 	{
-		return uint64_t();
+		uint64_t target = std::stoull(input[0]);
+		std::map<Point<int>, int> squares;
+
+		uint64_t lastSquareValue = 0;
+		Point currentSquare { 0,0 };
+		squares[currentSquare] = 1;
+
+		bool ringStart = true;
+		int ring = 0;
+		Direction currentDir = Direction::Up;
+
+		while (lastSquareValue <= target)
+		{
+			if (ringStart)
+			{
+				++ring;
+				++currentSquare.X;
+				ringStart = false;
+			}
+			else switch (currentDir)
+			{
+				case Direction::Up:
+					--currentSquare.Y;
+					if (currentSquare.Y == -ring)
+						currentDir = Direction::Left;
+					break;
+				case Direction::Left:
+					--currentSquare.X;
+					if (currentSquare.X == -ring)
+						currentDir = Direction::Down;
+					break;
+				case Direction::Down:
+					++currentSquare.Y;
+					if (currentSquare.Y == ring)
+						currentDir = Direction::Right;
+					break;
+				case Direction::Right:
+					++currentSquare.X;
+					if (currentSquare.X == ring)
+					{
+						currentDir = Direction::Up;
+						ringStart = true;
+					}
+					break;
+			}
+
+			lastSquareValue = 0;
+			for (auto&& p : currentSquare.GetSurroundingPoints(true))
+				lastSquareValue += squares[p];
+
+			squares[currentSquare] = lastSquareValue;
+		}
+
+		return lastSquareValue;
 	}
 }

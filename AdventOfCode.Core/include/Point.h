@@ -42,6 +42,27 @@ namespace AdventOfCode
 			}
 		}
 
+		std::vector<Point<T>> GetSurroundingPoints(bool includeDiagonals) const
+		{
+			std::vector<Point<T>> points;
+			points.reserve(8);
+
+			points.emplace_back(X, Y - 1);
+			points.emplace_back(X, Y + 1);
+			points.emplace_back(X - 1, Y);
+			points.emplace_back(X + 1, Y);
+
+			if (includeDiagonals)
+			{
+				points.emplace_back(X - 1, Y - 1);
+				points.emplace_back(X + 1, Y + 1);
+				points.emplace_back(X - 1, Y + 1);
+				points.emplace_back(X + 1, Y - 1);
+			}
+
+			return points;
+		}
+
 		// Make points sortable, e.g. for using in a map
 		bool operator<(const Point& other) const
 		{
