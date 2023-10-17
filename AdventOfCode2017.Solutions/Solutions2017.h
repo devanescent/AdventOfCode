@@ -7,6 +7,7 @@
 #include "Day04\Day04_HighEntropyPassphrases.h"
 #include "Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h"
 #include "Day06\Day06_MemoryReallocation.h"
+#include "Day07\Day07_RecursiveCircus.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -22,6 +23,7 @@ namespace AdventOfCode::Year2017
 				case 04:	return std::make_unique<Day04::HighEntropyPassphrases>();
 				case 05:	return std::make_unique<Day05::AMazeOfTwistyTrampolinesAllAlike>();
 				case 06:	return std::make_unique<Day06::MemoryReallocation>();
+				case 07:	return std::make_unique<Day07::RecursiveCircus>();
 				default:	return nullptr;
 			}
 		}

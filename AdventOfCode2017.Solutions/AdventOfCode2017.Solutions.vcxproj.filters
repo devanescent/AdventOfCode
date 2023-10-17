@@ -23,6 +23,9 @@
     <Filter Include="Day06">
       <Filter>{ce09f71f-9469-4422-a923-99a214bbd8a4}</Filter>
     </Filter>
+    <Filter Include="Day07">
+      <Filter>{cf7cef0f-a6b5-4643-aba6-390dbfd0a6c9}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -50,6 +53,15 @@
     <ClInclude Include="Day06\Day06_MemoryReallocation.h">
       <Filter>Day06</Filter>
     </ClInclude>
+    <ClInclude Include="Day07\Day07_RecursiveCircus.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\TowerProgram.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\TowerProgramProcessor.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -75,6 +87,12 @@
     </ClCompile>
     <ClCompile Include="Day06\Day06_MemoryReallocation.cpp">
       <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\Day07_RecursiveCircus.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\TowerProgramProcessor.cpp">
+      <Filter>Day07</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

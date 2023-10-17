@@ -36,6 +36,9 @@
     <ClInclude Include="Day04\PassphraseProcessor.h" />
     <ClInclude Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h" />
     <ClInclude Include="Day06\Day06_MemoryReallocation.h" />
+    <ClInclude Include="Day07\Day07_RecursiveCircus.h" />
+    <ClInclude Include="Day07\TowerProgram.h" />
+    <ClInclude Include="Day07\TowerProgramProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -51,6 +54,8 @@
     <ClCompile Include="Day04\PassphraseProcessor.cpp" />
     <ClCompile Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.cpp" />
     <ClCompile Include="Day06\Day06_MemoryReallocation.cpp" />
+    <ClCompile Include="Day07\Day07_RecursiveCircus.cpp" />
+    <ClCompile Include="Day07\TowerProgramProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
