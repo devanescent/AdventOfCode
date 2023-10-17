@@ -81,7 +81,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../AdventOfCode.Core/include;../AdventOfCode2018.Solutions;../AdventOfCode2020.Solutions;../AdventOfCode2021.Solutions;../AdventOfCode2022.Solutions</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../AdventOfCode.Core/include;../AdventOfCode2017.Solutions;../AdventOfCode2018.Solutions;../AdventOfCode2020.Solutions;../AdventOfCode2021.Solutions;../AdventOfCode2022.Solutions</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -139,6 +139,9 @@
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
       <Project>{e12387bc-ae11-4ece-b865-bc4bd1374889}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AdventOfCode2017.Solutions\AdventOfCode2017.Solutions.vcxproj">
+      <Project>{05eee347-ac92-406b-9eb2-8e3f695a513d}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AdventOfCode2018.Solutions\AdventOfCode2018.Solutions.vcxproj">
       <Project>{b30a2a41-93c4-4889-8ce9-194bd0f714e0}</Project>

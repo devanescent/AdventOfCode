@@ -1,4 +1,5 @@
 #include "SolutionFactory.h"
+#include "Solutions2017.h"
 #include "Solutions2018.h"
 #include "Solutions2020.h"
 #include "Solutions2021.h"
@@ -10,6 +11,7 @@ namespace AdventOfCode
 	{
 		switch (year)
 		{
+			case 2017:	return std::make_unique<Year2017::Solutions2017>();
 			case 2018:	return std::make_unique<Year2018::Solutions2018>();
 			case 2020:	return std::make_unique<Year2020::Solutions2020>();
 			case 2021:	return std::make_unique<Year2021::Solutions2021>();
