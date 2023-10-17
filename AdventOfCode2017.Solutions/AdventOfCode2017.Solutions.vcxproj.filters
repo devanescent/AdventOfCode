@@ -20,6 +20,9 @@
     <Filter Include="Day05">
       <Filter>{ee4dfd2f-d361-4e70-a782-50eabf0630b2}</Filter>
     </Filter>
+    <Filter Include="Day06">
+      <Filter>{ce09f71f-9469-4422-a923-99a214bbd8a4}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -44,6 +47,9 @@
     <ClInclude Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h">
       <Filter>Day05</Filter>
     </ClInclude>
+    <ClInclude Include="Day06\Day06_MemoryReallocation.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -66,6 +72,9 @@
     </ClCompile>
     <ClCompile Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.cpp">
       <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\Day06_MemoryReallocation.cpp">
+      <Filter>Day06</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

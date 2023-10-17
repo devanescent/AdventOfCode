@@ -6,6 +6,7 @@
 #include "Day03\Day03_SpiralMemory.h"
 #include "Day04\Day04_HighEntropyPassphrases.h"
 #include "Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h"
+#include "Day06\Day06_MemoryReallocation.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -20,6 +21,7 @@ namespace AdventOfCode::Year2017
 				case 03:	return std::make_unique<Day03::SpiralMemory>();
 				case 04:	return std::make_unique<Day04::HighEntropyPassphrases>();
 				case 05:	return std::make_unique<Day05::AMazeOfTwistyTrampolinesAllAlike>();
+				case 06:	return std::make_unique<Day06::MemoryReallocation>();
 				default:	return nullptr;
 			}
 		}

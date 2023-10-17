@@ -35,6 +35,7 @@
     <ClInclude Include="Day04\Day04_HighEntropyPassphrases.h" />
     <ClInclude Include="Day04\PassphraseProcessor.h" />
     <ClInclude Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h" />
+    <ClInclude Include="Day06\Day06_MemoryReallocation.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -49,6 +50,7 @@
     <ClCompile Include="Day04\Day04_HighEntropyPassphrases.cpp" />
     <ClCompile Include="Day04\PassphraseProcessor.cpp" />
     <ClCompile Include="Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.cpp" />
+    <ClCompile Include="Day06\Day06_MemoryReallocation.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
