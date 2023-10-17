@@ -15,35 +15,12 @@ namespace AdventOfCode::Year2017::Tests
 		static std::vector<std::string> inputData4;
 
 	public:
-		TEST_CLASS_INITIALIZE(Init)
-		{
-			inputData1 = std::vector<std::string>
-			{
-				"1122"
-			};
-
-			inputData2 = std::vector<std::string>
-			{
-				"1111"
-			};
-
-			inputData3 = std::vector<std::string>
-			{
-				"1234"
-			};
-
-			inputData4 = std::vector<std::string>
-			{
-				"91212129"
-			};
-
-		};
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData1);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "1122" });
 			// Assert:
 			Assert::AreEqual(3ull, result);
 		};
@@ -53,7 +30,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData2);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "1111" });
 			// Assert:
 			Assert::AreEqual(4ull, result);
 		};
@@ -63,7 +40,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData3);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "1234" });
 			// Assert:
 			Assert::AreEqual(0ull, result);
 		};
@@ -73,14 +50,60 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData4);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "91212129" });
 			// Assert:
 			Assert::AreEqual(9ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			InverseCaptcha sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "91212129" });
+			// Assert:
+			Assert::AreEqual(6ull, result);
+		};
+
+		TEST_METHOD(CheckExample2_Part2)
+		{
+			// Arrange:
+			InverseCaptcha sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "1221" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample3_Part2)
+		{
+			// Arrange:
+			InverseCaptcha sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "123425" });
+			// Assert:
+			Assert::AreEqual(4ull, result);
+		};
+
+		TEST_METHOD(CheckExample4_Part2)
+		{
+			// Arrange:
+			InverseCaptcha sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "123123" });
+			// Assert:
+			Assert::AreEqual(12ull, result);
+		};
+
+		TEST_METHOD(CheckExample5_Part2)
+		{
+			// Arrange:
+			InverseCaptcha sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "12131415" });
+			// Assert:
+			Assert::AreEqual(4ull, result);
+		};
+
 	};
-	std::vector<std::string> Year2017_Day01::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day01::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day01::inputData3 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day01::inputData4 = std::vector<std::string>();
 }

@@ -23,6 +23,17 @@ namespace AdventOfCode::Year2017::Day01
 
 	uint64_t InverseCaptcha::GetResultOnPart2(std::vector<std::string> input)
 	{
-		return uint64_t();
+		const std::string& sequence = input[0];
+
+		// Only iterate half the list, because comparisons are symmetrical:
+		uint64_t sum = 0ull;
+		int halfLen = sequence.size() / 2;
+		for (int i = 0; i < halfLen; ++i)
+		{
+			if (sequence[i] == sequence[i + halfLen])
+				sum += 2ull * (sequence[i] - '0');
+		}
+
+		return sum;
 	}
 }
