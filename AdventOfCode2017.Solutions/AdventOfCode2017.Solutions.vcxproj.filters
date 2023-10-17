@@ -14,6 +14,9 @@
     <Filter Include="Day03">
       <Filter>{e1050a69-da3e-4a76-b2ff-7284b3a28c8c}</Filter>
     </Filter>
+    <Filter Include="Day04">
+      <Filter>{4549e4ce-e4b5-42b1-9a13-fef181b19b05}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -29,9 +32,14 @@
     <ClInclude Include="Day03\Day03_SpiralMemory.h">
       <Filter>Day03</Filter>
     </ClInclude>
+    <ClInclude Include="Day04\Day04_HighEntropyPassphrases.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\PassphraseProcessor.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
       <Filter>Day01</Filter>
     </ClCompile>
@@ -43,6 +51,12 @@
     </ClCompile>
     <ClCompile Include="Day03\Day03_SpiralMemory.cpp">
       <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\Day04_HighEntropyPassphrases.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\PassphraseProcessor.cpp">
+      <Filter>Day04</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
