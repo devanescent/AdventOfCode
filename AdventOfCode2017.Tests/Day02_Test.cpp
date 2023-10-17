@@ -10,6 +10,7 @@ namespace AdventOfCode::Year2017::Tests
 	{
 	private:
 		static std::vector<std::string> inputData1;
+		static std::vector<std::string> inputData2;
 
 	public:
 		TEST_CLASS_INITIALIZE(Init)
@@ -21,6 +22,12 @@ namespace AdventOfCode::Year2017::Tests
 				"2 4 6 8"
 			};
 
+			inputData2 = std::vector<std::string>
+			{
+				"5 9 2 8",
+				"9 4 7 3",
+				"3 8 6 5"
+			};
 		};
 		TEST_METHOD(CheckExample1_Part1)
 		{
@@ -32,6 +39,16 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(18ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			CorruptionChecksum sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData2);
+			// Assert:
+			Assert::AreEqual(9ull, result);
+		};
 	};
 	std::vector<std::string> Year2017_Day02::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day02::inputData2 = std::vector<std::string>();
 }
