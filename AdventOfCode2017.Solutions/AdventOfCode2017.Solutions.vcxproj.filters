@@ -8,17 +8,32 @@
     <Filter Include="Day01">
       <Filter>{d0c18793-4503-4141-b3b9-4d8bcfea5b72}</Filter>
     </Filter>
+    <Filter Include="Day02">
+      <Filter>{5da4bfe3-1e20-4c02-adff-a808132e944a}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
     <ClInclude Include="Day01\Day01_InverseCaptcha.h">
       <Filter>Day01</Filter>
     </ClInclude>
+    <ClInclude Include="Day02\Day02_CorruptionChecksum.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\SpreadsheetProcessor.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
       <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\Day02_CorruptionChecksum.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\SpreadsheetProcessor.cpp">
+      <Filter>Day02</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
