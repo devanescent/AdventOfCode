@@ -31,6 +31,31 @@ namespace AdventOfCode::Year2017::Day05
 
 	uint64_t AMazeOfTwistyTrampolinesAllAlike::ExecutePart2(std::vector<int> jumpOffsets)
 	{
-		return uint64_t();
+		bool foundExit = false;
+		uint64_t steps = 0ull;
+
+		int currentOffsetIndex = 0;
+		while (!foundExit)
+		{
+			++steps;
+
+			int newIndex = currentOffsetIndex + jumpOffsets[currentOffsetIndex];
+			if (newIndex < 0 || newIndex >= jumpOffsets.size())
+			{
+				foundExit = true;
+			}
+			else if (jumpOffsets[currentOffsetIndex] >= 3)
+			{
+				--jumpOffsets[currentOffsetIndex];
+				currentOffsetIndex = newIndex;
+			}
+			else
+			{
+				++jumpOffsets[currentOffsetIndex];
+				currentOffsetIndex = newIndex;
+			}
+		}
+
+		return steps;
 	}
 }

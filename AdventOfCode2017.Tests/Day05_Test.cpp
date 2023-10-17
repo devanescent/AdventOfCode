@@ -34,6 +34,16 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(5ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			AMazeOfTwistyTrampolinesAllAlike sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData1);
+			// Assert:
+			Assert::AreEqual(10ull, result);
+		};
+
 	};
 	std::vector<std::string> Year2017_Day05::inputData1 = std::vector<std::string>();
 }
