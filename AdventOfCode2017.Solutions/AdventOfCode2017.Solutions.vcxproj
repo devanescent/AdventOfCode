@@ -31,6 +31,7 @@
     <ClInclude Include="Day01\Day01_InverseCaptcha.h" />
     <ClInclude Include="Day02\Day02_CorruptionChecksum.h" />
     <ClInclude Include="Day02\SpreadsheetProcessor.h" />
+    <ClInclude Include="Day03\Day03_SpiralMemory.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -41,6 +42,7 @@
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp" />
     <ClCompile Include="Day02\Day02_CorruptionChecksum.cpp" />
     <ClCompile Include="Day02\SpreadsheetProcessor.cpp" />
+    <ClCompile Include="Day03\Day03_SpiralMemory.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

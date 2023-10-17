@@ -11,6 +11,9 @@
     <Filter Include="Day02">
       <Filter>{5da4bfe3-1e20-4c02-adff-a808132e944a}</Filter>
     </Filter>
+    <Filter Include="Day03">
+      <Filter>{e1050a69-da3e-4a76-b2ff-7284b3a28c8c}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -23,6 +26,9 @@
     <ClInclude Include="Day02\SpreadsheetProcessor.h">
       <Filter>Day02</Filter>
     </ClInclude>
+    <ClInclude Include="Day03\Day03_SpiralMemory.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
@@ -34,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="Day02\SpreadsheetProcessor.cpp">
       <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\Day03_SpiralMemory.cpp">
+      <Filter>Day03</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
