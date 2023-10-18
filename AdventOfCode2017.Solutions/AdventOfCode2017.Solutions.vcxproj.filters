@@ -29,6 +29,9 @@
     <Filter Include="Day08">
       <Filter>{4d080cc1-a5f2-4fea-bc5c-4385302b2dd5}</Filter>
     </Filter>
+    <Filter Include="Day09">
+      <Filter>{aba91534-a22d-4f0a-88ce-059a660b8863}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -74,6 +77,9 @@
     <ClInclude Include="Day08\RegisterInstructionProcessor.h">
       <Filter>Day08</Filter>
     </ClInclude>
+    <ClInclude Include="Day09\Day09_StreamProcessing.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -111,6 +117,9 @@
     </ClCompile>
     <ClCompile Include="Day08\RegisterInstructionProcessor.cpp">
       <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\Day09_StreamProcessing.cpp">
+      <Filter>Day09</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

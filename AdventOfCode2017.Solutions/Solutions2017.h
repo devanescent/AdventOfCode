@@ -9,6 +9,7 @@
 #include "Day06\Day06_MemoryReallocation.h"
 #include "Day07\Day07_RecursiveCircus.h"
 #include "Day08\Day08_IHeardYouLikeRegisters.h"
+#include "Day09\Day09_StreamProcessing.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -26,6 +27,7 @@ namespace AdventOfCode::Year2017
 				case  6:	return std::make_unique<Day06::MemoryReallocation>();
 				case  7:	return std::make_unique<Day07::RecursiveCircus>();
 				case  8:	return std::make_unique<Day08::IHeardYouLikeRegisters>();
+				case  9:	return std::make_unique<Day09::StreamProcessing>();
 				default:	return nullptr;
 			}
 		}
