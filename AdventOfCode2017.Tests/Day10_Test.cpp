@@ -12,25 +12,55 @@ namespace AdventOfCode::Year2017::Tests
 		static std::vector<std::string> inputData1;
 
 	public:
-		TEST_CLASS_INITIALIZE(Init)
-		{
-			inputData1 = std::vector<std::string>
-			{
-				"3, 4, 1, 5"
-			};
-
-		};
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
 			KnotHash sut;
 			sut.SetNumberListLength(5);
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData1);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "3, 4, 1, 5" });
 			// Assert:
 			Assert::AreEqual(12ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			KnotHash sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample2_Part2)
+		{
+			// Arrange:
+			KnotHash sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "AoC 2017" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample3_Part2)
+		{
+			// Arrange:
+			KnotHash sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "1,2,3" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample4_Part2)
+		{
+			// Arrange:
+			KnotHash sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "1,2,4" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
 	};
-	std::vector<std::string> Year2017_Day10::inputData1 = std::vector<std::string>();
 }
