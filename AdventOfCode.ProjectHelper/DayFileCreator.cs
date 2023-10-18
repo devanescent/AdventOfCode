@@ -48,7 +48,9 @@ namespace AdventOfCode.ProjectHelper
 
 			// Capitalize each word and join without blanks
 			TitleWithoutBlanks = string.Join("",
-				title.Split(' ').Select(word => { return char.ToUpper(word[0]) + word.Substring(1); })
+				title.Split(' ')
+				.Select(word => string.Concat(word.Where(c => char.IsLetterOrDigit(c)))) // Remove special characters, like comma or hyphen
+				.Select(word => { return char.ToUpper(word[0]) + word[1..]; })
 			);
 			return this;
 		}
@@ -204,7 +206,9 @@ namespace AdventOfCode.ProjectHelper
 
 			// Insert case for this day before the 'default' case:
 			int defaultCase = lines.IndexOf(lines.Single(l => l.Contains("default:\treturn nullptr;")));
-			lines.Insert(defaultCase, $"\t\t\t\tcase {_day:D2}:\treturn std::make_unique<Day{_day:D2}::{TitleWithoutBlanks}>();");
+
+			// Do not prefix literals with leading zeros (octal numbers), instead just align with space:
+			lines.Insert(defaultCase, $"\t\t\t\tcase {_day,2}:\treturn std::make_unique<Day{_day:D2}::{TitleWithoutBlanks}>();");
 		}
 
 		private void AddBlank(StreamWriter sw)
