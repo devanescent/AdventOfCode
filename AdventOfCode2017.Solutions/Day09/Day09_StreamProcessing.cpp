@@ -9,15 +9,21 @@ namespace AdventOfCode::Year2017::Day09
 		const std::string& stream = input[0];
 		auto streamStart = stream.cbegin();
 
-		return ProcessGroup(streamStart, stream.cend(), 1, 0);
+		int _;
+		return ProcessGroup(streamStart, stream.cend(), 1, 0, _);
 	}
 
 	uint64_t StreamProcessing::GetResultOnPart2(std::vector<std::string> input)
 	{
-		return uint64_t();
+		const std::string& stream = input[0];
+		auto streamStart = stream.cbegin();
+
+		int totalGarbage = 0;
+		ProcessGroup(streamStart, stream.cend(), 1, 0, totalGarbage);
+		return totalGarbage;
 	}
 
-	int StreamProcessing::ProcessGroup(std::string::const_iterator& strIt, std::string::const_iterator strEnd, int currentGrpScore, int totalScore)
+	int StreamProcessing::ProcessGroup(std::string::const_iterator& strIt, std::string::const_iterator strEnd, int currentGrpScore, int totalScore, int& totalGarbage)
 	{
 		while (strIt != strEnd)
 		{
@@ -28,7 +34,7 @@ namespace AdventOfCode::Year2017::Day09
 			{
 				case '{':
 					// New group found:
-					totalScore = ProcessGroup(strIt, strEnd, currentGrpScore + 1, totalScore + currentGrpScore);
+					totalScore = ProcessGroup(strIt, strEnd, currentGrpScore + 1, totalScore + currentGrpScore, totalGarbage);
 					break;
 
 				case '}':
@@ -37,7 +43,7 @@ namespace AdventOfCode::Year2017::Day09
 
 				case '<':
 					// Garbage found:
-					ProcessGarbage(strIt, strEnd);
+					ProcessGarbage(strIt, strEnd, totalGarbage);
 					break;
 			}
 		}
@@ -45,7 +51,7 @@ namespace AdventOfCode::Year2017::Day09
 		return totalScore;
 	}
 
-	void StreamProcessing::ProcessGarbage(std::string::const_iterator& strIt, std::string::const_iterator strEnd)
+	void StreamProcessing::ProcessGarbage(std::string::const_iterator& strIt, std::string::const_iterator strEnd, int& totalGarbage)
 	{
 		while (strIt != strEnd)
 		{
@@ -62,6 +68,10 @@ namespace AdventOfCode::Year2017::Day09
 				case '>':
 					// Garbage finished:
 					return;
+
+				default:
+					++totalGarbage;
+					break;
 			}
 		}
 	}

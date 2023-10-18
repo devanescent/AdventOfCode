@@ -19,55 +19,12 @@ namespace AdventOfCode::Year2017::Tests
 		static std::vector<std::string> inputData8;
 
 	public:
-		TEST_CLASS_INITIALIZE(Init)
-		{
-			inputData1 = std::vector<std::string>
-			{
-				"{}"
-			};
-
-			inputData2 = std::vector<std::string>
-			{
-				"{{{}}}"
-			};
-
-			inputData3 = std::vector<std::string>
-			{
-				"{{},{}}"
-			};
-
-			inputData4 = std::vector<std::string>
-			{
-				"{{{},{},{{}}}}"
-			};
-
-			inputData5 = std::vector<std::string>
-			{
-				"{<a>,<a>,<a>,<a>}"
-			};
-
-			inputData6 = std::vector<std::string>
-			{
-				"{{<ab>},{<ab>},{<ab>},{<ab>}}"
-			};
-
-			inputData7 = std::vector<std::string>
-			{
-				"{{<!!>},{<!!>},{<!!>},{<!!>}}"
-			};
-
-			inputData8 = std::vector<std::string>
-			{
-				"{{<a!>},{<a!>},{<a!>},{<ab>}}"
-			};
-
-		};
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData1);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{}" });
 			// Assert:
 			Assert::AreEqual(1ull, result);
 		};
@@ -77,7 +34,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData2);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{{{}}}" });
 			// Assert:
 			Assert::AreEqual(6ull, result);
 		};
@@ -87,7 +44,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData3);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{{},{}}" });
 			// Assert:
 			Assert::AreEqual(5ull, result);
 		};
@@ -97,7 +54,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData4);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{{{},{},{{}}}}" });
 			// Assert:
 			Assert::AreEqual(16ull, result);
 		};
@@ -107,7 +64,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData5);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{<a>,<a>,<a>,<a>}" });
 			// Assert:
 			Assert::AreEqual(1ull, result);
 		};
@@ -117,7 +74,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData6);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{{<ab>},{<ab>},{<ab>},{<ab>}}" });
 			// Assert:
 			Assert::AreEqual(9ull, result);
 		};
@@ -127,7 +84,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData7);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{{<!!>},{<!!>},{<!!>},{<!!>}}" });
 			// Assert:
 			Assert::AreEqual(9ull, result);
 		};
@@ -137,18 +94,79 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			StreamProcessing sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData8);
+			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "{{<a!>},{<a!>},{<a!>},{<ab>}}" });
 			// Assert:
 			Assert::AreEqual(3ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<>" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample2_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<random characters>" });
+			// Assert:
+			Assert::AreEqual(17ull, result);
+		};
+
+		TEST_METHOD(CheckExample3_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<<<<>" });
+			// Assert:
+			Assert::AreEqual(3ull, result);
+		};
+
+		TEST_METHOD(CheckExample4_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<{!>}>" });
+			// Assert:
+			Assert::AreEqual(2ull, result);
+		};
+
+		TEST_METHOD(CheckExample5_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<!!>" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample6_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<!!!>>" });
+			// Assert:
+			Assert::AreEqual(0ull, result);
+		};
+
+		TEST_METHOD(CheckExample7_Part2)
+		{
+			// Arrange:
+			StreamProcessing sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "<{o\"i!a,<{i<a>" });
+			// Assert:
+			Assert::AreEqual(10ull, result);
+		};
 	};
-	std::vector<std::string> Year2017_Day09::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData3 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData4 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData5 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData6 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData7 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day09::inputData8 = std::vector<std::string>();
 }

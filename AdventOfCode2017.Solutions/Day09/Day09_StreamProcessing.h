@@ -15,7 +15,7 @@ namespace AdventOfCode::Year2017::Day09
 		uint64_t GetResultOnPart2(std::vector<std::string> input) override;
 
 	private:
-		int ProcessGroup(std::string::const_iterator& strIt, std::string::const_iterator strEnd, int currentGrpScore, int totalScore);
-		void ProcessGarbage(std::string::const_iterator& strIt, std::string::const_iterator strEnd);
+		int ProcessGroup(std::string::const_iterator& strIt, std::string::const_iterator strEnd, int currentGrpScore, int totalScore, int& totalGarbage);
+		void ProcessGarbage(std::string::const_iterator& strIt, std::string::const_iterator strEnd, int& totalGarbage);
 	};
 }
