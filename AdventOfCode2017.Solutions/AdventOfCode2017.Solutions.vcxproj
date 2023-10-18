@@ -43,6 +43,7 @@
     <ClInclude Include="Day08\RegisterInstruction.h" />
     <ClInclude Include="Day08\RegisterInstructionProcessor.h" />
     <ClInclude Include="Day09\Day09_StreamProcessing.h" />
+    <ClInclude Include="Day10\Day10_KnotHash.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -63,6 +64,7 @@
     <ClCompile Include="Day08\Day08_IHeardYouLikeRegisters.cpp" />
     <ClCompile Include="Day08\RegisterInstructionProcessor.cpp" />
     <ClCompile Include="Day09\Day09_StreamProcessing.cpp" />
+    <ClCompile Include="Day10\Day10_KnotHash.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

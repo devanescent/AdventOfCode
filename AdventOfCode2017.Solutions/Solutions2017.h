@@ -10,6 +10,7 @@
 #include "Day07\Day07_RecursiveCircus.h"
 #include "Day08\Day08_IHeardYouLikeRegisters.h"
 #include "Day09\Day09_StreamProcessing.h"
+#include "Day10\Day10_KnotHash.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -28,6 +29,7 @@ namespace AdventOfCode::Year2017
 				case  7:	return std::make_unique<Day07::RecursiveCircus>();
 				case  8:	return std::make_unique<Day08::IHeardYouLikeRegisters>();
 				case  9:	return std::make_unique<Day09::StreamProcessing>();
+				case 10:	return std::make_unique<Day10::KnotHash>();
 				default:	return nullptr;
 			}
 		}

@@ -1,0 +1,48 @@
+﻿#include "Day10_KnotHash.h"
+#include <algorithm>
+#include <numeric>
+
+namespace AdventOfCode::Year2017::Day10
+{
+	KnotHash::KnotHash() : DayT(10, "Knot Hash") { }
+
+	uint64_t KnotHash::ExecutePart1(std::vector<int> lengths)
+	{
+		// Fill in numbers:
+		std::vector<int> numbers(m_numberListLength);
+		std::iota(numbers.begin(), numbers.end(), 0);
+
+		int listStartIndex = 0;
+		int skipSize = 0;
+
+		for (auto len : lengths)
+		{
+			// Reverse the given length:
+			std::reverse(numbers.begin(), numbers.begin() + len);
+		
+			// Instead of moving the current position, rotate the list,
+			// so reverse operations do not wrap around
+			int shift = (len + skipSize) % m_numberListLength;
+			std::rotate(numbers.begin(), numbers.begin() + shift, numbers.end());
+
+			// Keep track of actual list start:
+			listStartIndex = (listStartIndex + m_numberListLength - shift) % m_numberListLength;
+
+			++skipSize;
+		}
+
+		// Multiply the first two numbers in the list, indicated by the listStartIndex:
+		uint64_t result = numbers[listStartIndex];
+		if (listStartIndex + 1 < m_numberListLength)
+			result *= numbers[listStartIndex + 1];
+		else
+			result *= numbers[0]; // wrap around
+
+		return result;
+	}
+
+	uint64_t KnotHash::ExecutePart2(std::vector<int> lengths)
+	{
+		return uint64_t();
+	}
+}

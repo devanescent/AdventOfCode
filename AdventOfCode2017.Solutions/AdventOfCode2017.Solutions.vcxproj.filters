@@ -32,6 +32,9 @@
     <Filter Include="Day09">
       <Filter>{aba91534-a22d-4f0a-88ce-059a660b8863}</Filter>
     </Filter>
+    <Filter Include="Day10">
+      <Filter>{1cf99f1c-2e63-493f-8ac2-13fd2ede7ead}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -80,6 +83,9 @@
     <ClInclude Include="Day09\Day09_StreamProcessing.h">
       <Filter>Day09</Filter>
     </ClInclude>
+    <ClInclude Include="Day10\Day10_KnotHash.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -120,6 +126,9 @@
     </ClCompile>
     <ClCompile Include="Day09\Day09_StreamProcessing.cpp">
       <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_KnotHash.cpp">
+      <Filter>Day10</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
