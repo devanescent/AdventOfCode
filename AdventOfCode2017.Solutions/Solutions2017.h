@@ -8,6 +8,7 @@
 #include "Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h"
 #include "Day06\Day06_MemoryReallocation.h"
 #include "Day07\Day07_RecursiveCircus.h"
+#include "Day08\Day08_IHeardYouLikeRegisters.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -17,13 +18,14 @@ namespace AdventOfCode::Year2017
 		{
 			switch (day)
 			{
-				case 01:	return std::make_unique<Day01::InverseCaptcha>();
-				case 02:	return std::make_unique<Day02::CorruptionChecksum>();
-				case 03:	return std::make_unique<Day03::SpiralMemory>();
-				case 04:	return std::make_unique<Day04::HighEntropyPassphrases>();
-				case 05:	return std::make_unique<Day05::AMazeOfTwistyTrampolinesAllAlike>();
-				case 06:	return std::make_unique<Day06::MemoryReallocation>();
-				case 07:	return std::make_unique<Day07::RecursiveCircus>();
+				case  1:	return std::make_unique<Day01::InverseCaptcha>();
+				case  2:	return std::make_unique<Day02::CorruptionChecksum>();
+				case  3:	return std::make_unique<Day03::SpiralMemory>();
+				case  4:	return std::make_unique<Day04::HighEntropyPassphrases>();
+				case  5:	return std::make_unique<Day05::AMazeOfTwistyTrampolinesAllAlike>();
+				case  6:	return std::make_unique<Day06::MemoryReallocation>();
+				case  7:	return std::make_unique<Day07::RecursiveCircus>();
+				case  8:	return std::make_unique<Day08::IHeardYouLikeRegisters>();
 				default:	return nullptr;
 			}
 		}
