@@ -19,7 +19,5 @@ namespace AdventOfCode::Year2017::Day10
 
 	private:
 		size_t m_numberListLength = 256;
-
-		void RunKnotHashRound(std::vector<int>& numbers, const std::vector<int>& lengths, int& listStartIndex, int& skipSize);
 	};
 }

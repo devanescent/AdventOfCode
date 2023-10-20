@@ -44,6 +44,12 @@
     <Filter Include="Day13">
       <Filter>{71a96aef-caca-4fde-b2d2-117dad7b3ab1}</Filter>
     </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{037e1c4f-59a9-4182-9ff3-d7291a339c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Day14">
+      <Filter>{67cd42dc-7907-498f-a71b-d8edc9b2e4ef}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -119,6 +125,12 @@
     <ClInclude Include="Day13\FirewallProcessor.h">
       <Filter>Day13</Filter>
     </ClInclude>
+    <ClInclude Include="Shared\KnotHashCalculator.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\Day14_DiskDefragmentation.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -180,6 +192,12 @@
     </ClCompile>
     <ClCompile Include="Day13\FirewallProcessor.cpp">
       <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\Day14_DiskDefragmentation.cpp">
+      <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\KnotHashCalculator.cpp">
+      <Filter>Shared</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
