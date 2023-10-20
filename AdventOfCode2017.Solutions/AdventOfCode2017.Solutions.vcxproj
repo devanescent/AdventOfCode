@@ -55,6 +55,9 @@
     <ClInclude Include="Day13\FirewallProcessor.h" />
     <ClInclude Include="Day14\Day14_DiskDefragmentation.h" />
     <ClInclude Include="Day15\Day15_DuelingGenerators.h" />
+    <ClInclude Include="Day16\Day16_PermutationPromenade.h" />
+    <ClInclude Include="Day16\DanceMove.h" />
+    <ClInclude Include="Day16\DanceMoveProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -85,6 +88,8 @@
     <ClCompile Include="Day14\Day14_DiskDefragmentation.cpp" />
     <ClCompile Include="Shared\KnotHashCalculator.cpp" />
     <ClCompile Include="Day15\Day15_DuelingGenerators.cpp" />
+    <ClCompile Include="Day16\Day16_PermutationPromenade.cpp" />
+    <ClCompile Include="Day16\DanceMoveProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

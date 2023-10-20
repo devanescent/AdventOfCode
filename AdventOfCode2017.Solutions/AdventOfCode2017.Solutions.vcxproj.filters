@@ -53,6 +53,9 @@
     <Filter Include="Day15">
       <Filter>{1f1220bb-8f24-4a0f-af3d-26b1cabd17b7}</Filter>
     </Filter>
+    <Filter Include="Day16">
+      <Filter>{98820602-78f2-449b-888d-a22a13929b38}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -137,6 +140,15 @@
     <ClInclude Include="Day15\Day15_DuelingGenerators.h">
       <Filter>Day15</Filter>
     </ClInclude>
+    <ClInclude Include="Day16\Day16_PermutationPromenade.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\DanceMove.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\DanceMoveProcessor.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -207,6 +219,12 @@
     </ClCompile>
     <ClCompile Include="Day15\Day15_DuelingGenerators.cpp">
       <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\Day16_PermutationPromenade.cpp">
+      <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\DanceMoveProcessor.cpp">
+      <Filter>Day16</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
