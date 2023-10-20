@@ -18,8 +18,8 @@ namespace AdventOfCode::Year2017::Tests
 			{
 				"flqrgnkx"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -30,6 +30,15 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(8108ull, result);
 		};
 
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			DiskDefragmentation sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData1);
+			// Assert:
+			Assert::AreEqual(1242ull, result);
+		};
 	};
 	std::vector<std::string> Year2017_Day14::inputData1 = std::vector<std::string>();
 }
