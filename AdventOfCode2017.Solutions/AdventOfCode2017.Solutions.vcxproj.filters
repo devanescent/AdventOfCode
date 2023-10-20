@@ -35,6 +35,9 @@
     <Filter Include="Day10">
       <Filter>{1cf99f1c-2e63-493f-8ac2-13fd2ede7ead}</Filter>
     </Filter>
+    <Filter Include="Day11">
+      <Filter>{9fc7a906-4bef-4949-87cf-e59c9b1c39ca}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -86,6 +89,12 @@
     <ClInclude Include="Day10\Day10_KnotHash.h">
       <Filter>Day10</Filter>
     </ClInclude>
+    <ClInclude Include="Day11\Day11_HexEd.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\HexGridProcessor.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -129,6 +138,12 @@
     </ClCompile>
     <ClCompile Include="Day10\Day10_KnotHash.cpp">
       <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\Day11_HexEd.cpp">
+      <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\HexGridProcessor.cpp">
+      <Filter>Day11</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

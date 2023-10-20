@@ -44,6 +44,8 @@
     <ClInclude Include="Day08\RegisterInstructionProcessor.h" />
     <ClInclude Include="Day09\Day09_StreamProcessing.h" />
     <ClInclude Include="Day10\Day10_KnotHash.h" />
+    <ClInclude Include="Day11\Day11_HexEd.h" />
+    <ClInclude Include="Day11\HexGridProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -65,6 +67,8 @@
     <ClCompile Include="Day08\RegisterInstructionProcessor.cpp" />
     <ClCompile Include="Day09\Day09_StreamProcessing.cpp" />
     <ClCompile Include="Day10\Day10_KnotHash.cpp" />
+    <ClCompile Include="Day11\Day11_HexEd.cpp" />
+    <ClCompile Include="Day11\HexGridProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

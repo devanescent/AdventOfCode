@@ -11,6 +11,7 @@
 #include "Day08\Day08_IHeardYouLikeRegisters.h"
 #include "Day09\Day09_StreamProcessing.h"
 #include "Day10\Day10_KnotHash.h"
+#include "Day11\Day11_HexEd.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -30,6 +31,7 @@ namespace AdventOfCode::Year2017
 				case  8:	return std::make_unique<Day08::IHeardYouLikeRegisters>();
 				case  9:	return std::make_unique<Day09::StreamProcessing>();
 				case 10:	return std::make_unique<Day10::KnotHash>();
+				case 11:	return std::make_unique<Day11::HexEd>();
 				default:	return nullptr;
 			}
 		}
