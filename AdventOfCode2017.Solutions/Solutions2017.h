@@ -12,6 +12,7 @@
 #include "Day09\Day09_StreamProcessing.h"
 #include "Day10\Day10_KnotHash.h"
 #include "Day11\Day11_HexEd.h"
+#include "Day12\Day12_DigitalPlumber.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -32,6 +33,7 @@ namespace AdventOfCode::Year2017
 				case  9:	return std::make_unique<Day09::StreamProcessing>();
 				case 10:	return std::make_unique<Day10::KnotHash>();
 				case 11:	return std::make_unique<Day11::HexEd>();
+				case 12:	return std::make_unique<Day12::DigitalPlumber>();
 				default:	return nullptr;
 			}
 		}

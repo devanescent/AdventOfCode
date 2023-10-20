@@ -38,6 +38,9 @@
     <Filter Include="Day11">
       <Filter>{9fc7a906-4bef-4949-87cf-e59c9b1c39ca}</Filter>
     </Filter>
+    <Filter Include="Day12">
+      <Filter>{c3f017f8-bdfa-4359-8ebe-94059b6c649d}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -95,6 +98,15 @@
     <ClInclude Include="Day11\HexGridProcessor.h">
       <Filter>Day11</Filter>
     </ClInclude>
+    <ClInclude Include="Day12\Day12_DigitalPlumber.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\Pipe.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\PipeProcessor.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -144,6 +156,12 @@
     </ClCompile>
     <ClCompile Include="Day11\HexGridProcessor.cpp">
       <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_DigitalPlumber.cpp">
+      <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\PipeProcessor.cpp">
+      <Filter>Day12</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
