@@ -1,11 +1,8 @@
 ﻿#include "Day11_HexEd.h"
-#include <map>
 #include <numeric>
 
 namespace AdventOfCode::Year2017::Day11
 {
-	using HexCoord = std::tuple<int, int, int>;
-
 	HexCoord operator+(const HexCoord& lhs, const HexCoord& rhs)
 	{
 		return std::make_tuple(
@@ -15,39 +12,50 @@ namespace AdventOfCode::Year2017::Day11
 		);
 	}
 
-	HexEd::HexEd() : DayT(11, "Hex Ed") { }
+	uint64_t GetDistance(const HexCoord& c)
+	{
+		return (
+			std::abs(std::get<0>(c)) + 
+			std::abs(std::get<1>(c)) +
+			std::abs(std::get<2>(c))
+		) / 2;
+	}
+
+	HexEd::HexEd() : DayT(11, "Hex Ed")
+	{ 
+		// Map hex directions to directions in a cube coordinate system:
+		m_dirVectors[HexDirection::North] = { 0, +1, -1 };
+		m_dirVectors[HexDirection::South] = { 0, -1, +1 };
+		m_dirVectors[HexDirection::NorthEast] = { +1, 0, -1 };
+		m_dirVectors[HexDirection::SouthWest] = { -1, 0, +1 };
+		m_dirVectors[HexDirection::NorthWest] = { -1, +1, 0 };
+		m_dirVectors[HexDirection::SouthEast] = { +1, -1, 0 };
+	}
 
 	uint64_t HexEd::ExecutePart1(std::vector<HexDirection> directions)
 	{
-		// Map hex directions to directions in a cube coordinate system:
-		std::map<HexDirection, HexCoord> dirVectors;
-
-		// First coordinate: north/south
-		dirVectors[HexDirection::North] = { 0, +1, -1 };
-		dirVectors[HexDirection::South] = { 0, -1, +1 };
-
-		// Second coordinate: northeast / southwest
-		dirVectors[HexDirection::NorthEast] = { +1, 0, -1 };
-		dirVectors[HexDirection::SouthWest] = { -1, 0, +1 };
-
-		// Third coordinate: northwest / southeast
-		dirVectors[HexDirection::NorthWest] = { -1, +1, 0 };
-		dirVectors[HexDirection::SouthEast] = { +1, -1, 0 };
+		HexCoord pos { 0 , 0, 0 };
 
 		// Sum up vectors for all movements:
-		HexCoord pos { 0 , 0, 0 };
 		for (auto hexDir : directions)
-			pos = pos + dirVectors[hexDir];
+			pos = pos + m_dirVectors[hexDir];
 
 		// Resulting distance:
-		return 
-			(std::abs(std::get<0>(pos)) + 
-			std::abs(std::get<1>(pos)) +
-			std::abs(std::get<2>(pos))) / 2;
+		return GetDistance(pos);
 	}
 
 	uint64_t HexEd::ExecutePart2(std::vector<HexDirection> directions)
 	{
-		return uint64_t();
+		HexCoord pos{ 0 , 0, 0 };
+		uint64_t maxDistance = 0ull;
+
+		// Sum up vectors for all movements while keeping track of maximum distance:
+		for (auto hexDir : directions)
+		{
+			pos = pos + m_dirVectors[hexDir];
+			maxDistance = std::max(maxDistance, GetDistance(pos));
+		}
+
+		return maxDistance;
 	}
 }
