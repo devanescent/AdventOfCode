@@ -15,6 +15,7 @@
 #include "Day12\Day12_DigitalPlumber.h"
 #include "Day13\Day13_PacketScanners.h"
 #include "Day14\Day14_DiskDefragmentation.h"
+#include "Day15\Day15_DuelingGenerators.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -38,6 +39,7 @@ namespace AdventOfCode::Year2017
 				case 12:	return std::make_unique<Day12::DigitalPlumber>();
 				case 13:	return std::make_unique<Day13::PacketScanners>();
 				case 14:	return std::make_unique<Day14::DiskDefragmentation>();
+				case 15:	return std::make_unique<Day15::DuelingGenerators>();
 				default:	return nullptr;
 			}
 		}

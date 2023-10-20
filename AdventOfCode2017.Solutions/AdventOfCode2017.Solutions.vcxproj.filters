@@ -50,6 +50,9 @@
     <Filter Include="Day14">
       <Filter>{67cd42dc-7907-498f-a71b-d8edc9b2e4ef}</Filter>
     </Filter>
+    <Filter Include="Day15">
+      <Filter>{1f1220bb-8f24-4a0f-af3d-26b1cabd17b7}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -131,6 +134,9 @@
     <ClInclude Include="Day14\Day14_DiskDefragmentation.h">
       <Filter>Day14</Filter>
     </ClInclude>
+    <ClInclude Include="Day15\Day15_DuelingGenerators.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -198,6 +204,9 @@
     </ClCompile>
     <ClCompile Include="Shared\KnotHashCalculator.cpp">
       <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_DuelingGenerators.cpp">
+      <Filter>Day15</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
