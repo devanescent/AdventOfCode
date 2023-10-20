@@ -41,6 +41,9 @@
     <Filter Include="Day12">
       <Filter>{c3f017f8-bdfa-4359-8ebe-94059b6c649d}</Filter>
     </Filter>
+    <Filter Include="Day13">
+      <Filter>{71a96aef-caca-4fde-b2d2-117dad7b3ab1}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -107,6 +110,15 @@
     <ClInclude Include="Day12\PipeProcessor.h">
       <Filter>Day12</Filter>
     </ClInclude>
+    <ClInclude Include="Day13\Day13_PacketScanners.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\FirewallLayer.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\FirewallProcessor.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -162,6 +174,12 @@
     </ClCompile>
     <ClCompile Include="Day12\PipeProcessor.cpp">
       <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Day13_PacketScanners.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\FirewallProcessor.cpp">
+      <Filter>Day13</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

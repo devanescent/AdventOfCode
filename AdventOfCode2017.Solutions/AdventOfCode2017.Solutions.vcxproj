@@ -49,6 +49,9 @@
     <ClInclude Include="Day12\Day12_DigitalPlumber.h" />
     <ClInclude Include="Day12\Pipe.h" />
     <ClInclude Include="Day12\PipeProcessor.h" />
+    <ClInclude Include="Day13\Day13_PacketScanners.h" />
+    <ClInclude Include="Day13\FirewallLayer.h" />
+    <ClInclude Include="Day13\FirewallProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -74,6 +77,8 @@
     <ClCompile Include="Day11\HexGridProcessor.cpp" />
     <ClCompile Include="Day12\Day12_DigitalPlumber.cpp" />
     <ClCompile Include="Day12\PipeProcessor.cpp" />
+    <ClCompile Include="Day13\Day13_PacketScanners.cpp" />
+    <ClCompile Include="Day13\FirewallProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
