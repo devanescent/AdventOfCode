@@ -65,6 +65,9 @@
     <Filter Include="Day19">
       <Filter>{dee1b167-ed0f-4636-9c15-37929f48e854}</Filter>
     </Filter>
+    <Filter Include="Day20">
+      <Filter>{43e5a653-ba3f-4180-9a87-af8a05f6963e}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -173,6 +176,15 @@
     <ClInclude Include="Day19\Day19_ASeriesOfTubes.h">
       <Filter>Day19</Filter>
     </ClInclude>
+    <ClInclude Include="Day20\Day20_ParticleSwarm.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\Particle.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\ParticleProcessor.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -261,6 +273,12 @@
     </ClCompile>
     <ClCompile Include="Day19\Day19_ASeriesOfTubes.cpp">
       <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\Day20_ParticleSwarm.cpp">
+      <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\ParticleProcessor.cpp">
+      <Filter>Day20</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

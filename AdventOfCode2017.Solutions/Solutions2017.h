@@ -20,6 +20,7 @@
 #include "Day17\Day17_Spinlock.h"
 #include "Day18\Day18_Duet.h"
 #include "Day19\Day19_ASeriesOfTubes.h"
+#include "Day20\Day20_ParticleSwarm.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -48,6 +49,7 @@ namespace AdventOfCode::Year2017
 				case 17:	return std::make_unique<Day17::Spinlock>();
 				case 18:	return std::make_unique<Day18::Duet>();
 				case 19:	return std::make_unique<Day19::ASeriesOfTubes>();
+				case 20:	return std::make_unique<Day20::ParticleSwarm>();
 				default:	return nullptr;
 			}
 		}

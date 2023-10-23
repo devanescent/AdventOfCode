@@ -63,6 +63,9 @@
     <ClInclude Include="Day18\SoundInstruction.h" />
     <ClInclude Include="Day18\SoundInstructionsProcessor.h" />
     <ClInclude Include="Day19\Day19_ASeriesOfTubes.h" />
+    <ClInclude Include="Day20\Day20_ParticleSwarm.h" />
+    <ClInclude Include="Day20\Particle.h" />
+    <ClInclude Include="Day20\ParticleProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -99,6 +102,8 @@
     <ClCompile Include="Day18\Day18_Duet.cpp" />
     <ClCompile Include="Day18\SoundInstructionsProcessor.cpp" />
     <ClCompile Include="Day19\Day19_ASeriesOfTubes.cpp" />
+    <ClCompile Include="Day20\Day20_ParticleSwarm.cpp" />
+    <ClCompile Include="Day20\ParticleProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
