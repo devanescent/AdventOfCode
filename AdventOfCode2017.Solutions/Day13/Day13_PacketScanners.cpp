@@ -56,6 +56,29 @@ namespace AdventOfCode::Year2017::Day13
 
 	uint64_t PacketScanners::ExecutePart2(std::vector<FirewallLayer> fwLayers)
 	{
-		return uint64_t();
+		uint64_t delay = 0;
+		bool wasCaught;
+
+		// Find lowest possible delay to pass without being caught:
+		do
+		{
+			wasCaught = false;
+			++delay;
+			for (auto& layer : fwLayers)
+			{
+				auto scannerPeriod = (layer.Range - 1) * 2;
+				auto arrivalTime = layer.Depth + delay;
+			
+				// Check if scanner is at the top position:
+				if (arrivalTime % scannerPeriod == 0)
+				{
+					wasCaught = true;
+					break;
+				}
+			}
+
+		} while (wasCaught);
+
+		return delay;
 	}
 }
