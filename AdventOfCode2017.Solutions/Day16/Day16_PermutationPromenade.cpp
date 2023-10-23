@@ -18,6 +18,22 @@ namespace AdventOfCode::Year2017::Day16
 
 	uint64_t PermutationPromenade::ExecutePart2(std::vector<std::unique_ptr<DanceMove>> dance)
 	{
-		return uint64_t();
+		std::vector<char> programs(m_prgmCount);
+		std::iota(programs.begin(), programs.end(), 'a');
+
+		// Keep record of previous orders to detect a cycle:
+		std::vector< std::vector<char>> prevOrders;
+
+		while (prevOrders.empty() || prevOrders[0] != programs)
+		{
+			prevOrders.push_back(programs);
+
+			for (const auto& danceMove : dance)
+				danceMove->Execute(programs);
+		}
+
+		auto order = prevOrders[1'000'000'000 % prevOrders.size()];
+
+		return 0ull;
 	}
 }

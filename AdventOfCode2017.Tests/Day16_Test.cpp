@@ -16,9 +16,7 @@ namespace AdventOfCode::Year2017::Tests
 		{
 			inputData1 = std::vector<std::string>
 			{
-				"s1",
-				"x3/4",
-				"pe/b"
+				"s1,x3/4,pe/b"
 			};
 
 		};

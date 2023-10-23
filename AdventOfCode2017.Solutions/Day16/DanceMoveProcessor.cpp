@@ -7,12 +7,15 @@ namespace AdventOfCode::Year2017::Day16
 	{
 		std::vector<std::unique_ptr<DanceMove>> dance;
 
-		for (const std::string& line : input)
-		{
-			std::istringstream iss(line);
-			char moveType;
+		std::istringstream allMoves(input[0]);
+		std::string currentMove;
 
+		while (std::getline(allMoves, currentMove, ','))
+		{
+			std::istringstream iss(currentMove);
+			char moveType;
 			iss >> moveType;
+
 			switch (moveType)
 			{
 				case 's':
