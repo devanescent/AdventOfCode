@@ -34,6 +34,22 @@ namespace AdventOfCode::Year2017::Day17
 
 	uint64_t Spinlock::GetResultOnPart2(std::vector<std::string> input)
 	{
-		return uint64_t();
+		int steps = std::stoi(input[0]);
+		auto currentPos = 0;
+
+		int valueAfterZero;
+		for (int n = 1; n <= 50'000'000; ++n)
+		{
+			// Move forward:
+			currentPos = (currentPos + steps) % n;
+
+			// If value is inserted after 0 (currentPos is 0), remember last value that was inserted:
+			if (currentPos == 0)
+				valueAfterZero = n;
+
+			++currentPos;
+		}
+
+		return valueAfterZero;
 	}
 }
