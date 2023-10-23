@@ -19,6 +19,7 @@
 #include "Day16\Day16_PermutationPromenade.h"
 #include "Day17\Day17_Spinlock.h"
 #include "Day18\Day18_Duet.h"
+#include "Day19\Day19_ASeriesOfTubes.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -46,6 +47,7 @@ namespace AdventOfCode::Year2017
 				case 16:	return std::make_unique<Day16::PermutationPromenade>();
 				case 17:	return std::make_unique<Day17::Spinlock>();
 				case 18:	return std::make_unique<Day18::Duet>();
+				case 19:	return std::make_unique<Day19::ASeriesOfTubes>();
 				default:	return nullptr;
 			}
 		}

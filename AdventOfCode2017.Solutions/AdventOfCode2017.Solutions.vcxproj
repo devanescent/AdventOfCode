@@ -62,6 +62,7 @@
     <ClInclude Include="Day18\Day18_Duet.h" />
     <ClInclude Include="Day18\SoundInstruction.h" />
     <ClInclude Include="Day18\SoundInstructionsProcessor.h" />
+    <ClInclude Include="Day19\Day19_ASeriesOfTubes.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -97,6 +98,7 @@
     <ClCompile Include="Day17\Day17_Spinlock.cpp" />
     <ClCompile Include="Day18\Day18_Duet.cpp" />
     <ClCompile Include="Day18\SoundInstructionsProcessor.cpp" />
+    <ClCompile Include="Day19\Day19_ASeriesOfTubes.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

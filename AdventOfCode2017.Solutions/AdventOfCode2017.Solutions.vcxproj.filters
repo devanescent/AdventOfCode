@@ -62,6 +62,9 @@
     <Filter Include="Day18">
       <Filter>{7183f0f4-33cb-4242-8340-1c9e5d75cbd2}</Filter>
     </Filter>
+    <Filter Include="Day19">
+      <Filter>{dee1b167-ed0f-4636-9c15-37929f48e854}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -167,6 +170,9 @@
     <ClInclude Include="Day18\SoundInstructionsProcessor.h">
       <Filter>Day18</Filter>
     </ClInclude>
+    <ClInclude Include="Day19\Day19_ASeriesOfTubes.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -252,6 +258,9 @@
     </ClCompile>
     <ClCompile Include="Day18\SoundInstructionsProcessor.cpp">
       <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\Day19_ASeriesOfTubes.cpp">
+      <Filter>Day19</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
