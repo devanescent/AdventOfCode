@@ -59,6 +59,9 @@
     <ClInclude Include="Day16\DanceMove.h" />
     <ClInclude Include="Day16\DanceMoveProcessor.h" />
     <ClInclude Include="Day17\Day17_Spinlock.h" />
+    <ClInclude Include="Day18\Day18_Duet.h" />
+    <ClInclude Include="Day18\SoundInstruction.h" />
+    <ClInclude Include="Day18\SoundInstructionsProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -92,6 +95,8 @@
     <ClCompile Include="Day16\Day16_PermutationPromenade.cpp" />
     <ClCompile Include="Day16\DanceMoveProcessor.cpp" />
     <ClCompile Include="Day17\Day17_Spinlock.cpp" />
+    <ClCompile Include="Day18\Day18_Duet.cpp" />
+    <ClCompile Include="Day18\SoundInstructionsProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

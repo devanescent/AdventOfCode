@@ -18,6 +18,7 @@
 #include "Day15\Day15_DuelingGenerators.h"
 #include "Day16\Day16_PermutationPromenade.h"
 #include "Day17\Day17_Spinlock.h"
+#include "Day18\Day18_Duet.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -44,6 +45,7 @@ namespace AdventOfCode::Year2017
 				case 15:	return std::make_unique<Day15::DuelingGenerators>();
 				case 16:	return std::make_unique<Day16::PermutationPromenade>();
 				case 17:	return std::make_unique<Day17::Spinlock>();
+				case 18:	return std::make_unique<Day18::Duet>();
 				default:	return nullptr;
 			}
 		}
