@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Day.h"
+#include "Point.h"
 
 namespace AdventOfCode::Year2017::Day19
 {
@@ -13,5 +14,8 @@ namespace AdventOfCode::Year2017::Day19
 
 		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
 		uint64_t GetResultOnPart2(std::vector<std::string> input) override;
+
+	private:
+		bool MoveStep(std::vector<std::string>& grid, Point<int>& currentPos, int& dx, int& dy, std::string& letters);
 	};
 }

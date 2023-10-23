@@ -24,8 +24,8 @@ namespace AdventOfCode::Year2017::Tests
 				"     +B-+  +--+ ",
 				""
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -34,6 +34,17 @@ namespace AdventOfCode::Year2017::Tests
 			uint64_t result = sut.GetResultOnPart1(inputData1);
 			// Assert:
 			Assert::AreEqual(0ull, result);
+		};
+
+
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			ASeriesOfTubes sut;
+			// Act:
+			uint64_t result = sut.GetResultOnPart2(inputData1);
+			// Assert:
+			Assert::AreEqual(38ull, result);
 		};
 
 	};
