@@ -24,7 +24,7 @@ namespace AdventOfCode::Year2017::Day18
 			else if (str == "mul")
 				instrType = InstructionType::Multiply;
 			else if (str == "mod")
-					instrType = InstructionType::Modulo;
+				instrType = InstructionType::Modulo;
 			else if (str == "rcv")
 				instrType = InstructionType::RecoverSound;
 			else if (str == "jgz")

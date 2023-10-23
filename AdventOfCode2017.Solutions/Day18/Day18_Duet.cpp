@@ -1,6 +1,7 @@
 ﻿#include "Day18_Duet.h"
 #include <map>
 #include <optional>
+#include <queue>
 
 namespace AdventOfCode::Year2017::Day18
 {
@@ -14,51 +15,11 @@ namespace AdventOfCode::Year2017::Day18
 		std::map<char, int64_t> registers;
 		auto currentInstr = instructions.begin();
 
-		auto getValue = [&registers](const InstructionParameter& p) -> int64_t
-			{
-				if (p.ValType == ValueType::Register)
-					return registers[static_cast<char>(p.Value)];
-				else
-					return p.Value;
-			};
-
+		
 		// Get the first recovered frequency:
 		while (!recoveredFreq.has_value())
 		{
-			switch (currentInstr->Type)
-			{
-				case InstructionType::PlaySound:
-					lastFreqPlayed = static_cast<uint64_t>(getValue(currentInstr->Param1));
-					++currentInstr;
-					break;
-				case InstructionType::Set:
-					registers[static_cast<char>(currentInstr->Param1.Value)] = getValue(currentInstr->Param2);
-					++currentInstr;
-					break;
-				case InstructionType::Add:
-					registers[static_cast<char>(currentInstr->Param1.Value)] += getValue(currentInstr->Param2);
-					++currentInstr;
-					break;
-				case InstructionType::Multiply:
-					registers[static_cast<char>(currentInstr->Param1.Value)] *= getValue(currentInstr->Param2);
-					++currentInstr;
-					break;
-				case InstructionType::Modulo:
-					registers[static_cast<char>(currentInstr->Param1.Value)] %= getValue(currentInstr->Param2);
-					++currentInstr;
-					break;
-				case InstructionType::RecoverSound:
-					if (getValue(currentInstr->Param1) != 0)
-						recoveredFreq = lastFreqPlayed;
-					++currentInstr;
-					break;
-				case InstructionType::JumpGreaterZero:
-					if (getValue(currentInstr->Param1) > 0)
-						currentInstr += getValue(currentInstr->Param2);
-					else
-						++currentInstr;
-					break;
-			}
+			currentInstr->Execute1(currentInstr, registers, lastFreqPlayed, recoveredFreq);
 		}
 
 		return recoveredFreq.value_or(0ull);
@@ -66,6 +27,32 @@ namespace AdventOfCode::Year2017::Day18
 
 	uint64_t Duet::ExecutePart2(std::vector<SoundInstruction> instructions)
 	{
-		return uint64_t();
+		std::map<char, int64_t> registers1;
+		registers1['p'] = 0;
+
+		std::map<char, int64_t> registers2;
+		registers1['p'] = 1;
+		
+		auto currentInstr1 = instructions.begin();
+		auto currentInstr2 = instructions.begin();
+
+		std::queue<int64_t> from1To2;
+		std::queue<int64_t> from2To1;
+
+		uint64_t sendCnt1 = 0, sendCnt2 = 0;
+
+		bool isDeadlock;
+
+		do
+		{
+			bool p1Continues = currentInstr1 != instructions.end() && currentInstr1->Execute2(currentInstr1, registers1, from1To2, from2To1, sendCnt1);
+			bool p2Continues = currentInstr2 != instructions.end() && currentInstr2->Execute2(currentInstr2, registers2, from2To1, from1To2, sendCnt2);
+			
+			// programs are running as long as one of them can continue execution:
+			isDeadlock = !p1Continues && !p2Continues;
+
+		} while (!isDeadlock);
+
+		return sendCnt1;
 	}
 }
