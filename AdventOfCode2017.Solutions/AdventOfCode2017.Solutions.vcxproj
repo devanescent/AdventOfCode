@@ -58,6 +58,7 @@
     <ClInclude Include="Day16\Day16_PermutationPromenade.h" />
     <ClInclude Include="Day16\DanceMove.h" />
     <ClInclude Include="Day16\DanceMoveProcessor.h" />
+    <ClInclude Include="Day17\Day17_Spinlock.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -90,6 +91,7 @@
     <ClCompile Include="Day15\Day15_DuelingGenerators.cpp" />
     <ClCompile Include="Day16\Day16_PermutationPromenade.cpp" />
     <ClCompile Include="Day16\DanceMoveProcessor.cpp" />
+    <ClCompile Include="Day17\Day17_Spinlock.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -263,7 +265,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile></PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include;.\Shared</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem></SubSystem>

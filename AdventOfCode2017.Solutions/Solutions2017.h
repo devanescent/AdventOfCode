@@ -17,6 +17,7 @@
 #include "Day14\Day14_DiskDefragmentation.h"
 #include "Day15\Day15_DuelingGenerators.h"
 #include "Day16\Day16_PermutationPromenade.h"
+#include "Day17\Day17_Spinlock.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -42,6 +43,7 @@ namespace AdventOfCode::Year2017
 				case 14:	return std::make_unique<Day14::DiskDefragmentation>();
 				case 15:	return std::make_unique<Day15::DuelingGenerators>();
 				case 16:	return std::make_unique<Day16::PermutationPromenade>();
+				case 17:	return std::make_unique<Day17::Spinlock>();
 				default:	return nullptr;
 			}
 		}

@@ -56,6 +56,9 @@
     <Filter Include="Day16">
       <Filter>{98820602-78f2-449b-888d-a22a13929b38}</Filter>
     </Filter>
+    <Filter Include="Day17">
+      <Filter>{fa33d2f3-4743-47a6-bfc6-1b0a2abf97e3}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -149,6 +152,9 @@
     <ClInclude Include="Day16\DanceMoveProcessor.h">
       <Filter>Day16</Filter>
     </ClInclude>
+    <ClInclude Include="Day17\Day17_Spinlock.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -225,6 +231,9 @@
     </ClCompile>
     <ClCompile Include="Day16\DanceMoveProcessor.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_Spinlock.cpp">
+      <Filter>Day17</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
