@@ -1,5 +1,6 @@
 ﻿#include "Day20_ParticleSwarm.h"
 #include <algorithm>
+#include <map>
 
 namespace AdventOfCode::Year2017::Day20
 {
@@ -35,6 +36,34 @@ namespace AdventOfCode::Year2017::Day20
 
 	uint64_t ParticleSwarm::ExecutePart2(std::vector<Particle> particles)
 	{
-		return uint64_t();
+		// Simulate 100 ticks to find all collisions:
+		for (int t = 0; t < 100; ++t)
+		{
+			// Update particles and find collisions:
+			std::map<Vector3, std::vector<int>> particlesByPos;
+
+			for (int i = 0; i < particles.size(); ++i)
+			{
+				Particle& p = particles[i];
+				p.Velocity = p.Velocity + p.Acceleration;
+				p.Position = p.Position + p.Velocity;
+				particlesByPos[p.Position].push_back(p.Order);
+			}
+
+			// Remove particles that have the same position:
+			for (auto& kv : particlesByPos)
+			{
+				if (kv.second.size() > 1)
+				{
+					std::erase_if(particles, 
+						[&kv](const Particle& p)
+						{
+							return std::find(kv.second.begin(), kv.second.end(), p.Order) != kv.second.end();
+						});
+				}
+			}
+		}
+
+		return particles.size();
 	}
 }

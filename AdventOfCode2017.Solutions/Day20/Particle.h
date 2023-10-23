@@ -17,6 +17,8 @@ namespace AdventOfCode::Year2017::Day20
 			Z += other.Z;
 			return *this;
 		}
+		
+		auto operator<=>(const Vector3& other) const = default;
 
 		int GetLength() const
 		{
