@@ -53,7 +53,8 @@ namespace AdventOfCode::Year2017::Day21
 
 	uint64_t FractalArt::ExecutePart2(std::vector<EnhancementRule> rules)
 	{
-		return uint64_t();
+		m_iterations = 18;
+		return ExecutePart1(std::move(rules));
 	}
 
 	std::vector<std::string> FractalArt::ProcessSubGrids(const std::vector<EnhancementRule>& rules, const std::vector<std::string>& grid, int subGridSize)
