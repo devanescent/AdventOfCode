@@ -7,6 +7,14 @@ namespace AdventOfCode::Year2017::Day22
 	// ---------------------------------------------------------------------------
 	// Day22: Sporifica Virus
 	// ---------------------------------------------------------------------------
+	enum class NodeState
+	{
+		Clean,
+		Weakened,
+		Infected,
+		Flagged
+	};
+
 	class SporificaVirus : public DayTC<GridComputingClusterProcessor>
 	{
 	public:
