@@ -24,6 +24,27 @@ namespace AdventOfCode::Year2017::Day23
 
 	uint64_t CoprocessorConflagration::ExecutePart2(std::vector<Instruction> instructions)
 	{
-		return 0ull;
+		// Manually optimized program from the input file:
+
+		uint64_t h = 0;
+
+		int64_t b = 108'400;
+		const int64_t c = 125'400;
+
+		while (b <= c)
+		{
+			for (int64_t d = 2; d < b; ++d)
+			{
+				if (b % d == 0)
+				{
+					++h;
+					break;
+				}
+			}
+
+			b += 17;
+		}
+
+		return h;
 	}
 }
