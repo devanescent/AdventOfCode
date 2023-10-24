@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2017::Day18
 {
 	Duet::Duet() : DayT(18, "Duet") { }
 
-	uint64_t Duet::ExecutePart1(std::vector<SoundInstruction> instructions)
+	uint64_t Duet::ExecutePart1(std::vector<Instruction> instructions)
 	{
 		uint64_t lastFreqPlayed = 0;
 		std::optional<uint64_t> recoveredFreq = {};
@@ -25,7 +25,7 @@ namespace AdventOfCode::Year2017::Day18
 		return recoveredFreq.value_or(0ull);
 	}
 
-	uint64_t Duet::ExecutePart2(std::vector<SoundInstruction> instructions)
+	uint64_t Duet::ExecutePart2(std::vector<Instruction> instructions)
 	{
 		std::map<char, int64_t> registers1;
 		registers1['p'] = 0;

@@ -27,7 +27,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shared\KnotHashCalculator.h" />
+    <ClInclude Include="Instruction.h" />
+    <ClInclude Include="InstructionsProcessor.h" />
+    <ClInclude Include="KnotHashCalculator.h" />
     <ClInclude Include="Solutions2017.h" />
     <ClInclude Include="Day01\Day01_InverseCaptcha.h" />
     <ClInclude Include="Day02\Day02_CorruptionChecksum.h" />
@@ -60,8 +62,6 @@
     <ClInclude Include="Day16\DanceMoveProcessor.h" />
     <ClInclude Include="Day17\Day17_Spinlock.h" />
     <ClInclude Include="Day18\Day18_Duet.h" />
-    <ClInclude Include="Day18\SoundInstruction.h" />
-    <ClInclude Include="Day18\SoundInstructionsProcessor.h" />
     <ClInclude Include="Day19\Day19_ASeriesOfTubes.h" />
     <ClInclude Include="Day20\Day20_ParticleSwarm.h" />
     <ClInclude Include="Day20\Particle.h" />
@@ -71,6 +71,7 @@
     <ClInclude Include="Day21\EnhancementRulesProcessor.h" />
     <ClInclude Include="Day22\Day22_SporificaVirus.h" />
     <ClInclude Include="Day22\GridComputingClusterProcessor.h" />
+    <ClInclude Include="Day23\Day23_CoprocessorConflagration.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -99,13 +100,11 @@
     <ClCompile Include="Day13\Day13_PacketScanners.cpp" />
     <ClCompile Include="Day13\FirewallProcessor.cpp" />
     <ClCompile Include="Day14\Day14_DiskDefragmentation.cpp" />
-    <ClCompile Include="Shared\KnotHashCalculator.cpp" />
     <ClCompile Include="Day15\Day15_DuelingGenerators.cpp" />
     <ClCompile Include="Day16\Day16_PermutationPromenade.cpp" />
     <ClCompile Include="Day16\DanceMoveProcessor.cpp" />
     <ClCompile Include="Day17\Day17_Spinlock.cpp" />
     <ClCompile Include="Day18\Day18_Duet.cpp" />
-    <ClCompile Include="Day18\SoundInstructionsProcessor.cpp" />
     <ClCompile Include="Day19\Day19_ASeriesOfTubes.cpp" />
     <ClCompile Include="Day20\Day20_ParticleSwarm.cpp" />
     <ClCompile Include="Day20\ParticleProcessor.cpp" />
@@ -113,6 +112,9 @@
     <ClCompile Include="Day21\EnhancementRulesProcessor.cpp" />
     <ClCompile Include="Day22\Day22_SporificaVirus.cpp" />
     <ClCompile Include="Day22\GridComputingClusterProcessor.cpp" />
+    <ClCompile Include="Day23\Day23_CoprocessorConflagration.cpp" />
+    <ClCompile Include="InstructionsProcessor.cpp" />
+    <ClCompile Include="KnotHashCalculator.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -161,8 +163,10 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings"></ImportGroup>
-  <ImportGroup Label="Shared"></ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -207,7 +211,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem></SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -221,7 +226,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem></SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -237,7 +243,8 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem></SubSystem>
+      <SubSystem>
+      </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -250,12 +257,14 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include;.\Shared</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\AdventOfCode.Core\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem></SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -266,12 +275,14 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>..\AdventOfCode.Core\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem></SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -284,17 +295,20 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>..\AdventOfCode.Core\include;.\Shared</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\AdventOfCode.Core\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem></SubSystem>
+      <SubSystem>
+      </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>

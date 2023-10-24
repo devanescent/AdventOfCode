@@ -2,15 +2,15 @@
 #include "DayT.h"
 #include "InstructionsProcessor.h"
 
-namespace AdventOfCode::Year2017::Day18
+namespace AdventOfCode::Year2017::Day23
 {
 	// ---------------------------------------------------------------------------
-	// Day18: Duet
+	// Day23: Coprocessor Conflagration
 	// ---------------------------------------------------------------------------
-	class Duet : public DayT<InstructionsProcessor>
+	class CoprocessorConflagration : public DayT<InstructionsProcessor>
 	{
 	public:
-		Duet();
+		CoprocessorConflagration();
 
 	protected:
 		uint64_t ExecutePart1(std::vector<Instruction> instructions) override;

@@ -3,17 +3,19 @@
 #include <optional>
 #include <queue>
 
-namespace AdventOfCode::Year2017::Day18
+namespace AdventOfCode::Year2017
 {
 	enum class InstructionType
 	{
 		PlaySound,
 		Set,
 		Add,
+		Subtract,
 		Multiply,
 		Modulo,
 		RecoverSound,
-		JumpGreaterZero
+		JumpGreaterZero,
+		JumpNotZero,
 	};
 
 	enum ValueType
@@ -37,18 +39,18 @@ namespace AdventOfCode::Year2017::Day18
 		}
 	};
 
-	class SoundInstruction
+	class Instruction
 	{
 	public:
 		InstructionType Type;
 		InstructionParameter Param1;
 		InstructionParameter Param2;
 
-		SoundInstruction(InstructionType instrType, InstructionParameter p1, InstructionParameter p2) :
+		Instruction(InstructionType instrType, InstructionParameter p1, InstructionParameter p2) :
 			Type(instrType), Param1(std::move(p1)), Param2(std::move(p2))
 		{}
 
-		void Execute1(std::vector<SoundInstruction>::iterator& instrIt, std::map<char, int64_t>& registers, uint64_t& lastSoundPlayed, std::optional<uint64_t>& soundRecovered)
+		void Execute1(std::vector<Instruction>::iterator& instrIt, std::map<char, int64_t>& registers, uint64_t& lastSoundPlayed, std::optional<uint64_t>& soundRecovered)
 		{
 			switch (Type)
 			{
@@ -61,17 +63,13 @@ namespace AdventOfCode::Year2017::Day18
 						soundRecovered = lastSoundPlayed;
 					++instrIt;
 					break;
-				case InstructionType::Set:
-				case InstructionType::Add:
-				case InstructionType::Multiply:
-				case InstructionType::Modulo:
-				case InstructionType::JumpGreaterZero:
+				default:
 					ExecuteCommon(instrIt, registers);
 					break;
 			}
 		}
 
-		bool Execute2(std::vector<SoundInstruction>::iterator& instrIt, std::map<char, int64_t>& registers, std::queue<int64_t>& sendQueue, std::queue<int64_t>& recvQueue, uint64_t& sendCnt)
+		bool Execute2(std::vector<Instruction>::iterator& instrIt, std::map<char, int64_t>& registers, std::queue<int64_t>& sendQueue, std::queue<int64_t>& recvQueue, uint64_t& sendCnt)
 		{
 			switch (Type)
 			{
@@ -90,45 +88,48 @@ namespace AdventOfCode::Year2017::Day18
 					}
 					else
 						return false;
-				case InstructionType::Set:
-				case InstructionType::Add:
-				case InstructionType::Multiply:
-				case InstructionType::Modulo:
-				case InstructionType::JumpGreaterZero:
+				default:
 					ExecuteCommon(instrIt, registers);
 					return true;
 			}
 			return false;
 		}
 
-	private:
-		void ExecuteCommon(std::vector<SoundInstruction>::iterator& instrIt, std::map<char, int64_t>& registers)
+		void ExecuteCommon(std::vector<Instruction>::iterator& instrIt, std::map<char, int64_t>& registers)
 		{
 			switch (Type)
 			{
 				case InstructionType::Set:
 					registers[static_cast<char>(Param1.Value)] = Param2.GetValue(registers);
-					++instrIt;
 					break;
 				case InstructionType::Add:
 					registers[static_cast<char>(Param1.Value)] += Param2.GetValue(registers);
-					++instrIt;
+					break;
+				case InstructionType::Subtract:
+					registers[static_cast<char>(Param1.Value)] -= Param2.GetValue(registers);
 					break;
 				case InstructionType::Multiply:
 					registers[static_cast<char>(Param1.Value)] *= Param2.GetValue(registers);
-					++instrIt;
 					break;
 				case InstructionType::Modulo:
 					registers[static_cast<char>(Param1.Value)] %= Param2.GetValue(registers);
-					++instrIt;
 					break;
 				case InstructionType::JumpGreaterZero:
 					if (Param1.GetValue(registers) > 0)
+					{
 						instrIt += Param2.GetValue(registers);
-					else
-						++instrIt;
+						return;
+					}
+					break;
+				case InstructionType::JumpNotZero:
+					if (Param1.GetValue(registers) != 0)
+					{
+						instrIt += Param2.GetValue(registers);
+						return;
+					}
 					break;
 			}
+			++instrIt;
 		}
 	};
 }

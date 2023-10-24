@@ -44,9 +44,6 @@
     <Filter Include="Day13">
       <Filter>{71a96aef-caca-4fde-b2d2-117dad7b3ab1}</Filter>
     </Filter>
-    <Filter Include="Shared">
-      <UniqueIdentifier>{037e1c4f-59a9-4182-9ff3-d7291a339c71}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Day14">
       <Filter>{67cd42dc-7907-498f-a71b-d8edc9b2e4ef}</Filter>
     </Filter>
@@ -73,6 +70,12 @@
     </Filter>
     <Filter Include="Day22">
       <Filter>{731e23e7-576d-4d0c-9a2d-0dec6f7e7edf}</Filter>
+    </Filter>
+    <Filter Include="Day23">
+      <Filter>{223cdc4b-4fd1-40b4-9794-6a027923666c}</Filter>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{26ed81b2-8b55-41c1-8cba-9eaa588448ac}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -149,9 +152,6 @@
     <ClInclude Include="Day13\FirewallProcessor.h">
       <Filter>Day13</Filter>
     </ClInclude>
-    <ClInclude Include="Shared\KnotHashCalculator.h">
-      <Filter>Shared</Filter>
-    </ClInclude>
     <ClInclude Include="Day14\Day14_DiskDefragmentation.h">
       <Filter>Day14</Filter>
     </ClInclude>
@@ -171,12 +171,6 @@
       <Filter>Day17</Filter>
     </ClInclude>
     <ClInclude Include="Day18\Day18_Duet.h">
-      <Filter>Day18</Filter>
-    </ClInclude>
-    <ClInclude Include="Day18\SoundInstruction.h">
-      <Filter>Day18</Filter>
-    </ClInclude>
-    <ClInclude Include="Day18\SoundInstructionsProcessor.h">
       <Filter>Day18</Filter>
     </ClInclude>
     <ClInclude Include="Day19\Day19_ASeriesOfTubes.h">
@@ -205,6 +199,18 @@
     </ClInclude>
     <ClInclude Include="Day22\GridComputingClusterProcessor.h">
       <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Day23_CoprocessorConflagration.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Instruction.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="InstructionsProcessor.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="KnotHashCalculator.h">
+      <Filter>Shared</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -271,9 +277,6 @@
     <ClCompile Include="Day14\Day14_DiskDefragmentation.cpp">
       <Filter>Day14</Filter>
     </ClCompile>
-    <ClCompile Include="Shared\KnotHashCalculator.cpp">
-      <Filter>Shared</Filter>
-    </ClCompile>
     <ClCompile Include="Day15\Day15_DuelingGenerators.cpp">
       <Filter>Day15</Filter>
     </ClCompile>
@@ -287,9 +290,6 @@
       <Filter>Day17</Filter>
     </ClCompile>
     <ClCompile Include="Day18\Day18_Duet.cpp">
-      <Filter>Day18</Filter>
-    </ClCompile>
-    <ClCompile Include="Day18\SoundInstructionsProcessor.cpp">
       <Filter>Day18</Filter>
     </ClCompile>
     <ClCompile Include="Day19\Day19_ASeriesOfTubes.cpp">
@@ -312,6 +312,15 @@
     </ClCompile>
     <ClCompile Include="Day22\GridComputingClusterProcessor.cpp">
       <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\Day23_CoprocessorConflagration.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="InstructionsProcessor.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="KnotHashCalculator.cpp">
+      <Filter>Shared</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

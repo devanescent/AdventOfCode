@@ -23,6 +23,7 @@
 #include "Day20\Day20_ParticleSwarm.h"
 #include "Day21\Day21_FractalArt.h"
 #include "Day22\Day22_SporificaVirus.h"
+#include "Day23\Day23_CoprocessorConflagration.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -54,6 +55,7 @@ namespace AdventOfCode::Year2017
 				case 20:	return std::make_unique<Day20::ParticleSwarm>();
 				case 21:	return std::make_unique<Day21::FractalArt>();
 				case 22:	return std::make_unique<Day22::SporificaVirus>();
+				case 23:	return std::make_unique<Day23::CoprocessorConflagration>();
 				default:	return nullptr;
 			}
 		}

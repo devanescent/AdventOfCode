@@ -1,11 +1,11 @@
-﻿#include "SoundInstructionsProcessor.h"
+﻿#include "InstructionsProcessor.h"
 #include <sstream>
 
-namespace AdventOfCode::Year2017::Day18
+namespace AdventOfCode::Year2017
 {
-	std::vector<SoundInstruction> SoundInstructionsProcessor::Process(std::vector<std::string> input)
+	std::vector<Instruction> InstructionsProcessor::Process(std::vector<std::string> input)
 	{
-		std::vector<SoundInstruction> instructions;
+		std::vector<Instruction> instructions;
 
 		for (const std::string& line : input)
 		{
@@ -21,6 +21,8 @@ namespace AdventOfCode::Year2017::Day18
 				instrType = InstructionType::Set;
 			else if (str == "add")
 				instrType = InstructionType::Add;
+			else if (str == "sub")
+				instrType = InstructionType::Subtract;
 			else if (str == "mul")
 				instrType = InstructionType::Multiply;
 			else if (str == "mod")
@@ -29,6 +31,8 @@ namespace AdventOfCode::Year2017::Day18
 				instrType = InstructionType::RecoverSound;
 			else if (str == "jgz")
 				instrType = InstructionType::JumpGreaterZero;
+			else if (str == "jnz")
+				instrType = InstructionType::JumpNotZero;
 
 			InstructionParameter p1, p2;
 			InstructionParameter* currentP = &p1;
