@@ -68,6 +68,9 @@
     <Filter Include="Day20">
       <Filter>{43e5a653-ba3f-4180-9a87-af8a05f6963e}</Filter>
     </Filter>
+    <Filter Include="Day21">
+      <Filter>{000c8d16-01dc-48e7-a4a0-187a4939f4cd}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -185,6 +188,15 @@
     <ClInclude Include="Day20\ParticleProcessor.h">
       <Filter>Day20</Filter>
     </ClInclude>
+    <ClInclude Include="Day21\Day21_FractalArt.h">
+      <Filter>Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21\EnhancementRule.h">
+      <Filter>Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21\EnhancementRulesProcessor.h">
+      <Filter>Day21</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -279,6 +291,12 @@
     </ClCompile>
     <ClCompile Include="Day20\ParticleProcessor.cpp">
       <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21\Day21_FractalArt.cpp">
+      <Filter>Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21\EnhancementRulesProcessor.cpp">
+      <Filter>Day21</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

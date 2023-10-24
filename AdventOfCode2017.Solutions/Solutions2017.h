@@ -21,6 +21,7 @@
 #include "Day18\Day18_Duet.h"
 #include "Day19\Day19_ASeriesOfTubes.h"
 #include "Day20\Day20_ParticleSwarm.h"
+#include "Day21\Day21_FractalArt.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -50,6 +51,7 @@ namespace AdventOfCode::Year2017
 				case 18:	return std::make_unique<Day18::Duet>();
 				case 19:	return std::make_unique<Day19::ASeriesOfTubes>();
 				case 20:	return std::make_unique<Day20::ParticleSwarm>();
+				case 21:	return std::make_unique<Day21::FractalArt>();
 				default:	return nullptr;
 			}
 		}
