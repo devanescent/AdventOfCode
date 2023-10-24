@@ -71,6 +71,9 @@
     <Filter Include="Day21">
       <Filter>{000c8d16-01dc-48e7-a4a0-187a4939f4cd}</Filter>
     </Filter>
+    <Filter Include="Day22">
+      <Filter>{731e23e7-576d-4d0c-9a2d-0dec6f7e7edf}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -197,6 +200,12 @@
     <ClInclude Include="Day21\EnhancementRulesProcessor.h">
       <Filter>Day21</Filter>
     </ClInclude>
+    <ClInclude Include="Day22\Day22_SporificaVirus.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\GridComputingClusterProcessor.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -297,6 +306,12 @@
     </ClCompile>
     <ClCompile Include="Day21\EnhancementRulesProcessor.cpp">
       <Filter>Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\Day22_SporificaVirus.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\GridComputingClusterProcessor.cpp">
+      <Filter>Day22</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -69,6 +69,8 @@
     <ClInclude Include="Day21\Day21_FractalArt.h" />
     <ClInclude Include="Day21\EnhancementRule.h" />
     <ClInclude Include="Day21\EnhancementRulesProcessor.h" />
+    <ClInclude Include="Day22\Day22_SporificaVirus.h" />
+    <ClInclude Include="Day22\GridComputingClusterProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -109,6 +111,8 @@
     <ClCompile Include="Day20\ParticleProcessor.cpp" />
     <ClCompile Include="Day21\Day21_FractalArt.cpp" />
     <ClCompile Include="Day21\EnhancementRulesProcessor.cpp" />
+    <ClCompile Include="Day22\Day22_SporificaVirus.cpp" />
+    <ClCompile Include="Day22\GridComputingClusterProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
