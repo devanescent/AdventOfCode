@@ -25,6 +25,7 @@
 #include "Day22\Day22_SporificaVirus.h"
 #include "Day23\Day23_CoprocessorConflagration.h"
 #include "Day24\Day24_ElectromagneticMoat.h"
+#include "Day25\Day25_TheHaltingProblem.h"
 
 namespace AdventOfCode::Year2017
 {
@@ -58,6 +59,7 @@ namespace AdventOfCode::Year2017
 				case 22:	return std::make_unique<Day22::SporificaVirus>();
 				case 23:	return std::make_unique<Day23::CoprocessorConflagration>();
 				case 24:	return std::make_unique<Day24::ElectromagneticMoat>();
+				case 25:	return std::make_unique<Day25::TheHaltingProblem>();
 				default:	return nullptr;
 			}
 		}

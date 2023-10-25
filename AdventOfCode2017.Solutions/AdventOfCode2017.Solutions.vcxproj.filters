@@ -80,6 +80,9 @@
     <Filter Include="Day24">
       <Filter>{35eed003-193b-4267-ad1d-9b1ae3961e5b}</Filter>
     </Filter>
+    <Filter Include="Day25">
+      <Filter>{433326ae-5700-4152-be32-e51f245a43d9}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2017.h" />
@@ -224,6 +227,18 @@
     <ClInclude Include="Day24\MagneticComponentProcessor.h">
       <Filter>Day24</Filter>
     </ClInclude>
+    <ClInclude Include="Day25\Day25_TheHaltingProblem.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\Blueprint.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\BlueprintsProcessor.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\BlueprintInitializer.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_InverseCaptcha.cpp">
@@ -339,6 +354,12 @@
     </ClCompile>
     <ClCompile Include="Day24\MagneticComponentProcessor.cpp">
       <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\Day25_TheHaltingProblem.cpp">
+      <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\BlueprintsProcessor.cpp">
+      <Filter>Day25</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
