@@ -72,6 +72,9 @@
     <ClInclude Include="Day22\Day22_SporificaVirus.h" />
     <ClInclude Include="Day22\GridComputingClusterProcessor.h" />
     <ClInclude Include="Day23\Day23_CoprocessorConflagration.h" />
+    <ClInclude Include="Day24\Day24_ElectromagneticMoat.h" />
+    <ClInclude Include="Day24\MagneticComponent.h" />
+    <ClInclude Include="Day24\MagneticComponentProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
@@ -115,6 +118,8 @@
     <ClCompile Include="Day23\Day23_CoprocessorConflagration.cpp" />
     <ClCompile Include="InstructionsProcessor.cpp" />
     <ClCompile Include="KnotHashCalculator.cpp" />
+    <ClCompile Include="Day24\Day24_ElectromagneticMoat.cpp" />
+    <ClCompile Include="Day24\MagneticComponentProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
