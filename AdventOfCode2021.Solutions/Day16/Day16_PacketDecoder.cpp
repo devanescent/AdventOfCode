@@ -29,7 +29,7 @@ namespace AdventOfCode::Year2021::Day16
 	// ---------------------------------------------------------------------------
 	// Part 1:
 	// ---------------------------------------------------------------------------
-	uint64_t PacketDecoder::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t PacketDecoder::ExecutePart1(const std::vector<std::string> input)
 	{
 		// Convert Hex representation to binary representation
 		const std::string& packet(input[0]);
@@ -54,7 +54,7 @@ namespace AdventOfCode::Year2021::Day16
 	// ---------------------------------------------------------------------------
 	// Part 2:
 	// ---------------------------------------------------------------------------
-	uint64_t PacketDecoder::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t PacketDecoder::ExecutePart2(const std::vector<std::string> input)
 	{
 		// Convert Hex representation to binary representation
 		const std::string& packet(input[0]);

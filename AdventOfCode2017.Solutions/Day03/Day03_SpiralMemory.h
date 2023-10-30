@@ -6,13 +6,14 @@ namespace AdventOfCode::Year2017::Day03
 	// ---------------------------------------------------------------------------
 	// Day03: Spiral Memory
 	// ---------------------------------------------------------------------------
-	class SpiralMemory : public Day
+	class SpiralMemory : public Day<>
 	{
 	public:
 		SpiralMemory();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> input) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> input) override;
+		uint64_t ExecutePart2(std::vector<std::string> input) override;
 	};
 
 	enum class Direction

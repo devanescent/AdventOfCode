@@ -6,7 +6,7 @@ namespace AdventOfCode::Year2017::Day03
 {
 	SpiralMemory::SpiralMemory() : Day(3, "Spiral Memory") { }
 
-	uint64_t SpiralMemory::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t SpiralMemory::ExecutePart1(std::vector<std::string> input)
 	{
 		uint64_t target = std::stoull(input[0]);
 
@@ -31,7 +31,7 @@ namespace AdventOfCode::Year2017::Day03
 		return std::abs((int64_t)(((target + (ring * 2 - 1)) % (2 * ring)) - ring)) + ring;
 	}
 
-	uint64_t SpiralMemory::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t SpiralMemory::ExecutePart2(std::vector<std::string> input)
 	{
 		uint64_t target = std::stoull(input[0]);
 		std::map<Point<int>, int> squares;

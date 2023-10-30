@@ -6,12 +6,13 @@ namespace AdventOfCode::Year2018::Day15
 	// ---------------------------------------------------------------------------
 	// Day15: Beverage Bandits
 	// ---------------------------------------------------------------------------
-	class BeverageBandits : public Day
+	class BeverageBandits : public Day<>
 	{
 	public:
 		BeverageBandits();
 
-		uint64_t	GetResultOnPart1(std::vector<std::string> map) override;
-		uint64_t	GetResultOnPart2(std::vector<std::string> map) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> map) override;
+		uint64_t ExecutePart2(std::vector<std::string> map) override;
 	};
 }

@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2022::Day17
 {
 	PyroclasticFlow::PyroclasticFlow() : Day(17, "Pyroclastic Flow") { }
 
-	uint64_t PyroclasticFlow::GetResultOnPart1(std::vector<std::string> jets)
+	uint64_t PyroclasticFlow::ExecutePart1(std::vector<std::string> jets)
 	{
 		std::string jetPattern = jets[0];
 		auto currentJet = jetPattern.begin();
@@ -53,7 +53,7 @@ namespace AdventOfCode::Year2022::Day17
 		return *std::max_element(maxHeights.begin(), maxHeights.end());
 	}
 
-	uint64_t PyroclasticFlow::GetResultOnPart2(std::vector<std::string> jets)
+	uint64_t PyroclasticFlow::ExecutePart2(std::vector<std::string> jets)
 	{
 		return uint64_t();
 	}

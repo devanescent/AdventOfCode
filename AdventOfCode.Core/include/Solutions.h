@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include "Day.h"
+#include "DayBase.h"
 
 namespace AdventOfCode
 {
@@ -8,7 +8,7 @@ namespace AdventOfCode
 	class Solutions
 	{
 	public:
-		virtual std::unique_ptr<Day> GetDay(int day) = 0;
+		virtual std::unique_ptr<DayBase> GetDay(int day) = 0;
 	};
 }
 

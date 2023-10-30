@@ -31,7 +31,7 @@ namespace AdventOfCode::Year2021
 {
 	class Solutions2021 : public Solutions
 	{
-		std::unique_ptr<Day> GetDay(int day) override
+		std::unique_ptr<DayBase> GetDay(int day) override
 		{
 			switch (day)
 			{

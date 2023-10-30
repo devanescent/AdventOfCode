@@ -6,12 +6,13 @@ namespace AdventOfCode::Year2022::Day17
 	// ---------------------------------------------------------------------------
 	// Day17: Pyroclastic Flow
 	// ---------------------------------------------------------------------------
-	class PyroclasticFlow : public Day
+	class PyroclasticFlow : public Day<>
 	{
 	public:
 		PyroclasticFlow();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> jets) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> jets) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> jets) override;
+		uint64_t ExecutePart2(std::vector<std::string> jets) override;
 	};
 }

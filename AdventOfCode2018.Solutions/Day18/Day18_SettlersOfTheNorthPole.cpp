@@ -6,7 +6,7 @@ namespace AdventOfCode::Year2018::Day18
 	SettlersOfTheNorthPole::SettlersOfTheNorthPole() : Day(18, "Settlers Of The North Pole") {}
 
 
-	uint64_t SettlersOfTheNorthPole::GetResultOnPart1(std::vector<std::string> ground)
+	uint64_t SettlersOfTheNorthPole::ExecutePart1(std::vector<std::string> ground)
 	{
 		for (int t = 0; t < 10; ++t)
 			ground = TransformGround(ground);
@@ -14,7 +14,7 @@ namespace AdventOfCode::Year2018::Day18
 		return GetResourceValue(ground);
 	}
 
-	uint64_t SettlersOfTheNorthPole::GetResultOnPart2(std::vector<std::string> ground)
+	uint64_t SettlersOfTheNorthPole::ExecutePart2(std::vector<std::string> ground)
 	{
 		// Let run long enough that the ground transforms in a cyclic pattern:
 		for (int t = 0; t < 1000; ++t)

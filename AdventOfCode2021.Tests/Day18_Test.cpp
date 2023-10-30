@@ -124,14 +124,14 @@ namespace AdventOfCode::Year2021::Tests
 		TEST_METHOD(AddSnailfishNums)
 		{
 			Snailfish day18;
-			auto result = day18.GetResultOnPart1(inputData4);
+			uint64_t result = day18.GetResultOnPart1(inputData4);
 			Assert::AreEqual(4140ull, result);
 		}
 
 		TEST_METHOD(FindMaxMagnitude)
 		{
 			Snailfish day18;
-			auto result = day18.GetResultOnPart2(inputData4);
+			uint64_t result = day18.GetResultOnPart2(inputData4);
 			Assert::AreEqual(3993ull, result);
 		}
 	};

@@ -27,12 +27,12 @@ namespace AdventOfCode::Year2020::Day03
 		return treeCount;
 	}
 
-	uint64_t TobogganTrajectory::GetResultOnPart1(std::vector<std::string> mapData)
+	uint64_t TobogganTrajectory::ExecutePart1(std::vector<std::string> mapData)
 	{
 		return CountTreesOnTraversal(mapData, 3, 1);
 	}
 
-	uint64_t TobogganTrajectory::GetResultOnPart2(std::vector<std::string> mapData)
+	uint64_t TobogganTrajectory::ExecutePart2(std::vector<std::string> mapData)
 	{
 		return static_cast<uint64_t>(CountTreesOnTraversal(mapData, 1, 1)) *
 			   CountTreesOnTraversal(mapData, 3, 1) *

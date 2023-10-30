@@ -6,11 +6,13 @@ namespace AdventOfCode::Year2018::Day09
 	// ---------------------------------------------------------------------------
 	// Day09: Marble Mania 
 	// ---------------------------------------------------------------------------
-	class MarbleMania : public Day
+	class MarbleMania : public Day<>
 	{
 	public:
 		MarbleMania();
-		uint64_t GetResultOnPart1(const std::vector<std::string> input) override;
-		uint64_t GetResultOnPart2(const std::vector<std::string> input) override;
+
+	protected:
+		uint64_t ExecutePart1(const std::vector<std::string> input) override;
+		uint64_t ExecutePart2(const std::vector<std::string> input) override;
 	};
 }

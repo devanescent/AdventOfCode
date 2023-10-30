@@ -45,6 +45,12 @@
     <ClInclude Include="include\Range.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\DayBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AoCResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Utils.cpp">

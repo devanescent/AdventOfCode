@@ -8,7 +8,7 @@ namespace AdventOfCode::Year2021::Day17
 	// ---------------------------------------------------------------------------
 	// Part 1:
 	// ---------------------------------------------------------------------------
-	uint64_t TrickShot::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t TrickShot::ExecutePart1(const std::vector<std::string> input)
 	{
 		int targetXMin = 0, targetXMax = 0, targetYMin = 0, targetYMax = 0;
 		sscanf_s(input[0].c_str(), "target area: x=%d..%d, y=%d..%d", &targetXMin, &targetXMax, &targetYMin, &targetYMax);

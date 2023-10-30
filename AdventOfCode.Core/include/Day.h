@@ -1,28 +1,31 @@
 #pragma once
-#include "InputProcessor.h"
+#include "DayBase.h"
 
 namespace AdventOfCode
 {
 	// -----------------------------------------------------------------------------------
-	// non-templated base class in order to use objects from all days in common collection
-	class Day
+// Base class for days that use string input data directly
+	template<typename TResult1 = uint64_t, typename TResult2 = TResult1>
+	class Day : public DayBase
 	{
 	public:
-		virtual				~Day() = default;
+		virtual ~Day() = default;
 
-		int					GetDayNo() { return m_dayNo; }
-		const char*			GetName() { return m_dayName; }
+		AoCResult GetResultOnPart1(std::vector<std::string> input) override
+		{
+			return AoCResult(ExecutePart1(std::move(input)));
+		}
 
-		virtual uint64_t	GetResultOnPart1(std::vector<std::string> input) = 0;
-		virtual uint64_t	GetResultOnPart2(std::vector<std::string> input) { return 0ull; }
+		AoCResult GetResultOnPart2(std::vector<std::string> input) override
+		{
+			return AoCResult(ExecutePart2(std::move(input)));
+		}
 
 	protected:
-		Day(int no, const char* name) :
-			m_dayNo(no), m_dayName(name)
-		{}
+		Day(int no, const char* name) : DayBase(no, name) {}
 
-	private:
-		int			m_dayNo;
-		const char* m_dayName;
+		// Process input (to be overwritten by concrete classes)
+		virtual TResult1 ExecutePart1(std::vector<std::string> input) = 0;
+		virtual TResult2 ExecutePart2(std::vector<std::string> input) { return TResult2{}; }
 	};
 }

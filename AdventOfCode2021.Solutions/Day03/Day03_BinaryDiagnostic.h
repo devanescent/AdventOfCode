@@ -1,15 +1,16 @@
 #pragma once
-#include "DayT.h"
+#include "Day.h"
 
 namespace AdventOfCode::Year2021::Day03
 {
-	class BinaryDiagnostic : public Day
+	class BinaryDiagnostic : public Day<>
 	{
 	public:
 		BinaryDiagnostic();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> diagReport) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> diagReport) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> diagReport) override;
+		uint64_t ExecutePart2(std::vector<std::string> diagReport) override;
 
 	private:
 		enum class LifeSupportRatingValue

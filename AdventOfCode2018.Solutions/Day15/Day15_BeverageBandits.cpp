@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2018::Day15
 {
 	BeverageBandits::BeverageBandits() : Day(15, "Beverage Bandits") {}
 
-	uint64_t BeverageBandits::GetResultOnPart1(std::vector<std::string> map)
+	uint64_t BeverageBandits::ExecutePart1(std::vector<std::string> map)
 	{
 		Battle battle(map);
 		Battle::BattleResult result = battle.ExecuteCombat();
@@ -13,7 +13,7 @@ namespace AdventOfCode::Year2018::Day15
 		return static_cast<uint64_t>(result.GetOutcome());
 	}
 
-	uint64_t BeverageBandits::GetResultOnPart2(std::vector<std::string> map)
+	uint64_t BeverageBandits::ExecutePart2(std::vector<std::string> map)
 	{
 		// Find lowest increment to attack power so that no elf will die during combat:
 		int increment = 50;

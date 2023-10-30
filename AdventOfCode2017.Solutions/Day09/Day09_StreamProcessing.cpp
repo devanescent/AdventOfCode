@@ -4,7 +4,7 @@ namespace AdventOfCode::Year2017::Day09
 {
 	StreamProcessing::StreamProcessing() : Day(9, "Stream Processing") { }
 
-	uint64_t StreamProcessing::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t StreamProcessing::ExecutePart1(std::vector<std::string> input)
 	{
 		const std::string& stream = input[0];
 		auto streamStart = stream.cbegin();
@@ -13,7 +13,7 @@ namespace AdventOfCode::Year2017::Day09
 		return ProcessGroup(streamStart, stream.cend(), 1, 0, _);
 	}
 
-	uint64_t StreamProcessing::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t StreamProcessing::ExecutePart2(std::vector<std::string> input)
 	{
 		const std::string& stream = input[0];
 		auto streamStart = stream.cbegin();

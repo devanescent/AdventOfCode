@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2020::Day18
 {
 	OperationOrder::OperationOrder() : Day(18, "Operation Order") {}
 
-	uint64_t OperationOrder::GetResultOnPart1(std::vector<std::string> infixExpressions)
+	uint64_t OperationOrder::ExecutePart1(std::vector<std::string> infixExpressions)
 	{
 		// Transform from infix to postfix notation:
 		std::vector<std::string> postfixExpressions;
@@ -21,7 +21,7 @@ namespace AdventOfCode::Year2020::Day18
 			[&](uint64_t res, const std::string& expr) { return res + EvaluateExpression(expr); });
 	}
 
-	uint64_t OperationOrder::GetResultOnPart2(std::vector<std::string> infixExpressions)
+	uint64_t OperationOrder::ExecutePart2(std::vector<std::string> infixExpressions)
 	{
 		// Transform from infix to postfix notation:
 		std::vector<std::string> postfixExpressions;

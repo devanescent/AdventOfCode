@@ -41,7 +41,7 @@ namespace AdventOfCode::Year2018::Day11
 	ChronalCharge::ChronalCharge() : Day(11, "Chronal Charge")
 	{}
 
-	uint64_t ChronalCharge::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t ChronalCharge::ExecutePart1(const std::vector<std::string> input)
 	{
 		int gridId = atoi(input[0].c_str());
 
@@ -84,7 +84,7 @@ namespace AdventOfCode::Year2018::Day11
 		return 0;
 	}
 
-	uint64_t ChronalCharge::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t ChronalCharge::ExecutePart2(const std::vector<std::string> input)
 	{
 		int gridId = atoi(input[0].c_str());
 

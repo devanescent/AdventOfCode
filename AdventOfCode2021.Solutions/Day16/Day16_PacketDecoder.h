@@ -3,13 +3,14 @@
 
 namespace AdventOfCode::Year2021::Day16
 {
-	class PacketDecoder : public Day
+	class PacketDecoder : public Day<>
 	{
 	public:
 		PacketDecoder();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> input) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> input) override;
+		uint64_t ExecutePart2(std::vector<std::string> input) override;
 
 	private:
 		uint64_t DecodePackets(const std::string& packet, int& dataIx, std::vector<int>& versions);

@@ -3,13 +3,14 @@
 
 namespace AdventOfCode::Year2020::Day18
 {
-	class OperationOrder : public Day
+	class OperationOrder : public Day<>
 	{
 	public:
 		OperationOrder();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> infixExpressions) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> infixExpressions) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> infixExpressions) override;
+		uint64_t ExecutePart2(std::vector<std::string> infixExpressions) override;
 
 	private:
 		// Converts a mathematical expression from infix to postfix notation

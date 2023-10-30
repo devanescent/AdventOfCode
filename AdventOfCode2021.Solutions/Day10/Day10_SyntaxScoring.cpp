@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2021::Day10
 {
 	SyntaxScoring::SyntaxScoring() : Day(10, "Syntax Scoring") {}
 
-	uint64_t SyntaxScoring::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t SyntaxScoring::ExecutePart1(const std::vector<std::string> input)
 	{
 		return std::accumulate(input.begin(), input.end(), 0ull,
 			[](uint64_t corruptionScore, const std::string& chunkLine)
@@ -17,7 +17,7 @@ namespace AdventOfCode::Year2021::Day10
 		);
 	}
 
-	uint64_t SyntaxScoring::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t SyntaxScoring::ExecutePart2(const std::vector<std::string> input)
 	{
 		std::vector<uint64_t> incompleteScores;
 		incompleteScores.reserve(input.size());

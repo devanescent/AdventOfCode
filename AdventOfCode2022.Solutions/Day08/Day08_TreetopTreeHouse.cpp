@@ -6,7 +6,7 @@ namespace AdventOfCode::Year2022::Day08
 {
 	TreetopTreeHouse::TreetopTreeHouse() : Day(8, "Treetop Tree House") { }
 
-	uint64_t TreetopTreeHouse::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t TreetopTreeHouse::ExecutePart1(std::vector<std::string> input)
 	{
 		// Collect coordinates of all visible trees
 		std::set<Point<int>> visibleTrees;
@@ -69,7 +69,7 @@ namespace AdventOfCode::Year2022::Day08
 		return visibleTrees.size() + outerTrees;
 	}
 
-	uint64_t TreetopTreeHouse::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t TreetopTreeHouse::ExecutePart2(std::vector<std::string> input)
 	{
 		// Ignore trees on outer border, because these will have at least one direction
 		// with a viewing distance of 0 which will result in a scenic score of 0

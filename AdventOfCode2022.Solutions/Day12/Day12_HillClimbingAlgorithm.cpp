@@ -38,7 +38,7 @@ namespace AdventOfCode::Year2022::Day12
 		return { -1, -1 };
 	}
 
-	uint64_t HillClimbingAlgorithm::GetResultOnPart1(std::vector<std::string> map)
+	uint64_t HillClimbingAlgorithm::ExecutePart1(std::vector<std::string> map)
 	{
 		std::priority_queue<MapProgress> q;
 		std::map<Point<int>, int> visited; // Remember positions with minimal steps reached
@@ -88,7 +88,7 @@ namespace AdventOfCode::Year2022::Day12
 		return q.top().Steps;
 	}
 
-	uint64_t HillClimbingAlgorithm::GetResultOnPart2(std::vector<std::string> map)
+	uint64_t HillClimbingAlgorithm::ExecutePart2(std::vector<std::string> map)
 	{
 		std::priority_queue<MapProgress> q;
 		std::map<Point<int>, int> visited; // Remember positions with minimal steps reached

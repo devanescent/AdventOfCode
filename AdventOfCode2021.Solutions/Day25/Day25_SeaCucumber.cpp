@@ -4,7 +4,7 @@ namespace AdventOfCode::Year2021::Day25
 {
 	SeaCucumber::SeaCucumber() : Day(25, "Sea Cucumber") {}
 
-	uint64_t SeaCucumber::GetResultOnPart1(std::vector<std::string> cucumbers)
+	uint64_t SeaCucumber::ExecutePart1(std::vector<std::string> cucumbers)
 	{
 		bool canMove = true;
 		uint64_t stepCount = 0;

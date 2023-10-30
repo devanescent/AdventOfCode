@@ -15,7 +15,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AoCResult.h" />
     <ClInclude Include="include\Day.h" />
+    <ClInclude Include="include\DayBase.h" />
     <ClInclude Include="include\DayT.h" />
     <ClInclude Include="include\DayTC.h" />
     <ClInclude Include="include\InputProcessor.h" />

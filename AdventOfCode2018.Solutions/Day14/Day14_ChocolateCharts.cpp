@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2018::Day14
 {
 	ChocolateCharts::ChocolateCharts() : Day(14, "Chocolate Charts") {}
 
-	uint64_t ChocolateCharts::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t ChocolateCharts::ExecutePart1(const std::vector<std::string> input)
 	{
 		std::istringstream iss(input[0]);
 		uint64_t requiredNumberOfRecipes;
@@ -59,7 +59,7 @@ namespace AdventOfCode::Year2018::Day14
 	}
 
 
-	uint64_t ChocolateCharts::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t ChocolateCharts::ExecutePart2(const std::vector<std::string> input)
 	{
 		const std::string& sequence = input[0];
 

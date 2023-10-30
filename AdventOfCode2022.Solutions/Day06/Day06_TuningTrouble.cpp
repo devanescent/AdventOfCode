@@ -28,12 +28,12 @@ namespace AdventOfCode::Year2022::Day06
 		return 0ull;
 	}
 
-	uint64_t TuningTrouble::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t TuningTrouble::ExecutePart1(std::vector<std::string> input)
 	{
 		return FindPacketMarker(input[0], 4);
 	}
 
-	uint64_t TuningTrouble::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t TuningTrouble::ExecutePart2(std::vector<std::string> input)
 	{
 		return FindPacketMarker(input[0], 14);
 	}

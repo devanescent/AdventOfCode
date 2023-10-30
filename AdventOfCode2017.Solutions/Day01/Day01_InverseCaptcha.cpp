@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2017::Day01
 {
 	InverseCaptcha::InverseCaptcha() : Day(1, "Inverse Captcha") { }
 
-	uint64_t InverseCaptcha::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t InverseCaptcha::ExecutePart1(std::vector<std::string> input)
 	{
 		std::vector<int> digitsToAdd;
 
@@ -21,7 +21,7 @@ namespace AdventOfCode::Year2017::Day01
 		return std::accumulate(digitsToAdd.begin() + 1, digitsToAdd.end(), 0ull);
 	}
 
-	uint64_t InverseCaptcha::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t InverseCaptcha::ExecutePart2(std::vector<std::string> input)
 	{
 		const std::string& sequence = input[0];
 

@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2017::Day15
 {
 	DuelingGenerators::DuelingGenerators() : Day(15, "Dueling Generators") { }
 
-	uint64_t DuelingGenerators::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t DuelingGenerators::ExecutePart1(std::vector<std::string> input)
 	{
 		// Initial values for the generators:
 		uint64_t genA, genB;
@@ -30,7 +30,7 @@ namespace AdventOfCode::Year2017::Day15
 		return matches;
 	}
 
-	uint64_t DuelingGenerators::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t DuelingGenerators::ExecutePart2(std::vector<std::string> input)
 	{
 		// Initial values for the generators:
 		uint64_t genA, genB;

@@ -6,7 +6,7 @@ namespace AdventOfCode::Year2018::Day05
 	AlchemicalReduction::AlchemicalReduction() : Day(5, "Alchemical Reduction")
 	{}
 
-	uint64_t AlchemicalReduction::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t AlchemicalReduction::ExecutePart1(const std::vector<std::string> input)
 	{
 		std::string polymer = input[0];
 		bool hasReacted = false;
@@ -55,7 +55,7 @@ namespace AdventOfCode::Year2018::Day05
 		return polymer.length();
 	}
 
-	uint64_t AlchemicalReduction::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t AlchemicalReduction::ExecutePart2(const std::vector<std::string> input)
 	{
 		std::vector<uint64_t> reducedPolymerLengths;
 

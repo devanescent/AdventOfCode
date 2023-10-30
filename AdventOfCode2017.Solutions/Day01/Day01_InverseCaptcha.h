@@ -6,12 +6,13 @@ namespace AdventOfCode::Year2017::Day01
 	// ---------------------------------------------------------------------------
 	// Day01: Inverse Captcha
 	// ---------------------------------------------------------------------------
-	class InverseCaptcha : public Day
+	class InverseCaptcha : public Day<>
 	{
 	public:
 		InverseCaptcha();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> input) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> input) override;
+		uint64_t ExecutePart2(std::vector<std::string> input) override;
 	};
 }

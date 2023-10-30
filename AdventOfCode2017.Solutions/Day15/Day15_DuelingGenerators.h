@@ -6,12 +6,13 @@ namespace AdventOfCode::Year2017::Day15
 	// ---------------------------------------------------------------------------
 	// Day15: Dueling Generators
 	// ---------------------------------------------------------------------------
-	class DuelingGenerators : public Day
+	class DuelingGenerators : public Day<>
 	{
 	public:
 		DuelingGenerators();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> input) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> input) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> input) override;
+		uint64_t ExecutePart2(std::vector<std::string> input) override;
 	};
 }

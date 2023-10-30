@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2021::Day03
 {
 	BinaryDiagnostic::BinaryDiagnostic() : Day(3, "Binary Diagnostic") {}
 
-	uint64_t BinaryDiagnostic::GetResultOnPart1(std::vector<std::string> diagReport)
+	uint64_t BinaryDiagnostic::ExecutePart1(std::vector<std::string> diagReport)
 	{
 		if (!diagReport.empty())
 		{
@@ -43,7 +43,7 @@ namespace AdventOfCode::Year2021::Day03
 		return 0ull;
 	}
 
-	uint64_t BinaryDiagnostic::GetResultOnPart2(std::vector<std::string> diagReport)
+	uint64_t BinaryDiagnostic::ExecutePart2(std::vector<std::string> diagReport)
 	{
 		if (!diagReport.empty())
 		{

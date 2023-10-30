@@ -6,13 +6,14 @@ namespace AdventOfCode::Year2018::Day18
 	// ---------------------------------------------------------------------------
 	// Day18: Settlers Of The North Pole
 	// ---------------------------------------------------------------------------
-	class SettlersOfTheNorthPole : public Day
+	class SettlersOfTheNorthPole : public Day<>
 	{
 	public:
 		SettlersOfTheNorthPole();
 
-		uint64_t GetResultOnPart1(std::vector<std::string> ground) override;
-		uint64_t GetResultOnPart2(std::vector<std::string> ground) override;
+	protected:
+		uint64_t ExecutePart1(std::vector<std::string> ground) override;
+		uint64_t ExecutePart2(std::vector<std::string> ground) override;
 
 	private:
 		enum class AcreType : char

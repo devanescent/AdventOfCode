@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include "Day.h"
 #include <unordered_set>
 #include <algorithm>
 

@@ -26,7 +26,7 @@ namespace AdventOfCode::Year2021::Day18
 	// ---------------------------------------------------------------------------
 	// Part 2:
 	// ---------------------------------------------------------------------------
-	uint64_t Snailfish::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t Snailfish::ExecutePart2WithOrigData(const std::vector<std::string> input)
 	{
 		uint64_t maxMagnitude = 0;
 		

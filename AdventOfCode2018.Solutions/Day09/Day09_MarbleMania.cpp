@@ -71,7 +71,7 @@ namespace AdventOfCode::Year2018::Day09
 		return *std::max_element(playerScores.begin(), playerScores.end());
 	}
 
-	uint64_t MarbleMania::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t MarbleMania::ExecutePart1(const std::vector<std::string> input)
 	{
 		int numPlayers;
 		int lastMarble;
@@ -80,7 +80,7 @@ namespace AdventOfCode::Year2018::Day09
 		return FindWinningScore(numPlayers, lastMarble);
 	}
 
-	uint64_t MarbleMania::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t MarbleMania::ExecutePart2(const std::vector<std::string> input)
 	{
 		int numPlayers;
 		int lastMarble;

@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2017::Day17
 {
 	Spinlock::Spinlock() : Day(17, "Spinlock") { }
 
-	uint64_t Spinlock::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t Spinlock::ExecutePart1(std::vector<std::string> input)
 	{
 		int steps = std::stoi(input[0]);
 
@@ -32,7 +32,7 @@ namespace AdventOfCode::Year2017::Day17
 		return *valueAfter;
 	}
 
-	uint64_t Spinlock::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t Spinlock::ExecutePart2(std::vector<std::string> input)
 	{
 		int steps = std::stoi(input[0]);
 		auto currentPos = 0;

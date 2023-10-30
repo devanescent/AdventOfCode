@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2017::Day19
 {
 	ASeriesOfTubes::ASeriesOfTubes() : Day(19, "A Series of Tubes") { }
 
-	uint64_t ASeriesOfTubes::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t ASeriesOfTubes::ExecutePart1(std::vector<std::string> input)
 	{
 		// Find starting position in first line:
 		auto startIt = std::find(input[0].begin(), input[0].end(), '|');
@@ -22,7 +22,7 @@ namespace AdventOfCode::Year2017::Day19
 		return 0ull;
 	}
 
-	uint64_t ASeriesOfTubes::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t ASeriesOfTubes::ExecutePart2(std::vector<std::string> input)
 	{
 		// Find starting position in first line:
 		auto startIt = std::find(input[0].begin(), input[0].end(), '|');

@@ -9,7 +9,7 @@ namespace AdventOfCode::Year2021::Day21
 	// ---------------------------------------------------------------------------
 	// Part 1:
 	// ---------------------------------------------------------------------------
-	uint64_t DiracDice::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t DiracDice::ExecutePart1(const std::vector<std::string> input)
 	{
 		int player1Start = 0, player2Start = 0;
 		sscanf_s(input[0].c_str(), "Player 1 starting position: %d", &player1Start);
@@ -102,7 +102,7 @@ namespace AdventOfCode::Year2021::Day21
 	// ---------------------------------------------------------------------------
 	// Part 2:
 	// ---------------------------------------------------------------------------
-	uint64_t DiracDice::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t DiracDice::ExecutePart2(const std::vector<std::string> input)
 	{
 		int player1Start = 0, player2Start = 0;
 		sscanf_s(input[0].c_str(), "Player 1 starting position: %d", &player1Start);

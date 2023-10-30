@@ -11,7 +11,7 @@ namespace AdventOfCode::Year2017::Day14
 {
 	DiskDefragmentation::DiskDefragmentation() : Day(14, "Disk Defragmentation") { }
 
-	uint64_t DiskDefragmentation::GetResultOnPart1(std::vector<std::string> input)
+	uint64_t DiskDefragmentation::ExecutePart1(std::vector<std::string> input)
 	{
 		uint64_t totalUsedSquares = 0;
 		const std::string& key = input[0];
@@ -29,7 +29,7 @@ namespace AdventOfCode::Year2017::Day14
 		return totalUsedSquares;
 	}
 
-	uint64_t DiskDefragmentation::GetResultOnPart2(std::vector<std::string> input)
+	uint64_t DiskDefragmentation::ExecutePart2(std::vector<std::string> input)
 	{
 		const std::string& key = input[0];
 

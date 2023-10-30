@@ -6,7 +6,7 @@ namespace AdventOfCode::Year2018::Day02
 	InventoryManagementSystem::InventoryManagementSystem() : Day(2, "Inventory Management System")
 	{}
 
-	uint64_t InventoryManagementSystem::GetResultOnPart1(const std::vector<std::string> input)
+	uint64_t InventoryManagementSystem::ExecutePart1(const std::vector<std::string> input)
 	{
 		uint64_t twoLettersCount = 0, threeLettersCount = 0;
 
@@ -51,7 +51,7 @@ namespace AdventOfCode::Year2018::Day02
 		return twoLettersCount * threeLettersCount;
 	}
 
-	uint64_t InventoryManagementSystem::GetResultOnPart2(const std::vector<std::string> input)
+	uint64_t InventoryManagementSystem::ExecutePart2(const std::vector<std::string> input)
 	{
 		for (auto id1 = input.begin() + 1; id1 != input.end(); ++id1)
 		{
