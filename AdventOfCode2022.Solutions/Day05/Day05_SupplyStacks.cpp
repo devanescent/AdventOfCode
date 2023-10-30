@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2022::Day05
 {
 	SupplyStacks::SupplyStacks() : DayTC(5, "Supply Stacks") { }
 
-	uint64_t SupplyStacks::ExecutePart1(std::vector<CraneStep> steps, CrateStacks stacks)
+	std::string SupplyStacks::ExecutePart1(std::vector<CraneStep> steps, CrateStacks stacks)
 	{
 		for (const auto& step : steps)
 		{
@@ -24,10 +24,10 @@ namespace AdventOfCode::Year2022::Day05
 			result.push_back(stack.top());
 		}
 
-		return 0;
+		return result;
 	}
 
-	uint64_t SupplyStacks::ExecutePart2(std::vector<CraneStep> steps, CrateStacks stacks)
+	std::string SupplyStacks::ExecutePart2(std::vector<CraneStep> steps, CrateStacks stacks)
 	{
 		// Move multiple stacks at the same time (via temp stack)
 		std::stack<Crate> temp;
@@ -57,6 +57,6 @@ namespace AdventOfCode::Year2022::Day05
 			result.push_back(stack.top());
 		}
 
-		return 0;
+		return result;
 	}
 }

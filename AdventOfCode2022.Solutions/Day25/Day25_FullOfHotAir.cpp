@@ -6,7 +6,7 @@ namespace AdventOfCode::Year2022::Day25
 {
 	FullOfHotAir::FullOfHotAir() : DayT(25, "Full of Hot Air") { }
 
-	uint64_t FullOfHotAir::ExecutePart1(std::vector<SNAFUNumber> numbers)
+	std::string FullOfHotAir::ExecutePart1(std::vector<SNAFUNumber> numbers)
 	{
 		uint64_t sum = std::accumulate(numbers.begin(), numbers.end(), 0ull,
 			[](uint64_t total, const SNAFUNumber& n)
@@ -55,12 +55,6 @@ namespace AdventOfCode::Year2022::Day25
 			remainingValue -= p * f;
 		}
 
-		// Return numeric value for tests:
-		return sum;
-	}
-
-	uint64_t FullOfHotAir::ExecutePart2(std::vector<SNAFUNumber> numbers)
-	{
-		return uint64_t();
+		return snafuStr;
 	}
 }

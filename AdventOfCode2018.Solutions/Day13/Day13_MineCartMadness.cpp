@@ -93,7 +93,7 @@ namespace AdventOfCode::Year2018::Day13
 		return false;
 	}
 	
-	uint64_t MineCartMadness::ExecutePart1(std::vector<Minecart> mineCarts, MineTracks tracks)
+	std::string MineCartMadness::ExecutePart1(std::vector<Minecart> mineCarts, MineTracks tracks)
 	{
 		// Put in set for ordered iteration and collision detection:
 		std::set<Minecart> carts(mineCarts.begin(), mineCarts.end());
@@ -101,11 +101,11 @@ namespace AdventOfCode::Year2018::Day13
 		std::pair<int, int> firstCollision;
 		FindNextCollision(carts, tracks, false, firstCollision);
 
-		return 0ull;
+		return std::to_string(firstCollision.first) + "," + std::to_string(firstCollision.second);
 	}
 
 
-	uint64_t MineCartMadness::ExecutePart2(std::vector<Minecart> mineCarts, MineTracks tracks)
+	std::string MineCartMadness::ExecutePart2(std::vector<Minecart> mineCarts, MineTracks tracks)
 	{
 		// Put in set for ordered iteration and collision detection:
 		std::set<Minecart> carts(mineCarts.begin(), mineCarts.end());
@@ -116,6 +116,6 @@ namespace AdventOfCode::Year2018::Day13
 
 		auto lastCartPos = carts.begin()->GetPosition();
 
-		return 0ull;
+		return std::to_string(lastCartPos.first) + "," + std::to_string(lastCartPos.second);
 	}
 }

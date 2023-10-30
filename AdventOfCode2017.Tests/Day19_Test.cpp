@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day19;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2017::Tests
 {
@@ -31,9 +32,9 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			ASeriesOfTubes sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData1);
+			std::string result = sut.GetResultOnPart1(inputData1);
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("ABCDEF"s, result);
 		};
 
 

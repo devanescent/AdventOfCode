@@ -7,13 +7,13 @@ namespace AdventOfCode::Year2017::Day07
 	// ---------------------------------------------------------------------------
 	// Day07: Recursive Circus
 	// ---------------------------------------------------------------------------
-	class RecursiveCircus : public DayT<TowerProgramProcessor>
+	class RecursiveCircus : public DayT<TowerProgramProcessor, std::string, uint64_t>
 	{
 	public:
 		RecursiveCircus();
 
 	protected:
-		uint64_t ExecutePart1(std::vector<TowerProgram> prgms) override;
+		std::string ExecutePart1(std::vector<TowerProgram> prgms) override;
 		uint64_t ExecutePart2(std::vector<TowerProgram> prgms) override;
 
 	private:

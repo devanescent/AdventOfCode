@@ -51,7 +51,7 @@ namespace AdventOfCode::Year2018::Day02
 		return twoLettersCount * threeLettersCount;
 	}
 
-	uint64_t InventoryManagementSystem::ExecutePart2(const std::vector<std::string> input)
+	std::string InventoryManagementSystem::ExecutePart2(const std::vector<std::string> input)
 	{
 		for (auto id1 = input.begin() + 1; id1 != input.end(); ++id1)
 		{
@@ -76,7 +76,7 @@ namespace AdventOfCode::Year2018::Day02
 				{
 					std::string result = *id1;
 					result.erase(firstDiffIndex, 1);
-					return 0;
+					return result;
 				}
 			}
 		}

@@ -41,7 +41,7 @@ namespace AdventOfCode::Year2018::Day11
 	ChronalCharge::ChronalCharge() : Day(11, "Chronal Charge")
 	{}
 
-	uint64_t ChronalCharge::ExecutePart1(const std::vector<std::string> input)
+	std::string ChronalCharge::ExecutePart1(const std::vector<std::string> input)
 	{
 		int gridId = atoi(input[0].c_str());
 
@@ -81,16 +81,16 @@ namespace AdventOfCode::Year2018::Day11
 			}
 		}
 
-		return 0;
+		return std::to_string(maxPowerLocation.first) + "," + std::to_string(maxPowerLocation.second);
 	}
 
-	uint64_t ChronalCharge::ExecutePart2(const std::vector<std::string> input)
+	std::string ChronalCharge::ExecutePart2(const std::vector<std::string> input)
 	{
 		int gridId = atoi(input[0].c_str());
 
 		int maxTotalPower = 0;
 		std::pair<int, int> maxPowerLocation;
-		int sqaureSIze = 0;
+		int sqaureSize = 0;
 
 		// Fill array with values:
 		Array2D<int> grid(300, 300, 0);
@@ -119,13 +119,13 @@ namespace AdventOfCode::Year2018::Day11
 					{
 						maxTotalPower = totalPower;
 						maxPowerLocation = std::make_pair(x - s + 1, y - s + 1);
-						sqaureSIze = s;
+						sqaureSize = s;
 					}
 				}
 
 			}
 		}
 
-		return 0;
+		return std::to_string(maxPowerLocation.first) + "," + std::to_string(maxPowerLocation.second) + "," + std::to_string(sqaureSize);
 	}
 }

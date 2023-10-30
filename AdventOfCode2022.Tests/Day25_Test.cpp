@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day25;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2022::Tests
 {
@@ -37,9 +38,9 @@ namespace AdventOfCode::Year2022::Tests
 			// Arrange:
 			FullOfHotAir sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData1);
+			std::string result = sut.GetResultOnPart1(inputData1);
 			// Assert:
-			Assert::AreEqual(4890ull, result);
+			Assert::AreEqual("2=-1=0"s, result);
 		};
 
 	};

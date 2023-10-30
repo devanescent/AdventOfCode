@@ -33,7 +33,7 @@ namespace AdventOfCode::Year2020::Day21
 		return harmlessIngredients;
 	}
 
-	uint64_t AllergenAssessment::ExecutePart2(std::vector<Food> foods)
+	std::string AllergenAssessment::ExecutePart2(std::vector<Food> foods)
 	{
 		std::map<std::string, std::set<std::string>> ingredientsByAllergen = MapIngredientsToAllergens(foods);
 		std::map<std::string, std::string> allergenResults; // which allergen is contained in which ingredient
@@ -63,7 +63,7 @@ namespace AdventOfCode::Year2020::Day21
 			canonicalDangerousIngredientList.append(resultEntry.second);
 		}
 
-		return 0ull;
+		return canonicalDangerousIngredientList;
 	}
 
 	std::map<std::string, std::set<std::string>> AllergenAssessment::MapIngredientsToAllergens(const std::vector<Food>& foods)

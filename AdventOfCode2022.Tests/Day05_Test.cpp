@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day05;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2022::Tests
 {
@@ -33,9 +34,19 @@ namespace AdventOfCode::Year2022::Tests
 			// Arrange:
 			SupplyStacks sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData1);
+			std::string result = sut.GetResultOnPart1(inputData1);
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("CMZ"s, result);
+		};
+
+		TEST_METHOD(CheckExample1_Part2)
+		{
+			// Arrange:
+			SupplyStacks sut;
+			// Act:
+			std::string result = sut.GetResultOnPart2(inputData1);
+			// Assert:
+			Assert::AreEqual("MCD"s, result);
 		};
 
 	};

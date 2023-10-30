@@ -5,7 +5,7 @@ namespace AdventOfCode::Year2017::Day16
 {
 	PermutationPromenade::PermutationPromenade() : DayT(16, "Permutation Promenade") { }
 
-	uint64_t PermutationPromenade::ExecutePart1(std::vector<std::unique_ptr<DanceMove>> dance)
+	std::string PermutationPromenade::ExecutePart1(std::vector<std::unique_ptr<DanceMove>> dance)
 	{
 		std::vector<char> programs(m_prgmCount);
 		std::iota(programs.begin(), programs.end(), 'a');
@@ -13,10 +13,10 @@ namespace AdventOfCode::Year2017::Day16
 		for (const auto& danceMove : dance)
 			danceMove->Execute(programs);
 
-		return 0ull;
+		return std::string(programs.begin(), programs.end());
 	}
 
-	uint64_t PermutationPromenade::ExecutePart2(std::vector<std::unique_ptr<DanceMove>> dance)
+	std::string PermutationPromenade::ExecutePart2(std::vector<std::unique_ptr<DanceMove>> dance)
 	{
 		std::vector<char> programs(m_prgmCount);
 		std::iota(programs.begin(), programs.end(), 'a');
@@ -33,7 +33,6 @@ namespace AdventOfCode::Year2017::Day16
 		}
 
 		auto order = prevOrders[1'000'000'000 % prevOrders.size()];
-
-		return 0ull;
+		return std::string(order.begin(), order.end());
 	}
 }

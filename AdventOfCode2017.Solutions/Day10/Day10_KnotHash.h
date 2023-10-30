@@ -7,13 +7,13 @@ namespace AdventOfCode::Year2017::Day10
 	// ---------------------------------------------------------------------------
 	// Day10: Knot Hash
 	// ---------------------------------------------------------------------------
-	class KnotHash : public DayT<IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine>, uint64_t, uint64_t, true>
+	class KnotHash : public DayT<IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine>, uint64_t, std::string, true>
 	{
 	public:
 		KnotHash();
 
 		uint64_t ExecutePart1(std::vector<int> lengths) override;
-		uint64_t ExecutePart2WithOrigData(std::vector<std::string> input) override;
+		std::string ExecutePart2WithOrigData(std::vector<std::string> input) override;
 
 		void SetNumberListLength(size_t listLength) { m_numberListLength = listLength; }
 

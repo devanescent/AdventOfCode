@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day11;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2018::Tests
 {
@@ -19,16 +20,16 @@ namespace AdventOfCode::Year2018::Tests
 			inputData2 = std::vector<std::string> { "42" };
 		}
 
-		TEST_METHOD(CheckExample_Part1)
+		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
 			ChronalCharge sut;
 
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData);
+			std::string result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("33,45"s, result);
 		}
 
 		TEST_METHOD(CheckExample2_Part1)
@@ -37,22 +38,34 @@ namespace AdventOfCode::Year2018::Tests
 			ChronalCharge sut;
 
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData2);
+			std::string result = sut.GetResultOnPart1(inputData2);
 
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("21,61"s, result);
 		}
 
-		TEST_METHOD(CheckExample_Part2)
+		TEST_METHOD(CheckExample1_Part2)
 		{
 			// Arrange:
 			ChronalCharge sut;
 
 			// Act:
-			uint64_t result = sut.GetResultOnPart2(inputData2);
+			std::string result = sut.GetResultOnPart2(inputData);
 
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("90,269,16"s, result);
+		}
+
+		TEST_METHOD(CheckExample2_Part2)
+		{
+			// Arrange:
+			ChronalCharge sut;
+
+			// Act:
+			std::string result = sut.GetResultOnPart2(inputData2);
+
+			// Assert:
+			Assert::AreEqual("232,251,12"s, result);
 		}
 	};
 

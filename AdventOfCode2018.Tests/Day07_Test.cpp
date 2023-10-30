@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day07;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2018::Tests
 {
@@ -32,10 +33,10 @@ namespace AdventOfCode::Year2018::Tests
 			TheSumOfItsParts sut(0, 0);
 
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(inputData);
+			std::string result = sut.GetResultOnPart1(inputData);
 
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("CABDFE"s, result);
 		}
 
 		TEST_METHOD(CheckExample_Part2)

@@ -6,10 +6,9 @@ namespace AdventOfCode::Year2017::Day07
 {
 	RecursiveCircus::RecursiveCircus() : DayT(7, "Recursive Circus") { }
 
-	uint64_t RecursiveCircus::ExecutePart1(std::vector<TowerProgram> prgms)
+	std::string RecursiveCircus::ExecutePart1(std::vector<TowerProgram> prgms)
 	{
-		auto basePrgmName = GetBasePrgmName(prgms);
-		return 0;
+		return GetBasePrgmName(prgms);
 	}
 
 	uint64_t RecursiveCircus::ExecutePart2(std::vector<TowerProgram> prgms)

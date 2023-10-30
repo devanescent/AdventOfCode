@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day02;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2018::Tests
 {
@@ -10,6 +11,7 @@ namespace AdventOfCode::Year2018::Tests
 	{
 	private:
 		static std::vector<std::string> inputData;
+		static std::vector<std::string> inputData2;
 
 	public:
 		TEST_CLASS_INITIALIZE(Init)
@@ -24,6 +26,17 @@ namespace AdventOfCode::Year2018::Tests
 				"abcdee",
 				"ababab"
 			};
+
+			inputData2 = std::vector<std::string>
+			{
+				"abcde",
+				"fghij",
+				"klmno",
+				"pqrst",
+				"fguij",
+				"axcye",
+				"wvxyz"
+			};
 		}
 
 		TEST_METHOD(CheckExample_Part1)
@@ -37,7 +50,20 @@ namespace AdventOfCode::Year2018::Tests
 			// Assert:
 			Assert::AreEqual(12ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			InventoryManagementSystem day02;
+
+			// Act:
+			std::string result = day02.GetResultOnPart2(inputData2);
+
+			// Assert:
+			Assert::AreEqual("fgij"s, result);
+		}
 	};
 
 	std::vector<std::string> Year2018_Day02::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day02::inputData2 = std::vector<std::string>();
 }

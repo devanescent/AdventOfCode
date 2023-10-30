@@ -29,7 +29,7 @@ namespace AdventOfCode::Year2017::Day10
 		return result;
 	}
 
-	uint64_t KnotHash::ExecutePart2WithOrigData(std::vector<std::string> input)
+	std::string KnotHash::ExecutePart2WithOrigData(std::vector<std::string> input)
 	{
 		// Calculate knot hash:
 		std::vector<int> denseHash = CalculateKnotHash(input[0], m_numberListLength);
@@ -43,6 +43,6 @@ namespace AdventOfCode::Year2017::Day10
 		}
 
 		std::string hash = oss.str();
-		return 0ull;
+		return hash;
 	}
 }

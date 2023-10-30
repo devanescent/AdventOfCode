@@ -9,7 +9,7 @@ namespace AdventOfCode::Year2018::Day07
 		DayT(7, "The Sum of Its Parts"), m_numWorkers(numWorkers), m_workTimeOffset(workTimeOffset)
 	{}
 
-	uint64_t TheSumOfItsParts::ExecutePart1(std::vector<AssemblyStep> steps)
+	std::string TheSumOfItsParts::ExecutePart1(std::vector<AssemblyStep> steps)
 	{
 		std::string result;
 
@@ -37,7 +37,7 @@ namespace AdventOfCode::Year2018::Day07
 			availableSteps.erase(nextStep);
 		}
 
-		return 0;
+		return result;
 	}
 
 	uint64_t TheSumOfItsParts::ExecutePart2(std::vector<AssemblyStep> steps)

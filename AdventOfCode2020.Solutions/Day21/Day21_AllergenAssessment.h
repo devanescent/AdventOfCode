@@ -5,14 +5,14 @@
 
 namespace AdventOfCode::Year2020::Day21
 {
-	class AllergenAssessment : public DayT<FoodProcessor>
+	class AllergenAssessment : public DayT<FoodProcessor, uint64_t, std::string>
 	{
 	public:
 		AllergenAssessment();
 
 	protected:
 		uint64_t ExecutePart1(std::vector<Food> foods) override;
-		uint64_t ExecutePart2(std::vector<Food> foods) override;
+		std::string ExecutePart2(std::vector<Food> foods) override;
 
 	private:
 		// Maps each allergen to a set of potential ingredients:

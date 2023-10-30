@@ -3,6 +3,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day21;
+using namespace std::string_literals;
 
 namespace AdventOfCode::Year2020::Tests
 {
@@ -34,7 +35,7 @@ namespace AdventOfCode::Year2020::Tests
 			AllergenAssessment sut;
 
 			// Act:
-			uint64_t result = sut.GetResultOnPart2(
+			std::string result = sut.GetResultOnPart2(
 				{
 					"mxmxvkd kfcds sqjhc nhms (contains dairy, fish)",
 					"trh fvjkl sbzzf mxmxvkd (contains dairy)",
@@ -43,7 +44,7 @@ namespace AdventOfCode::Year2020::Tests
 				});
 
 			// Assert:
-			Assert::AreEqual(0ull, result);
+			Assert::AreEqual("mxmxvkd,sqjhc,fvjkl"s, result);
 		}
 	};
 }
