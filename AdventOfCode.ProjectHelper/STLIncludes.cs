@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿using System.ComponentModel;
 
 namespace AdventOfCode.ProjectHelper
 {
@@ -15,10 +12,37 @@ namespace AdventOfCode.ProjectHelper
 		public bool UseStdStack { get; set; }
 	}
 
-	public class ProcessorSTLIncludes
+	public class ProcessorSTLIncludes : INotifyPropertyChanged
 	{
-		public bool UseStdAlgorithm { get; set; }
-		public bool UseRegex { get; set; }
-		public bool UseStringStream { get; set; }
+		private bool _stdAlgorithm, _regex, _stringStream;
+		public bool UseStdAlgorithm
+		{
+			get => _stdAlgorithm;
+			set
+			{
+				_stdAlgorithm = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseStdAlgorithm)));
+			}
+		}
+		public bool UseRegex
+		{
+			get => _regex;
+			set
+			{
+				_regex = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseRegex)));
+			}
+		}
+		public bool UseStringStream
+		{
+			get => _stringStream;
+			set
+			{
+				_stringStream = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseStringStream)));
+			}
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
 	}
 }

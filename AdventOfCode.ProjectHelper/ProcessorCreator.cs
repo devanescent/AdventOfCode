@@ -18,10 +18,12 @@ namespace AdventOfCode.ProjectHelper
 
 		private string _processorName = string.Empty;
 		private string _resultName = string.Empty;
+		private string _resultListName = "results";
 		private string _contextName = string.Empty;
 		private bool _createResultType = false;
 		private bool _createContextType = false;
 		private ResultOptions _resultOptions;
+		private ProcessorTemplateType _template = ProcessorTemplateType.None;
 
 		public ProcessorCreator() { }
 
@@ -32,10 +34,11 @@ namespace AdventOfCode.ProjectHelper
 			return this;
 		}
 
-		public ProcessorCreator WithProcessor(string processorName, string resultName, bool createType)
+		public ProcessorCreator WithProcessor(string processorName, string resultName, bool createType, string resultListName)
 		{
 			_processorName = processorName;
 			_resultName = resultName;
+			_resultListName = resultListName;
 			_createResultType = createType;
 			return this;
 		}
@@ -50,6 +53,12 @@ namespace AdventOfCode.ProjectHelper
 		{
 			_contextName = contextName;
 			_createContextType = createType;
+			return this;
+		}
+
+		public ProcessorCreator WithTemplate(ProcessorTemplateType templateType)
+		{
+			_template = templateType;
 			return this;
 		}
 
@@ -211,7 +220,26 @@ namespace AdventOfCode.ProjectHelper
 			// Processing method:
 			sw.WriteLine($"\t{processingReturnType} {_processorName}::Process(std::vector<std::string> input)");
 			sw.WriteLine("\t{");
-			sw.WriteLine($"\t\treturn {processingReturnType}();");
+			sw.WriteLine($"\t\t{processingReturnType} {_resultListName};");
+
+			// Add implementation from template:
+			if (_template == ProcessorTemplateType.None)
+			{
+				sw.WriteLine("");
+			}
+			else if (_template == ProcessorTemplateType.StringStream)
+			{
+				sw.WriteLine("");
+				sw.WriteLine("\t\tfor (const auto& line : input)");
+				sw.WriteLine("\t\t{");
+				sw.WriteLine("\t\t\tstd::istringstream iss(line);");
+				sw.WriteLine("");
+				sw.WriteLine($"\t\t\t// {_resultListName}.emplace_back(x);");
+				sw.WriteLine("\t\t}");
+				sw.WriteLine("");
+			}
+
+			sw.WriteLine($"\t\treturn {_resultListName};");
 			sw.WriteLine("\t}");
 		}
 	}

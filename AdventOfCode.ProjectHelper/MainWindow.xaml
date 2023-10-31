@@ -51,22 +51,30 @@
 				</GroupBox.Header>
 				<StackPanel Orientation="Vertical" IsEnabled="{Binding ElementName=cbEnableProcessor, Path=IsChecked}">
 					<StackPanel Orientation="Horizontal">
-						<Label Content="Processor name:" Width="120" FontSize="14" />
+						<Label Content="Processor name:" Width="140" FontSize="14" />
 						<TextBox Text="{Binding Processor}" Width="250" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
 					</StackPanel>
 					<StackPanel Orientation="Horizontal">
-                        <Label Content="Result name:" Width="120" FontSize="14" />
+                        <Label Content="Result name:" Width="140" FontSize="14" />
 						<TextBox Text="{Binding Result}" Width="150" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
                         <CheckBox IsChecked="{Binding CreateResultType}" Content="Create result as new type" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         <CheckBox IsChecked="{Binding ResultOptions.EqualsOperator}" Content="Add equals operator" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         <CheckBox IsChecked="{Binding ResultOptions.ToStringMethod}" Content="Add ToString()" VerticalAlignment="Center" Margin="10,0,0,0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Context:" Width="120" FontSize="14"/>
+                        <Label Content="Processed list name:" Width="140" FontSize="14" />
+                        <TextBox Text="{Binding ResultListName}" Width="150" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Context:" Width="140" FontSize="14"/>
                         <TextBox Text="{Binding Context}" Width="150" Height="25" FontSize="14" VerticalContentAlignment="Center"/>
                         <CheckBox IsChecked="{Binding CreateContextType}" Content="Create context as new type" VerticalAlignment="Center" Margin="10,0,0,0"/>
                     </StackPanel>
-					<GroupBox Header="Add the following STL includes to the processor source file:">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Processor template:" Width="140" FontSize="14"/>
+                        <ComboBox Width="250" ItemsSource="{Binding ProcessorTemplates}" SelectedItem="{Binding SelectedProcessorTemplate}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <GroupBox Header="Add the following STL includes to the processor source file:">
 						<StackPanel Orientation="Vertical">
 							<CheckBox IsChecked="{Binding ProcSTL.UseStdAlgorithm}" Content="&lt;algorithm&gt;"/>
 							<CheckBox IsChecked="{Binding ProcSTL.UseRegex}" Content="&lt;regex&gt;"/>

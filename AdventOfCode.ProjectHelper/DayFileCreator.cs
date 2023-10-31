@@ -24,6 +24,7 @@ namespace AdventOfCode.ProjectHelper
 
 		private string _processorName = string.Empty;
 		private string _resultName = string.Empty;
+		private string _resultListName = "results";
 		private string _contextName = string.Empty;
 
 		private string _baseClassName;
@@ -61,10 +62,11 @@ namespace AdventOfCode.ProjectHelper
 			return this;
 		}
 
-		public DayFileCreator WithProcessor(string processorName, string resultName)
+		public DayFileCreator WithProcessor(string processorName, string resultName, string resultListName)
 		{
 			_processorName = processorName;
 			_resultName = resultName;
+			_resultListName = resultListName;
 			_baseClassName = "DayT";
 			_baseClassParameter = $"{processorName}";
 			return this;
@@ -257,9 +259,9 @@ namespace AdventOfCode.ProjectHelper
 			if (_processorName == string.Empty)
 				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<std::string> input) override;");
 			else if (_contextName == string.Empty)
-				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> input) override;");
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> {_resultListName}) override;");
 			else
-				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context) override;");
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> {_resultListName}, {_contextName} context) override;");
 		}
 
 		private void AddSourceIncludes(StreamWriter sw, DaySTLIncludes stlIncludes)
@@ -285,9 +287,9 @@ namespace AdventOfCode.ProjectHelper
 			if (_processorName == string.Empty)
 				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<std::string> input)");
 			else if (_contextName == string.Empty)
-				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> {_resultListName})");
 			else
-				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> {_resultListName}, {_contextName} context)");
 
 			sw.WriteLine("\t{");
 			sw.WriteLine($"\t\treturn {actualResultType}{{}};");

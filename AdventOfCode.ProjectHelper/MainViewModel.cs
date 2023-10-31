@@ -7,6 +7,12 @@ using System.Linq;
 
 namespace AdventOfCode.ProjectHelper
 {
+	public enum ProcessorTemplateType
+	{
+		None,
+		StringStream
+	}
+
 	public class MainViewModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -27,11 +33,34 @@ namespace AdventOfCode.ProjectHelper
 		
 		public string Processor { get; set; }
 		public string Result { get; set; }
+		public string ResultListName { get; set; }
 		public string Context { get; set; }
 		public bool CreateContextType { get; set; } = true;
 		public bool CreateResultType { get; set; } = true;
 		public ProcessorSTLIncludes ProcSTL { get; set; } = new ProcessorSTLIncludes();
 		public ResultOptions ResultOptions { get; set; } = new ResultOptions();
+
+		public List<ProcessorTemplateType> ProcessorTemplates { get; } = new List<ProcessorTemplateType>()
+		{
+			ProcessorTemplateType.None,
+			ProcessorTemplateType.StringStream
+		};
+
+		private ProcessorTemplateType _selectedTemplate = ProcessorTemplateType.None;
+		public ProcessorTemplateType SelectedProcessorTemplate
+		{
+			get => _selectedTemplate;
+			set
+			{
+				_selectedTemplate = value;
+				switch (_selectedTemplate)
+				{
+					case ProcessorTemplateType.StringStream:
+						ProcSTL.UseStringStream = true;
+						break;
+				}
+			}
+		}
 
 		public ObservableCollection<TestCase> TestCaseList { get; set; } = new ObservableCollection<TestCase>() { new TestCase() { TestNo = 1 } };
 
@@ -58,7 +87,7 @@ namespace AdventOfCode.ProjectHelper
 					.WithResult(UseNumericResult ? DayResultType.Numeric : DayResultType.String);
 
 			if (!string.IsNullOrEmpty(Processor))
-				dayFileCreator.WithProcessor(Processor, Result);
+				dayFileCreator.WithProcessor(Processor, Result, ResultListName);
 
 			if (!string.IsNullOrEmpty(Context))
 				dayFileCreator.WithContext(Context);
@@ -95,11 +124,13 @@ namespace AdventOfCode.ProjectHelper
 			{
 				ProcessorCreator processorCreator = new ProcessorCreator()
 				.ForDay(Day, Year)
-				.WithProcessor(Processor, Result, CreateResultType)
+				.WithProcessor(Processor, Result, CreateResultType, ResultListName)
 				.WithResultOptions(ResultOptions);
 
 				if (!string.IsNullOrEmpty(Context))
 					processorCreator.WithContext(Context, CreateContextType);
+
+				processorCreator.WithTemplate(SelectedProcessorTemplate);
 
 				if (CreateResultType && !string.IsNullOrWhiteSpace(Result))
 				{
