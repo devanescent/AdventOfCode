@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Globalization;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
-using System.Windows.Data;
 
 namespace AdventOfCode.ProjectHelper
 {
-	public class MainViewModel
+	public class MainViewModel : INotifyPropertyChanged
 	{
+		public event PropertyChangedEventHandler PropertyChanged;
+
 		public int Year { get; set; }
 		public int Day { get; set; }
 		public string Title { get; set; }
+
+		private bool _useNumericResult = true;
+
+		public bool UseNumericResult
+		{
+			get { return _useNumericResult; }
+			set { _useNumericResult = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseNumericResult))); }
+		}
 
 		public DaySTLIncludes DaySTL { get; set; } = new DaySTLIncludes();
 		
@@ -24,7 +33,7 @@ namespace AdventOfCode.ProjectHelper
 		public ProcessorSTLIncludes ProcSTL { get; set; } = new ProcessorSTLIncludes();
 		public ResultOptions ResultOptions { get; set; } = new ResultOptions();
 
-		public ObservableCollection<TestCase> TestCaseList { get; set; } = new ObservableCollection<TestCase>() { new TestCase() };
+		public ObservableCollection<TestCase> TestCaseList { get; set; } = new ObservableCollection<TestCase>() { new TestCase() { TestNo = 1 } };
 
 		public MainViewModel()
 		{
@@ -45,7 +54,8 @@ namespace AdventOfCode.ProjectHelper
 			// Main files:
 			DayFileCreator dayFileCreator = new DayFileCreator()
 					.ForDay(Day, Year)
-					.WithTitle(Title);
+					.WithTitle(Title)
+					.WithResult(UseNumericResult ? DayResultType.Numeric : DayResultType.String);
 
 			if (!string.IsNullOrEmpty(Processor))
 				dayFileCreator.WithProcessor(Processor, Result);
@@ -91,7 +101,7 @@ namespace AdventOfCode.ProjectHelper
 				if (!string.IsNullOrEmpty(Context))
 					processorCreator.WithContext(Context, CreateContextType);
 
-				if (CreateResultType)
+				if (CreateResultType && !string.IsNullOrWhiteSpace(Result))
 				{
 					using (FileStream processingResultFile = File.Create(@$"{solutionDirPath}\{Result}.h"))
 					{
@@ -112,7 +122,7 @@ namespace AdventOfCode.ProjectHelper
 					prjUpdater.AddSourceFile(Path.GetFileName(ProcessorSourceFile.Name));
 				}
 
-				if (CreateContextType)
+				if (CreateContextType && !string.IsNullOrWhiteSpace(Context))
 				{
 					using (FileStream ContextFile = File.Create(@$"{solutionDirPath}\{Context}.h"))
 					{

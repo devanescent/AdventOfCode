@@ -44,11 +44,19 @@ namespace AdventOfCode.ProjectHelper
 			TestCase tc = ctrl.DataContext as TestCase;
 
 			mvm.TestCaseList.Remove(tc);
+
+			// Reassign test numbers:
+			for (int i = 0; i < mvm.TestCaseList.Count; ++i)
+				mvm.TestCaseList[i].TestNo = i + 1;
 		}
 
 		private void AddTestCase_Click(object sender, RoutedEventArgs e)
 		{
-			mvm.TestCaseList.Add(new TestCase());
+			int testNo = 1;
+			if (mvm.TestCaseList.Any())
+				testNo = mvm.TestCaseList.Max(tc => tc.TestNo) + 1;
+
+			mvm.TestCaseList.Add(new TestCase() { TestNo = testNo });
 		}
 	}
 }

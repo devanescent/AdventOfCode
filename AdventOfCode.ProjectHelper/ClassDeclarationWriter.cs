@@ -23,7 +23,7 @@ namespace AdventOfCode.ProjectHelper
 			_indent = new string('\t', 1);
 
 			// Declaration
-			sw.WriteLine($"{_indent}class {className} : public {baseClassName}{baseClassParam}");
+			sw.WriteLine($"{_indent}class {className} : public {baseClassName}<{baseClassParam}>");
 			sw.WriteLine($"{_indent}{{");
 
 			// Constructor:

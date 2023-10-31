@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 
 namespace AdventOfCode.ProjectHelper
 {
-	public class TestCase
+	public enum DayResultType
 	{
-		public int Part { get; set; }
-		public List<string> Data { get; set; }
-		public string Result { get; set; }
+		Numeric,
+		String
 	}
 
 	public class DayFileCreator
@@ -20,6 +17,9 @@ namespace AdventOfCode.ProjectHelper
 		private int _year;
 
 		private string _title = string.Empty;
+
+		private DayResultType _resultType;
+
 		public string TitleWithoutBlanks { get; private set; }
 
 		private string _processorName = string.Empty;
@@ -55,13 +55,18 @@ namespace AdventOfCode.ProjectHelper
 			return this;
 		}
 
+		public DayFileCreator WithResult(DayResultType resultType)
+		{
+			_resultType = resultType;
+			return this;
+		}
 
 		public DayFileCreator WithProcessor(string processorName, string resultName)
 		{
 			_processorName = processorName;
 			_resultName = resultName;
 			_baseClassName = "DayT";
-			_baseClassParameter = $"<{processorName}>";
+			_baseClassParameter = $"{processorName}";
 			return this;
 		}
 
@@ -94,13 +99,23 @@ namespace AdventOfCode.ProjectHelper
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Day{_day:D2}", sw))
 				{
 					AddCommentDecorator(sw);
-					using (_ = new ClassDeclarationWriter(TitleWithoutBlanks, _baseClassName, _baseClassParameter, DefaultCtor.Create, sw))
-					{
-						if (!string.IsNullOrEmpty(_processorName))
-							sw.WriteLine("\tprotected:");
 
-						AddSolutionMethod(sw, 1);
-						AddSolutionMethod(sw, 2);
+					// Additional template parameter if result type is string:
+					string resultTypeParam = "";
+					if (_resultType == DayResultType.String)
+					{
+						if (!string.IsNullOrEmpty(_baseClassParameter))
+							resultTypeParam += ", ";
+
+						resultTypeParam += "std::string";
+					}
+
+					using (_ = new ClassDeclarationWriter(TitleWithoutBlanks, _baseClassName, _baseClassParameter + resultTypeParam, DefaultCtor.Create, sw))
+					{
+						sw.WriteLine("\tprotected:");
+
+						AddSolutionMethod(sw, 1, _resultType);
+						AddSolutionMethod(sw, 2, _resultType);
 					}
 				}
 			}
@@ -125,9 +140,9 @@ namespace AdventOfCode.ProjectHelper
 				{
 					AddConstructorImpl(sw);
 					AddBlank(sw);
-					AddSolutionMethodImpl(sw, 1);
+					AddSolutionMethodImpl(sw, 1, _resultType);
 					AddBlank(sw);
-					AddSolutionMethodImpl(sw, 2);
+					AddSolutionMethodImpl(sw, 2, _resultType);
 				}
 			}
 
@@ -183,8 +198,8 @@ namespace AdventOfCode.ProjectHelper
 						}
 
 						// Check Examples:
-						AddTestCase(sw, 1);
-						AddTestCase(sw, 2);
+						AddTestCase(sw, 1, _resultType);
+						AddTestCase(sw, 2, _resultType);
 					}
 
 					// Static initializers:
@@ -234,18 +249,17 @@ namespace AdventOfCode.ProjectHelper
 			sw.WriteLine($"{indent}// ---------------------------------------------------------------------------");
 		}
 
-		private void AddSolutionMethod(StreamWriter sw, int part)
+		private void AddSolutionMethod(StreamWriter sw, int part, DayResultType resultType)
 		{
+			string actualResultType = resultType == DayResultType.Numeric ? "uint64_t" : "std::string";
+
 			// Solution method:
-			if (_processorName != string.Empty)
-			{
-				if (_contextName != string.Empty)
-					sw.WriteLine($"\t\tuint64_t ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context) override;");
-				else
-					sw.WriteLine($"\t\tuint64_t ExecutePart{part}(std::vector<{_resultName}> input) override;");
-			}
+			if (_processorName == string.Empty)
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<std::string> input) override;");
+			else if (_contextName == string.Empty)
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> input) override;");
 			else
-				sw.WriteLine($"\t\tuint64_t GetResultOnPart{part}(std::vector<std::string> input) override;");
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context) override;");
 		}
 
 		private void AddSourceIncludes(StreamWriter sw, DaySTLIncludes stlIncludes)
@@ -264,29 +278,28 @@ namespace AdventOfCode.ProjectHelper
 			sw.WriteLine($"\t{TitleWithoutBlanks}::{TitleWithoutBlanks}() : {_baseClassName}({_day}, \"{_title}\") {{ }}");
 		}
 
-		private void AddSolutionMethodImpl(StreamWriter sw, int part)
+		private void AddSolutionMethodImpl(StreamWriter sw, int part, DayResultType resultType)
 		{
-			if (_processorName != string.Empty)
-			{
-				if (_contextName != string.Empty)
-					sw.WriteLine($"\tuint64_t {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
-				else
-					sw.WriteLine($"\tuint64_t {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
-			}
+			string actualResultType = resultType == DayResultType.Numeric ? "uint64_t" : "std::string";
+
+			if (_processorName == string.Empty)
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<std::string> input)");
+			else if (_contextName == string.Empty)
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input)");
 			else
-				sw.WriteLine($"\tuint64_t {TitleWithoutBlanks}::GetResultOnPart{part}(std::vector<std::string> input)");
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> input, {_contextName} context)");
 
 			sw.WriteLine("\t{");
-			sw.WriteLine("\t\treturn uint64_t();");
+			sw.WriteLine($"\t\treturn {actualResultType}{{}};");
 			sw.WriteLine("\t}");
 		}
 
-		private void AddTestCase(StreamWriter sw, int part)
+		private void AddTestCase(StreamWriter sw, int part, DayResultType resultType)
 		{
-			int testCaseNo = 1;
+			string actualResultType = resultType == DayResultType.Numeric ? "uint64_t" : "std::string";
 			foreach(TestCase tc in _testCases.Where(tc => tc.Part == part))
 			{
-				using (_ = new TestMethodDeclarationWriter("TEST_METHOD", $"CheckExample{testCaseNo}_Part{part}", sw))
+				using (_ = new TestMethodDeclarationWriter("TEST_METHOD", $"CheckExample{tc.TestNo}_Part{part}", sw))
 				{
 					sw.WriteLine("\t\t\t// Arrange:");
 					sw.WriteLine($"\t\t\t{TitleWithoutBlanks} sut;");
@@ -294,12 +307,10 @@ namespace AdventOfCode.ProjectHelper
 					sw.WriteLine("\t\t\t// Act:");
 
 					int inputDataNo = _testCases.IndexOf(tc) + 1;
-					sw.WriteLine($"\t\t\tuint64_t result = sut.GetResultOnPart{part}(inputData{inputDataNo});");
+					sw.WriteLine($"\t\t\t{actualResultType} result = sut.GetResultOnPart{part}(inputData{inputDataNo});");
 
 					sw.WriteLine("\t\t\t// Assert:");
 					sw.WriteLine($"\t\t\tAssert::AreEqual({tc.Result}ull, result);");
-
-					++testCaseNo;
 				}
 				AddBlank(sw);
 			}

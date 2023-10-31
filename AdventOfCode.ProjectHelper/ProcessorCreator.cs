@@ -109,12 +109,12 @@ namespace AdventOfCode.ProjectHelper
 					if (!string.IsNullOrEmpty(_contextName))
 					{
 						processorBaseClassName = "InputProcessorWithContextBase";
-						processorBaseClassParam = $"<{_resultName}, {_contextName}>";
+						processorBaseClassParam = $"{_resultName}, {_contextName}";
 					}
 					else
 					{
 						processorBaseClassName = "InputProcessorBase";
-						processorBaseClassParam = $"<{_resultName}>";
+						processorBaseClassParam = $"{_resultName}";
 					}
 
 					using (_ = new ClassDeclarationWriter(_processorName, processorBaseClassName, processorBaseClassParam, DefaultCtor.None, sw))
