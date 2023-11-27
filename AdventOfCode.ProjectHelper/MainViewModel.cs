@@ -13,6 +13,18 @@ namespace AdventOfCode.ProjectHelper
 		StringStream
 	}
 
+	public enum ProcessorChoiceType
+	{
+		Custom,
+		IntProcessor_ValuesAsDigit,
+		IntProcessor_ValuePerLine,
+		IntProcessor_ValuesAsCommaSeparatedLine,
+		IntProcessor_ValuesAsSpaceSeparatedLine,
+	}
+
+	public record ProcessorTemplateTypeVM(ProcessorTemplateType TemplateType, string DisplayName);
+	public record ProcessorChoiceTypeVM(ProcessorChoiceType ChoiceType, string DisplayName);
+
 	public class MainViewModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -30,7 +42,29 @@ namespace AdventOfCode.ProjectHelper
 		}
 
 		public DaySTLIncludes DaySTL { get; set; } = new DaySTLIncludes();
-		
+
+		public List<ProcessorChoiceTypeVM> ProcessorChoiceList { get; } = new()
+		{
+			new ProcessorChoiceTypeVM(ProcessorChoiceType.Custom, "Custom"),
+			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuesAsDigit, "Int processor (values as digits in single line)"),
+			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuePerLine, "Int processor (value per line)"),
+			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuesAsCommaSeparatedLine, "Int processor (values as comma-separated line)"),
+			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuesAsSpaceSeparatedLine, "Int processor (values as space-separated line)"),
+		};
+
+		private ProcessorChoiceType? _selectedProcessorChoice = null;
+		public ProcessorChoiceType? ProcessorChoice
+		{
+			get => _selectedProcessorChoice;
+			set
+			{
+				_selectedProcessorChoice = value;
+				IsCustomProcessor = _selectedProcessorChoice == ProcessorChoiceType.Custom;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsCustomProcessor)));
+			}
+		}
+		public bool IsCustomProcessor { get; set; }
+
 		public string Processor { get; set; }
 		public string Result { get; set; }
 		public string ResultListName { get; set; }
@@ -40,10 +74,10 @@ namespace AdventOfCode.ProjectHelper
 		public ProcessorSTLIncludes ProcSTL { get; set; } = new ProcessorSTLIncludes();
 		public ResultOptions ResultOptions { get; set; } = new ResultOptions();
 
-		public List<ProcessorTemplateType> ProcessorTemplates { get; } = new List<ProcessorTemplateType>()
+		public List<ProcessorTemplateTypeVM> ProcessorTemplates { get; } = new()
 		{
-			ProcessorTemplateType.None,
-			ProcessorTemplateType.StringStream
+			new ProcessorTemplateTypeVM(ProcessorTemplateType.None, "None"),
+			new ProcessorTemplateTypeVM(ProcessorTemplateType.StringStream, "StringStream"),
 		};
 
 		private ProcessorTemplateType _selectedTemplate = ProcessorTemplateType.None;
@@ -86,11 +120,34 @@ namespace AdventOfCode.ProjectHelper
 					.WithTitle(Title)
 					.WithResult(UseNumericResult ? DayResultType.Numeric : DayResultType.String);
 
-			if (!string.IsNullOrEmpty(Processor))
-				dayFileCreator.WithProcessor(Processor, Result, ResultListName);
+			if (ProcessorChoice != null)
+			{
+				if (ProcessorChoice != ProcessorChoiceType.Custom)
+				{
+					switch (ProcessorChoice)
+					{
+						case ProcessorChoiceType.IntProcessor_ValuesAsDigit:
+							dayFileCreator.WithProcessor("IntProcessor<IntProcessingMode::ValuesAsDigits>", "int", ResultListName, "IntProcessor");
+							break;
+						case ProcessorChoiceType.IntProcessor_ValuePerLine:
+							dayFileCreator.WithProcessor("IntProcessor<IntProcessingMode::ValuePerLine>", "int", ResultListName, "IntProcessor");
+							break;
+						case ProcessorChoiceType.IntProcessor_ValuesAsCommaSeparatedLine:
+							dayFileCreator.WithProcessor("IntProcessor<IntProcessingMode::ValuesAsCommaSeparatedLine>", "int", ResultListName, "IntProcessor");
+							break;
+						case ProcessorChoiceType.IntProcessor_ValuesAsSpaceSeparatedLine:
+							dayFileCreator.WithProcessor("IntProcessor<IntProcessingMode::ValuesAsSpaceSeparatedLine>", "int", ResultListName, "IntProcessor");
+							break;
+					}
+				}
+				else if (ProcessorChoice == ProcessorChoiceType.Custom && !string.IsNullOrEmpty(Processor))
+				{
+					dayFileCreator.WithProcessor(Processor, Result, ResultListName);
 
-			if (!string.IsNullOrEmpty(Context))
-				dayFileCreator.WithContext(Context);
+					if (!string.IsNullOrEmpty(Context))
+						dayFileCreator.WithContext(Context);
+				}
+			}
 
 			using (FileStream dayHeaderFile = File.Create(@$"{solutionDirPath}\Day{Day:D2}_{dayFileCreator.TitleWithoutBlanks}.h"))
 			{
@@ -107,7 +164,7 @@ namespace AdventOfCode.ProjectHelper
 			List<string> lines = File.ReadAllLines(@$"{solutionDirPath}\..\Solutions{Year}.h").ToList();
 			dayFileCreator.AddToSolutionHeader(lines);
 			File.WriteAllLines(@$"{solutionDirPath}\..\Solutions{Year}.h", lines.ToArray());
-			
+
 
 			if (TestCaseList.Any())
 			{
@@ -118,9 +175,9 @@ namespace AdventOfCode.ProjectHelper
 					prjUpdater.AddTestFile(Path.GetFileName(testFile.Name));
 				}
 			}
-			
+
 			// Processor:
-			if (!string.IsNullOrEmpty(Processor))
+			if (ProcessorChoice == ProcessorChoiceType.Custom && !string.IsNullOrEmpty(Processor))
 			{
 				ProcessorCreator processorCreator = new ProcessorCreator()
 				.ForDay(Day, Year)
@@ -162,6 +219,7 @@ namespace AdventOfCode.ProjectHelper
 					}
 				}
 			}
+
 
 			prjUpdater.Save();
 		}

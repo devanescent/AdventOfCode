@@ -23,6 +23,7 @@ namespace AdventOfCode.ProjectHelper
 		public string TitleWithoutBlanks { get; private set; }
 
 		private string _processorName = string.Empty;
+		private string _processorInclude = string.Empty;
 		private string _resultName = string.Empty;
 		private string _resultListName = "results";
 		private string _contextName = string.Empty;
@@ -62,9 +63,10 @@ namespace AdventOfCode.ProjectHelper
 			return this;
 		}
 
-		public DayFileCreator WithProcessor(string processorName, string resultName, string resultListName)
+		public DayFileCreator WithProcessor(string processorName, string resultName, string resultListName, string prcoessorInclude = null)
 		{
 			_processorName = processorName;
+			_processorInclude = prcoessorInclude ?? processorName;
 			_resultName = resultName;
 			_resultListName = resultListName;
 			_baseClassName = "DayT";
@@ -238,8 +240,8 @@ namespace AdventOfCode.ProjectHelper
 			sw.WriteLine("#pragma once");
 			sw.WriteLine($"#include \"{_baseClassName}.h\"");
 
-			if (_processorName != string.Empty)
-				sw.WriteLine($"#include \"{_processorName}.h\"");
+			if (_processorInclude != string.Empty)
+				sw.WriteLine($"#include \"{_processorInclude}.h\"");
 		}
 
 		private void AddCommentDecorator(StreamWriter sw)
