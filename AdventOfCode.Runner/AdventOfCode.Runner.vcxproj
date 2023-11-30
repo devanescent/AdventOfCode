@@ -81,7 +81,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../AdventOfCode.Core/include;../AdventOfCode2017.Solutions;../AdventOfCode2018.Solutions;../AdventOfCode2020.Solutions;../AdventOfCode2021.Solutions;../AdventOfCode2022.Solutions</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../AdventOfCode.Core/include;../AdventOfCode2017.Solutions;../AdventOfCode2018.Solutions;../AdventOfCode2020.Solutions;../AdventOfCode2021.Solutions;../AdventOfCode2022.Solutions;../AdventOfCode2023.Solutions</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -113,7 +113,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../AdventOfCode.Core/include;../AdventOfCode2018.Solutions;../AdventOfCode2020.Solutions;../AdventOfCode2021.Solutions;../AdventOfCode2022.Solutions</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../AdventOfCode.Core/include;../AdventOfCode2017.Solutions;../AdventOfCode2018.Solutions;../AdventOfCode2020.Solutions;../AdventOfCode2021.Solutions;../AdventOfCode2022.Solutions;../AdventOfCode2023.Solutions</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -154,6 +154,9 @@
     </ProjectReference>
     <ProjectReference Include="..\AdventOfCode2022.Solutions\AdventOfCode2022.Solutions.vcxproj">
       <Project>{d9971511-3f2e-4a5a-a97b-55bf7a520b0f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AdventOfCode2023.Solutions\AdventOfCode2023.Solutions.vcxproj">
+      <Project>{0d7b0ded-ea2a-4786-810e-0c8043aa13bd}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

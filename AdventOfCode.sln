@@ -29,6 +29,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2017.Solutions"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2017.Tests", "AdventOfCode2017.Tests\AdventOfCode2017.Tests.vcxproj", "{83BCC683-DF4B-4F71-981F-3F7AFF28D820}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2023.Solutions", "AdventOfCode2023.Solutions\AdventOfCode2023.Solutions.vcxproj", "{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdventOfCode2023.Tests", "AdventOfCode2023.Tests\AdventOfCode2023.Tests.vcxproj", "{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_2019|x64 = Debug_2019|x64
@@ -112,6 +116,18 @@ Global
 		{83BCC683-DF4B-4F71-981F-3F7AFF28D820}.Debug|x64.Build.0 = Debug|x64
 		{83BCC683-DF4B-4F71-981F-3F7AFF28D820}.Release|x64.ActiveCfg = Release|x64
 		{83BCC683-DF4B-4F71-981F-3F7AFF28D820}.Release|x64.Build.0 = Release|x64
+		{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}.Debug_2019|x64.ActiveCfg = Debug_2019|x64
+		{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}.Debug_2019|x64.Build.0 = Debug_2019|x64
+		{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}.Debug|x64.ActiveCfg = Debug|x64
+		{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}.Debug|x64.Build.0 = Debug|x64
+		{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}.Release|x64.ActiveCfg = Release|x64
+		{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}.Release|x64.Build.0 = Release|x64
+		{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}.Debug_2019|x64.ActiveCfg = Debug_2019|x64
+		{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}.Debug_2019|x64.Build.0 = Debug_2019|x64
+		{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}.Debug|x64.ActiveCfg = Debug|x64
+		{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}.Debug|x64.Build.0 = Debug|x64
+		{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}.Release|x64.ActiveCfg = Release|x64
+		{E2BA7C45-84CC-4092-9AEF-BA0EA45DCE02}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

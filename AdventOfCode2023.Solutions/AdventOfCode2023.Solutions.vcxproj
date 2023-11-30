@@ -27,126 +27,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Day01\CarriedCalories.h" />
-    <ClInclude Include="Day13\Packet.h" />
-    <ClInclude Include="Day17\Rock.h" />
-    <ClInclude Include="Day19\Blueprint.h" />
-    <ClInclude Include="Day19\BlueprintProcessor.h" />
-    <ClInclude Include="Day19\Day19_NotEnoughMinerals.h" />
-    <ClInclude Include="Day23\Grove.h" />
-    <ClInclude Include="Solutions2022.h" />
-    <ClInclude Include="Day01\Day01_CalorieCounting.h" />
-    <ClInclude Include="Day01\CalorieProcessor.h" />
-    <ClInclude Include="Day02\Day02_RockPaperScissors.h" />
-    <ClInclude Include="Day02\RockPaperScissorsRound.h" />
-    <ClInclude Include="Day02\StrategyGuideProcessor.h" />
-    <ClInclude Include="Day03\Day03_RucksackReorganization.h" />
-    <ClInclude Include="Day03\Rucksack.h" />
-    <ClInclude Include="Day03\RucksackProcessor.h" />
-    <ClInclude Include="Day04\Day04_CampCleanup.h" />
-    <ClInclude Include="Day04\SectionAssignments.h" />
-    <ClInclude Include="Day04\SectionAssignmentsProcessor.h" />
-    <ClInclude Include="Day05\Day05_SupplyStacks.h" />
-    <ClInclude Include="Day05\CraneStep.h" />
-    <ClInclude Include="Day05\CraneStepProcessor.h" />
-    <ClInclude Include="Day06\Day06_TuningTrouble.h" />
-    <ClInclude Include="Day07\Day07_NoSpaceLeftOnDevice.h" />
-    <ClInclude Include="Day07\FileSystem.h" />
-    <ClInclude Include="Day07\FilesystemProcessor.h" />
-    <ClInclude Include="Day08\Day08_TreetopTreeHouse.h" />
-    <ClInclude Include="Day09\Day09_RopeBridge.h" />
-    <ClInclude Include="Day09\RopeMovement.h" />
-    <ClInclude Include="Day09\RopeMovementProcessor.h" />
-    <ClInclude Include="Day10\Day10_CathodeRayTube.h" />
-    <ClInclude Include="Day10\Instruction.h" />
-    <ClInclude Include="Day10\InstructionProcessor.h" />
-    <ClInclude Include="Day11\Day11_MonkeyInTheMiddle.h" />
-    <ClInclude Include="Day11\Monkey.h" />
-    <ClInclude Include="Day11\MonkeyProcessor.h" />
-    <ClInclude Include="Day12\Day12_HillClimbingAlgorithm.h" />
-    <ClInclude Include="Day13\Day13_DistressSignal.h" />
-    <ClInclude Include="Day13\PacketProcessor.h" />
-    <ClInclude Include="Day14\Day14_RegolithReservoir.h" />
-    <ClInclude Include="Day14\RockPath.h" />
-    <ClInclude Include="Day14\RockPathProcessor.h" />
-    <ClInclude Include="Day15\Day15_BeaconExclusionZone.h" />
-    <ClInclude Include="Day15\Sensor.h" />
-    <ClInclude Include="Day15\SensorProcessor.h" />
-    <ClInclude Include="Day16\Day16_ProboscideaVolcanium.h" />
-    <ClInclude Include="Day16\Valve.h" />
-    <ClInclude Include="Day16\ValveProcessor.h" />
-    <ClInclude Include="Day17\Day17_PyroclasticFlow.h" />
-    <ClInclude Include="Day18\Day18_BoilingBoulders.h" />
-    <ClInclude Include="Day18\Cube.h" />
-    <ClInclude Include="Day18\CubeProcessor.h" />
-    <ClInclude Include="Day20\Day20_GrovePositioningSystem.h" />
-    <ClInclude Include="Day21\Day21_MonkeyMath.h" />
-    <ClInclude Include="Day21\YellingMonkey.h" />
-    <ClInclude Include="Day21\MonkeyMathProcessor.h" />
-    <ClInclude Include="Day22\Day22_MonkeyMap.h" />
-    <ClInclude Include="Day22\MoveInstruction.h" />
-    <ClInclude Include="Day22\MonkeyMapProcessor.h" />
-    <ClInclude Include="Day22\JungleMap.h" />
-    <ClInclude Include="Day23\Day23_UnstableDiffusion.h" />
-    <ClInclude Include="Day23\Elf.h" />
-    <ClInclude Include="Day23\GroveProcessor.h" />
-    <ClInclude Include="Day24\Day24_BlizzardBasin.h" />
-    <ClInclude Include="Day24\Blizzard.h" />
-    <ClInclude Include="Day24\BlizzardProcessor.h" />
-    <ClInclude Include="Day25\Day25_FullOfHotAir.h" />
-    <ClInclude Include="Day25\SNAFUNumber.h" />
-    <ClInclude Include="Day25\SNAFUProcessor.h" />
+    <ClInclude Include="Solutions2023.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Day01\Day01_CalorieCounting.cpp" />
-    <ClCompile Include="Day01\CalorieProcessor.cpp" />
-    <ClCompile Include="Day02\Day02_RockPaperScissors.cpp" />
-    <ClCompile Include="Day02\StrategyGuideProcessor.cpp" />
-    <ClCompile Include="Day03\Day03_RucksackReorganization.cpp" />
-    <ClCompile Include="Day03\RucksackProcessor.cpp" />
-    <ClCompile Include="Day04\Day04_CampCleanup.cpp" />
-    <ClCompile Include="Day04\SectionAssignmentsProcessor.cpp" />
-    <ClCompile Include="Day05\Day05_SupplyStacks.cpp" />
-    <ClCompile Include="Day05\CraneStepProcessor.cpp" />
-    <ClCompile Include="Day06\Day06_TuningTrouble.cpp" />
-    <ClCompile Include="Day07\Day07_NoSpaceLeftOnDevice.cpp" />
-    <ClCompile Include="Day07\FilesystemProcessor.cpp" />
-    <ClCompile Include="Day08\Day08_TreetopTreeHouse.cpp" />
-    <ClCompile Include="Day09\Day09_RopeBridge.cpp" />
-    <ClCompile Include="Day09\RopeMovementProcessor.cpp" />
-    <ClCompile Include="Day10\Day10_CathodeRayTube.cpp" />
-    <ClCompile Include="Day10\InstructionProcessor.cpp" />
-    <ClCompile Include="Day11\Day11_MonkeyInTheMiddle.cpp" />
-    <ClCompile Include="Day11\MonkeyProcessor.cpp" />
-    <ClCompile Include="Day12\Day12_HillClimbingAlgorithm.cpp" />
-    <ClCompile Include="Day13\Day13_DistressSignal.cpp" />
-    <ClCompile Include="Day13\Packet.cpp" />
-    <ClCompile Include="Day13\PacketProcessor.cpp" />
-    <ClCompile Include="Day14\Day14_RegolithReservoir.cpp" />
-    <ClCompile Include="Day14\RockPathProcessor.cpp" />
-    <ClCompile Include="Day15\Day15_BeaconExclusionZone.cpp" />
-    <ClCompile Include="Day15\SensorProcessor.cpp" />
-    <ClCompile Include="Day16\Day16_ProboscideaVolcanium.cpp" />
-    <ClCompile Include="Day16\ValveProcessor.cpp" />
-    <ClCompile Include="Day17\Day17_PyroclasticFlow.cpp" />
-    <ClCompile Include="Day18\Day18_BoilingBoulders.cpp" />
-    <ClCompile Include="Day18\CubeProcessor.cpp" />
-    <ClCompile Include="Day19\BlueprintProcessor.cpp" />
-    <ClCompile Include="Day19\Day19_NotEnoughMinerals.cpp" />
-    <ClCompile Include="Day20\Day20_GrovePositioningSystem.cpp" />
-    <ClCompile Include="Day21\Day21_MonkeyMath.cpp" />
-    <ClCompile Include="Day21\MonkeyMathProcessor.cpp" />
-    <ClCompile Include="Day22\Day22_MonkeyMap.cpp" />
-    <ClCompile Include="Day22\MonkeyMapProcessor.cpp" />
-    <ClCompile Include="Day23\Day23_UnstableDiffusion.cpp" />
-    <ClCompile Include="Day23\Grove.cpp" />
-    <ClCompile Include="Day23\GroveProcessor.cpp" />
-    <ClCompile Include="Day24\Day24_BlizzardBasin.cpp" />
-    <ClCompile Include="Day24\BlizzardProcessor.cpp" />
-    <ClCompile Include="Day25\Day25_FullOfHotAir.cpp" />
-    <ClCompile Include="Day25\SNAFUProcessor.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="AdventOfCode2023.cpp" />
     <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.vcxproj">
       <Project>{e12387bc-ae11-4ece-b865-bc4bd1374889}</Project>
     </ProjectReference>
@@ -154,8 +38,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d9971511-3f2e-4a5a-a97b-55bf7a520b0f}</ProjectGuid>
-    <RootNamespace>AdventOfCode2022Solutions</RootNamespace>
+    <ProjectGuid>{0D7B0DED-EA2A-4786-810E-0C8043AA13BD}</ProjectGuid>
+    <RootNamespace>AdventOfCode2023Solutions</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -224,17 +108,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)bin\</OutDir>
     <IntDir>$(SolutionDir)\obj\$(ProjectName)\</IntDir>
-    <TargetName>aoc2022</TargetName>
+    <TargetName>aoc2023</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_2019|x64'">
     <OutDir>$(SolutionDir)bin\</OutDir>
     <IntDir>$(SolutionDir)\obj\$(ProjectName)\</IntDir>
-    <TargetName>aoc2022</TargetName>
+    <TargetName>aoc2023</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir)\obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)bin\</OutDir>
-    <TargetName>aoc2022</TargetName>
+    <TargetName>aoc2023</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

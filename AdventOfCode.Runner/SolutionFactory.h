@@ -9,5 +9,3 @@ namespace AdventOfCode
 		std::unique_ptr<Solutions> GetYear(int year);
 	};
 }
-
-
