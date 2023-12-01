@@ -5,11 +5,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Day01">
+      <Filter>{c578d019-1d7f-483a-a4d7-f766370b50fb}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
+    <ClInclude Include="Day01\Day01_Trebuchet.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdventOfCode2023.cpp"/>
+    <ClCompile Include="AdventOfCode2023.cpp" />
+    <ClCompile Include="Day01\Day01_Trebuchet.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
