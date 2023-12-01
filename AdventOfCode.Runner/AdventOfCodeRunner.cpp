@@ -3,8 +3,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <format>
 #include "SolutionFactory.h"
+#include "toml.hpp"
 
 using namespace AdventOfCode;
 
@@ -29,28 +29,30 @@ std::vector<std::string> ReadLinesFromFile()
 // ---------------------------------------------------------------------------
 int main(int argc, char* argv[])
 {
-	// TODO: read from command line
-	int pYear = 2022;
-	int pDay = 1;
+	// Read which year / day / part to run from config:
+	auto appConfig = toml::parse_file("appconfig.toml");
+	int year = appConfig["run"]["year"].value_or(2023);
+	int day = appConfig["run"]["day"].value_or(1);
+	int part = appConfig["run"]["part"].value_or(1);
 
 	// Solution of the given year / day:
-	auto day = SolutionFactory().GetYear(pYear)->GetDay(pDay);
+	auto solution = SolutionFactory().GetYear(year)->GetDay(day);
+	if (solution)
+	{
+		// Read input and get results:
+		auto lines = ReadLinesFromFile();
+		auto res = part == 1 ? solution->GetResultOnPart1(lines) : solution->GetResultOnPart2(lines);
 
-	// Read input and get results:
-	auto lines = ReadLinesFromFile();
-	auto res1 = day->GetResultOnPart1(lines);
-	auto res2 = day->GetResultOnPart2(lines);
-
-	// Pretty-print results to screen:
-	std::cout
-		<< "+----------------------------------------------------------------------+\n"
-		<< std::format("|                         ADVENT OF CODE {:4}                          |\n", pYear)
-		<< "+------+---------------------------+-----------------+-----------------+\n"
-		<< "| Date | Name                      | Result (Part 1) | Result (Part 2) |\n"
-		<< "+------+---------------------------+-----------------+-----------------+\n";
-
-	std::cout << std::format("|  {:02}  | {:25} | {:15} | {:15} |\n", day->GetDayNo(), day->GetName(), res1, res2);
-	std::cout << "+------+---------------------------+-----------------+-----------------+\n";
+		// Print results to screen:
+		std::cout << "Day " << solution->GetDayNo() << " - " << solution->GetName() << "\n";
+		std::cout << "--------------------------------------------------\n";
+		std::cout << "Result (part " << part << "): " << res << "\n\n\n";
+	}
+	else
+	{
+		std::cout << "No solution for this year / day\n";
+	}
+	
 
 	// Wait for keypress (in particular, when debugger is running):
 	std::cout << "\nPress enter to exit...\n";
