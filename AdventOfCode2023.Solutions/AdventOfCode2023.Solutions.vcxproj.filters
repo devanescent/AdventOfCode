@@ -8,17 +8,35 @@
     <Filter Include="Day01">
       <Filter>{c578d019-1d7f-483a-a4d7-f766370b50fb}</Filter>
     </Filter>
+    <Filter Include="Day02">
+      <Filter>{5352dec0-9fdd-4c52-88d2-a473df0d7529}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
     <ClInclude Include="Day01\Day01_Trebuchet.h">
       <Filter>Day01</Filter>
     </ClInclude>
+    <ClInclude Include="Day02\Day02_CubeConundrum.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\GameRecord.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\CubeGameProcessor.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
     <ClCompile Include="Day01\Day01_Trebuchet.cpp">
       <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\Day02_CubeConundrum.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\CubeGameProcessor.cpp">
+      <Filter>Day02</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

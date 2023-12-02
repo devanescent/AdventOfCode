@@ -2,6 +2,7 @@
 #include <memory>
 #include "Solutions.h"
 #include "Day01\Day01_Trebuchet.h"
+#include "Day02\Day02_CubeConundrum.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -12,6 +13,7 @@ namespace AdventOfCode::Year2023
 			switch (day)
 			{
 				case  1:	return std::make_unique<Day01::Trebuchet>();
+				case  2:	return std::make_unique<Day02::CubeConundrum>();
 				default:	return nullptr;
 			}
 		}

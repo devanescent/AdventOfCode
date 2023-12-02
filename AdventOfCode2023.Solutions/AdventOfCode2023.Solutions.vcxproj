@@ -13,6 +13,9 @@
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
     <ClInclude Include="Day01\Day01_Trebuchet.h" />
+    <ClInclude Include="Day02\Day02_CubeConundrum.h" />
+    <ClInclude Include="Day02\GameRecord.h" />
+    <ClInclude Include="Day02\CubeGameProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -20,6 +23,8 @@
       <Project>{e12387bc-ae11-4ece-b865-bc4bd1374889}</Project>
     </ProjectReference>
     <ClCompile Include="Day01\Day01_Trebuchet.cpp" />
+    <ClCompile Include="Day02\Day02_CubeConundrum.cpp" />
+    <ClCompile Include="Day02\CubeGameProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
