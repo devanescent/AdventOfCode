@@ -16,6 +16,9 @@
     <ClInclude Include="Day02\Day02_CubeConundrum.h" />
     <ClInclude Include="Day02\GameRecord.h" />
     <ClInclude Include="Day02\CubeGameProcessor.h" />
+    <ClInclude Include="Day03\Day03_GearRatios.h" />
+    <ClInclude Include="Day03\PartNumber.h" />
+    <ClInclude Include="Day03\EngineSchematicsProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -25,6 +28,8 @@
     <ClCompile Include="Day01\Day01_Trebuchet.cpp" />
     <ClCompile Include="Day02\Day02_CubeConundrum.cpp" />
     <ClCompile Include="Day02\CubeGameProcessor.cpp" />
+    <ClCompile Include="Day03\Day03_GearRatios.cpp" />
+    <ClCompile Include="Day03\EngineSchematicsProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

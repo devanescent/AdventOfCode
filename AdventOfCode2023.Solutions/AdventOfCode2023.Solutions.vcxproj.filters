@@ -11,6 +11,9 @@
     <Filter Include="Day02">
       <Filter>{5352dec0-9fdd-4c52-88d2-a473df0d7529}</Filter>
     </Filter>
+    <Filter Include="Day03">
+      <Filter>{c9430c84-8400-4b9c-9657-5bc7ea8bf2fb}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -26,6 +29,15 @@
     <ClInclude Include="Day02\CubeGameProcessor.h">
       <Filter>Day02</Filter>
     </ClInclude>
+    <ClInclude Include="Day03\Day03_GearRatios.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\PartNumber.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
+    <ClInclude Include="Day03\EngineSchematicsProcessor.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -37,6 +49,12 @@
     </ClCompile>
     <ClCompile Include="Day02\CubeGameProcessor.cpp">
       <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\Day03_GearRatios.cpp">
+      <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\EngineSchematicsProcessor.cpp">
+      <Filter>Day03</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
