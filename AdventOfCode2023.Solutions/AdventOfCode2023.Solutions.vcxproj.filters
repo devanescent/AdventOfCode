@@ -14,6 +14,9 @@
     <Filter Include="Day03">
       <Filter>{c9430c84-8400-4b9c-9657-5bc7ea8bf2fb}</Filter>
     </Filter>
+    <Filter Include="Day04">
+      <Filter>{f51acb83-ee64-4c93-969e-3993bad6c1d7}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -38,6 +41,15 @@
     <ClInclude Include="Day03\EngineSchematicsProcessor.h">
       <Filter>Day03</Filter>
     </ClInclude>
+    <ClInclude Include="Day04\Day04_Scratchcards.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\Scratchcard.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
+    <ClInclude Include="Day04\ScratchcardProcessor.h">
+      <Filter>Day04</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -55,6 +67,12 @@
     </ClCompile>
     <ClCompile Include="Day03\EngineSchematicsProcessor.cpp">
       <Filter>Day03</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\Day04_Scratchcards.cpp">
+      <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day04\ScratchcardProcessor.cpp">
+      <Filter>Day04</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

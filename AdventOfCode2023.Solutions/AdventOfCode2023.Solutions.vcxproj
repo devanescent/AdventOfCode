@@ -19,6 +19,9 @@
     <ClInclude Include="Day03\Day03_GearRatios.h" />
     <ClInclude Include="Day03\PartNumber.h" />
     <ClInclude Include="Day03\EngineSchematicsProcessor.h" />
+    <ClInclude Include="Day04\Day04_Scratchcards.h" />
+    <ClInclude Include="Day04\Scratchcard.h" />
+    <ClInclude Include="Day04\ScratchcardProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -30,6 +33,8 @@
     <ClCompile Include="Day02\CubeGameProcessor.cpp" />
     <ClCompile Include="Day03\Day03_GearRatios.cpp" />
     <ClCompile Include="Day03\EngineSchematicsProcessor.cpp" />
+    <ClCompile Include="Day04\Day04_Scratchcards.cpp" />
+    <ClCompile Include="Day04\ScratchcardProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

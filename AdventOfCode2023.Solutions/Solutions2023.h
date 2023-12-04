@@ -4,6 +4,7 @@
 #include "Day01\Day01_Trebuchet.h"
 #include "Day02\Day02_CubeConundrum.h"
 #include "Day03\Day03_GearRatios.h"
+#include "Day04\Day04_Scratchcards.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -16,6 +17,7 @@ namespace AdventOfCode::Year2023
 				case  1:	return std::make_unique<Day01::Trebuchet>();
 				case  2:	return std::make_unique<Day02::CubeConundrum>();
 				case  3:	return std::make_unique<Day03::GearRatios>();
+				case  4:	return std::make_unique<Day04::Scratchcards>();
 				default:	return nullptr;
 			}
 		}
