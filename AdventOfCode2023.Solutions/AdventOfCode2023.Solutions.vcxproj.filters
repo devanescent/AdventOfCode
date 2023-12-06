@@ -20,6 +20,9 @@
     <Filter Include="Day05">
       <Filter>{b0f72dd8-d7f5-4be1-b476-67b23790ea38}</Filter>
     </Filter>
+    <Filter Include="Day06">
+      <Filter>{e74a30e1-afa4-4323-8fa3-301faa4e838f}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -65,6 +68,15 @@
     <ClInclude Include="Day05\SeedList.h">
       <Filter>Day05</Filter>
     </ClInclude>
+    <ClInclude Include="Day06\Day06_WaitForIt.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\RaceRecord.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
+    <ClInclude Include="Day06\RaceRecordsProcessor.h">
+      <Filter>Day06</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -94,6 +106,12 @@
     </ClCompile>
     <ClCompile Include="Day05\AlmanacProcessor.cpp">
       <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\Day06_WaitForIt.cpp">
+      <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day06\RaceRecordsProcessor.cpp">
+      <Filter>Day06</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

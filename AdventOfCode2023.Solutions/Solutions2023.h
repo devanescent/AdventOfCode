@@ -6,6 +6,7 @@
 #include "Day03\Day03_GearRatios.h"
 #include "Day04\Day04_Scratchcards.h"
 #include "Day05\Day05_IfYouGiveASeedAFertilizer.h"
+#include "Day06\Day06_WaitForIt.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -20,6 +21,7 @@ namespace AdventOfCode::Year2023
 				case  3:	return std::make_unique<Day03::GearRatios>();
 				case  4:	return std::make_unique<Day04::Scratchcards>();
 				case  5:	return std::make_unique<Day05::IfYouGiveASeedAFertilizer>();
+				case  6:	return std::make_unique<Day06::WaitForIt>();
 				default:	return nullptr;
 			}
 		}

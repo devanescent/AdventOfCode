@@ -26,6 +26,9 @@
     <ClInclude Include="Day05\SeedMapping.h" />
     <ClInclude Include="Day05\AlmanacProcessor.h" />
     <ClInclude Include="Day05\SeedList.h" />
+    <ClInclude Include="Day06\Day06_WaitForIt.h" />
+    <ClInclude Include="Day06\RaceRecord.h" />
+    <ClInclude Include="Day06\RaceRecordsProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -41,6 +44,8 @@
     <ClCompile Include="Day04\ScratchcardProcessor.cpp" />
     <ClCompile Include="Day05\Day05_IfYouGiveASeedAFertilizer.cpp" />
     <ClCompile Include="Day05\AlmanacProcessor.cpp" />
+    <ClCompile Include="Day06\Day06_WaitForIt.cpp" />
+    <ClCompile Include="Day06\RaceRecordsProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
