@@ -23,6 +23,9 @@
     <Filter Include="Day06">
       <Filter>{e74a30e1-afa4-4323-8fa3-301faa4e838f}</Filter>
     </Filter>
+    <Filter Include="Day07">
+      <Filter>{e4ccd618-6caf-42f4-aaaf-79adcf9ebf0b}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -77,6 +80,15 @@
     <ClInclude Include="Day06\RaceRecordsProcessor.h">
       <Filter>Day06</Filter>
     </ClInclude>
+    <ClInclude Include="Day07\Day07_CamelCards.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\PlayedCards.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
+    <ClInclude Include="Day07\CamelCardsProcessor.h">
+      <Filter>Day07</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -112,6 +124,12 @@
     </ClCompile>
     <ClCompile Include="Day06\RaceRecordsProcessor.cpp">
       <Filter>Day06</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\Day07_CamelCards.cpp">
+      <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day07\CamelCardsProcessor.cpp">
+      <Filter>Day07</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
