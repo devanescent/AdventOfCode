@@ -8,6 +8,7 @@
 #include "Day05\Day05_IfYouGiveASeedAFertilizer.h"
 #include "Day06\Day06_WaitForIt.h"
 #include "Day07\Day07_CamelCards.h"
+#include "Day08\Day08_HauntedWasteland.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -24,6 +25,7 @@ namespace AdventOfCode::Year2023
 				case  5:	return std::make_unique<Day05::IfYouGiveASeedAFertilizer>();
 				case  6:	return std::make_unique<Day06::WaitForIt>();
 				case  7:	return std::make_unique<Day07::CamelCards>();
+				case  8:	return std::make_unique<Day08::HauntedWasteland>();
 				default:	return nullptr;
 			}
 		}

@@ -26,6 +26,9 @@
     <Filter Include="Day07">
       <Filter>{e4ccd618-6caf-42f4-aaaf-79adcf9ebf0b}</Filter>
     </Filter>
+    <Filter Include="Day08">
+      <Filter>{9ff7dbc3-54c9-47f3-a423-4b11574c70f3}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -89,6 +92,15 @@
     <ClInclude Include="Day07\CamelCardsProcessor.h">
       <Filter>Day07</Filter>
     </ClInclude>
+    <ClInclude Include="Day08\Day08_HauntedWasteland.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\NetworkNode.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
+    <ClInclude Include="Day08\NetworkProcessor.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -130,6 +142,12 @@
     </ClCompile>
     <ClCompile Include="Day07\CamelCardsProcessor.cpp">
       <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Day08_HauntedWasteland.cpp">
+      <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\NetworkProcessor.cpp">
+      <Filter>Day08</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -32,6 +32,9 @@
     <ClInclude Include="Day07\Day07_CamelCards.h" />
     <ClInclude Include="Day07\PlayedCards.h" />
     <ClInclude Include="Day07\CamelCardsProcessor.h" />
+    <ClInclude Include="Day08\Day08_HauntedWasteland.h" />
+    <ClInclude Include="Day08\NetworkNode.h" />
+    <ClInclude Include="Day08\NetworkProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -51,6 +54,8 @@
     <ClCompile Include="Day06\RaceRecordsProcessor.cpp" />
     <ClCompile Include="Day07\Day07_CamelCards.cpp" />
     <ClCompile Include="Day07\CamelCardsProcessor.cpp" />
+    <ClCompile Include="Day08\Day08_HauntedWasteland.cpp" />
+    <ClCompile Include="Day08\NetworkProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
