@@ -29,6 +29,9 @@
     <Filter Include="Day08">
       <Filter>{9ff7dbc3-54c9-47f3-a423-4b11574c70f3}</Filter>
     </Filter>
+    <Filter Include="Day09">
+      <Filter>{fab3443f-bfd6-42ad-8257-f5db756036a6}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -101,6 +104,15 @@
     <ClInclude Include="Day08\NetworkProcessor.h">
       <Filter>Day08</Filter>
     </ClInclude>
+    <ClInclude Include="Day09\Day09_MirageMaintenance.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
+    <ClInclude Include="Day09\ValueHistory.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
+    <ClInclude Include="Day09\ValueHistoryProcessor.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -148,6 +160,12 @@
     </ClCompile>
     <ClCompile Include="Day08\NetworkProcessor.cpp">
       <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\Day09_MirageMaintenance.cpp">
+      <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\ValueHistoryProcessor.cpp">
+      <Filter>Day09</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
