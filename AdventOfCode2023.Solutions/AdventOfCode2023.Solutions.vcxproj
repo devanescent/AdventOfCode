@@ -38,6 +38,9 @@
     <ClInclude Include="Day09\Day09_MirageMaintenance.h" />
     <ClInclude Include="Day09\ValueHistory.h" />
     <ClInclude Include="Day09\ValueHistoryProcessor.h" />
+    <ClInclude Include="Day10\Day10_PipeMaze.h" />
+    <ClInclude Include="Day10\Pipe.h" />
+    <ClInclude Include="Day10\PipeMazeProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -61,6 +64,8 @@
     <ClCompile Include="Day08\NetworkProcessor.cpp" />
     <ClCompile Include="Day09\Day09_MirageMaintenance.cpp" />
     <ClCompile Include="Day09\ValueHistoryProcessor.cpp" />
+    <ClCompile Include="Day10\Day10_PipeMaze.cpp" />
+    <ClCompile Include="Day10\PipeMazeProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

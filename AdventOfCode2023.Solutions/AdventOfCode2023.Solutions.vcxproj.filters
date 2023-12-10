@@ -32,6 +32,9 @@
     <Filter Include="Day09">
       <Filter>{fab3443f-bfd6-42ad-8257-f5db756036a6}</Filter>
     </Filter>
+    <Filter Include="Day10">
+      <Filter>{9891a89e-cd06-4edb-8726-d8d45604def7}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -113,6 +116,15 @@
     <ClInclude Include="Day09\ValueHistoryProcessor.h">
       <Filter>Day09</Filter>
     </ClInclude>
+    <ClInclude Include="Day10\Day10_PipeMaze.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\Pipe.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
+    <ClInclude Include="Day10\PipeMazeProcessor.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -166,6 +178,12 @@
     </ClCompile>
     <ClCompile Include="Day09\ValueHistoryProcessor.cpp">
       <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_PipeMaze.cpp">
+      <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\PipeMazeProcessor.cpp">
+      <Filter>Day10</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
