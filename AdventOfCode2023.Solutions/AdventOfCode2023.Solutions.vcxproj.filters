@@ -35,6 +35,9 @@
     <Filter Include="Day10">
       <Filter>{9891a89e-cd06-4edb-8726-d8d45604def7}</Filter>
     </Filter>
+    <Filter Include="Day11">
+      <Filter>{1113c83c-ab20-4967-ab05-95484fbc8098}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -125,6 +128,15 @@
     <ClInclude Include="Day10\PipeMazeProcessor.h">
       <Filter>Day10</Filter>
     </ClInclude>
+    <ClInclude Include="Day11\Day11_CosmicExpansion.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\GalaxyMapProcessor.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
+    <ClInclude Include="Day11\SpaceExpansions.h">
+      <Filter>Day11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -184,6 +196,12 @@
     </ClCompile>
     <ClCompile Include="Day10\PipeMazeProcessor.cpp">
       <Filter>Day10</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\Day11_CosmicExpansion.cpp">
+      <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day11\GalaxyMapProcessor.cpp">
+      <Filter>Day11</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

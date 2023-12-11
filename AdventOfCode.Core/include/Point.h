@@ -24,7 +24,7 @@ namespace AdventOfCode
 
 		Point MoveXBy(T dx) const { return Point{ X + dx, Y }; }
 		Point MoveYBy(T dy) const { return Point{ X, Y + dy }; }
-		Point MoveBy(int dx, int dy) const { return Point{ X + dx, Y + dy }; }
+		Point MoveBy(T dx, T dy) const { return Point{ X + dx, Y + dy }; }
 
 		T DistanceTo(const Point& other, DistanceMetric metric = DistanceMetric::Manhattan) const
 		{
