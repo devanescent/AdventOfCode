@@ -1,4 +1,4 @@
-#include <format>
+#pragma once
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -50,14 +50,3 @@ namespace AdventOfCode
 		std::variant<uint64_t, std::string> m_resultValue;
 	};
 }
-
-// For use with std::format:
-// -> must be implemented in global namespace
-template <>
-struct std::formatter<AdventOfCode::AoCResult> : std::formatter<std::string>
-{
-	auto format(AdventOfCode::AoCResult& res, format_context& ctx)
-	{
-		return formatter<string>::format(res.ToString(), ctx);
-	}
-};
