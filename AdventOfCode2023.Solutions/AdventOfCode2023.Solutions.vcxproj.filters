@@ -38,6 +38,9 @@
     <Filter Include="Day11">
       <Filter>{1113c83c-ab20-4967-ab05-95484fbc8098}</Filter>
     </Filter>
+    <Filter Include="Day12">
+      <Filter>{1af8013c-6e7f-470a-ba23-67122dcc1aa3}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -137,6 +140,15 @@
     <ClInclude Include="Day11\SpaceExpansions.h">
       <Filter>Day11</Filter>
     </ClInclude>
+    <ClInclude Include="Day12\Day12_HotSprings.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\SpringReport.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
+    <ClInclude Include="Day12\SpringReportProcessor.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -202,6 +214,12 @@
     </ClCompile>
     <ClCompile Include="Day11\GalaxyMapProcessor.cpp">
       <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_HotSprings.cpp">
+      <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\SpringReportProcessor.cpp">
+      <Filter>Day12</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
