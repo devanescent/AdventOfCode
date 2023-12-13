@@ -13,6 +13,7 @@
 #include "Day10\Day10_PipeMaze.h"
 #include "Day11\Day11_CosmicExpansion.h"
 #include "Day12\Day12_HotSprings.h"
+#include "Day13\Day13_PointOfIncidence.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -34,6 +35,7 @@ namespace AdventOfCode::Year2023
 				case 10:	return std::make_unique<Day10::PipeMaze>();
 				case 11:	return std::make_unique<Day11::CosmicExpansion>();
 				case 12:	return std::make_unique<Day12::HotSprings>();
+				case 13:	return std::make_unique<Day13::PointOfIncidence>();
 				default:	return nullptr;
 			}
 		}

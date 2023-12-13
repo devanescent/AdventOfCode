@@ -41,6 +41,9 @@
     <Filter Include="Day12">
       <Filter>{1af8013c-6e7f-470a-ba23-67122dcc1aa3}</Filter>
     </Filter>
+    <Filter Include="Day13">
+      <Filter>{61b5aeb0-7393-4022-92ee-059f4517711a}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -149,6 +152,15 @@
     <ClInclude Include="Day12\SpringReportProcessor.h">
       <Filter>Day12</Filter>
     </ClInclude>
+    <ClInclude Include="Day13\Day13_PointOfIncidence.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\MirrorPattern.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\MirrorPatternProcessor.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -220,6 +232,12 @@
     </ClCompile>
     <ClCompile Include="Day12\SpringReportProcessor.cpp">
       <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Day13_PointOfIncidence.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\MirrorPatternProcessor.cpp">
+      <Filter>Day13</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

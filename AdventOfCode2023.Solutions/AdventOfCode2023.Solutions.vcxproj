@@ -47,6 +47,9 @@
     <ClInclude Include="Day12\Day12_HotSprings.h" />
     <ClInclude Include="Day12\SpringReport.h" />
     <ClInclude Include="Day12\SpringReportProcessor.h" />
+    <ClInclude Include="Day13\Day13_PointOfIncidence.h" />
+    <ClInclude Include="Day13\MirrorPattern.h" />
+    <ClInclude Include="Day13\MirrorPatternProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -76,6 +79,8 @@
     <ClCompile Include="Day11\GalaxyMapProcessor.cpp" />
     <ClCompile Include="Day12\Day12_HotSprings.cpp" />
     <ClCompile Include="Day12\SpringReportProcessor.cpp" />
+    <ClCompile Include="Day13\Day13_PointOfIncidence.cpp" />
+    <ClCompile Include="Day13\MirrorPatternProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
