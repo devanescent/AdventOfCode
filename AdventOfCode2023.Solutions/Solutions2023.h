@@ -14,6 +14,7 @@
 #include "Day11\Day11_CosmicExpansion.h"
 #include "Day12\Day12_HotSprings.h"
 #include "Day13\Day13_PointOfIncidence.h"
+#include "Day14\Day14_ParabolicReflectorDish.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -36,6 +37,7 @@ namespace AdventOfCode::Year2023
 				case 11:	return std::make_unique<Day11::CosmicExpansion>();
 				case 12:	return std::make_unique<Day12::HotSprings>();
 				case 13:	return std::make_unique<Day13::PointOfIncidence>();
+				case 14:	return std::make_unique<Day14::ParabolicReflectorDish>();
 				default:	return nullptr;
 			}
 		}

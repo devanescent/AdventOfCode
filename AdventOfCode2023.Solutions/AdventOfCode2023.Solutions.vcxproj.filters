@@ -44,6 +44,9 @@
     <Filter Include="Day13">
       <Filter>{61b5aeb0-7393-4022-92ee-059f4517711a}</Filter>
     </Filter>
+    <Filter Include="Day14">
+      <Filter>{74cfc775-f121-4530-a90f-d619836efc61}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -161,6 +164,18 @@
     <ClInclude Include="Day13\MirrorPatternProcessor.h">
       <Filter>Day13</Filter>
     </ClInclude>
+    <ClInclude Include="Day14\Day14_ParabolicReflectorDish.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\Rock.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\PlatformRocksProcessor.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
+    <ClInclude Include="Day14\Platform.h">
+      <Filter>Day14</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -238,6 +253,12 @@
     </ClCompile>
     <ClCompile Include="Day13\MirrorPatternProcessor.cpp">
       <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\Day14_ParabolicReflectorDish.cpp">
+      <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day14\PlatformRocksProcessor.cpp">
+      <Filter>Day14</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

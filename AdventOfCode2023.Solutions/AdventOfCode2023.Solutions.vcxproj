@@ -50,6 +50,10 @@
     <ClInclude Include="Day13\Day13_PointOfIncidence.h" />
     <ClInclude Include="Day13\MirrorPattern.h" />
     <ClInclude Include="Day13\MirrorPatternProcessor.h" />
+    <ClInclude Include="Day14\Day14_ParabolicReflectorDish.h" />
+    <ClInclude Include="Day14\Rock.h" />
+    <ClInclude Include="Day14\PlatformRocksProcessor.h" />
+    <ClInclude Include="Day14\Platform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -81,6 +85,8 @@
     <ClCompile Include="Day12\SpringReportProcessor.cpp" />
     <ClCompile Include="Day13\Day13_PointOfIncidence.cpp" />
     <ClCompile Include="Day13\MirrorPatternProcessor.cpp" />
+    <ClCompile Include="Day14\Day14_ParabolicReflectorDish.cpp" />
+    <ClCompile Include="Day14\PlatformRocksProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
