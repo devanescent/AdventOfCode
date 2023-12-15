@@ -47,6 +47,9 @@
     <Filter Include="Day14">
       <Filter>{74cfc775-f121-4530-a90f-d619836efc61}</Filter>
     </Filter>
+    <Filter Include="Day15">
+      <Filter>{d7134ec9-adc4-4e99-bb5d-ea4e54b710c6}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -176,6 +179,12 @@
     <ClInclude Include="Day14\Platform.h">
       <Filter>Day14</Filter>
     </ClInclude>
+    <ClInclude Include="Day15\Day15_LensLibrary.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\InitSequenceProcessor.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -259,6 +268,12 @@
     </ClCompile>
     <ClCompile Include="Day14\PlatformRocksProcessor.cpp">
       <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_LensLibrary.cpp">
+      <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\InitSequenceProcessor.cpp">
+      <Filter>Day15</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

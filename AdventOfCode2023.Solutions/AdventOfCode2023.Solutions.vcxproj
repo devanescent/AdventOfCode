@@ -54,6 +54,8 @@
     <ClInclude Include="Day14\Rock.h" />
     <ClInclude Include="Day14\PlatformRocksProcessor.h" />
     <ClInclude Include="Day14\Platform.h" />
+    <ClInclude Include="Day15\Day15_LensLibrary.h" />
+    <ClInclude Include="Day15\InitSequenceProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -87,6 +89,8 @@
     <ClCompile Include="Day13\MirrorPatternProcessor.cpp" />
     <ClCompile Include="Day14\Day14_ParabolicReflectorDish.cpp" />
     <ClCompile Include="Day14\PlatformRocksProcessor.cpp" />
+    <ClCompile Include="Day15\Day15_LensLibrary.cpp" />
+    <ClCompile Include="Day15\InitSequenceProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
