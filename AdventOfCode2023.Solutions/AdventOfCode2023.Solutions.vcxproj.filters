@@ -50,6 +50,9 @@
     <Filter Include="Day15">
       <Filter>{d7134ec9-adc4-4e99-bb5d-ea4e54b710c6}</Filter>
     </Filter>
+    <Filter Include="Day16">
+      <Filter>{4c16a600-9397-40b6-9e99-881b15d537e0}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -185,6 +188,12 @@
     <ClInclude Include="Day15\InitSequenceProcessor.h">
       <Filter>Day15</Filter>
     </ClInclude>
+    <ClInclude Include="Day16\Day16_TheFloorWillBeLava.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
+    <ClInclude Include="Day16\Beam.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -274,6 +283,9 @@
     </ClCompile>
     <ClCompile Include="Day15\InitSequenceProcessor.cpp">
       <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\Day16_TheFloorWillBeLava.cpp">
+      <Filter>Day16</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

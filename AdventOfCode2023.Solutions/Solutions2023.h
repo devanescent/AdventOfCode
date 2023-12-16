@@ -16,6 +16,7 @@
 #include "Day13\Day13_PointOfIncidence.h"
 #include "Day14\Day14_ParabolicReflectorDish.h"
 #include "Day15\Day15_LensLibrary.h"
+#include "Day16\Day16_TheFloorWillBeLava.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -40,6 +41,7 @@ namespace AdventOfCode::Year2023
 				case 13:	return std::make_unique<Day13::PointOfIncidence>();
 				case 14:	return std::make_unique<Day14::ParabolicReflectorDish>();
 				case 15:	return std::make_unique<Day15::LensLibrary>();
+				case 16:	return std::make_unique<Day16::TheFloorWillBeLava>();
 				default:	return nullptr;
 			}
 		}
