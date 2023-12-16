@@ -194,7 +194,16 @@ namespace AdventOfCode.ProjectHelper
 								sw.WriteLine("\t\t\t{");
 
 								foreach (string inputLine in _testCases[i - 1].Data)
-									sw.WriteLine($"\t\t\t\t\"{inputLine}\"" + (inputLine != _testCases[i - 1].Data.Last() ? "," : ""));
+								{
+									// Escape '\' literals in data:
+									sw.Write($"\t\t\t\t\"{inputLine.Replace(@"\", @"\\")}\"");
+
+									// Add comma at the end for all lines but the last one
+									if (inputLine != _testCases[i - 1].Data.Last())
+										sw.WriteLine(',');
+									else
+										sw.WriteLine();
+								}
 
 								sw.WriteLine("\t\t\t};");
 								AddBlank(sw);
