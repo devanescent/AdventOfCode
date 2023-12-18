@@ -53,6 +53,9 @@
     <Filter Include="Day16">
       <Filter>{4c16a600-9397-40b6-9e99-881b15d537e0}</Filter>
     </Filter>
+    <Filter Include="Day18">
+      <Filter>{529eb9da-c799-4bed-b299-b6e39419b8f5}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -194,6 +197,15 @@
     <ClInclude Include="Day16\Beam.h">
       <Filter>Day16</Filter>
     </ClInclude>
+    <ClInclude Include="Day18\Day18_LavaductLagoon.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\DigPlan.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\DigPlanProcessor.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -286,6 +298,12 @@
     </ClCompile>
     <ClCompile Include="Day16\Day16_TheFloorWillBeLava.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\Day18_LavaductLagoon.cpp">
+      <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\DigPlanProcessor.cpp">
+      <Filter>Day18</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

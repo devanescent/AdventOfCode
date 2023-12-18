@@ -58,6 +58,9 @@
     <ClInclude Include="Day15\Day15_LensLibrary.h" />
     <ClInclude Include="Day15\InitSequenceProcessor.h" />
     <ClInclude Include="Day16\Day16_TheFloorWillBeLava.h" />
+    <ClInclude Include="Day18\Day18_LavaductLagoon.h" />
+    <ClInclude Include="Day18\DigPlan.h" />
+    <ClInclude Include="Day18\DigPlanProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -94,6 +97,8 @@
     <ClCompile Include="Day15\Day15_LensLibrary.cpp" />
     <ClCompile Include="Day15\InitSequenceProcessor.cpp" />
     <ClCompile Include="Day16\Day16_TheFloorWillBeLava.cpp" />
+    <ClCompile Include="Day18\Day18_LavaductLagoon.cpp" />
+    <ClCompile Include="Day18\DigPlanProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
