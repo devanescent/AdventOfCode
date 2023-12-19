@@ -56,6 +56,9 @@
     <Filter Include="Day18">
       <Filter>{529eb9da-c799-4bed-b299-b6e39419b8f5}</Filter>
     </Filter>
+    <Filter Include="Day19">
+      <Filter>{13ca808b-2fa8-4957-b95c-b1d9d98a0329}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -206,6 +209,18 @@
     <ClInclude Include="Day18\DigPlanProcessor.h">
       <Filter>Day18</Filter>
     </ClInclude>
+    <ClInclude Include="Day19\Day19_Aplenty.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\MachinePart.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\WorkflowProcessor.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\Workflows.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -304,6 +319,12 @@
     </ClCompile>
     <ClCompile Include="Day18\DigPlanProcessor.cpp">
       <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\Day19_Aplenty.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\WorkflowProcessor.cpp">
+      <Filter>Day19</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
