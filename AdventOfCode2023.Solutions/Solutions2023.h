@@ -17,6 +17,7 @@
 #include "Day14\Day14_ParabolicReflectorDish.h"
 #include "Day15\Day15_LensLibrary.h"
 #include "Day16\Day16_TheFloorWillBeLava.h"
+#include "Day17\Day17_ClumsyCrucible.h"
 #include "Day18\Day18_LavaductLagoon.h"
 #include "Day19\Day19_Aplenty.h"
 
@@ -44,6 +45,7 @@ namespace AdventOfCode::Year2023
 				case 14:	return std::make_unique<Day14::ParabolicReflectorDish>();
 				case 15:	return std::make_unique<Day15::LensLibrary>();
 				case 16:	return std::make_unique<Day16::TheFloorWillBeLava>();
+				case 17:	return std::make_unique<Day17::ClumsyCrucible>();
 				case 18:	return std::make_unique<Day18::LavaductLagoon>();
 				case 19:	return std::make_unique<Day19::Aplenty>();
 				default:	return nullptr;

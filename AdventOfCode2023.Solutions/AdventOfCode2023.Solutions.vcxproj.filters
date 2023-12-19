@@ -53,6 +53,9 @@
     <Filter Include="Day16">
       <Filter>{4c16a600-9397-40b6-9e99-881b15d537e0}</Filter>
     </Filter>
+    <Filter Include="Day17">
+      <Filter>{127a15f2-9acf-44dd-a1ba-a691f3c81ceb}</Filter>
+    </Filter>
     <Filter Include="Day18">
       <Filter>{529eb9da-c799-4bed-b299-b6e39419b8f5}</Filter>
     </Filter>
@@ -200,6 +203,9 @@
     <ClInclude Include="Day16\Beam.h">
       <Filter>Day16</Filter>
     </ClInclude>
+    <ClInclude Include="Day17\Day17_ClumsyCrucible.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
     <ClInclude Include="Day18\Day18_LavaductLagoon.h">
       <Filter>Day18</Filter>
     </ClInclude>
@@ -313,6 +319,9 @@
     </ClCompile>
     <ClCompile Include="Day16\Day16_TheFloorWillBeLava.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_ClumsyCrucible.cpp">
+      <Filter>Day17</Filter>
     </ClCompile>
     <ClCompile Include="Day18\Day18_LavaductLagoon.cpp">
       <Filter>Day18</Filter>

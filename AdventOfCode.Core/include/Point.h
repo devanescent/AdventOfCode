@@ -63,6 +63,11 @@ namespace AdventOfCode
 			return points;
 		}
 
+		bool CheckBounds(T width, T height) const
+		{
+			return X >= 0 && X < width && Y >= 0 && Y < height;
+		}
+
 		// Make points sortable, e.g. for using in a map
 		bool operator<(const Point& other) const
 		{
