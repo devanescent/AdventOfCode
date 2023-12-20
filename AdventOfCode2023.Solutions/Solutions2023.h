@@ -20,6 +20,7 @@
 #include "Day17\Day17_ClumsyCrucible.h"
 #include "Day18\Day18_LavaductLagoon.h"
 #include "Day19\Day19_Aplenty.h"
+#include "Day20\Day20_PulsePropagation.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -48,6 +49,7 @@ namespace AdventOfCode::Year2023
 				case 17:	return std::make_unique<Day17::ClumsyCrucible>();
 				case 18:	return std::make_unique<Day18::LavaductLagoon>();
 				case 19:	return std::make_unique<Day19::Aplenty>();
+				case 20:	return std::make_unique<Day20::PulsePropagation>();
 				default:	return nullptr;
 			}
 		}
