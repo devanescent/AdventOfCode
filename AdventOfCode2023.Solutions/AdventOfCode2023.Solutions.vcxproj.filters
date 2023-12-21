@@ -65,6 +65,9 @@
     <Filter Include="Day20">
       <Filter>{8d526af2-09a7-4f82-a427-a0f6307f24ae}</Filter>
     </Filter>
+    <Filter Include="Day21">
+      <Filter>{3ba36f61-3194-476a-9a0e-336af194133a}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -239,6 +242,9 @@
     <ClInclude Include="Day20\PulseModuleProcessor.h">
       <Filter>Day20</Filter>
     </ClInclude>
+    <ClInclude Include="Day21\Day21_StepCounter.h">
+      <Filter>Day21</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -352,6 +358,9 @@
     </ClCompile>
     <ClCompile Include="Day20\PulseModuleProcessor.cpp">
       <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21\Day21_StepCounter.cpp">
+      <Filter>Day21</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
