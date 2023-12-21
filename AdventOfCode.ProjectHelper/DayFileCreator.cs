@@ -188,18 +188,20 @@ namespace AdventOfCode.ProjectHelper
 						// Initialize input data:
 						using (_ = new TestMethodDeclarationWriter("TEST_CLASS_INITIALIZE", "Init", sw))
 						{
-							for (int i = 1; i <= _testCases.Count; ++i)
+							for (int testIx = 0; testIx < _testCases.Count; ++testIx)
 							{
-								sw.WriteLine($"\t\t\tinputData{i} = std::vector<std::string>");
+								sw.WriteLine($"\t\t\tinputData{testIx + 1} = std::vector<std::string>");
 								sw.WriteLine("\t\t\t{");
 
-								foreach (string inputLine in _testCases[i - 1].Data)
+								for (int lineIx = 0; lineIx < _testCases[testIx].Data.Count; ++lineIx)
 								{
+									var line = _testCases[testIx].Data[lineIx];
+
 									// Escape '\' literals in data:
-									sw.Write($"\t\t\t\t\"{inputLine.Replace(@"\", @"\\")}\"");
+									sw.Write($"\t\t\t\t\"{line.Replace(@"\", @"\\")}\"");
 
 									// Add comma at the end for all lines but the last one
-									if (inputLine != _testCases[i - 1].Data.Last())
+									if (lineIx != _testCases[testIx].Data.Count - 1)
 										sw.WriteLine(',');
 									else
 										sw.WriteLine();
