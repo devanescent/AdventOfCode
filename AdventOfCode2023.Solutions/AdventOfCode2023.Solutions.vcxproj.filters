@@ -68,6 +68,9 @@
     <Filter Include="Day21">
       <Filter>{3ba36f61-3194-476a-9a0e-336af194133a}</Filter>
     </Filter>
+    <Filter Include="Day22">
+      <Filter>{5e7a765f-f8af-41bf-9314-d76234599d3b}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -245,6 +248,15 @@
     <ClInclude Include="Day21\Day21_StepCounter.h">
       <Filter>Day21</Filter>
     </ClInclude>
+    <ClInclude Include="Day22\Day22_SandSlabs.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\SandBrick.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22\SandBrickProcessor.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -361,6 +373,12 @@
     </ClCompile>
     <ClCompile Include="Day21\Day21_StepCounter.cpp">
       <Filter>Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\Day22_SandSlabs.cpp">
+      <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22\SandBrickProcessor.cpp">
+      <Filter>Day22</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

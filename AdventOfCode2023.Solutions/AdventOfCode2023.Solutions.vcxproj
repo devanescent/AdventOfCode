@@ -70,6 +70,9 @@
     <ClInclude Include="Day20\PulseModule.h" />
     <ClInclude Include="Day20\PulseModuleProcessor.h" />
     <ClInclude Include="Day21\Day21_StepCounter.h" />
+    <ClInclude Include="Day22\Day22_SandSlabs.h" />
+    <ClInclude Include="Day22\SandBrick.h" />
+    <ClInclude Include="Day22\SandBrickProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -114,6 +117,8 @@
     <ClCompile Include="Day20\Day20_PulsePropagation.cpp" />
     <ClCompile Include="Day20\PulseModuleProcessor.cpp" />
     <ClCompile Include="Day21\Day21_StepCounter.cpp" />
+    <ClCompile Include="Day22\Day22_SandSlabs.cpp" />
+    <ClCompile Include="Day22\SandBrickProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
