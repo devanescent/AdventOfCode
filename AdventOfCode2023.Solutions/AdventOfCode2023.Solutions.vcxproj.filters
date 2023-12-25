@@ -74,6 +74,9 @@
     <Filter Include="Day23">
       <Filter>{d888f8ad-664e-4662-b962-f9a51492ff36}</Filter>
     </Filter>
+    <Filter Include="Day25">
+      <Filter>{6b43f95b-46f3-40c4-beec-ae46308263ea}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2023.h" />
@@ -263,6 +266,15 @@
     <ClInclude Include="Day23\Day23_ALongWalk.h">
       <Filter>Day23</Filter>
     </ClInclude>
+    <ClInclude Include="Day25\Day25_Snowverload.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\Wiring.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25\ComponentWiringProcessor.h">
+      <Filter>Day25</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdventOfCode2023.cpp" />
@@ -388,6 +400,12 @@
     </ClCompile>
     <ClCompile Include="Day23\Day23_ALongWalk.cpp">
       <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\Day25_Snowverload.cpp">
+      <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25\ComponentWiringProcessor.cpp">
+      <Filter>Day25</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

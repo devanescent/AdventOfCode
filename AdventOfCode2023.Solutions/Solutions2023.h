@@ -24,6 +24,7 @@
 #include "Day21\Day21_StepCounter.h"
 #include "Day22\Day22_SandSlabs.h"
 #include "Day23\Day23_ALongWalk.h"
+#include "Day25\Day25_Snowverload.h"
 
 namespace AdventOfCode::Year2023
 {
@@ -56,6 +57,7 @@ namespace AdventOfCode::Year2023
 				case 21:	return std::make_unique<Day21::StepCounter>();
 				case 22:	return std::make_unique<Day22::SandSlabs>();
 				case 23:	return std::make_unique<Day23::ALongWalk>();
+				case 25:	return std::make_unique<Day25::Snowverload>();
 				default:	return nullptr;
 			}
 		}
