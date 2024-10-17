@@ -17,7 +17,7 @@
 #include "Day14\Day14_ChocolateCharts.h"
 #include "Day15\Day15_BeverageBandits.h"
 #include "Day16\Day16_ChronalClassification.h"
-// TODO: Day 17
+#include "Day17\Day17_ReservoirResearch.h"
 #include "Day18\Day18_SettlersOfTheNorthPole.h"
 #include "Day19\Day19_GoWithTheFlow.h"
 // TODO: Day 20
@@ -51,7 +51,7 @@ namespace AdventOfCode::Year2018
 				case 14:	return std::make_unique<Day14::ChocolateCharts>();
 				case 15:	return std::make_unique<Day15::BeverageBandits>();
 				case 16:	return std::make_unique<Day16::ChronalClassification>();
-				//case 17:
+				case 17:	return std::make_unique<Day17::ReservoirResearch>();
 				case 18:	return std::make_unique<Day18::SettlersOfTheNorthPole>();
 				case 19:	return std::make_unique<Day19::GoWithTheFlow>();
 				//case 20:

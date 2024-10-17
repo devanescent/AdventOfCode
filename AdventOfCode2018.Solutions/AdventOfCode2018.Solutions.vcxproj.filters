@@ -74,6 +74,9 @@
     <Filter Include="Day21">
       <UniqueIdentifier>{6fb708f2-e212-466c-a5e6-a60f818f394b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day17">
+      <UniqueIdentifier>{f40a134d-d760-4b44-9cca-a3fd64e861f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -201,6 +204,12 @@
     </ClCompile>
     <ClCompile Include="Day21\Day21_ChronalConversion.cpp">
       <Filter>Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\ClayVeinProcessor.cpp">
+      <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_ReservoirResearch.cpp">
+      <Filter>Day17</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -370,5 +379,17 @@
       <Filter>Day19</Filter>
     </ClInclude>
     <ClInclude Include="Solutions2018.h" />
+    <ClInclude Include="Day17\ClayVein.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\ClayVeinProcessor.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\Day17_ReservoirResearch.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\WaterStream.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

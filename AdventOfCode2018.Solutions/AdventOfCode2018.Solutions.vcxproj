@@ -39,6 +39,8 @@
     <ClCompile Include="Day16\ComputationSampleProcessor.cpp" />
     <ClCompile Include="Day16\Day16_ChronalClassification.cpp" />
     <ClCompile Include="Day16\Instruction.cpp" />
+    <ClCompile Include="Day17\ClayVeinProcessor.cpp" />
+    <ClCompile Include="Day17\Day17_ReservoirResearch.cpp" />
     <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp" />
     <ClCompile Include="Day19\Day19_GoWithTheFlow.cpp" />
     <ClCompile Include="Day19\InstructionProcessor.cpp" />
@@ -92,6 +94,10 @@
     <ClInclude Include="Day16\Day16_ChronalClassification.h" />
     <ClInclude Include="Day16\Instruction.h" />
     <ClInclude Include="Day16\Register.h" />
+    <ClInclude Include="Day17\ClayVein.h" />
+    <ClInclude Include="Day17\ClayVeinProcessor.h" />
+    <ClInclude Include="Day17\Day17_ReservoirResearch.h" />
+    <ClInclude Include="Day17\WaterStream.h" />
     <ClInclude Include="Day18\Day18_SettlersOfTheNorthPole.h" />
     <ClInclude Include="Day19\Day19_GoWithTheFlow.h" />
     <ClInclude Include="Day19\InstructionProcessor.h" />
