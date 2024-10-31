@@ -20,7 +20,7 @@
 #include "Day17\Day17_ReservoirResearch.h"
 #include "Day18\Day18_SettlersOfTheNorthPole.h"
 #include "Day19\Day19_GoWithTheFlow.h"
-// TODO: Day 20
+#include "Day20\Day20_ARegularMap.h"
 #include "Day21\Day21_ChronalConversion.h"
 #include "Day22\Day22_ModeMaze.h"
 #include "Day23\Day23_ExperimentalEmergencyTeleportation.h"
@@ -54,7 +54,7 @@ namespace AdventOfCode::Year2018
 				case 17:	return std::make_unique<Day17::ReservoirResearch>();
 				case 18:	return std::make_unique<Day18::SettlersOfTheNorthPole>();
 				case 19:	return std::make_unique<Day19::GoWithTheFlow>();
-				//case 20:
+				case 20:	return std::make_unique<Day20::ARegularMap>();
 				case 21:	return std::make_unique<Day21::ChronalConversion>();
 				case 22:	return std::make_unique<Day22::ModeMaze>();
 				case 23:	return std::make_unique<Day23::ExperimentalEmergencyTeleportation>();

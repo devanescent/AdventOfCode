@@ -77,6 +77,9 @@
     <Filter Include="Day17">
       <UniqueIdentifier>{f40a134d-d760-4b44-9cca-a3fd64e861f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day20">
+      <UniqueIdentifier>{c410d1d3-675f-4d29-bf99-31ba534f7eee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_ChronalCalibration.cpp">
@@ -210,6 +213,12 @@
     </ClCompile>
     <ClCompile Include="Day17\Day17_ReservoirResearch.cpp">
       <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\Day20_ARegularMap.cpp">
+      <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\RoomProcessor.cpp">
+      <Filter>Day20</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -390,6 +399,15 @@
     </ClInclude>
     <ClInclude Include="Day17\WaterStream.h">
       <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\Day20_ARegularMap.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\Room.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20\RoomProcessor.h">
+      <Filter>Day20</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -44,6 +44,8 @@
     <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp" />
     <ClCompile Include="Day19\Day19_GoWithTheFlow.cpp" />
     <ClCompile Include="Day19\InstructionProcessor.cpp" />
+    <ClCompile Include="Day20\Day20_ARegularMap.cpp" />
+    <ClCompile Include="Day20\RoomProcessor.cpp" />
     <ClCompile Include="Day21\Day21_ChronalConversion.cpp" />
     <ClCompile Include="Day22\CaveMap.cpp" />
     <ClCompile Include="Day22\CaveScanProcessor.cpp" />
@@ -102,6 +104,9 @@
     <ClInclude Include="Day19\Day19_GoWithTheFlow.h" />
     <ClInclude Include="Day19\InstructionProcessor.h" />
     <ClInclude Include="Day19\Program.h" />
+    <ClInclude Include="Day20\Day20_ARegularMap.h" />
+    <ClInclude Include="Day20\Room.h" />
+    <ClInclude Include="Day20\RoomProcessor.h" />
     <ClInclude Include="Day21\Day21_ChronalConversion.h" />
     <ClInclude Include="Day22\CaveMap.h" />
     <ClInclude Include="Day22\CaveScanProcessor.h" />
