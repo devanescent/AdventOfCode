@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day21\Day21_DiracDice.h"
+#include "Day21/Day21_DiracDice.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day21;
@@ -46,5 +46,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day21::inputData = std::vector<std::string>();
+	std::vector<std::string> Day21::inputData;
 }

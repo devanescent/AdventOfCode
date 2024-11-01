@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day23\Day23_UnstableDiffusion.h"
+#include "Day23/Day23_UnstableDiffusion.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day23;
@@ -36,6 +36,7 @@ namespace AdventOfCode::Year2022::Tests
 				".#..#.."
 			};
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -55,8 +56,8 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(20ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day23::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2022_Day23::inputData2 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day23::inputData1;
+	std::vector<std::string> Year2022_Day23::inputData2;
 }

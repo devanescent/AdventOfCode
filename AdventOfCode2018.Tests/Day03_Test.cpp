@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day03\Day03_NoMatterHowYouSliceIt.h"
+#include "Day03/Day03_NoMatterHowYouSliceIt.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day03;
@@ -191,11 +191,11 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day03::inputData = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day03::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day03::inputData3 = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day03::inputData4 = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day03::inputData5 = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day03::inputData6 = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day03::inputData7 = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day03::inputData;
+	std::vector<std::string> Year2018_Day03::inputData2;
+	std::vector<std::string> Year2018_Day03::inputData3;
+	std::vector<std::string> Year2018_Day03::inputData4;
+	std::vector<std::string> Year2018_Day03::inputData5;
+	std::vector<std::string> Year2018_Day03::inputData6;
+	std::vector<std::string> Year2018_Day03::inputData7;
 }

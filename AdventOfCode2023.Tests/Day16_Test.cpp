@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day16\Day16_TheFloorWillBeLava.h"
+#include "Day16/Day16_TheFloorWillBeLava.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day16;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2023::Tests
 				".|....-|.\\",
 				"..//.|...."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -49,5 +49,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(51ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day16::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day16::inputData1;
 }

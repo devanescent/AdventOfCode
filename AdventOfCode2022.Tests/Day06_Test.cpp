@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day06\Day06_TuningTrouble.h"
+#include "Day06/Day06_TuningTrouble.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day06;
@@ -18,32 +18,13 @@ namespace AdventOfCode::Year2022::Tests
 	public:
 		TEST_CLASS_INITIALIZE(Init)
 		{
-			inputData1 = std::vector<std::string>
-			{
-				"mjqjpqmgbljsphdztnvjfqwrcgsmlb"
-			};
-
-			inputData2 = std::vector<std::string>
-			{
-				"bvwbjplbgvbhsrlpgdmjqwftvncz"
-			};
-
-			inputData3 = std::vector<std::string>
-			{
-				"nppdvjthqldpwncqszvftbrmjlhg"
-			};
-
-			inputData4 = std::vector<std::string>
-			{
-				"nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg"
-			};
-
-			inputData5 = std::vector<std::string>
-			{
-				"zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw"
-			};
-
+			inputData1 = std::vector<std::string> { "mjqjpqmgbljsphdztnvjfqwrcgsmlb" };
+			inputData2 = std::vector<std::string> { "bvwbjplbgvbhsrlpgdmjqwftvncz" };
+			inputData3 = std::vector<std::string> { "nppdvjthqldpwncqszvftbrmjlhg" };
+			inputData4 = std::vector<std::string> { "nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg" };
+			inputData5 = std::vector<std::string> { "zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw" };
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -143,11 +124,11 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(26ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day06::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2022_Day06::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2022_Day06::inputData3 = std::vector<std::string>();
-	std::vector<std::string> Year2022_Day06::inputData4 = std::vector<std::string>();
-	std::vector<std::string> Year2022_Day06::inputData5 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day06::inputData1;
+	std::vector<std::string> Year2022_Day06::inputData2;
+	std::vector<std::string> Year2022_Day06::inputData3;
+	std::vector<std::string> Year2022_Day06::inputData4;
+	std::vector<std::string> Year2022_Day06::inputData5;
 }

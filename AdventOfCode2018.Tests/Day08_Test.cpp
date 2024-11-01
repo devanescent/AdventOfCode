@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day08\Day08_MemoryManeuver.h"
+#include "Day08/Day08_MemoryManeuver.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day08;
@@ -42,5 +42,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day08::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day08::inputData;
 }

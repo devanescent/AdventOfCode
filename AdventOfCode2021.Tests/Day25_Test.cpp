@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day25\Day25_SeaCucumber.h"
+#include "Day25/Day25_SeaCucumber.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day25;
@@ -41,5 +41,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day25::inputData = std::vector<std::string>();
+	std::vector<std::string> Day25::inputData;
 }

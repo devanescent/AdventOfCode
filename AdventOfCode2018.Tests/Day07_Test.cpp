@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day07\Day07_TheSumOfItsParts.h"
+#include "Day07/Day07_TheSumOfItsParts.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day07;
@@ -52,5 +52,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day07::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day07::inputData;
 }

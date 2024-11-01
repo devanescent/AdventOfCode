@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day17\Day17_ClumsyCrucible.h"
+#include "Day17/Day17_ClumsyCrucible.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day17;
@@ -40,7 +40,6 @@ namespace AdventOfCode::Year2023::Tests
 				"999999999991",
 				"999999999991"
 			};
-
 		};
 
 		TEST_METHOD(CheckExample1_Part1)
@@ -73,6 +72,7 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(71ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day17::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day17::inputData2 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day17::inputData1;
+	std::vector<std::string> Year2023_Day17::inputData2;
 }

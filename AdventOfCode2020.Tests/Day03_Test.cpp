@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day03\Day03_TobogganTrajectory.h"
+#include "Day03/Day03_TobogganTrajectory.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day03;
@@ -55,5 +55,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day03::inputData = std::vector<std::string>();
+	std::vector<std::string> Day03::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day13\Day13_MineCartMadness.h"
+#include "Day13/Day13_MineCartMadness.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day13;
@@ -84,7 +84,7 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day13::inputData = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day13::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day13::inputData3 = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day13::inputData;
+	std::vector<std::string> Year2018_Day13::inputData2;
+	std::vector<std::string> Year2018_Day13::inputData3;
 }

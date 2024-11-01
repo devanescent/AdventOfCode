@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day14\Day14_ExtendedPolymerization.h"
+#include "Day14/Day14_ExtendedPolymerization.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day14;
@@ -79,8 +79,7 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(2188189693529ull, result);
 		}
-
 	};
 
-	std::vector<std::string> Day14::inputData = std::vector<std::string>();
+	std::vector<std::string> Day14::inputData;
 }

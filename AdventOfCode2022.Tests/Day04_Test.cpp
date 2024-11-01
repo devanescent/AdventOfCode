@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day04\Day04_CampCleanup.h"
+#include "Day04/Day04_CampCleanup.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day04;
@@ -23,8 +23,8 @@ namespace AdventOfCode::Year2022::Tests
 				"6-6,4-6",
 				"2-6,4-8"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -44,7 +44,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(4ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day04::inputData = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day04::inputData;
 }

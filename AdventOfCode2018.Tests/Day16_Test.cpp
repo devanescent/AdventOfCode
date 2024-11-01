@@ -21,6 +21,7 @@ namespace AdventOfCode::Year2018::Tests
 				"After:  [3, 2, 2, 1]"
 			};
 		}
+
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
@@ -34,5 +35,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day16::example1Data = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day16::example1Data;
 }

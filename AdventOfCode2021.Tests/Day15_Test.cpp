@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day15\Day15_Chiton.h"
+#include "Day15/Day15_Chiton.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day15;
@@ -54,5 +54,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day15::inputData = std::vector<std::string>();
+	std::vector<std::string> Day15::inputData;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day07\Day07_NoSpaceLeftOnDevice.h"
+#include "Day07/Day07_NoSpaceLeftOnDevice.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day07;
@@ -40,8 +40,8 @@ namespace AdventOfCode::Year2022::Tests
 				"5626152 d.ext",
 				"7214296 k"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -61,7 +61,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(24933642ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day07::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day07::inputData1;
 }

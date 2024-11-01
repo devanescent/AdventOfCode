@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day10\Day10_CathodeRayTube.h"
+#include "Day10/Day10_CathodeRayTube.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day10;
@@ -163,8 +163,8 @@ namespace AdventOfCode::Year2022::Tests
 				"noop",
 				"noop"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -175,5 +175,6 @@ namespace AdventOfCode::Year2022::Tests
 			Assert::AreEqual(13140ull, result);
 		};
 	};
-	std::vector<std::string> Year2022_Day10::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day10::inputData1;
 }

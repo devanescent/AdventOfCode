@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day02\Day02_CubeConundrum.h"
+#include "Day02/Day02_CubeConundrum.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day02;
@@ -22,8 +22,8 @@ namespace AdventOfCode::Year2023::Tests
 				"Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red",
 				"Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -44,5 +44,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(2286ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day02::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day02::inputData1;
 }

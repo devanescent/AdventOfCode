@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day11\Day11_CosmicExpansion.h"
+#include "Day11/Day11_CosmicExpansion.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day11;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2023::Tests
 				".......#..",
 				"#...#....."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -38,7 +38,7 @@ namespace AdventOfCode::Year2023::Tests
 			// Assert:
 			Assert::AreEqual(374ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2023_Day11::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day11::inputData1;
 }

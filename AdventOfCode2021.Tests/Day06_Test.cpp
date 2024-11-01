@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day06\Day06_Lanternfish.h"
+#include "Day06/Day06_Lanternfish.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day06;
@@ -33,5 +33,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day06::inputData = std::vector<std::string>();
+	std::vector<std::string> Day06::inputData;
 }

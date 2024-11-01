@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day13\Day13_TransparentOrigami.h"
+#include "Day13/Day13_TransparentOrigami.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day13;
@@ -81,5 +81,5 @@ namespace AdventOfCode::Year2021::Tests
 
 	};
 
-	std::vector<std::string> Day13::inputData = std::vector<std::string>();
+	std::vector<std::string> Day13::inputData;
 }

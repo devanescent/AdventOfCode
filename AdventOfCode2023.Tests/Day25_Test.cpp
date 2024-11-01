@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day25\Day25_Snowverload.h"
+#include "Day25/Day25_Snowverload.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day25;
@@ -30,8 +30,8 @@ namespace AdventOfCode::Year2023::Tests
 				"rzs: qnr cmg lsr rsh",
 				"frs: qnr lhk lsr"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -41,7 +41,7 @@ namespace AdventOfCode::Year2023::Tests
 			// Assert:
 			Assert::AreEqual(54ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2023_Day25::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day25::inputData1;
 }

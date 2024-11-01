@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day19\Day19_NotEnoughMinerals.h"
+#include "Day19/Day19_NotEnoughMinerals.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day19;
@@ -19,8 +19,8 @@ namespace AdventOfCode::Year2022::Tests
 				"Blueprint 1: Each ore robot costs 4 ore. Each clay robot costs 2 ore. Each obsidian robot costs 3 ore and 14 clay. Each geode robot costs 2 ore and 7 obsidian.",
 				"Blueprint 2: Each ore robot costs 2 ore. Each clay robot costs 3 ore. Each obsidian robot costs 3 ore and 8 clay. Each geode robot costs 3 ore and 12 obsidian."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -40,7 +40,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual((uint64_t)(56 * 62), result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day19::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day19::inputData1;
 }

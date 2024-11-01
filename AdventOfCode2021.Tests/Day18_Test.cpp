@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day18\Day18_Snailfish.h"
+#include "Day18/Day18_Snailfish.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day18;
@@ -136,8 +136,8 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day18::inputData = std::vector<std::string>();
-	std::vector<std::string> Day18::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Day18::inputData3 = std::vector<std::string>();
-	std::vector<std::string> Day18::inputData4 = std::vector<std::string>();
+	std::vector<std::string> Day18::inputData;
+	std::vector<std::string> Day18::inputData2;
+	std::vector<std::string> Day18::inputData3;
+	std::vector<std::string> Day18::inputData4;
 }

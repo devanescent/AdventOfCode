@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day23\Day23_ALongWalk.h"
+#include "Day23/Day23_ALongWalk.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day23;
@@ -40,8 +40,8 @@ namespace AdventOfCode::Year2023::Tests
 				"#.....###...###...#...#",
 				"#####################.#"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -62,5 +62,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(154ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day23::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day23::inputData1;
 }

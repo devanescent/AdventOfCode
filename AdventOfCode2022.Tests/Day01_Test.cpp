@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day01\Day01_CalorieCounting.h"
+#include "Day01/Day01_CalorieCounting.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day01;
@@ -31,8 +31,8 @@ namespace AdventOfCode::Year2022::Tests
 				"",
 				"10000"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -52,7 +52,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(45000ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day01::inputData = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day01::inputData;
 }

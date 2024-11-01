@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day02\Day02_InventoryManagementSystem.h"
+#include "Day02/Day02_InventoryManagementSystem.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day02;
@@ -10,13 +10,13 @@ namespace AdventOfCode::Year2018::Tests
 	TEST_CLASS(Year2018_Day02)
 	{
 	private:
-		static std::vector<std::string> inputData;
+		static std::vector<std::string> inputData1;
 		static std::vector<std::string> inputData2;
 
 	public:
 		TEST_CLASS_INITIALIZE(Init)
 		{
-			inputData = std::vector<std::string>
+			inputData1 = std::vector<std::string>
 			{
 				"abcdef",
 				"bababc",
@@ -45,7 +45,7 @@ namespace AdventOfCode::Year2018::Tests
 			InventoryManagementSystem day02;
 
 			// Act:
-			uint64_t result = day02.GetResultOnPart1(inputData);
+			uint64_t result = day02.GetResultOnPart1(inputData1);
 
 			// Assert:
 			Assert::AreEqual(12ull, result);
@@ -64,6 +64,6 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day02::inputData = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day02::inputData2 = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day02::inputData1;
+	std::vector<std::string> Year2018_Day02::inputData2;
 }

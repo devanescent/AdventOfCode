@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day14\Day14_ParabolicReflectorDish.h"
+#include "Day14/Day14_ParabolicReflectorDish.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day14;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2023::Tests
 				"#....###..",
 				"#OO..#...."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -49,5 +49,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(64ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day14::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day14::inputData1;
 }

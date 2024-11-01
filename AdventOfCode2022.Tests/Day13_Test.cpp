@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day13\Day13_DistressSignal.h"
+#include "Day13/Day13_DistressSignal.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day13;
@@ -40,8 +40,8 @@ namespace AdventOfCode::Year2022::Tests
 				"[1,[2,[3,[4,[5,6,7]]]],8,9]",
 				"[1,[2,[3,[4,[5,6,0]]]],8,9]"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -61,7 +61,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(140ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day13::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day13::inputData1;
 }

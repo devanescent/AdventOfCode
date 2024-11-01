@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day03\Day03_RucksackReorganization.h"
+#include "Day03/Day03_RucksackReorganization.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day03;
@@ -23,8 +23,8 @@ namespace AdventOfCode::Year2022::Tests
 				"ttgJtRGJQctTZtZT",
 				"CrZsJsPPZsGzwwsLwLmpwMDw"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -44,7 +44,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(70ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day03::inputData = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day03::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day04\Day04_GiantSquid.h"
+#include "Day04/Day04_GiantSquid.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day04;
@@ -114,5 +114,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day04::inputData = std::vector<std::string>();
+	std::vector<std::string> Day04::inputData;
 }

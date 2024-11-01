@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day19\Day19_GoWithTheFlow.h"
+#include "Day19/Day19_GoWithTheFlow.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day19;
@@ -26,6 +26,7 @@ namespace AdventOfCode::Year2018::Tests
 				"seti 9 0 5"
 			};
 		}
+
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
@@ -39,5 +40,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day19::example1Data = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day19::example1Data;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day20\Day20_PulsePropagation.h"
+#include "Day20/Day20_PulsePropagation.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day20;
@@ -32,8 +32,8 @@ namespace AdventOfCode::Year2023::Tests
 				"%b -> con",
 				"&con -> output"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -53,8 +53,8 @@ namespace AdventOfCode::Year2023::Tests
 			// Assert:
 			Assert::AreEqual(11687500ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2023_Day20::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day20::inputData2 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day20::inputData1;
+	std::vector<std::string> Year2023_Day20::inputData2;
 }

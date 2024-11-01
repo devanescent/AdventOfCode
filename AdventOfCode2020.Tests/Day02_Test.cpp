@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day02\Day02_PasswordPhilosophy.h"
+#include "Day02/Day02_PasswordPhilosophy.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day02;
@@ -64,5 +64,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day02::inputData = std::vector<std::string>();
+	std::vector<std::string> Day02::inputData;
 }

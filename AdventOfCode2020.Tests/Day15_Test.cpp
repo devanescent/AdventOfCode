@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day15\Day15_RambunctiousRecitation.h"
+#include "Day15/Day15_RambunctiousRecitation.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day15;

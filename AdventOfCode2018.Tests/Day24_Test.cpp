@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day24\Day24_ImmuneSystemSimulator20XX.h"
+#include "Day24/Day24_ImmuneSystemSimulator20XX.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day24;
@@ -51,5 +51,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day24::exampleData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day24::exampleData;
 }

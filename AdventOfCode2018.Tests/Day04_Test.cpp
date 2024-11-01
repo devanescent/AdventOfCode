@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day04\Day04_ReposeRecord.h"
+#include "Day04/Day04_ReposeRecord.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day04;
@@ -83,5 +83,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day04::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day04::inputData;
 }

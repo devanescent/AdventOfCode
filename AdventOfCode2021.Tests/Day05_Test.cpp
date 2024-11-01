@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day05\Day05_HydrothermalVenture.h"
+#include "Day05/Day05_HydrothermalVenture.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day05;
@@ -73,5 +73,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day05::inputData = std::vector<std::string>();
+	std::vector<std::string> Day05::inputData;
 }

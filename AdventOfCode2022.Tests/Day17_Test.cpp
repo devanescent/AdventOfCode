@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day17\Day17_PyroclasticFlow.h"
+#include "Day17/Day17_PyroclasticFlow.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day17;
@@ -18,8 +18,8 @@ namespace AdventOfCode::Year2022::Tests
 			{
 				">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -39,7 +39,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(1514285714288ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day17::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day17::inputData1;
 }

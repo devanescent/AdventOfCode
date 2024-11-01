@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day10\Day10_SyntaxScoring.h"
+#include "Day10/Day10_SyntaxScoring.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day10;
@@ -54,5 +54,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day10::inputData = std::vector<std::string>();
+	std::vector<std::string> Day10::inputData;
 }

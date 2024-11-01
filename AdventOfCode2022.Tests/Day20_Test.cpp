@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day20\Day20_GrovePositioningSystem.h"
+#include "Day20/Day20_GrovePositioningSystem.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day20;
@@ -24,8 +24,8 @@ namespace AdventOfCode::Year2022::Tests
 				"0",
 				"4"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -45,7 +45,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(1623178306ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day20::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day20::inputData1;
 }

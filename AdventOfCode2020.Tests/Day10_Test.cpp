@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day10\Day10_AdapterArray.h"
+#include "Day10/Day10_AdapterArray.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day10;
@@ -75,5 +75,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day10::inputData = std::vector<std::string>();
+	std::vector<std::string> Day10::inputData;
 }

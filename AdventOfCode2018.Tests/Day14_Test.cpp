@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day14\Day14_ChocolateCharts.h"
+#include "Day14/Day14_ChocolateCharts.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day14;

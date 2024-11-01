@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day22\Day22_ModeMaze.h"
+#include "Day22/Day22_ModeMaze.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day22;
@@ -20,6 +20,7 @@ namespace AdventOfCode::Year2018::Tests
 				"target: 10,10"
 			};
 		}
+
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
@@ -45,5 +46,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day22::exampleData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day22::exampleData;
 }

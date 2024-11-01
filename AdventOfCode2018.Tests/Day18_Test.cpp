@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day18\Day18_SettlersOfTheNorthPole.h"
+#include "Day18/Day18_SettlersOfTheNorthPole.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day18;
@@ -28,6 +28,7 @@ namespace AdventOfCode::Year2018::Tests
 				"...#.|..|."
 			};
 		}
+
 		TEST_METHOD(CheckExample_Part1)
 		{
 			// Arrange:
@@ -41,5 +42,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day18::example1Data = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day18::example1Data;
 }

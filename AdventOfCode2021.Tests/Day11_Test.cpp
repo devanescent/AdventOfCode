@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day11\Day11_DumboOctopus.h"
+#include "Day11/Day11_DumboOctopus.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day11;
@@ -54,5 +54,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day11::inputData = std::vector<std::string>();
+	std::vector<std::string> Day11::inputData;
 }

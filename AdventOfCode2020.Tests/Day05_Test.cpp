@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day05\Day05_BinaryBoarding.h"
+#include "Day05/Day05_BinaryBoarding.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day05;
@@ -36,5 +36,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day05::inputData = std::vector<std::string>();
+	std::vector<std::string> Day05::inputData;
 }

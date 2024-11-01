@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day02\Day02_Dive.h"
+#include "Day02/Day02_Dive.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day02;
@@ -67,5 +67,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day02::inputData = std::vector<std::string>();
+	std::vector<std::string> Day02::inputData;
 }

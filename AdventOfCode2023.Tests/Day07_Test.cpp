@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day07\Day07_CamelCards.h"
+#include "Day07/Day07_CamelCards.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day07;
@@ -22,8 +22,8 @@ namespace AdventOfCode::Year2023::Tests
 				"KTJJT 220",
 				"QQQJA 483"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -44,5 +44,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(5905ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day07::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day07::inputData1;
 }

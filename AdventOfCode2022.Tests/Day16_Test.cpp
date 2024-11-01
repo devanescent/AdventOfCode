@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day16\Day16_ProboscideaVolcanium.h"
+#include "Day16/Day16_ProboscideaVolcanium.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day16;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2022::Tests
 				"Valve II has flow rate=0; tunnels lead to valves AA, JJ",
 				"Valve JJ has flow rate=21; tunnel leads to valve II"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -48,7 +48,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(1707ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day16::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day16::inputData1;
 }

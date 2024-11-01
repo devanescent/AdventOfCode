@@ -32,5 +32,6 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual("baedc"s, result);
 		};
 	};
+
 	std::vector<std::string> Year2017_Day16::inputData1;
 }

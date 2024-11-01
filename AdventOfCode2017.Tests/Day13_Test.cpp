@@ -33,5 +33,6 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(24ull, result);
 		};
 	};
+
 	std::vector<std::string> Year2017_Day13::inputData1;
 }

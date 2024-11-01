@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day13\Day13_PointOfIncidence.h"
+#include "Day13/Day13_PointOfIncidence.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day13;
@@ -32,8 +32,8 @@ namespace AdventOfCode::Year2023::Tests
 				"..##..###",
 				"#....#..#"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -54,5 +54,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(400ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day13::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day13::inputData1;
 }

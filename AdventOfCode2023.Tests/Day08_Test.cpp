@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day08\Day08_HauntedWasteland.h"
+#include "Day08/Day08_HauntedWasteland.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day08;
@@ -51,8 +51,8 @@ namespace AdventOfCode::Year2023::Tests
 				"22Z = (22B, 22B)",
 				"XXX = (XXX, XXX)"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -83,7 +83,8 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(6ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day08::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day08::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day08::inputData3 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day08::inputData1;
+	std::vector<std::string> Year2023_Day08::inputData2;
+	std::vector<std::string> Year2023_Day08::inputData3;
 }

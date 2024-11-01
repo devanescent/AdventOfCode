@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day05\Day05_SupplyStacks.h"
+#include "Day05/Day05_SupplyStacks.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day05;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2022::Tests
 				"move 2 from 2 to 1",
 				"move 1 from 1 to 2"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -48,7 +48,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual("MCD"s, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day05::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day05::inputData1;
 }

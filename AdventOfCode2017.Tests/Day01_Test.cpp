@@ -98,6 +98,5 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(4ull, result);
 		};
-
 	};
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day25\Day25_FourDimensionalAdventure.h"
+#include "Day25/Day25_FourDimensionalAdventure.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day25;
@@ -96,7 +96,7 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day25::example1Data = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day25::example2Data = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day25::example3Data = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day25::example1Data;
+	std::vector<std::string> Year2018_Day25::example2Data;
+	std::vector<std::string> Year2018_Day25::example3Data;
 }

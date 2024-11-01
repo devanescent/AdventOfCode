@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day12\Day12_RainRisk.h"
+#include "Day12/Day12_RainRisk.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day12;
@@ -66,5 +66,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day12::inputData = std::vector<std::string>();
+	std::vector<std::string> Day12::inputData;
 }

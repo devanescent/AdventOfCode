@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day09\Day09_MirageMaintenance.h"
+#include "Day09/Day09_MirageMaintenance.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day09;
@@ -20,8 +20,8 @@ namespace AdventOfCode::Year2023::Tests
 				"1 3 6 10 15 21",
 				"10 13 16 21 30 45"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -42,5 +42,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(2ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day09::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day09::inputData1;
 }

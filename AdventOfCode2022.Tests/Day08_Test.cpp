@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day08\Day08_TreetopTreeHouse.h"
+#include "Day08/Day08_TreetopTreeHouse.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day08;
@@ -22,8 +22,8 @@ namespace AdventOfCode::Year2022::Tests
 				"33549",
 				"35390"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -43,7 +43,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(8ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day08::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day08::inputData1;
 }

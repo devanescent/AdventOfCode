@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day01\Day01_Trebuchet.h"
+#include "Day01/Day01_Trebuchet.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day01;
@@ -40,6 +40,7 @@ namespace AdventOfCode::Year2023::Tests
 				"abc9abc",
 			};
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -70,7 +71,8 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(99ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day01::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day01::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day01::inputData3 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day01::inputData1;
+	std::vector<std::string> Year2023_Day01::inputData2;
+	std::vector<std::string> Year2023_Day01::inputData3;
 }

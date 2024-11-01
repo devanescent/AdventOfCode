@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day04\Day04_PassportProcessing.h"
+#include "Day04/Day04_PassportProcessing.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day04;
@@ -118,5 +118,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day04::inputData = std::vector<std::string>();
+	std::vector<std::string> Day04::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day07\Day07_HandyHaversacks.h"
+#include "Day07/Day07_HandyHaversacks.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day07;

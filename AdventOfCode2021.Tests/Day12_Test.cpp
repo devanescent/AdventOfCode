@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day12\Day12_PassagePathing.h"
+#include "Day12/Day12_PassagePathing.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day12;
@@ -137,7 +137,7 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day12::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Day12::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Day12::inputData3 = std::vector<std::string>();
+	std::vector<std::string> Day12::inputData1;
+	std::vector<std::string> Day12::inputData2;
+	std::vector<std::string> Day12::inputData3;
 }

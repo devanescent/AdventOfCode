@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day08\Day08_HandheldHalting.h"
+#include "Day08/Day08_HandheldHalting.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day08;
@@ -70,5 +70,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day08::inputData = std::vector<std::string>();
+	std::vector<std::string> Day08::inputData;
 }

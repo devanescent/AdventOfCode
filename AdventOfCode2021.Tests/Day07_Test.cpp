@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day07\Day07_TheTreacheryOfWhales.h"
+#include "Day07/Day07_TheTreacheryOfWhales.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day07;

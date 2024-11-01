@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day12\Day12_HillClimbingAlgorithm.h"
+#include "Day12/Day12_HillClimbingAlgorithm.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day12;
@@ -22,8 +22,8 @@ namespace AdventOfCode::Year2022::Tests
 				"acctuvwj",
 				"abdefghi"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -43,7 +43,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(29ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day12::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day12::inputData1;
 }

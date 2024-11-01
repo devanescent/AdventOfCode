@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day22\Day22_SandSlabs.h"
+#include "Day22/Day22_SandSlabs.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day22;
@@ -24,8 +24,8 @@ namespace AdventOfCode::Year2023::Tests
 				"0,1,6~2,1,6",
 				"1,1,8~1,1,9"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -46,5 +46,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(7ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day22::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day22::inputData1;
 }

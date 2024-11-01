@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day20\Day20_TrenchMap.h"
+#include "Day20/Day20_TrenchMap.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day20;
@@ -51,5 +51,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day20::inputData = std::vector<std::string>();
+	std::vector<std::string> Day20::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day23\Day23_ExperimentalEmergencyTeleportation.h"
+#include "Day23/Day23_ExperimentalEmergencyTeleportation.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day23;
@@ -89,7 +89,7 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day23::example1Data = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day23::example2Data = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day23::inputData2 = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day23::example1Data;
+	std::vector<std::string> Year2018_Day23::example2Data;
+	std::vector<std::string> Year2018_Day23::inputData2;
 }

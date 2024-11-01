@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day21\Day21_StepCounter.h"
+#include "Day21/Day21_StepCounter.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day21;
@@ -28,8 +28,8 @@ namespace AdventOfCode::Year2023::Tests
 				".##..##.##.",
 				"..........."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -40,7 +40,7 @@ namespace AdventOfCode::Year2023::Tests
 			// Assert:
 			Assert::AreEqual(16ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2023_Day21::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day21::inputData1;
 }

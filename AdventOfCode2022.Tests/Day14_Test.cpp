@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day14\Day14_RegolithReservoir.h"
+#include "Day14/Day14_RegolithReservoir.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day14;
@@ -19,8 +19,8 @@ namespace AdventOfCode::Year2022::Tests
 				"498,4 -> 498,6 -> 496,6",
 				"503,4 -> 502,4 -> 502,9 -> 494,9"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -40,7 +40,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(93ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day14::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day14::inputData1;
 }

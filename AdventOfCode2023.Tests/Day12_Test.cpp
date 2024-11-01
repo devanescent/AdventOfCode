@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day12\Day12_HotSprings.h"
+#include "Day12/Day12_HotSprings.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day12;
@@ -29,8 +29,8 @@ namespace AdventOfCode::Year2023::Tests
 			{
 				".#. 1"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -61,6 +61,7 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(1ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day12::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day12::inputData2 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day12::inputData1;
+	std::vector<std::string> Year2023_Day12::inputData2;
 }

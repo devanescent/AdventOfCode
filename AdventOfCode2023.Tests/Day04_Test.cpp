@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day04\Day04_Scratchcards.h"
+#include "Day04/Day04_Scratchcards.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day04;
@@ -23,8 +23,8 @@ namespace AdventOfCode::Year2023::Tests
 				"Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36",
 				"Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -45,5 +45,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(30ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day04::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day04::inputData1;
 }

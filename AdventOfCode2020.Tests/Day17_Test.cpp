@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day17\Day17_ConvayCubes.h"
+#include "Day17/Day17_ConvayCubes.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day17;
@@ -64,5 +64,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day17::inputData = std::vector<std::string>();
+	std::vector<std::string> Day17::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day19\Day19_MonsterMessages.h"
+#include "Day19/Day19_MonsterMessages.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day19;

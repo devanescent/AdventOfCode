@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day14\Day14_DockingData.h"
+#include "Day14/Day14_DockingData.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day14;
@@ -71,5 +71,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day14::inputData = std::vector<std::string>();
+	std::vector<std::string> Day14::inputData;
 }

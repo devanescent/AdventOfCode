@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day21\Day21_MonkeyMath.h"
+#include "Day21/Day21_MonkeyMath.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day21;
@@ -32,8 +32,8 @@ namespace AdventOfCode::Year2022::Tests
 				"drzm: hmdt - zczc",
 				"hmdt: 32"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -53,7 +53,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(301ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day21::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day21::inputData1;
 }

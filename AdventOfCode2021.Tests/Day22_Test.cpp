@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day22\Day22_ReactorReboot.h"
+#include "Day22/Day22_ReactorReboot.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day22;
@@ -72,5 +72,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day22::inputData = std::vector<std::string>();
+	std::vector<std::string> Day22::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day08\Day08_SevenSegmentSearch.h"
+#include "Day08/Day08_SevenSegmentSearch.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day08;
@@ -54,5 +54,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day08::inputData = std::vector<std::string>();
+	std::vector<std::string> Day08::inputData;
 }

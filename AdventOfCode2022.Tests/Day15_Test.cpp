@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day15\Day15_BeaconExclusionZone.h"
+#include "Day15/Day15_BeaconExclusionZone.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day15;
@@ -31,8 +31,8 @@ namespace AdventOfCode::Year2022::Tests
 				"Sensor at x=14, y=3: closest beacon is at x=15, y=3",
 				"Sensor at x=20, y=1: closest beacon is at x=15, y=3"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -52,7 +52,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(56000011ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day15::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day15::inputData1;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day05\Day05_IfYouGiveASeedAFertilizer.h"
+#include "Day05/Day05_IfYouGiveASeedAFertilizer.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day05;
@@ -50,8 +50,8 @@ namespace AdventOfCode::Year2023::Tests
 				"60 56 37",
 				"56 93 4"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -72,5 +72,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(46ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day05::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day05::inputData1;
 }

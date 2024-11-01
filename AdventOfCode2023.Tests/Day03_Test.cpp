@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day03\Day03_GearRatios.h"
+#include "Day03/Day03_GearRatios.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day03;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2023::Tests
 				"...$.*....",
 				".664.598.."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -49,5 +49,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(467835ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day03::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day03::inputData1;
 }

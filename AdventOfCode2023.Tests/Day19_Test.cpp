@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day19\Day19_Aplenty.h"
+#include "Day19/Day19_Aplenty.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day19;
@@ -34,8 +34,8 @@ namespace AdventOfCode::Year2023::Tests
 				"{x=2461,m=1339,a=466,s=291}",
 				"{x=2127,m=1623,a=2188,s=1013}"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -55,7 +55,7 @@ namespace AdventOfCode::Year2023::Tests
 			// Assert:
 			Assert::AreEqual(167409079868000ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2023_Day19::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day19::inputData1;
 }

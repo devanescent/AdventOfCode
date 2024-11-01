@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day06\Day06_WaitForIt.h"
+#include "Day06/Day06_WaitForIt.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day06;
@@ -19,8 +19,8 @@ namespace AdventOfCode::Year2023::Tests
 				"Time:      7  15   30",
 				"Distance:  9  40  200"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -41,5 +41,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(71503ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day06::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day06::inputData1;
 }

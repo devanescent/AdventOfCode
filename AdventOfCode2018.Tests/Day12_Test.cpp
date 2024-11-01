@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day12\Day12_SubterraneanSustainability.h"
+#include "Day12/Day12_SubterraneanSustainability.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day12;
@@ -50,5 +50,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day12::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day12::inputData;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day10\Day10_PipeMaze.h"
+#include "Day10/Day10_PipeMaze.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day10;
@@ -77,6 +77,7 @@ namespace AdventOfCode::Year2023::Tests
 				"L7JLJL-JLJLJL--JLJ.L"
 			};
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -127,9 +128,10 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(10ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day10::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day10::inputData2 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day10::inputData3 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day10::inputData4 = std::vector<std::string>();
-	std::vector<std::string> Year2023_Day10::inputData5 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day10::inputData1;
+	std::vector<std::string> Year2023_Day10::inputData2;
+	std::vector<std::string> Year2023_Day10::inputData3;
+	std::vector<std::string> Year2023_Day10::inputData4;
+	std::vector<std::string> Year2023_Day10::inputData5;
 }

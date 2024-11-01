@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day05\Day05_AlchemicalReduction.h"
+#include "Day05/Day05_AlchemicalReduction.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day05;
@@ -45,5 +45,5 @@ namespace AdventOfCode::Year2018::Tests
 		}
 	};
 
-	std::vector<std::string> Year2018_Day05::inputData = std::vector<std::string>();
+	std::vector<std::string> Year2018_Day05::inputData;
 }

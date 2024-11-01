@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day11\Day11_SeatingSystem.h"
+#include "Day11/Day11_SeatingSystem.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day11;
@@ -71,5 +71,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day11::inputData = std::vector<std::string>();
+	std::vector<std::string> Day11::inputData;
 }

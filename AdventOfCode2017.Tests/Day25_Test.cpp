@@ -50,7 +50,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(3ull, result);
 		};
-
 	};
+
 	std::vector<std::string> Year2017_Day25::inputData1;
 }

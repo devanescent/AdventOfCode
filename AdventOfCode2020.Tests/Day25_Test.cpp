@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day25\Day25_ComboBreaker.h"
+#include "Day25/Day25_ComboBreaker.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day25;
@@ -34,5 +34,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day25::inputData = std::vector<std::string>();
+	std::vector<std::string> Day25::inputData;
 }

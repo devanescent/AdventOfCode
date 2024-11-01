@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day09\Day09_SmokeBasin.h"
+#include "Day09/Day09_SmokeBasin.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2021::Day09;
@@ -68,5 +68,5 @@ namespace AdventOfCode::Year2021::Tests
 		}
 	};
 
-	std::vector<std::string> Day09::inputData = std::vector<std::string>();
+	std::vector<std::string> Day09::inputData;
 }

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day18\Day18_OperationOrder.h"
+#include "Day18/Day18_OperationOrder.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day18;
@@ -49,5 +49,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day18::inputData = std::vector<std::string>();
+	std::vector<std::string> Day18::inputData;
 }

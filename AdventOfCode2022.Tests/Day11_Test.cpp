@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day11\Day11_MonkeyintheMiddle.h"
+#include "Day11/Day11_MonkeyintheMiddle.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day11;
@@ -44,8 +44,8 @@ namespace AdventOfCode::Year2022::Tests
 				"    If true: throw to monkey 0",
 				"    If false: throw to monkey 1"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -65,7 +65,7 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(2713310158ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2022_Day11::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2022_Day11::inputData1;
 }

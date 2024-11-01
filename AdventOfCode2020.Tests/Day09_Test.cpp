@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day09\Day09_EncodingError.h"
+#include "Day09/Day09_EncodingError.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day09;
@@ -64,5 +64,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day09::inputData = std::vector<std::string>();
+	std::vector<std::string> Day09::inputData;
 }

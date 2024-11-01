@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day20\Day20_JurassicJigsaw.h"
+#include "Day20/Day20_JurassicJigsaw.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day20;
@@ -165,9 +165,7 @@ namespace AdventOfCode::Year2020::Tests
 			// Assert:
 			Assert::AreEqual(20899048083289ull, result);
 		}
-
-		
 	};
 
-	std::vector<std::string> Day20::inputData = std::vector<std::string>();
+	std::vector<std::string> Day20::inputData;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day18\Day18_LavaductLagoon.h"
+#include "Day18/Day18_LavaductLagoon.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2023::Day18;
@@ -31,8 +31,8 @@ namespace AdventOfCode::Year2023::Tests
 				"L 2 (#015232)",
 				"U 2 (#7a21e3)"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -53,5 +53,6 @@ namespace AdventOfCode::Year2023::Tests
 			Assert::AreEqual(952408144115ull, result);
 		};
 	};
-	std::vector<std::string> Year2023_Day18::inputData1 = std::vector<std::string>();
+
+	std::vector<std::string> Year2023_Day18::inputData1;
 }

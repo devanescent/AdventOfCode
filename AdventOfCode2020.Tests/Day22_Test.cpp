@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day22\Day22_CrabCombat.h"
+#include "Day22/Day22_CrabCombat.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2020::Day22;
@@ -73,5 +73,5 @@ namespace AdventOfCode::Year2020::Tests
 		}
 	};
 
-	std::vector<std::string> Day22::inputData = std::vector<std::string>();
+	std::vector<std::string> Day22::inputData;
 }

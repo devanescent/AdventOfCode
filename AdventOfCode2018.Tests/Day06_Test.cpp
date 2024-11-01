@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day06\Day06_ChronalCoordinates.h"
+#include "Day06/Day06_ChronalCoordinates.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day06;

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day15\Day15_BeverageBandits.h"
+#include "Day15/Day15_BeverageBandits.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day15;

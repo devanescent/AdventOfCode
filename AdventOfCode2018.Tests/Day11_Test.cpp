@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Day11\Day11_ChronalCharge.h"
+#include "Day11/Day11_ChronalCharge.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2018::Day11;
@@ -9,24 +9,14 @@ namespace AdventOfCode::Year2018::Tests
 {
 	TEST_CLASS(Year2018_Day11)
 	{
-	private:
-		static std::vector<std::string> inputData;
-		static std::vector<std::string> inputData2;
-
 	public:
-		TEST_CLASS_INITIALIZE(Init)
-		{
-			inputData = std::vector<std::string> { "18" };
-			inputData2 = std::vector<std::string> { "42" };
-		}
-
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
 			ChronalCharge sut;
 
 			// Act:
-			std::string result = sut.GetResultOnPart1(inputData);
+			std::string result = sut.GetResultOnPart1({ "18" });
 
 			// Assert:
 			Assert::AreEqual("33,45"s, result);
@@ -38,7 +28,7 @@ namespace AdventOfCode::Year2018::Tests
 			ChronalCharge sut;
 
 			// Act:
-			std::string result = sut.GetResultOnPart1(inputData2);
+			std::string result = sut.GetResultOnPart1({ "42" });
 
 			// Assert:
 			Assert::AreEqual("21,61"s, result);
@@ -50,7 +40,7 @@ namespace AdventOfCode::Year2018::Tests
 			ChronalCharge sut;
 
 			// Act:
-			std::string result = sut.GetResultOnPart2(inputData);
+			std::string result = sut.GetResultOnPart2({ "18" });
 
 			// Assert:
 			Assert::AreEqual("90,269,16"s, result);
@@ -62,13 +52,10 @@ namespace AdventOfCode::Year2018::Tests
 			ChronalCharge sut;
 
 			// Act:
-			std::string result = sut.GetResultOnPart2(inputData2);
+			std::string result = sut.GetResultOnPart2({ "42" });
 
 			// Assert:
 			Assert::AreEqual("232,251,12"s, result);
 		}
 	};
-
-	std::vector<std::string> Year2018_Day11::inputData = std::vector<std::string>();
-	std::vector<std::string> Year2018_Day11::inputData2 = std::vector<std::string>();
 }

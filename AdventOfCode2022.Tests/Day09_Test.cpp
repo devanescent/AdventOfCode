@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day09\Day09_RopeBridge.h"
+#include "Day09/Day09_RopeBridge.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2022::Day09;
@@ -38,8 +38,8 @@ namespace AdventOfCode::Year2022::Tests
 				"L 25",
 				"U 20"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -69,9 +69,8 @@ namespace AdventOfCode::Year2022::Tests
 			// Assert:
 			Assert::AreEqual(36ull, result);
 		};
-
 	};
 
-	std::vector<std::string> Year2022_Day09::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2022_Day09::inputData2 = std::vector<std::string>();
+	std::vector<std::string> Year2022_Day09::inputData1;
+	std::vector<std::string> Year2022_Day09::inputData2;
 }
