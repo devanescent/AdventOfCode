@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day01\Day01_InverseCaptcha.h"
+#include "Day01/Day01_InverseCaptcha.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day01;
@@ -8,19 +8,13 @@ namespace AdventOfCode::Year2017::Tests
 {
 	TEST_CLASS(Year2017_Day01)
 	{
-	private:
-		static std::vector<std::string> inputData1;
-		static std::vector<std::string> inputData2;
-		static std::vector<std::string> inputData3;
-		static std::vector<std::string> inputData4;
-
 	public:
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "1122" });
+			uint64_t result = sut.GetResultOnPart1({ "1122" });
 			// Assert:
 			Assert::AreEqual(3ull, result);
 		};
@@ -30,7 +24,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "1111" });
+			uint64_t result = sut.GetResultOnPart1({ "1111" });
 			// Assert:
 			Assert::AreEqual(4ull, result);
 		};
@@ -40,7 +34,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "1234" });
+			uint64_t result = sut.GetResultOnPart1({ "1234" });
 			// Assert:
 			Assert::AreEqual(0ull, result);
 		};
@@ -50,7 +44,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart1(std::vector<std::string> { "91212129" });
+			uint64_t result = sut.GetResultOnPart1({ "91212129" });
 			// Assert:
 			Assert::AreEqual(9ull, result);
 		};
@@ -60,7 +54,7 @@ namespace AdventOfCode::Year2017::Tests
 			// Arrange:
 			InverseCaptcha sut;
 			// Act:
-			uint64_t result = sut.GetResultOnPart2(std::vector<std::string> { "91212129" });
+			uint64_t result = sut.GetResultOnPart2({ "91212129" });
 			// Assert:
 			Assert::AreEqual(6ull, result);
 		};

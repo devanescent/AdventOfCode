@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day10\Day10_KnotHash.h"
+#include "Day10/Day10_KnotHash.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day10;
@@ -9,9 +9,6 @@ namespace AdventOfCode::Year2017::Tests
 {
 	TEST_CLASS(Year2017_Day10)
 	{
-	private:
-		static std::vector<std::string> inputData1;
-
 	public:
 		TEST_METHOD(CheckExample1_Part1)
 		{

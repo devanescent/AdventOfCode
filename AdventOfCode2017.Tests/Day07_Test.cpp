@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day07\Day07_RecursiveCircus.h"
+#include "Day07/Day07_RecursiveCircus.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day07;
@@ -53,5 +53,5 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(60ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day07::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day07::inputData1;
 }

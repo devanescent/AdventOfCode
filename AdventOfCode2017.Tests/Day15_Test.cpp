@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day15\Day15_DuelingGenerators.h"
+#include "Day15/Day15_DuelingGenerators.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day15;
@@ -41,5 +41,5 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(309ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day15::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day15::inputData1;
 }

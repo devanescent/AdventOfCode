@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day14\Day14_DiskDefragmentation.h"
+#include "Day14/Day14_DiskDefragmentation.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day14;
@@ -40,5 +40,5 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(1242ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day14::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day14::inputData1;
 }

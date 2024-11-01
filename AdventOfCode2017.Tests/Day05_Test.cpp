@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day05\Day05_AMazeOfTwistyTrampolinesAllAlike.h"
+#include "Day05/Day05_AMazeOfTwistyTrampolinesAllAlike.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day05;
@@ -22,8 +22,8 @@ namespace AdventOfCode::Year2017::Tests
 				"1",
 				"-3"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -43,7 +43,6 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(10ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2017_Day05::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day05::inputData1;
 }

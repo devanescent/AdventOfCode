@@ -19,7 +19,10 @@ namespace AdventOfCode.ProjectHelper
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TestNo)));
 			}
 		}
+
 		public List<string> Data { get; set; }
+		public bool InlineData { get; set; } = false;	// Single line of input can be inlined within the test method
+
 		public string Result { get; set; }
 
 		public event PropertyChangedEventHandler PropertyChanged;

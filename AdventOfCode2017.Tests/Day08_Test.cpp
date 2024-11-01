@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day08\Day08_IHeardYouLikeRegisters.h"
+#include "Day08/Day08_IHeardYouLikeRegisters.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day08;
@@ -43,5 +43,5 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(10ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day08::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day08::inputData1;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day18\Day18_Duet.h"
+#include "Day18/Day18_Duet.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day18;
@@ -27,8 +27,8 @@ namespace AdventOfCode::Year2017::Tests
 				"set a 1",
 				"jgz a -2"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -40,5 +40,5 @@ namespace AdventOfCode::Year2017::Tests
 		};
 
 	};
-	std::vector<std::string> Year2017_Day18::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day18::inputData1;
 }

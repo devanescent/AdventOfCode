@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day12\Day12_DigitalPlumber.h"
+#include "Day12/Day12_DigitalPlumber.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day12;
@@ -24,8 +24,8 @@ namespace AdventOfCode::Year2017::Tests
 				"5 <-> 6",
 				"6 <-> 4, 5"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -35,7 +35,6 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(6ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2017_Day12::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day12::inputData1;
 }

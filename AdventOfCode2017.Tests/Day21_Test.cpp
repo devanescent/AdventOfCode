@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day21\Day21_FractalArt.h"
+#include "Day21/Day21_FractalArt.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day21;
@@ -19,8 +19,8 @@ namespace AdventOfCode::Year2017::Tests
 				"../.# => ##./#../...",
 				".#./..#/### => #..#/..../..../#..#"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -31,7 +31,6 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(12ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2017_Day21::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day21::inputData1;
 }

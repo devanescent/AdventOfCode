@@ -165,51 +165,68 @@ namespace AdventOfCode.ProjectHelper
 			{
 				// AddSourceIncludes(sw, stlIncludes);
 				sw.WriteLine("#include \"stdafx.h\"");
-				sw.WriteLine($"#include \"Day{_day:D2}\\Day{_day:D2}_{TitleWithoutBlanks}.h\"");
+				sw.WriteLine($"#include \"Day{_day:D2}/Day{_day:D2}_{TitleWithoutBlanks}.h\"");
 				AddBlank(sw);
 
 				sw.WriteLine("using namespace Microsoft::VisualStudio::CppUnitTestFramework;");
 				sw.WriteLine($"using namespace AdventOfCode::Year{_year}::Day{_day:D2};");
 				AddBlank(sw);
 
+				// Number of data inputs:
+				int dataCount = 0;
+
 				using (_ = new NamespaceWriter($"AdventOfCode::Year{_year}::Tests", sw))
 				{
 					using (_ = new TestClassDeclarationWriter(_year, _day, sw))
 					{
-						sw.WriteLine("\tprivate:");
-
-						for (int i = 1; i <= _testCases.Count; ++i)
+						// Private section for test data members:
+						if (_testCases.Any(tc => !tc.InlineData))
 						{
-							sw.WriteLine($"\t\tstatic std::vector<std::string> inputData{i};");
-						}	
-						AddBlank(sw);
+							sw.WriteLine("\tprivate:");
+
+							foreach (var tc in _testCases.Where(tc => !tc.InlineData))
+								sw.WriteLine($"\t\tstatic std::vector<std::string> inputData{++dataCount};");
+							
+							AddBlank(sw);
+						}
+
 						sw.WriteLine("\tpublic:");
 
 						// Initialize input data:
-						using (_ = new TestMethodDeclarationWriter("TEST_CLASS_INITIALIZE", "Init", sw))
+						if (dataCount > 0)
 						{
-							for (int testIx = 0; testIx < _testCases.Count; ++testIx)
+							using (_ = new TestMethodDeclarationWriter("TEST_CLASS_INITIALIZE", "Init", sw))
 							{
-								sw.WriteLine($"\t\t\tinputData{testIx + 1} = std::vector<std::string>");
-								sw.WriteLine("\t\t\t{");
-
-								for (int lineIx = 0; lineIx < _testCases[testIx].Data.Count; ++lineIx)
+								int testInputDataIndex = 0;
+								for (int testIx = 0; testIx < _testCases.Count; ++testIx)
 								{
-									var line = _testCases[testIx].Data[lineIx];
+									if (!_testCases[testIx].InlineData)
+									{
+										sw.WriteLine($"\t\t\tinputData{++testInputDataIndex} = std::vector<std::string>");
+										sw.WriteLine("\t\t\t{");
 
-									// Escape '\' literals in data:
-									sw.Write($"\t\t\t\t\"{line.Replace(@"\", @"\\")}\"");
+										for (int lineIx = 0; lineIx < _testCases[testIx].Data.Count; ++lineIx)
+										{
+											var line = _testCases[testIx].Data[lineIx];
 
-									// Add comma at the end for all lines but the last one
-									if (lineIx != _testCases[testIx].Data.Count - 1)
-										sw.WriteLine(',');
-									else
-										sw.WriteLine();
+											// Escape '\' literals in data:
+											sw.Write($"\t\t\t\t\"{line.Replace(@"\", @"\\")}\"");
+
+											// Add comma at the end for all lines but the last one
+											if (lineIx != _testCases[testIx].Data.Count - 1)
+												sw.WriteLine(',');
+											else
+												sw.WriteLine();
+										}
+
+										sw.WriteLine("\t\t\t};");
+
+										if (testInputDataIndex < dataCount)
+											AddBlank(sw);
+									}
 								}
-
-								sw.WriteLine("\t\t\t};");
-								AddBlank(sw);
 							}
+							AddBlank(sw);
 						}
 
 						// Check Examples:
@@ -218,9 +235,9 @@ namespace AdventOfCode.ProjectHelper
 					}
 
 					// Static initializers:
-					for (int i = 1; i <= _testCases.Count; ++i)
+					for (int i = 1; i <= dataCount; ++i)
 					{
-						sw.WriteLine($"\tstd::vector<std::string> Year{_year}_Day{_day:D2}::inputData{i} = std::vector<std::string>();");
+						sw.WriteLine($"\tstd::vector<std::string> Year{_year}_Day{_day:D2}::inputData{i};");
 					}
 				}
 			}
@@ -232,7 +249,7 @@ namespace AdventOfCode.ProjectHelper
 		{
 			// Insert include statement after the end of the existing include block:
 			int lastInclude = lines.IndexOf(lines.Last(l => l.StartsWith("#include")));
-			lines.Insert(lastInclude + 1, $"#include \"Day{_day:D2}\\Day{_day:D2}_{TitleWithoutBlanks}.h\"");
+			lines.Insert(lastInclude + 1, $"#include \"Day{_day:D2}/Day{_day:D2}_{TitleWithoutBlanks}.h\"");
 
 			// Insert case for this day before the 'default' case:
 			int defaultCase = lines.IndexOf(lines.Single(l => l.Contains("default:\treturn nullptr;")));
@@ -312,6 +329,7 @@ namespace AdventOfCode.ProjectHelper
 		private void AddTestCase(StreamWriter sw, int part, DayResultType resultType)
 		{
 			string actualResultType = resultType == DayResultType.Numeric ? "uint64_t" : "std::string";
+			int testDataIndex = 0;
 			foreach(TestCase tc in _testCases.Where(tc => tc.Part == part))
 			{
 				using (_ = new TestMethodDeclarationWriter("TEST_METHOD", $"CheckExample{tc.TestNo}_Part{part}", sw))
@@ -321,13 +339,21 @@ namespace AdventOfCode.ProjectHelper
 
 					sw.WriteLine("\t\t\t// Act:");
 
-					int inputDataNo = _testCases.IndexOf(tc) + 1;
-					sw.WriteLine($"\t\t\t{actualResultType} result = sut.GetResultOnPart{part}(inputData{inputDataNo});");
+					if (!tc.InlineData)
+					{
+						sw.WriteLine($"\t\t\t{actualResultType} result = sut.GetResultOnPart{part}(inputData{++testDataIndex});");
+					}
+					else
+					{
+						sw.WriteLine($"\t\t\t{actualResultType} result = sut.GetResultOnPart{part}({{ \"{tc.Data[0]}\" }});");
+					}
 
 					sw.WriteLine("\t\t\t// Assert:");
 					sw.WriteLine($"\t\t\tAssert::AreEqual({tc.Result}ull, result);");
 				}
-				AddBlank(sw);
+
+				if (_testCases.IndexOf(tc) != _testCases.Count - 1)
+					AddBlank(sw);
 			}
 		}
 	}

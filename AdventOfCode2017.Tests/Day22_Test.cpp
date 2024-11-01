@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day22\Day22_SporificaVirus.h"
+#include "Day22/Day22_SporificaVirus.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day22;
@@ -42,5 +42,5 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(2511944ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day22::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day22::inputData1;
 }

@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day19\Day19_ASeriesOfTubes.h"
+#include "Day19/Day19_ASeriesOfTubes.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day19;
@@ -37,7 +37,6 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual("ABCDEF"s, result);
 		};
 
-
 		TEST_METHOD(CheckExample1_Part2)
 		{
 			// Arrange:
@@ -47,7 +46,6 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(38ull, result);
 		};
-
 	};
-	std::vector<std::string> Year2017_Day19::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day19::inputData1;
 }

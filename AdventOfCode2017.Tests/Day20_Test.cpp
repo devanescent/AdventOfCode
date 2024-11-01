@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day20\Day20_ParticleSwarm.h"
+#include "Day20/Day20_ParticleSwarm.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day20;
@@ -19,8 +19,8 @@ namespace AdventOfCode::Year2017::Tests
 				"p=< 3,0,0>, v=< 2,0,0>, a=<-1,0,0>",
 				"p=< 4,0,0>, v=< 0,0,0>, a=<-2,0,0>"
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -30,7 +30,6 @@ namespace AdventOfCode::Year2017::Tests
 			// Assert:
 			Assert::AreEqual(0ull, result);
 		};
-
 	};
 	std::vector<std::string> Year2017_Day20::inputData1 = std::vector<std::string>();
 }

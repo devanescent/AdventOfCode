@@ -113,6 +113,7 @@
                                         <TextBlock Text="Test No. " VerticalAlignment="Center"/>
                                         <TextBox Text="{Binding TestNo}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
                                     </DockPanel>
+                                    <CheckBox DockPanel.Dock="Top" IsChecked="{Binding InlineData}">Inline single line</CheckBox>
                                     <DockPanel DockPanel.Dock="Bottom">
                                         <TextBlock Text="Result: "/>
                                         <TextBox Text="{Binding Result}"/>

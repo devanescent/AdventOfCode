@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day06\Day06_MemoryReallocation.h"
+#include "Day06/Day06_MemoryReallocation.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day06;
@@ -19,6 +19,7 @@ namespace AdventOfCode::Year2017::Tests
 				"0	2	7	0"
 			};
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -39,5 +40,5 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(4ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day06::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day06::inputData1;
 }

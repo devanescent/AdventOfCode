@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day09\Day09_StreamProcessing.h"
+#include "Day09/Day09_StreamProcessing.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day09;
@@ -8,16 +8,6 @@ namespace AdventOfCode::Year2017::Tests
 {
 	TEST_CLASS(Year2017_Day09)
 	{
-	private:
-		static std::vector<std::string> inputData1;
-		static std::vector<std::string> inputData2;
-		static std::vector<std::string> inputData3;
-		static std::vector<std::string> inputData4;
-		static std::vector<std::string> inputData5;
-		static std::vector<std::string> inputData6;
-		static std::vector<std::string> inputData7;
-		static std::vector<std::string> inputData8;
-
 	public:
 		TEST_METHOD(CheckExample1_Part1)
 		{

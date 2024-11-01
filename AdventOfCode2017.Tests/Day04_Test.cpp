@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day04\Day04_HighEntropyPassphrases.h"
+#include "Day04/Day04_HighEntropyPassphrases.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day04;
@@ -8,11 +8,6 @@ namespace AdventOfCode::Year2017::Tests
 {
 	TEST_CLASS(Year2017_Day04)
 	{
-	private:
-		static std::vector<std::string> inputData1;
-		static std::vector<std::string> inputData2;
-		static std::vector<std::string> inputData3;
-
 	public:
 		TEST_METHOD(CheckExample1_Part1)
 		{

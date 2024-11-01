@@ -29,6 +29,7 @@ namespace AdventOfCode::Year2017::Tests
 				"3 8 6 5"
 			};
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -49,6 +50,6 @@ namespace AdventOfCode::Year2017::Tests
 			Assert::AreEqual(9ull, result);
 		};
 	};
-	std::vector<std::string> Year2017_Day02::inputData1 = std::vector<std::string>();
-	std::vector<std::string> Year2017_Day02::inputData2 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day02::inputData1;
+	std::vector<std::string> Year2017_Day02::inputData2;
 }

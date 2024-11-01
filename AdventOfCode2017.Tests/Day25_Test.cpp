@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "Day25\Day25_TheHaltingProblem.h"
+#include "Day25/Day25_TheHaltingProblem.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace AdventOfCode::Year2017::Day25;
@@ -39,8 +39,8 @@ namespace AdventOfCode::Year2017::Tests
 				"    - Move one slot to the right.",
 				"    - Continue with state A."
 			};
-
 		};
+
 		TEST_METHOD(CheckExample1_Part1)
 		{
 			// Arrange:
@@ -52,5 +52,5 @@ namespace AdventOfCode::Year2017::Tests
 		};
 
 	};
-	std::vector<std::string> Year2017_Day25::inputData1 = std::vector<std::string>();
+	std::vector<std::string> Year2017_Day25::inputData1;
 }
