@@ -45,6 +45,8 @@
     <ClCompile Include="Day18\Day18_Snailfish.cpp" />
     <ClCompile Include="Day18\SnailfishNum.cpp" />
     <ClCompile Include="Day18\SnailfishNumberProcessor.cpp" />
+    <ClCompile Include="Day19\Day19_BeaconScanner.cpp" />
+    <ClCompile Include="Day19\ScannerProcessor.cpp" />
     <ClCompile Include="Day20\Day20_TrenchMap.cpp" />
     <ClCompile Include="Day20\TrenchImageProcessor.cpp" />
     <ClCompile Include="Day21\Day21_DiracDice.cpp" />
@@ -89,6 +91,9 @@
     <ClInclude Include="Day18\Day18_Snailfish.h" />
     <ClInclude Include="Day18\SnailfishNum.h" />
     <ClInclude Include="Day18\SnailfishNumberProcessor.h" />
+    <ClInclude Include="Day19\Day19_BeaconScanner.h" />
+    <ClInclude Include="Day19\Scanner.h" />
+    <ClInclude Include="Day19\ScannerProcessor.h" />
     <ClInclude Include="Day20\Day20_TrenchMap.h" />
     <ClInclude Include="Day20\TrenchImageProcessor.h" />
     <ClInclude Include="Day21\Day21_DiracDice.h" />

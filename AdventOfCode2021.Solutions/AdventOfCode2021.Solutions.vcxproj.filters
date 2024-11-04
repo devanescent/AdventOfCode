@@ -71,6 +71,9 @@
     <Filter Include="Day25">
       <UniqueIdentifier>{e1cd7746-ecde-40eb-9a60-7f608eb3dcf0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day19">
+      <UniqueIdentifier>{d831b587-59e7-4096-a555-db228fcc0e4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_SonarSweep.cpp">
@@ -177,6 +180,12 @@
     </ClCompile>
     <ClCompile Include="Day25\Day25_SeaCucumber.cpp">
       <Filter>Day25</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\Day19_BeaconScanner.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\ScannerProcessor.cpp">
+      <Filter>Day19</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -307,5 +316,14 @@
       <Filter>Day25</Filter>
     </ClInclude>
     <ClInclude Include="Solutions2021.h" />
+    <ClInclude Include="Day19\Day19_BeaconScanner.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\Scanner.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\ScannerProcessor.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

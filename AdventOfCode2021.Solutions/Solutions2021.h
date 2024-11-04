@@ -19,7 +19,7 @@
 #include "Day16\Day16_PacketDecoder.h"
 #include "Day17\Day17_TrickShot.h"
 #include "Day18\Day18_Snailfish.h"
-// TODO: Day 19
+#include "Day19\Day19_BeaconScanner.h"
 #include "Day20\Day20_TrenchMap.h"
 #include "Day21\Day21_DiracDice.h"
 #include "Day22\Day22_ReactorReboot.h"
@@ -53,7 +53,7 @@ namespace AdventOfCode::Year2021
 				case 16:	return std::make_unique<Day16::PacketDecoder>();
 				case 17:	return std::make_unique<Day17::TrickShot>();
 				case 18:	return std::make_unique<Day18::Snailfish>();
-				// case 19
+				case 19:	return std::make_unique<Day19::BeaconScanner>();
 				case 20:	return std::make_unique<Day20::TrenchMap>();
 				case 21:	return std::make_unique<Day21::DiracDice>();
 				case 22:	return std::make_unique<Day22::ReactorReboot>();

@@ -83,7 +83,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <UseFullPaths>true</UseFullPaths>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -111,6 +111,7 @@
     <ClCompile Include="Day16_Test.cpp" />
     <ClCompile Include="Day17_Test.cpp" />
     <ClCompile Include="Day18_Test.cpp" />
+    <ClCompile Include="Day19_Test.cpp" />
     <ClCompile Include="Day20_Test.cpp" />
     <ClCompile Include="Day21_Test.cpp" />
     <ClCompile Include="Day22_Test.cpp" />
