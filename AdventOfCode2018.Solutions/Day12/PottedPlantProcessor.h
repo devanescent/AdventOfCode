@@ -1,14 +1,18 @@
 #pragma once
 #include "InputProcessorWithContext.h"
-#include "PottedPlants.h"
 #include <deque>
 #include <map>
 
 namespace AdventOfCode::Year2018::Day12
 {
-	class PottedPlantProcessor : public InputProcessorWithContextBase<PottedPlant, std::map<std::string, bool>, std::deque<PottedPlant>>
+	using Pot = char;
+	using PotRow = std::string;
+	using PotPattern = std::string;
+	using PlantRules = std::map<PotPattern, bool, std::less<>>;
+
+	class PottedPlantProcessor : public InputProcessorWithContextBase<Pot, PlantRules, PotRow>
 	{
 	public:
-		std::pair<std::deque<PottedPlant>, std::map<std::string, bool>> Process(std::vector<std::string> input) override;
+		std::pair<PotRow, PlantRules> Process(std::vector<std::string> input) override;
 	};
 }

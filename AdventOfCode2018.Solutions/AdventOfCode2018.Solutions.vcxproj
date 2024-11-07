@@ -83,7 +83,6 @@
     <ClInclude Include="Day11\Day11_ChronalCharge.h" />
     <ClInclude Include="Day12\Day12_SubterraneanSustainability.h" />
     <ClInclude Include="Day12\PottedPlantProcessor.h" />
-    <ClInclude Include="Day12\PottedPlants.h" />
     <ClInclude Include="Day13\CartAndTracks.h" />
     <ClInclude Include="Day13\CartAndTracksProcessor.h" />
     <ClInclude Include="Day13\Day13_MineCartMadness.h" />

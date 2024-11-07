@@ -285,9 +285,6 @@
     <ClInclude Include="Day12\PottedPlantProcessor.h">
       <Filter>Day12</Filter>
     </ClInclude>
-    <ClInclude Include="Day12\PottedPlants.h">
-      <Filter>Day12</Filter>
-    </ClInclude>
     <ClInclude Include="Day10\Day10_TheStarsAlign.h">
       <Filter>Day10</Filter>
     </ClInclude>

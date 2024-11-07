@@ -13,6 +13,7 @@ namespace AdventOfCode::Year2018::Day12
 		SubterraneanSustainability();
 
 	protected:
-		virtual uint64_t ExecutePart1(std::deque<PottedPlant> plants, std::map<std::string, bool> rules) override;
+		virtual uint64_t ExecutePart1(PotRow pots, PlantRules rules) override;
+		virtual uint64_t ExecutePart2(PotRow pots, PlantRules rules) override;
 	};
 }
