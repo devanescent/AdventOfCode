@@ -42,6 +42,14 @@
     <ClCompile Include="Day17\ClayVeinProcessor.cpp" />
     <ClCompile Include="Day17\Day17_ReservoirResearch.cpp" />
     <ClCompile Include="Day18\Day18_SettlersOfTheNorthPole.cpp" />
+    <ClCompile Include="Day19\1_code_annotated.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Day19\2_loop_and_init_eval.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Day19\Day19_GoWithTheFlow.cpp" />
     <ClCompile Include="Day19\InstructionProcessor.cpp" />
     <ClCompile Include="Day20\Day20_ARegularMap.cpp" />

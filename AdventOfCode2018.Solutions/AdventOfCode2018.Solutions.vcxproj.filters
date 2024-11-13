@@ -220,6 +220,12 @@
     <ClCompile Include="Day20\RoomProcessor.cpp">
       <Filter>Day20</Filter>
     </ClCompile>
+    <ClCompile Include="Day19\1_code_annotated.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\2_loop_and_init_eval.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day01\Day01_ChronalCalibration.h">

@@ -13,5 +13,6 @@ namespace AdventOfCode::Year2018::Day19
 		GoWithTheFlow();
 
 		uint64_t ExecutePart1(std::vector<Instruction> program, int instrPtrReg) override;
+		uint64_t ExecutePart2(std::vector<Instruction> program, int instrPtrReg) override;
 	};
 }
