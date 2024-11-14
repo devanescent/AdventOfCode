@@ -68,6 +68,16 @@ namespace AdventOfCode
 			return X >= 0 && X < width && Y >= 0 && Y < height;
 		}
 
+		bool IsXBetween(T xmin, T xmax) const
+		{
+			return X >= xmin && X <= xmax;
+		}
+
+		bool IsYBetween(T ymin, T ymax) const
+		{
+			return Y >= ymin && Y <= ymax;
+		}
+
 		// Make points sortable, e.g. for using in a map
 		bool operator<(const Point& other) const
 		{

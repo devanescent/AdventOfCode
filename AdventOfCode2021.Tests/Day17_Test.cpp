@@ -20,5 +20,17 @@ namespace AdventOfCode::Year2021::Tests
 			// Assert:
 			Assert::AreEqual(45ull, result);
 		}
+
+		TEST_METHOD(CheckExample_Part2)
+		{
+			// Arrange:
+			TrickShot day17;
+
+			// Act:
+			uint64_t result = day17.GetResultOnPart2({ "target area: x=20..30, y=-10..-5" });
+
+			// Assert:
+			Assert::AreEqual(112ull, result);
+		}
 	};
 }
