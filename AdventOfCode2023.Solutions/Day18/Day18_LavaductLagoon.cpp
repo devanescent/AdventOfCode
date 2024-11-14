@@ -1,5 +1,6 @@
 ﻿#include "Day18_LavaductLagoon.h"
 #include "Point.h"
+#include <algorithm>
 #include <set>
 #include <queue>
 #include <numeric>

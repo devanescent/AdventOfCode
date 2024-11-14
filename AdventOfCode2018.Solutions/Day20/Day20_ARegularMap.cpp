@@ -1,4 +1,5 @@
 ﻿#include "Day20_ARegularMap.h"
+#include <algorithm>
 #include <map>
 #include <queue>
 
