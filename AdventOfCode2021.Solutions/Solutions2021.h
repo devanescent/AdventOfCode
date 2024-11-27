@@ -24,7 +24,7 @@
 #include "Day21\Day21_DiracDice.h"
 #include "Day22\Day22_ReactorReboot.h"
 // TODO: Day 23
-// TODO: Day 24
+#include "Day24\Day24_ArithmeticLogicUnit.h"
 #include "Day25\Day25_SeaCucumber.h"
 
 namespace AdventOfCode::Year2021
@@ -58,7 +58,7 @@ namespace AdventOfCode::Year2021
 				case 21:	return std::make_unique<Day21::DiracDice>();
 				case 22:	return std::make_unique<Day22::ReactorReboot>();
 				// case 23
-				// case 24
+				case 24:	return std::make_unique<Day24::ArithmeticLogicUnit>();
 				case 25:	return std::make_unique<Day25::SeaCucumber>();
 				default:	return nullptr;
 			}

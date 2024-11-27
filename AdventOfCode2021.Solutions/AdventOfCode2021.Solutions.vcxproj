@@ -52,6 +52,8 @@
     <ClCompile Include="Day21\Day21_DiracDice.cpp" />
     <ClCompile Include="Day22\Day22_ReactorReboot.cpp" />
     <ClCompile Include="Day22\RebootStepProcessor.cpp" />
+    <ClCompile Include="Day24\AluInstructionProcessor.cpp" />
+    <ClCompile Include="Day24\Day24_ArithmeticLogicUnit.cpp" />
     <ClCompile Include="Day25\Day25_SeaCucumber.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +101,10 @@
     <ClInclude Include="Day21\Day21_DiracDice.h" />
     <ClInclude Include="Day22\Day22_ReactorReboot.h" />
     <ClInclude Include="Day22\RebootStepProcessor.h" />
+    <ClInclude Include="Day24\ALU.h" />
+    <ClInclude Include="Day24\AluInstruction.h" />
+    <ClInclude Include="Day24\AluInstructionProcessor.h" />
+    <ClInclude Include="Day24\Day24_ArithmeticLogicUnit.h" />
     <ClInclude Include="Day25\Day25_SeaCucumber.h" />
     <ClInclude Include="Solutions2021.h" />
   </ItemGroup>
