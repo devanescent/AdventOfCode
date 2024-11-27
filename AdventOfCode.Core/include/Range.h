@@ -82,7 +82,7 @@ namespace AdventOfCode
 			return Range(Start + diff, End + diff);
 		}
 
-		// Make points sortable, e.g. for using in a map
+		// Make ranges sortable, e.g. for using in a map
 		bool operator<(const Range<T>& other) const
 		{
 			if (IsEmpty && other.IsEmpty)

@@ -346,5 +346,8 @@
     <ClInclude Include="Day24\Day24_ArithmeticLogicUnit.h">
       <Filter>Day24</Filter>
     </ClInclude>
+    <ClInclude Include="Day22\RebootStep.h">
+      <Filter>Day22</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

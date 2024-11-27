@@ -11,5 +11,6 @@ namespace AdventOfCode::Year2021::Day22
 
 	protected:
 		uint64_t ExecutePart1(std::vector<RebootStep> steps) override;
+		uint64_t ExecutePart2(std::vector<RebootStep> steps) override;
 	};
 }

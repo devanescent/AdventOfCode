@@ -9,22 +9,28 @@ namespace AdventOfCode::Year2021::Day22
 		std::vector<RebootStep> steps;
 		steps.reserve(input.size());
 
-		for (auto& step : input)
+		for (auto& line : input)
 		{
 			// Replace ',' and '=' with spaces so the input string can be processed with stringstream:
-			std::replace(step.begin(), step.end(), ',', ' ');
-			std::replace(step.begin(), step.end(), '=', ' ');
+			std::replace(line.begin(), line.end(), ',', ' ');
+			std::replace(line.begin(), line.end(), '=', ' ');
 
-			std::istringstream iss(step);
-			int fromX, toX, fromY, toY, fromZ, toZ;
-			char state[4], coord, dot;	// state = 'on'|'off', coord = 'x'|'y'|'z', dot='.'
+			std::istringstream iss(line);
+			RebootStep step;
+			std::string state;	// state = 'on'|'off', 
+			char coord, dot;	// coord = 'x'|'y'|'z', dot = '.'
 
 			iss >> state 
-				>> coord >> fromX >> dot >> dot >> toX
-				>> coord >> fromY >> dot >> dot >> toY
-				>> coord >> fromZ >> dot >> dot >> toZ;
+				>> coord >> step.Region.XRange.Start >> dot >> dot >> step.Region.XRange.End
+				>> coord >> step.Region.YRange.Start >> dot >> dot >> step.Region.YRange.End
+				>> coord >> step.Region.ZRange.Start >> dot >> dot >> step.Region.ZRange.End;
 
-			steps.emplace_back(RebootStep{ state[1] == 'n', fromX, toX, fromY, toY, fromZ, toZ });
+			if (state == "on")
+				step.NewState = RebootState::on;
+			else
+				step.NewState = RebootState::off;
+
+			steps.emplace_back(step);
 		}
 		
 		return steps;

@@ -100,6 +100,7 @@
     <ClInclude Include="Day20\TrenchImageProcessor.h" />
     <ClInclude Include="Day21\Day21_DiracDice.h" />
     <ClInclude Include="Day22\Day22_ReactorReboot.h" />
+    <ClInclude Include="Day22\RebootStep.h" />
     <ClInclude Include="Day22\RebootStepProcessor.h" />
     <ClInclude Include="Day24\ALU.h" />
     <ClInclude Include="Day24\AluInstruction.h" />
