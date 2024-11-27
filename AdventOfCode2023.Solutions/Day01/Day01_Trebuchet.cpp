@@ -1,6 +1,8 @@
 ﻿#include "Day01_Trebuchet.h"
+#include "CharDigitConverter.h"
 #include <algorithm>
 #include <numeric>
+#include <string_view>
 
 namespace AdventOfCode::Year2023::Day01
 {
@@ -15,13 +17,13 @@ namespace AdventOfCode::Year2023::Day01
 
 	uint64_t Trebuchet::ExecutePart1(std::vector<std::string> input)
 	{
-		return std::accumulate(input.begin(), input.end(), 0ull,
-			[](uint64_t sum, const std::string& line)
+		return std::accumulate(input.begin(), input.end(), 0ULL,
+			[](uint64_t sum, std::string_view line)
 			{
 				auto firstDigit = std::find_first_of(line.begin(), line.end(), digits.begin(), digits.end());
 				auto lastDigit = std::find_first_of(line.rbegin(), line.rend(), digits.begin(), digits.end());
 
-				return sum + (*firstDigit - '0') * 10 + (*lastDigit - '0');
+				return sum + CharToDigit<uint64_t>(*firstDigit) * 10 + CharToDigit<uint64_t>(*lastDigit);
 			});
 	}
 
@@ -31,7 +33,7 @@ namespace AdventOfCode::Year2023::Day01
 		for (const std::string& line : input)
 		{
 			auto firstDigitPos = line.size();
-			auto lastDigitPos = 0;
+			auto lastDigitPos = 0ULL;
 
 			int firstDigitVal = 0;
 			int lastDigitVal = 0;
@@ -39,8 +41,7 @@ namespace AdventOfCode::Year2023::Day01
 			for (int i = 0; i < digitsAndNames.size(); ++i)
 			{
 				// Find first digit, keep track of the leftmost value:
-				auto firstDigit = line.find(digitsAndNames[i]);
-				if (firstDigit != std::string::npos && firstDigit < firstDigitPos)
+				if (auto firstDigit = line.find(digitsAndNames[i]); firstDigit != std::string::npos && firstDigit < firstDigitPos)
 				{
 					firstDigitPos = firstDigit;
 					firstDigitVal = i < 9 ? i + 1 : i - 8; // map from list index to actual value

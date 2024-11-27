@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AoCResult.h" />
+    <ClInclude Include="include\CharDigitConverter.h" />
     <ClInclude Include="include\Day.h" />
     <ClInclude Include="include\DayBase.h" />
     <ClInclude Include="include\DayT.h" />

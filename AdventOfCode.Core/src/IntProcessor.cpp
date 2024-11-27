@@ -1,6 +1,9 @@
 #include "IntProcessor.h"
+#include "CharDigitConverter.h"
 #include <algorithm>
+#include <ranges>
 #include <sstream>
+#include <string_view>
 
 namespace AdventOfCode
 {
@@ -11,7 +14,7 @@ namespace AdventOfCode
 
 		if (!input.empty())
 		{
-			std::transform(input[0].begin(), input[0].end(), std::back_inserter(intList), [](char c) { return c - '0'; });
+			std::ranges::transform(input[0].begin(), input[0].end(), std::back_inserter(intList), CharToDigit<int>);
 		}
 
 		return intList;
@@ -23,7 +26,7 @@ namespace AdventOfCode
 		std::vector<int> intList;
 		intList.reserve(input.size());
 
-		std::transform(input.begin(), input.end(), std::back_inserter(intList), [](const std::string& s) { return std::stoi(s); });
+		std::ranges::transform(input, std::back_inserter(intList), [](const std::string& s) { return std::stoi(s); });
 
 		return intList;
 	}
@@ -35,7 +38,7 @@ namespace AdventOfCode
 
 		if (!input.empty())
 		{
-			std::istringstream iss = std::istringstream(input[0]);
+			std::istringstream iss(input[0]);
 			std::string valStr;
 
 			while (std::getline(iss, valStr, ','))
@@ -52,7 +55,7 @@ namespace AdventOfCode
 
 		if (!input.empty())
 		{
-			std::istringstream iss = std::istringstream(input[0]);
+			std::istringstream iss(input[0]);
 			std::string valStr;
 
 			while (iss >> valStr)
@@ -68,12 +71,12 @@ namespace AdventOfCode
 		std::vector<std::vector<int>> result;
 		result.reserve(input.size());
 
-		std::transform(input.begin(), input.end(), std::back_inserter(result),
-			[](const std::string& line)
+		std::ranges::transform(input, std::back_inserter(result),
+			[](std::string_view line)
 			{
 				std::vector<int> ints;
 				ints.reserve(line.size());
-				std::transform(line.begin(), line.end(), std::back_inserter(ints), [](char c) { return c - '0'; });
+				std::ranges::transform(line, std::back_inserter(ints), CharToDigit<int>);
 				return ints;
 			}
 		);
@@ -86,7 +89,7 @@ namespace AdventOfCode
 		std::vector<uint64_t> lIntList;
 		lIntList.reserve(input.size());
 
-		std::transform(input.begin(), input.end(), std::back_inserter(lIntList), [](const std::string& s) { return std::stoull(s); });
+		std::ranges::transform(input, std::back_inserter(lIntList), [](const std::string& s) { return std::stoull(s); });
 
 		return lIntList;
 	}
