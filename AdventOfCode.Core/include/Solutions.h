@@ -8,6 +8,7 @@ namespace AdventOfCode
 	class Solutions
 	{
 	public:
+		virtual ~Solutions() = default;
 		virtual std::unique_ptr<DayBase> GetDay(int day) = 0;
 	};
 }

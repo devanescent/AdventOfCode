@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
 		// Print results to screen:
 		std::cout << "Day " << solution->GetDayNo() << " - " << solution->GetName() << "\n";
 		std::cout << "--------------------------------------------------\n";
-		std::cout << "Result (part " << part << "): " << res << "\n\n\n";
+		std::cout << "Result (part " << part << "): " << res.ToString() << "\n\n\n";
 	}
 	else
 	{
