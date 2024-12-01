@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Day01">
+      <Filter>{008ff6e8-48f7-4cb8-9775-9655e3628783}</Filter>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Solutions2024.h" />
+    <ClInclude Include="Day01\Day01_HistorianHysteria.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+    <ClInclude Include="Day01\LocationsListProcessor.h">
+      <Filter>Day01</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day01\LocationsListProcessor.cpp">
+      <Filter>Day01</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -5,6 +5,7 @@
 #include "Solutions2021.h"
 #include "Solutions2022.h"
 #include "Solutions2023.h"
+#include "Solutions2024.h"
 
 namespace AdventOfCode
 {
@@ -18,6 +19,7 @@ namespace AdventOfCode
 			case 2021:	return std::make_unique<Year2021::Solutions2021>();
 			case 2022:	return std::make_unique<Year2022::Solutions2022>();
 			case 2023:	return std::make_unique<Year2023::Solutions2023>();
+			case 2024:	return std::make_unique<Year2024::Solutions2024>();
 			default:	return nullptr;
 		}
 	}
