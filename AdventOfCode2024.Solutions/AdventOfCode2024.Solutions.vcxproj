@@ -19,10 +19,14 @@
     <ClInclude Include="Solutions2024.h" />
     <ClInclude Include="Day01\Day01_HistorianHysteria.h" />
     <ClInclude Include="Day01\LocationsListProcessor.h" />
+    <ClInclude Include="Day02\Day02_RedNosedReports.h" />
+    <ClInclude Include="Day02\ReportsProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
     <ClCompile Include="Day01\LocationsListProcessor.cpp" />
+    <ClCompile Include="Day02\Day02_RedNosedReports.cpp" />
+    <ClCompile Include="Day02\ReportsProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -8,6 +8,9 @@
     <Filter Include="Day01">
       <Filter>{008ff6e8-48f7-4cb8-9775-9655e3628783}</Filter>
     </Filter>
+    <Filter Include="Day02">
+      <Filter>{d43b570d-8f7a-44a0-affb-35bd40d02f64}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -17,6 +20,12 @@
     <ClInclude Include="Day01\LocationsListProcessor.h">
       <Filter>Day01</Filter>
     </ClInclude>
+    <ClInclude Include="Day02\Day02_RedNosedReports.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
+    <ClInclude Include="Day02\ReportsProcessor.h">
+      <Filter>Day02</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -24,6 +33,12 @@
     </ClCompile>
     <ClCompile Include="Day01\LocationsListProcessor.cpp">
       <Filter>Day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\Day02_RedNosedReports.cpp">
+      <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day02\ReportsProcessor.cpp">
+      <Filter>Day02</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
