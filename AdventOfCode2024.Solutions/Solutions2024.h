@@ -3,6 +3,7 @@
 #include "Solutions.h"
 #include "Day01/Day01_HistorianHysteria.h"
 #include "Day02/Day02_RedNosedReports.h"
+#include "Day03/Day03_MullItOver.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -14,6 +15,7 @@ namespace AdventOfCode::Year2024
 			{
 				case  1:	return std::make_unique<Day01::HistorianHysteria>();
 				case  2:	return std::make_unique<Day02::RedNosedReports>();
+				case  3:	return std::make_unique<Day03::MullItOver>();
 				default:	return nullptr;
 			}
 		}

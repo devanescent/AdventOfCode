@@ -11,6 +11,9 @@
     <Filter Include="Day02">
       <Filter>{d43b570d-8f7a-44a0-affb-35bd40d02f64}</Filter>
     </Filter>
+    <Filter Include="Day03">
+      <Filter>{1dd3b8be-86e9-43c0-b36d-6faada331d6e}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -26,6 +29,9 @@
     <ClInclude Include="Day02\ReportsProcessor.h">
       <Filter>Day02</Filter>
     </ClInclude>
+    <ClInclude Include="Day03\Day03_MullItOver.h">
+      <Filter>Day03</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -39,6 +45,9 @@
     </ClCompile>
     <ClCompile Include="Day02\ReportsProcessor.cpp">
       <Filter>Day02</Filter>
+    </ClCompile>
+    <ClCompile Include="Day03\Day03_MullItOver.cpp">
+      <Filter>Day03</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
