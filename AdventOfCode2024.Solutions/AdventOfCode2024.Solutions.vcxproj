@@ -22,6 +22,7 @@
     <ClInclude Include="Day02\Day02_RedNosedReports.h" />
     <ClInclude Include="Day02\ReportsProcessor.h" />
     <ClInclude Include="Day03\Day03_MullItOver.h" />
+    <ClInclude Include="Day04\Day04_CeresSearch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -29,6 +30,7 @@
     <ClCompile Include="Day02\Day02_RedNosedReports.cpp" />
     <ClCompile Include="Day02\ReportsProcessor.cpp" />
     <ClCompile Include="Day03\Day03_MullItOver.cpp" />
+    <ClCompile Include="Day04\Day04_CeresSearch.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

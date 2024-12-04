@@ -54,6 +54,9 @@
     <ClInclude Include="include\CharDigitConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\GridTranspose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Utils.cpp">
