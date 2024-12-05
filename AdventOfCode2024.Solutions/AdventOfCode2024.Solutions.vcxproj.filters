@@ -17,6 +17,9 @@
     <Filter Include="Day04">
       <Filter>{366b5f0f-c48a-4de7-a65c-2046158ab6d6}</Filter>
     </Filter>
+    <Filter Include="Day05">
+      <Filter>{d1ff39d2-006b-46ac-8428-6b53f2d0b91e}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -38,6 +41,12 @@
     <ClInclude Include="Day04\Day04_CeresSearch.h">
       <Filter>Day04</Filter>
     </ClInclude>
+    <ClInclude Include="Day05\Day05_PrintQueue.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
+    <ClInclude Include="Day05\PrintingRulesProcessor.h">
+      <Filter>Day05</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -57,6 +66,12 @@
     </ClCompile>
     <ClCompile Include="Day04\Day04_CeresSearch.cpp">
       <Filter>Day04</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\Day05_PrintQueue.cpp">
+      <Filter>Day05</Filter>
+    </ClCompile>
+    <ClCompile Include="Day05\PrintingRulesProcessor.cpp">
+      <Filter>Day05</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

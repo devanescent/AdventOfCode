@@ -5,6 +5,7 @@
 #include "Day02/Day02_RedNosedReports.h"
 #include "Day03/Day03_MullItOver.h"
 #include "Day04/Day04_CeresSearch.h"
+#include "Day05/Day05_PrintQueue.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -18,6 +19,7 @@ namespace AdventOfCode::Year2024
 				case  2:	return std::make_unique<Day02::RedNosedReports>();
 				case  3:	return std::make_unique<Day03::MullItOver>();
 				case  4:	return std::make_unique<Day04::CeresSearch>();
+				case  5:	return std::make_unique<Day05::PrintQueue>();
 				default:	return nullptr;
 			}
 		}
