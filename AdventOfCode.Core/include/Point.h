@@ -26,6 +26,12 @@ namespace AdventOfCode
 		Point MoveYBy(T dy) const { return Point{ X, Y + dy }; }
 		Point MoveBy(T dx, T dy) const { return Point{ X + dx, Y + dy }; }
 
+		// Directions assume the x axis points to the right and the y axis points down:
+		static Point<T> Up() { return Point<T>(0, -1); }
+		static Point<T> Right() { return Point<T>(1, 0); }
+		static Point<T> Down() { return Point<T>(0, 1); }
+		static Point<T> Left() { return Point<T>(-1, 0); }
+
 		T DistanceTo(const Point& other, DistanceMetric metric = DistanceMetric::Manhattan) const
 		{
 			T dx = X > other.X ? X - other.X : other.X - X;

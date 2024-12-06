@@ -25,6 +25,8 @@
     <ClInclude Include="Day04\Day04_CeresSearch.h" />
     <ClInclude Include="Day05\Day05_PrintQueue.h" />
     <ClInclude Include="Day05\PrintingRulesProcessor.h" />
+    <ClInclude Include="Day06\Day06_GuardGallivant.h" />
+	<ClInclude Include="Day06\Guard.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -35,6 +37,7 @@
     <ClCompile Include="Day04\Day04_CeresSearch.cpp" />
     <ClCompile Include="Day05\Day05_PrintQueue.cpp" />
     <ClCompile Include="Day05\PrintingRulesProcessor.cpp" />
+    <ClCompile Include="Day06\Day06_GuardGallivant.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
