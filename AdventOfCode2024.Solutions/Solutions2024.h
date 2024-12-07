@@ -7,6 +7,7 @@
 #include "Day04/Day04_CeresSearch.h"
 #include "Day05/Day05_PrintQueue.h"
 #include "Day06/Day06_GuardGallivant.h"
+#include "Day07/Day07_BridgeRepair.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -22,6 +23,7 @@ namespace AdventOfCode::Year2024
 				case  4:	return std::make_unique<Day04::CeresSearch>();
 				case  5:	return std::make_unique<Day05::PrintQueue>();
 				case  6:	return std::make_unique<Day06::GuardGallivant>();
+				case  7:	return std::make_unique<Day07::BridgeRepair>();
 				default:	return nullptr;
 			}
 		}
