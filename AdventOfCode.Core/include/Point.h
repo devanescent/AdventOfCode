@@ -97,6 +97,23 @@ namespace AdventOfCode
 		{
 			return X == other.X && Y == other.Y;
 		}
+
+		// Use points like 2D vectors:
+
+		Point<T> DirectionTo(const Point& other) const
+		{
+			return Point<T>(other.X - X, other.Y - Y);
+		}
+
+		Point<T> operator+(const Point& other) const
+		{
+			return Point<T>(X + other.X, Y + other.Y);
+		}
+
+		Point<T> operator-() const
+		{
+			return Point<T>(-X, -Y);
+		}
 	};
 }
 

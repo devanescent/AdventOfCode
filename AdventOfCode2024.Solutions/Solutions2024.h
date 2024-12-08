@@ -8,6 +8,7 @@
 #include "Day05/Day05_PrintQueue.h"
 #include "Day06/Day06_GuardGallivant.h"
 #include "Day07/Day07_BridgeRepair.h"
+#include "Day08/Day08_ResonantCollinearity.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -24,6 +25,7 @@ namespace AdventOfCode::Year2024
 				case  5:	return std::make_unique<Day05::PrintQueue>();
 				case  6:	return std::make_unique<Day06::GuardGallivant>();
 				case  7:	return std::make_unique<Day07::BridgeRepair>();
+				case  8:	return std::make_unique<Day08::ResonantCollinearity>();
 				default:	return nullptr;
 			}
 		}

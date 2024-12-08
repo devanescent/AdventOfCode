@@ -26,6 +26,9 @@
     <Filter Include="Day07">
       <Filter>{95b50756-1eb9-4534-a87d-1ea6c8730ea8}</Filter>
     </Filter>
+    <Filter Include="Day08">
+      <Filter>{8138b09b-632b-4d52-ace2-91578c2ec01b}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -68,6 +71,9 @@
     <ClInclude Include="Day07\BridgeCalibrationsProcessor.h">
       <Filter>Day07</Filter>
     </ClInclude>
+    <ClInclude Include="Day08\Day08_ResonantCollinearity.h">
+      <Filter>Day08</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -102,6 +108,9 @@
     </ClCompile>
     <ClCompile Include="Day07\BridgeCalibrationsProcessor.cpp">
       <Filter>Day07</Filter>
+    </ClCompile>
+    <ClCompile Include="Day08\Day08_ResonantCollinearity.cpp">
+      <Filter>Day08</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
