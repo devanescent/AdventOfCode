@@ -29,6 +29,9 @@
     <Filter Include="Day08">
       <Filter>{8138b09b-632b-4d52-ace2-91578c2ec01b}</Filter>
     </Filter>
+    <Filter Include="Day09">
+      <Filter>{d8d6ffad-7e46-4598-9705-fd5a22cad64c}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -74,6 +77,9 @@
     <ClInclude Include="Day08\Day08_ResonantCollinearity.h">
       <Filter>Day08</Filter>
     </ClInclude>
+    <ClInclude Include="Day09\Day09_DiskFragmenter.h">
+      <Filter>Day09</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -111,6 +117,9 @@
     </ClCompile>
     <ClCompile Include="Day08\Day08_ResonantCollinearity.cpp">
       <Filter>Day08</Filter>
+    </ClCompile>
+    <ClCompile Include="Day09\Day09_DiskFragmenter.cpp">
+      <Filter>Day09</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
