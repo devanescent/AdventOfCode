@@ -20,6 +20,7 @@ namespace AdventOfCode.ProjectHelper
 		IntProcessor_ValuePerLine,
 		IntProcessor_ValuesAsCommaSeparatedLine,
 		IntProcessor_ValuesAsSpaceSeparatedLine,
+		GridMapProcessor
 	}
 
 	public record ProcessorTemplateTypeVM(ProcessorTemplateType TemplateType, string DisplayName);
@@ -43,24 +44,35 @@ namespace AdventOfCode.ProjectHelper
 
 		public DaySTLIncludes DaySTL { get; set; } = new DaySTLIncludes();
 
-		public List<ProcessorChoiceTypeVM> ProcessorChoiceList { get; } = new()
+		private List<ProcessorChoiceTypeVM> _processorChoiceList = new()
 		{
 			new ProcessorChoiceTypeVM(ProcessorChoiceType.Custom, "Custom"),
 			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuesAsDigit, "Int processor (values as digits in single line)"),
 			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuePerLine, "Int processor (value per line)"),
 			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuesAsCommaSeparatedLine, "Int processor (values as comma-separated line)"),
 			new ProcessorChoiceTypeVM(ProcessorChoiceType.IntProcessor_ValuesAsSpaceSeparatedLine, "Int processor (values as space-separated line)"),
+			new ProcessorChoiceTypeVM(ProcessorChoiceType.GridMapProcessor, "Grid map processor (input as rectangular map)"),
 		};
+
+		public List<ProcessorChoiceTypeVM> ProcessorChoiceList => _processorChoiceList;
 
 		private ProcessorChoiceType? _selectedProcessorChoice = null;
 		public ProcessorChoiceType? ProcessorChoice
 		{
-			get => _selectedProcessorChoice;
+			get => _selectedProcessorChoice ?? _processorChoiceList[0].ChoiceType;
 			set
 			{
 				_selectedProcessorChoice = value;
 				IsCustomProcessor = _selectedProcessorChoice == ProcessorChoiceType.Custom;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsCustomProcessor)));
+
+				// Set default value for result name when selecting GridMapProcessor:
+				if (_selectedProcessorChoice == ProcessorChoiceType.GridMapProcessor)
+					ResultListName = "map";
+				else
+					ResultListName = string.Empty;
+
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResultListName)));
 			}
 		}
 		public bool IsCustomProcessor { get; set; }
@@ -137,6 +149,9 @@ namespace AdventOfCode.ProjectHelper
 							break;
 						case ProcessorChoiceType.IntProcessor_ValuesAsSpaceSeparatedLine:
 							dayFileCreator.WithProcessor("IntProcessor<IntProcessingMode::ValuesAsSpaceSeparatedLine>", "int", ResultListName, "IntProcessor");
+							break;
+						case ProcessorChoiceType.GridMapProcessor:
+							dayFileCreator.WithProcessorSingleResult("GridMapProcessor", "GridMap", ResultListName, "GridMapProcessor");
 							break;
 					}
 				}

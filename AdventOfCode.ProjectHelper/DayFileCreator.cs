@@ -24,9 +24,10 @@ namespace AdventOfCode.ProjectHelper
 
 		private string _processorName = string.Empty;
 		private string _processorInclude = string.Empty;
-		private string _resultName = string.Empty;
-		private string _resultListName = "results";
+		private string _procResultTypeName = string.Empty;
+		private string _procResultListName = "results";
 		private string _contextName = string.Empty;
+		private bool _isSingleResult = false; // true if processing returns a single value, not a vector of objects
 
 		private string _baseClassName;
 		private string _baseClassParameter = string.Empty;
@@ -67,8 +68,20 @@ namespace AdventOfCode.ProjectHelper
 		{
 			_processorName = processorName;
 			_processorInclude = prcoessorInclude ?? processorName;
-			_resultName = resultName;
-			_resultListName = resultListName;
+			_procResultTypeName = resultName;
+			_procResultListName = resultListName;
+			_baseClassName = "DayT";
+			_baseClassParameter = $"{processorName}";
+			return this;
+		}
+
+		public DayFileCreator WithProcessorSingleResult(string processorName, string resultType, string resultName, string prcoessorInclude)
+		{
+			_isSingleResult = true;
+			_processorName = processorName;
+			_processorInclude = prcoessorInclude;
+			_procResultTypeName = resultType;
+			_procResultListName = resultName;
 			_baseClassName = "DayT";
 			_baseClassParameter = $"{processorName}";
 			return this;
@@ -288,10 +301,12 @@ namespace AdventOfCode.ProjectHelper
 			// Solution method:
 			if (_processorName == string.Empty)
 				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<std::string> input) override;");
+			else if (_isSingleResult)
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}({_procResultTypeName} {_procResultListName}) override;");
 			else if (_contextName == string.Empty)
-				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> {_resultListName}) override;");
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_procResultTypeName}> {_procResultListName}) override;");
 			else
-				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_resultName}> {_resultListName}, {_contextName} context) override;");
+				sw.WriteLine($"\t\t{actualResultType} ExecutePart{part}(std::vector<{_procResultTypeName}> {_procResultListName}, {_contextName} context) override;");
 		}
 
 		private void AddSourceIncludes(StreamWriter sw, DaySTLIncludes stlIncludes)
@@ -316,10 +331,12 @@ namespace AdventOfCode.ProjectHelper
 
 			if (_processorName == string.Empty)
 				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<std::string> input)");
+			else if (_isSingleResult)
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}({_procResultTypeName} {_procResultListName})");
 			else if (_contextName == string.Empty)
-				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> {_resultListName})");
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_procResultTypeName}> {_procResultListName})");
 			else
-				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_resultName}> {_resultListName}, {_contextName} context)");
+				sw.WriteLine($"\t{actualResultType} {TitleWithoutBlanks}::ExecutePart{part}(std::vector<{_procResultTypeName}> {_procResultListName}, {_contextName} context)");
 
 			sw.WriteLine("\t{");
 			sw.WriteLine($"\t\treturn {actualResultType}{{}};");

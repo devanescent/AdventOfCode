@@ -54,7 +54,7 @@
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Processor:" Width="140" FontSize="14" />
                         <ComboBox Width="350" ItemsSource="{Binding ProcessorChoiceList}" SelectedValue="{Binding ProcessorChoice}" SelectedValuePath="ChoiceType" DisplayMemberPath="DisplayName"
-                                  VerticalAlignment="Center" IsEditable="True" IsReadOnly="True" Text="--- Choose processor ---"/>
+                                  VerticalAlignment="Center" IsReadOnly="True"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Visibility="{Binding IsCustomProcessor, Converter={StaticResource Bool2VisConv}}">
                         <Label Content="Processor name:" Width="140" FontSize="14" />
