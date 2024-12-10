@@ -17,6 +17,8 @@
     <ClInclude Include="include\DayBase.h" />
     <ClInclude Include="include\DayT.h" />
     <ClInclude Include="include\DayTC.h" />
+    <ClInclude Include="include\GridMap.h" />
+    <ClInclude Include="include\GridMapProcessor.h" />
     <ClInclude Include="include\GridTranspose.h" />
     <ClInclude Include="include\InputProcessor.h" />
     <ClInclude Include="include\InputProcessorWithContext.h" />

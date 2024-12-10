@@ -1,18 +1,19 @@
 ﻿#pragma once
-#include "Day.h"
+#include "DayT.h"
+#include "GridMapProcessor.h"
 
 namespace AdventOfCode::Year2024::Day08
 {
 	// ---------------------------------------------------------------------------
 	// Day08: Resonant Collinearity
 	// ---------------------------------------------------------------------------
-	class ResonantCollinearity : public Day<>
+	class ResonantCollinearity : public DayT<GridMapProcessor>
 	{
 	public:
 		ResonantCollinearity();
 
 	protected:
-		uint64_t ExecutePart1(std::vector<std::string> input) override;
-		uint64_t ExecutePart2(std::vector<std::string> input) override;
+		uint64_t ExecutePart1(GridMap map) override;
+		uint64_t ExecutePart2(GridMap map) override;
 	};
 }

@@ -57,6 +57,12 @@
     <ClInclude Include="include\GridTranspose.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\GridMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GridMapProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Utils.cpp">

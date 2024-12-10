@@ -1,36 +1,18 @@
 ﻿#include "Day10_HoofIt.h"
-#include <stack>
+#include <algorithm>
 #include <map>
 #include <set>
+#include <stack>
 #include "Point.h"
 #include "CharDigitConverter.h"
 
 namespace AdventOfCode::Year2024::Day10
 {
-	HoofIt::HoofIt() : Day(10, "Hoof It") { }
+	HoofIt::HoofIt() : DayT(10, "Hoof It") { }
 
-	uint64_t HoofIt::ExecutePart1(std::vector<std::string> input)
+	std::map<Point<int>, std::vector<Point<int>>> FindAllTrails(const GridMap& map, const std::vector<Point<int>>& heads)
 	{
-		// Trail heads:
-		std::vector<Point<int>> heads;
-
-		auto mapWidth = input[0].size();
-		auto mapHeight = input.size();
-
-		for (int y = 0; y < mapHeight; ++y)
-		{
-			for (int x = 0; x < mapWidth; ++x)
-			{
-				if (input[y][x] == '0')
-				{
-					heads.emplace_back(x, y);
-				}
-			}
-		}
-
-		// List each trail end for each start position:
-		std::map<Point<int>, std::set<Point<int>>> hikingTrails;
-
+		std::map<Point<int>, std::vector<Point<int>>> hikingTrails;
 		for (const auto& head : heads)
 		{
 			// Find all trail paths from this trail head:
@@ -42,82 +24,67 @@ namespace AdventOfCode::Year2024::Day10
 				auto pos = paths.top();
 				paths.pop();
 
-				char height = input[pos.Y][pos.X];
-
+				char height = map.Get(pos);
 				if (height == '9')
 				{
 					// End of trail reached:
-					hikingTrails[head].insert(pos);
-					continue;
+					hikingTrails[head].push_back(pos);
 				}
-
-				// Find next possible path options
-				auto nextOptions = pos.GetSurroundingPoints(false);
-				for (const auto& n : nextOptions)
+				else
 				{
-					if (n.IsXBetween(0, mapWidth - 1) && n.IsYBetween(0, mapHeight - 1) && input[n.Y][n.X] == height + 1)
+					// Find next possible path options
+					auto nextOptions = pos.GetSurroundingPoints(false);
+					for (const auto& n : nextOptions)
 					{
-						paths.push(n);
+						if (map.Contains(n) && map.Get(n) == height + 1)
+						{
+							paths.push(n);
+						}
 					}
 				}
 			}
 		}
 
-		// Score is number of trail ends reachable from the trail head:
+		return hikingTrails;
+	}
+
+	uint64_t HoofIt::ExecutePart1(GridMap map)
+	{
+		// Trail heads:
+		std::vector<Point<int>> heads;
+		map.Find(std::back_inserter(heads), '0');
+
+		// List each trail end for each start position:
+		auto hikingTrails = FindAllTrails(map, heads);
+
+		// Score is unique number of trail ends reachable from the trail head:
 		uint64_t score = 0;
 		for (auto& [_, ends] : hikingTrails)
 		{
-			score += ends.size();
+			// Count only unique ends:
+			std::sort(ends.begin(), ends.end());
+			auto uniqueEnds = std::distance(ends.begin(), std::unique(ends.begin(), ends.end()));
+
+			score += (uint64_t)uniqueEnds;
 		}
 
 		return score;
 	}
 
-	uint64_t HoofIt::ExecutePart2(std::vector<std::string> input)
+	uint64_t HoofIt::ExecutePart2(GridMap map)
 	{
-		// Start a list of possible paths:
-		std::stack<Point<int>> paths;
+		// Trail heads:
+		std::vector<Point<int>> heads;
+		map.Find(std::back_inserter(heads), '0');
 
-		auto mapWidth = input[0].size();
-		auto mapHeight = input.size();
+		// List each trail end for each start position:
+		auto hikingTrails = FindAllTrails(map, heads);
 
-		for (int y = 0; y < mapHeight; ++y)
-		{
-			for (int x = 0; x < mapWidth; ++x)
-			{
-				if (input[y][x] == '0')
-				{
-					paths.emplace(x, y);
-				}
-			}
-		}
+		// Score is total number of trail ends reachable from the trail head:
+		uint64_t score = 0;
+		for (const auto& [_, ends] : hikingTrails)
+			score += ends.size();
 
-		uint64_t trailHeadScores = 0;
-
-		while (!paths.empty())
-		{
-			auto pos = paths.top();
-			paths.pop();
-
-			char height = input[pos.Y][pos.X];
-
-			if (height == '9')
-			{
-				// Count all paths found:
-				++trailHeadScores;
-				continue;
-			}
-
-			auto nextOptions = pos.GetSurroundingPoints(false);
-			for (const auto& n : nextOptions)
-			{
-				if (n.IsXBetween(0, mapWidth - 1) && n.IsYBetween(0, mapHeight - 1) && input[n.Y][n.X] == height + 1)
-				{
-					paths.push(n);
-				}
-			}
-		}
-
-		return trailHeadScores;
+		return score;
 	}
 }
