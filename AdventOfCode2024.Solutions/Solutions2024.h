@@ -10,6 +10,7 @@
 #include "Day07/Day07_BridgeRepair.h"
 #include "Day08/Day08_ResonantCollinearity.h"
 #include "Day09/Day09_DiskFragmenter.h"
+#include "Day10/Day10_HoofIt.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -28,6 +29,7 @@ namespace AdventOfCode::Year2024
 				case  7:	return std::make_unique<Day07::BridgeRepair>();
 				case  8:	return std::make_unique<Day08::ResonantCollinearity>();
 				case  9:	return std::make_unique<Day09::DiskFragmenter>();
+				case 10:	return std::make_unique<Day10::HoofIt>();
 				default:	return nullptr;
 			}
 		}

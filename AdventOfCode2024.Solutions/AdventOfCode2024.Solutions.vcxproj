@@ -32,6 +32,7 @@
     <ClInclude Include="Day07\BridgeCalibrationsProcessor.h" />
     <ClInclude Include="Day08\Day08_ResonantCollinearity.h" />
     <ClInclude Include="Day09\Day09_DiskFragmenter.h" />
+    <ClInclude Include="Day10\Day10_HoofIt.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -47,6 +48,7 @@
     <ClCompile Include="Day07\BridgeCalibrationsProcessor.cpp" />
     <ClCompile Include="Day08\Day08_ResonantCollinearity.cpp" />
     <ClCompile Include="Day09\Day09_DiskFragmenter.cpp" />
+    <ClCompile Include="Day10\Day10_HoofIt.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

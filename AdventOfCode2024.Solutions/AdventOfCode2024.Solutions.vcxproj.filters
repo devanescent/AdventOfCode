@@ -32,6 +32,9 @@
     <Filter Include="Day09">
       <Filter>{d8d6ffad-7e46-4598-9705-fd5a22cad64c}</Filter>
     </Filter>
+    <Filter Include="Day10">
+      <Filter>{fd580840-690d-4c94-9f2a-23bc9974f887}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -80,6 +83,9 @@
     <ClInclude Include="Day09\Day09_DiskFragmenter.h">
       <Filter>Day09</Filter>
     </ClInclude>
+    <ClInclude Include="Day10\Day10_HoofIt.h">
+      <Filter>Day10</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -120,6 +126,9 @@
     </ClCompile>
     <ClCompile Include="Day09\Day09_DiskFragmenter.cpp">
       <Filter>Day09</Filter>
+    </ClCompile>
+    <ClCompile Include="Day10\Day10_HoofIt.cpp">
+      <Filter>Day10</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
