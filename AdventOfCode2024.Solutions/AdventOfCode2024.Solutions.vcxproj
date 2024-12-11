@@ -33,6 +33,7 @@
     <ClInclude Include="Day08\Day08_ResonantCollinearity.h" />
     <ClInclude Include="Day09\Day09_DiskFragmenter.h" />
     <ClInclude Include="Day10\Day10_HoofIt.h" />
+    <ClInclude Include="Day11\Day11_PlutonianPebbles.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -49,6 +50,7 @@
     <ClCompile Include="Day08\Day08_ResonantCollinearity.cpp" />
     <ClCompile Include="Day09\Day09_DiskFragmenter.cpp" />
     <ClCompile Include="Day10\Day10_HoofIt.cpp" />
+    <ClCompile Include="Day11\Day11_PlutonianPebbles.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

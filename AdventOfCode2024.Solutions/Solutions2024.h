@@ -11,6 +11,7 @@
 #include "Day08/Day08_ResonantCollinearity.h"
 #include "Day09/Day09_DiskFragmenter.h"
 #include "Day10/Day10_HoofIt.h"
+#include "Day11/Day11_PlutonianPebbles.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -30,6 +31,7 @@ namespace AdventOfCode::Year2024
 				case  8:	return std::make_unique<Day08::ResonantCollinearity>();
 				case  9:	return std::make_unique<Day09::DiskFragmenter>();
 				case 10:	return std::make_unique<Day10::HoofIt>();
+				case 11:	return std::make_unique<Day11::PlutonianPebbles>();
 				default:	return nullptr;
 			}
 		}
