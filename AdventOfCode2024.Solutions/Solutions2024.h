@@ -12,6 +12,7 @@
 #include "Day09/Day09_DiskFragmenter.h"
 #include "Day10/Day10_HoofIt.h"
 #include "Day11/Day11_PlutonianPebbles.h"
+#include "Day12/Day12_GardenGroups.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -32,6 +33,7 @@ namespace AdventOfCode::Year2024
 				case  9:	return std::make_unique<Day09::DiskFragmenter>();
 				case 10:	return std::make_unique<Day10::HoofIt>();
 				case 11:	return std::make_unique<Day11::PlutonianPebbles>();
+				case 12:	return std::make_unique<Day12::GardenGroups>();
 				default:	return nullptr;
 			}
 		}

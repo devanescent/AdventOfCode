@@ -107,6 +107,7 @@
     <ClCompile Include="Day09_Test.cpp" />
     <ClCompile Include="Day10_Test.cpp" />
     <ClCompile Include="Day11_Test.cpp" />
+    <ClCompile Include="Day12_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />

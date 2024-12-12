@@ -38,6 +38,9 @@
     <Filter Include="Day11">
       <Filter>{5a0062b4-aec9-4069-becd-db04a422768f}</Filter>
     </Filter>
+    <Filter Include="Day12">
+      <Filter>{e0d9240f-a528-4abe-a9e9-c7152bcc40bd}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -92,6 +95,9 @@
     <ClInclude Include="Day11\Day11_PlutonianPebbles.h">
       <Filter>Day11</Filter>
     </ClInclude>
+    <ClInclude Include="Day12\Day12_GardenGroups.h">
+      <Filter>Day12</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -138,6 +144,9 @@
     </ClCompile>
     <ClCompile Include="Day11\Day11_PlutonianPebbles.cpp">
       <Filter>Day11</Filter>
+    </ClCompile>
+    <ClCompile Include="Day12\Day12_GardenGroups.cpp">
+      <Filter>Day12</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
