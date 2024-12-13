@@ -41,6 +41,9 @@
     <Filter Include="Day12">
       <Filter>{e0d9240f-a528-4abe-a9e9-c7152bcc40bd}</Filter>
     </Filter>
+    <Filter Include="Day13">
+      <Filter>{466daa63-35b5-4328-b14d-750aa743f14c}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -98,6 +101,15 @@
     <ClInclude Include="Day12\Day12_GardenGroups.h">
       <Filter>Day12</Filter>
     </ClInclude>
+    <ClInclude Include="Day13\Day13_ClawContraption.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\ClawMachine.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
+    <ClInclude Include="Day13\ClawMachineProcessor.h">
+      <Filter>Day13</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -147,6 +159,12 @@
     </ClCompile>
     <ClCompile Include="Day12\Day12_GardenGroups.cpp">
       <Filter>Day12</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\Day13_ClawContraption.cpp">
+      <Filter>Day13</Filter>
+    </ClCompile>
+    <ClCompile Include="Day13\ClawMachineProcessor.cpp">
+      <Filter>Day13</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
