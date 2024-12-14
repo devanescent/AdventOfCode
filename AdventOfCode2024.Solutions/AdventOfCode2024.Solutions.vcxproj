@@ -38,6 +38,9 @@
     <ClInclude Include="Day13\Day13_ClawContraption.h" />
     <ClInclude Include="Day13\ClawMachine.h" />
     <ClInclude Include="Day13\ClawMachineProcessor.h" />
+    <ClInclude Include="Day14\Day14_RestroomRedoubt.h" />
+    <ClInclude Include="Day14\Robot.h" />
+    <ClInclude Include="Day14\RobotProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -58,6 +61,8 @@
     <ClCompile Include="Day12\Day12_GardenGroups.cpp" />
     <ClCompile Include="Day13\Day13_ClawContraption.cpp" />
     <ClCompile Include="Day13\ClawMachineProcessor.cpp" />
+    <ClCompile Include="Day14\Day14_RestroomRedoubt.cpp" />
+    <ClCompile Include="Day14\RobotProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
