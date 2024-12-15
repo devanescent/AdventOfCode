@@ -41,6 +41,8 @@
     <ClInclude Include="Day14\Day14_RestroomRedoubt.h" />
     <ClInclude Include="Day14\Robot.h" />
     <ClInclude Include="Day14\RobotProcessor.h" />
+    <ClInclude Include="Day15\Day15_WarehouseWoes.h" />
+    <ClInclude Include="Day15\WarehouseProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -63,6 +65,8 @@
     <ClCompile Include="Day13\ClawMachineProcessor.cpp" />
     <ClCompile Include="Day14\Day14_RestroomRedoubt.cpp" />
     <ClCompile Include="Day14\RobotProcessor.cpp" />
+    <ClCompile Include="Day15\Day15_WarehouseWoes.cpp" />
+    <ClCompile Include="Day15\WarehouseProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

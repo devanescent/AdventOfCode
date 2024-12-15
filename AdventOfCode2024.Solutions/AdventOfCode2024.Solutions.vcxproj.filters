@@ -47,6 +47,9 @@
     <Filter Include="Day14">
       <Filter>{03db4e75-5657-4520-9b54-a33504f67d2a}</Filter>
     </Filter>
+    <Filter Include="Day15">
+      <Filter>{f1fb546e-74e1-4ce8-9c22-a7dd1207dc94}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -122,6 +125,12 @@
     <ClInclude Include="Day14\RobotProcessor.h">
       <Filter>Day14</Filter>
     </ClInclude>
+    <ClInclude Include="Day15\Day15_WarehouseWoes.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
+    <ClInclude Include="Day15\WarehouseProcessor.h">
+      <Filter>Day15</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -183,6 +192,12 @@
     </ClCompile>
     <ClCompile Include="Day14\RobotProcessor.cpp">
       <Filter>Day14</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\Day15_WarehouseWoes.cpp">
+      <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day15\WarehouseProcessor.cpp">
+      <Filter>Day15</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

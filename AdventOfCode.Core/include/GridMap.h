@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <optional>
 #include <string>
 #include <vector>
@@ -12,6 +13,10 @@ namespace AdventOfCode
 		GridMap(std::vector<std::string>&& grid) :
 			_grid(std::move(grid)),
 			_gridWidth(_grid[0].size()), _gridHeight(_grid.size())
+		{ }
+
+		GridMap(std::vector<std::string>::iterator begin, std::vector<std::string>::iterator end) :
+			_grid(begin, end), _gridWidth(begin->size()), _gridHeight(end - begin)
 		{ }
 
 		int Height() const { return _gridHeight; }
@@ -81,6 +86,26 @@ namespace AdventOfCode
 				{
 					op(x, y, _grid[y][x]);
 				}
+			}
+		}
+
+		// Replace single map tile:
+		void Replace(const Point<int>& pos, char value)
+		{
+			_grid[pos.Y][pos.X] = value;
+		}
+
+		// Swap map tiles:
+		void Swap(const Point<int>& p1, const Point<int>& p2)
+		{
+			std::swap(_grid[p1.Y][p1.X], _grid[p2.Y][p2.X]);
+		}
+
+		void Print() const
+		{
+			for (const auto& line : _grid)
+			{
+				std::cout << line << "\n";
 			}
 		}
 
