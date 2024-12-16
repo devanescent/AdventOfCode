@@ -43,6 +43,7 @@
     <ClInclude Include="Day14\RobotProcessor.h" />
     <ClInclude Include="Day15\Day15_WarehouseWoes.h" />
     <ClInclude Include="Day15\WarehouseProcessor.h" />
+    <ClInclude Include="Day16\Day16_ReindeerMaze.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -67,6 +68,7 @@
     <ClCompile Include="Day14\RobotProcessor.cpp" />
     <ClCompile Include="Day15\Day15_WarehouseWoes.cpp" />
     <ClCompile Include="Day15\WarehouseProcessor.cpp" />
+    <ClCompile Include="Day16\Day16_ReindeerMaze.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

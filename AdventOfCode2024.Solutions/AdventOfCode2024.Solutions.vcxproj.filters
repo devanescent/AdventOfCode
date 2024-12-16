@@ -50,6 +50,9 @@
     <Filter Include="Day15">
       <Filter>{f1fb546e-74e1-4ce8-9c22-a7dd1207dc94}</Filter>
     </Filter>
+    <Filter Include="Day16">
+      <Filter>{db413b4f-fde8-4571-a0b0-4eafd7272552}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -131,6 +134,9 @@
     <ClInclude Include="Day15\WarehouseProcessor.h">
       <Filter>Day15</Filter>
     </ClInclude>
+    <ClInclude Include="Day16\Day16_ReindeerMaze.h">
+      <Filter>Day16</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -198,6 +204,9 @@
     </ClCompile>
     <ClCompile Include="Day15\WarehouseProcessor.cpp">
       <Filter>Day15</Filter>
+    </ClCompile>
+    <ClCompile Include="Day16\Day16_ReindeerMaze.cpp">
+      <Filter>Day16</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

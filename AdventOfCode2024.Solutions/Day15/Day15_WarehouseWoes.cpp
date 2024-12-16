@@ -10,7 +10,7 @@ namespace AdventOfCode::Year2024::Day15
 	uint64_t WarehouseWoes::ExecutePart1(std::vector<Point<int>> movements, GridMap map)
 	{
 		// Set initial position of the robot to free space for processing:
-		Point<int> robot = map.Find('@').value();
+		Point<int> robot = map.Find('@');
 		map.Replace(robot, '.');
 
 		// Process movements:
@@ -120,7 +120,7 @@ namespace AdventOfCode::Year2024::Day15
 		map = GridMap(std::move(wideMap));
 
 		// Set initial position of the robot to free space for processing:
-		Point<int> robot = map.Find('@').value();
+		Point<int> robot = map.Find('@');
 		map.Replace(robot, '.');
 
 		// Process movements:

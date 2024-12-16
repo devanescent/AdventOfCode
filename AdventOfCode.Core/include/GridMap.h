@@ -33,7 +33,27 @@ namespace AdventOfCode
 		}
 
 		// Finds the first point on the map that is equal to the given value
-		std::optional<Point<int>> Find(char value)
+		// or (0,0) if no such point exist
+		Point<int> Find(char value)
+		{
+			Point<int> p;
+			for (int y = 0; y < _gridHeight; ++y)
+			{
+				for (int x = 0; x < _gridWidth; ++x)
+				{
+					if (_grid[y][x] == value)
+					{
+						p.X = x;
+						p.Y = y;
+					}
+				}
+			}
+			return p;
+		}
+
+		// Finds the first point on the map that is equal to the given value
+		// if such a point exists
+		std::optional<Point<int>> TryFind(char value)
 		{
 			for (int y = 0; y < _gridHeight; ++y)
 			{
@@ -43,7 +63,6 @@ namespace AdventOfCode
 						return Point<int>(x, y);
 				}
 			}
-
 			return {};
 		}
 

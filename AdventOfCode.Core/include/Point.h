@@ -2,6 +2,8 @@
 #include <cmath>
 #include <functional>
 
+#define AOC_POINT
+
 namespace AdventOfCode
 {
 	enum class DistanceMetric

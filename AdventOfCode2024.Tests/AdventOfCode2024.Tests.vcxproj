@@ -111,6 +111,7 @@
     <ClCompile Include="Day13_Test.cpp" />
     <ClCompile Include="Day14_Test.cpp" />
     <ClCompile Include="Day15_Test.cpp" />
+    <ClCompile Include="Day16_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />

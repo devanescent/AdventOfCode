@@ -14,7 +14,7 @@ namespace AdventOfCode::Year2024::Day06
 		std::set<Point<int>> obstacles;
 		map.Find(std::inserter(obstacles, obstacles.end()), '#');
 
-		Guard guard(map.Find('^').value(), Direction::Up);
+		Guard guard(map.Find('^'), Direction::Up);
 
 		// Let the guard walk through the map until he leaves the map's bounds;
 		// keep track of all places visited:
@@ -45,7 +45,7 @@ namespace AdventOfCode::Year2024::Day06
 		std::set<Point<int>> obstacles;
 		map.Find(std::inserter(obstacles, obstacles.end()), '#');
 
-		Guard guard(map.Find('^').value(), Direction::Up);
+		Guard guard(map.Find('^'), Direction::Up);
 
 		// Keep track of places that have been visited:
 		std::set<Point<int>> visitedMap;
