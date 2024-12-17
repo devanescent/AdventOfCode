@@ -53,6 +53,9 @@
     <Filter Include="Day16">
       <Filter>{db413b4f-fde8-4571-a0b0-4eafd7272552}</Filter>
     </Filter>
+    <Filter Include="Day17">
+      <Filter>{9956a153-1997-4e88-bcfd-0645ee85bd82}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -137,6 +140,18 @@
     <ClInclude Include="Day16\Day16_ReindeerMaze.h">
       <Filter>Day16</Filter>
     </ClInclude>
+    <ClInclude Include="Day17\Day17_ChronospatialComputer.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\DebugInfoProcessor.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\Registers.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17\OpCode.h">
+      <Filter>Day17</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -207,6 +222,12 @@
     </ClCompile>
     <ClCompile Include="Day16\Day16_ReindeerMaze.cpp">
       <Filter>Day16</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\Day17_ChronospatialComputer.cpp">
+      <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17\DebugInfoProcessor.cpp">
+      <Filter>Day17</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
