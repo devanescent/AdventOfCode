@@ -56,6 +56,9 @@
     <Filter Include="Day17">
       <Filter>{9956a153-1997-4e88-bcfd-0645ee85bd82}</Filter>
     </Filter>
+    <Filter Include="Day18">
+      <Filter>{e01529dd-5b4d-46f7-9bdf-e6bc446843fa}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -152,6 +155,12 @@
     <ClInclude Include="Day17\OpCode.h">
       <Filter>Day17</Filter>
     </ClInclude>
+    <ClInclude Include="Day18\Day18_RAMRun.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18\ByteProcessor.h">
+      <Filter>Day18</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -228,6 +237,12 @@
     </ClCompile>
     <ClCompile Include="Day17\DebugInfoProcessor.cpp">
       <Filter>Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\Day18_RAMRun.cpp">
+      <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18\ByteProcessor.cpp">
+      <Filter>Day18</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
