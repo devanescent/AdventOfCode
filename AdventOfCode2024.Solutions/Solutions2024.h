@@ -19,6 +19,7 @@
 #include "Day16/Day16_ReindeerMaze.h"
 #include "Day17/Day17_ChronospatialComputer.h"
 #include "Day18/Day18_RAMRun.h"
+#include "Day19/Day19_LinenLayout.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -46,6 +47,7 @@ namespace AdventOfCode::Year2024
 				case 16:	return std::make_unique<Day16::ReindeerMaze>();
 				case 17:	return std::make_unique<Day17::ChronospatialComputer>();
 				case 18:	return std::make_unique<Day18::RAMRun>();
+				case 19:	return std::make_unique<Day19::LinenLayout>();
 				default:	return nullptr;
 			}
 		}

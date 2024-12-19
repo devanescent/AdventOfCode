@@ -59,6 +59,9 @@
     <Filter Include="Day18">
       <Filter>{e01529dd-5b4d-46f7-9bdf-e6bc446843fa}</Filter>
     </Filter>
+    <Filter Include="Day19">
+      <Filter>{2fc61f11-3d98-4097-9b78-dd597bbac75a}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -161,6 +164,15 @@
     <ClInclude Include="Day18\ByteProcessor.h">
       <Filter>Day18</Filter>
     </ClInclude>
+    <ClInclude Include="Day19\Day19_LinenLayout.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\TowelPatternProcessor.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19\TowelPatterns.h">
+      <Filter>Day19</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -243,6 +255,12 @@
     </ClCompile>
     <ClCompile Include="Day18\ByteProcessor.cpp">
       <Filter>Day18</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\Day19_LinenLayout.cpp">
+      <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19\TowelPatternProcessor.cpp">
+      <Filter>Day19</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
