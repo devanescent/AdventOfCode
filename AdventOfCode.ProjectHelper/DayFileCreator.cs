@@ -183,6 +183,10 @@ namespace AdventOfCode.ProjectHelper
 
 				sw.WriteLine("using namespace Microsoft::VisualStudio::CppUnitTestFramework;");
 				sw.WriteLine($"using namespace AdventOfCode::Year{_year}::Day{_day:D2};");
+
+				if (_resultType == DayResultType.String)
+					sw.WriteLine("using namespace std::string_literals;");
+
 				AddBlank(sw);
 
 				// Number of data inputs:
@@ -366,7 +370,10 @@ namespace AdventOfCode.ProjectHelper
 					}
 
 					sw.WriteLine("\t\t\t// Assert:");
-					sw.WriteLine($"\t\t\tAssert::AreEqual({tc.Result}ull, result);");
+					if (resultType == DayResultType.Numeric)
+						sw.WriteLine($"\t\t\tAssert::AreEqual({tc.Result}ull, result);");
+					else
+						sw.WriteLine($"\t\t\tAssert::AreEqual(\"{tc.Result}\"s, result);");
 				}
 
 				if (_testCases.IndexOf(tc) != _testCases.Count - 1)

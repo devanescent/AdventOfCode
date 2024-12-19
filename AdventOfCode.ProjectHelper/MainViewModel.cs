@@ -63,7 +63,6 @@ namespace AdventOfCode.ProjectHelper
 			set
 			{
 				_selectedProcessorChoice = value;
-				IsCustomProcessor = _selectedProcessorChoice == ProcessorChoiceType.Custom;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsCustomProcessor)));
 
 				// Set default value for result name when selecting GridMapProcessor:
@@ -75,7 +74,7 @@ namespace AdventOfCode.ProjectHelper
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResultListName)));
 			}
 		}
-		public bool IsCustomProcessor { get; set; }
+		public bool IsCustomProcessor => ProcessorChoice == ProcessorChoiceType.Custom;
 
 		public string Processor { get; set; }
 		public string Result { get; set; }
