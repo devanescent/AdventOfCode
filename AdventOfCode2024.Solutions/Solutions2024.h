@@ -20,6 +20,7 @@
 #include "Day17/Day17_ChronospatialComputer.h"
 #include "Day18/Day18_RAMRun.h"
 #include "Day19/Day19_LinenLayout.h"
+#include "Day20/Day20_RaceCondition.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -48,6 +49,7 @@ namespace AdventOfCode::Year2024
 				case 17:	return std::make_unique<Day17::ChronospatialComputer>();
 				case 18:	return std::make_unique<Day18::RAMRun>();
 				case 19:	return std::make_unique<Day19::LinenLayout>();
+				case 20:	return std::make_unique<Day20::RaceCondition>();
 				default:	return nullptr;
 			}
 		}

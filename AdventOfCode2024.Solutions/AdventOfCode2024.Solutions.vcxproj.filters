@@ -62,6 +62,9 @@
     <Filter Include="Day19">
       <Filter>{2fc61f11-3d98-4097-9b78-dd597bbac75a}</Filter>
     </Filter>
+    <Filter Include="Day20">
+      <Filter>{ab0b515a-dfe4-4db6-adeb-33832f378df5}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -173,6 +176,9 @@
     <ClInclude Include="Day19\TowelPatterns.h">
       <Filter>Day19</Filter>
     </ClInclude>
+    <ClInclude Include="Day20\Day20_RaceCondition.h">
+      <Filter>Day20</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -261,6 +267,9 @@
     </ClCompile>
     <ClCompile Include="Day19\TowelPatternProcessor.cpp">
       <Filter>Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20\Day20_RaceCondition.cpp">
+      <Filter>Day20</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
