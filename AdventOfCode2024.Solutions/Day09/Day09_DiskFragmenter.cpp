@@ -159,7 +159,7 @@ namespace AdventOfCode::Year2024::Day09
 
 		// Try moving each file to the left once:
 		// -> files are at every even index within the memory blocks:
-		int lastFileIndex = memoryBlocks.size() % 2 == 0 ? memoryBlocks.size() - 2 : memoryBlocks.size() - 1;
+		int lastFileIndex = (int)(memoryBlocks.size() % 2 == 0 ? memoryBlocks.size() - 2 : memoryBlocks.size() - 1);
 		for (int fileIx = lastFileIndex; fileIx >= 0; fileIx -= 2)
 		{
 			int fileID = fileIx / 2;

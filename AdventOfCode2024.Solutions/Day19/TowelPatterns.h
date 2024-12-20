@@ -44,7 +44,7 @@ namespace AdventOfCode::Year2024::Day19
 				// Try appending each pattern to the current design so far and
 				// compare to the required design:
 				bool patternMatches = AppendAndMatchPattern(pattern, targetDesign, currentDesignIx);
-				int newDesignIx = currentDesignIx + pattern.length();
+				int newDesignIx = currentDesignIx + (int)pattern.length();
 
 				if (!patternMatches)
 				{
@@ -77,7 +77,7 @@ namespace AdventOfCode::Year2024::Day19
 				// Try appending each pattern to the current design so far and
 				// compare to the required design:
 				bool patternMatches = AppendAndMatchPattern(pattern, targetDesign, currentDesignIx);
-				int newDesignIx = currentDesignIx + pattern.length();
+				int newDesignIx = (int)(currentDesignIx + pattern.length());
 
 				if (!patternMatches)
 				{

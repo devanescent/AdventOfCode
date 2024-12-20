@@ -11,7 +11,7 @@ namespace AdventOfCode::Year2024::Day13
 		for (const auto& m : clawMachines)
 		{
 			// Current position of the claw:
-			Point<int> clawPos(0, 0);
+			Point<int64_t> clawPos(0, 0);
 			
 			// Best price found:
 			uint64_t bestPrice = UINT64_MAX;
@@ -36,7 +36,7 @@ namespace AdventOfCode::Year2024::Day13
 					if (dx % m.ButtonB.X == 0 && dy % m.ButtonB.Y == 0 &&
 						dx / m.ButtonB.X == dy / m.ButtonB.Y)
 					{
-						int b = dx / m.ButtonB.X;
+						int64_t b = dx / m.ButtonB.X;
 						uint64_t tokenPrice = a * 3 + b;
 						bestPrice = std::min(tokenPrice, bestPrice);
 					}

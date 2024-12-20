@@ -16,8 +16,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Day17\OpCode.h" />
-    <ClInclude Include="Day19\TowelPatterns.h" />
     <ClInclude Include="Solutions2024.h" />
     <ClInclude Include="Day01\Day01_HistorianHysteria.h" />
     <ClInclude Include="Day01\LocationsListProcessor.h" />
@@ -49,10 +47,12 @@
     <ClInclude Include="Day17\Day17_ChronospatialComputer.h" />
     <ClInclude Include="Day17\DebugInfoProcessor.h" />
     <ClInclude Include="Day17\Registers.h" />
+	<ClInclude Include="Day17\OpCode.h" />
     <ClInclude Include="Day18\Day18_RAMRun.h" />
     <ClInclude Include="Day18\ByteProcessor.h" />
     <ClInclude Include="Day19\Day19_LinenLayout.h" />
     <ClInclude Include="Day19\TowelPatternProcessor.h" />
+	<ClInclude Include="Day19\TowelPatterns.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />

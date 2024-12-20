@@ -67,10 +67,14 @@ namespace AdventOfCode::Year2024::Day04
 			for (const auto& word : wordsToFind)
 			{
 				size_t offset = 0;
-				while (offset <= line.length() - 4 && (offset = line.find(word, offset)) != std::string::npos)
+				while (offset <= line.length() - 4)
 				{
-					++xmasCount;
-					offset += 4;
+					offset = line.find(word, offset);
+					if (offset != std::string::npos)
+					{
+						++xmasCount;
+						offset += 4;
+					}
 				}
 			}
 		}
@@ -80,7 +84,7 @@ namespace AdventOfCode::Year2024::Day04
 
 	bool IsMAndS(char c1, char c2)
 	{
-		return c1 == 'M' && c2 == 'S' || c1 == 'S' && c2 == 'M';
+		return (c1 == 'M' && c2 == 'S') || (c1 == 'S' && c2 == 'M');
 	}
 
 	uint64_t CeresSearch::ExecutePart2(std::vector<std::string> wordSearch)

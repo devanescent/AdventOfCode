@@ -14,12 +14,12 @@ namespace AdventOfCode::Year2024::Day17
 		while (instrIndex < _program.size())
 		{
 			OpCode op = static_cast<OpCode>(_program[instrIndex]);
-			uint64_t operand = _program[instrIndex + 1];
+			int operand = _program[instrIndex + 1];
 
 			switch (op)
 			{
 				case OpCode::adv:
-					reg.A = reg.A / std::pow(2ull, reg.GetComboOperand(operand));
+					reg.A = (uint64_t)(reg.A / std::pow(2ull, reg.GetComboOperand(operand)));
 					instrIndex += 2;
 					break;
 				case OpCode::bxl:
@@ -47,11 +47,11 @@ namespace AdventOfCode::Year2024::Day17
 					instrIndex += 2;
 					break;
 				case OpCode::bdv:
-					reg.B = reg.A / std::pow(2ull, reg.GetComboOperand(operand));
+					reg.B = (uint64_t)(reg.A / std::pow(2ull, reg.GetComboOperand(operand)));
 					instrIndex += 2;
 					break;
 				case OpCode::cdv:
-					reg.C = reg.A / std::pow(2ull, reg.GetComboOperand(operand));
+					reg.C = (uint64_t)(reg.A / std::pow(2ull, reg.GetComboOperand(operand)));
 					instrIndex += 2;
 					break;
 			}

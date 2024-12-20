@@ -7,7 +7,7 @@ namespace AdventOfCode::Year2024::Day11
 
 	uint64_t Blink(std::vector<int>& stones, int blinks)
 	{
-		// Calculate stones after the given numvber of blinks.
+		// Calculate stones after the given number of blinks.
 		// Because the position of each individual stone does not affect its transformation,
 		// only keep track of how many stones of each value there are.
 		std::map<uint64_t, uint64_t> stoneCounts;

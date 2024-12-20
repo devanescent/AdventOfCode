@@ -12,11 +12,11 @@ namespace AdventOfCode
 	public:
 		GridMap(std::vector<std::string>&& grid) :
 			_grid(std::move(grid)),
-			_gridWidth(_grid[0].size()), _gridHeight(_grid.size())
+			_gridWidth((int)_grid[0].size()), _gridHeight((int)_grid.size())
 		{ }
 
 		GridMap(std::vector<std::string>::iterator begin, std::vector<std::string>::iterator end) :
-			_grid(begin, end), _gridWidth(begin->size()), _gridHeight(end - begin)
+			_grid(begin, end), _gridWidth((int)begin->size()), _gridHeight((int)(end - begin))
 		{ }
 
 		int Height() const { return _gridHeight; }

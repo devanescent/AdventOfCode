@@ -28,7 +28,7 @@ namespace AdventOfCode::Year2024::Day18
 		uint64_t result = 0;
 
 		// Remember visited points with shortest amount of steps reached
-		std::map<Point<int>, int> visited;
+		std::map<Point<int>, uint64_t> visited;
 
 		std::priority_queue<MemoryProgress> q;
 		q.emplace(start, 0);
