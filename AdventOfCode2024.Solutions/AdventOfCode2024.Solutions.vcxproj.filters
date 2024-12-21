@@ -65,6 +65,9 @@
     <Filter Include="Day20">
       <Filter>{ab0b515a-dfe4-4db6-adeb-33832f378df5}</Filter>
     </Filter>
+    <Filter Include="Day21">
+      <Filter>{3d83a498-4b4c-41b1-8a53-f7b7c1d08c8a}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -179,6 +182,9 @@
     <ClInclude Include="Day20\Day20_RaceCondition.h">
       <Filter>Day20</Filter>
     </ClInclude>
+    <ClInclude Include="Day21\Day21_KeypadConundrum.h">
+      <Filter>Day21</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -270,6 +276,9 @@
     </ClCompile>
     <ClCompile Include="Day20\Day20_RaceCondition.cpp">
       <Filter>Day20</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21\Day21_KeypadConundrum.cpp">
+      <Filter>Day21</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

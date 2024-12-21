@@ -21,6 +21,7 @@
 #include "Day18/Day18_RAMRun.h"
 #include "Day19/Day19_LinenLayout.h"
 #include "Day20/Day20_RaceCondition.h"
+#include "Day21/Day21_KeypadConundrum.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -50,6 +51,7 @@ namespace AdventOfCode::Year2024
 				case 18:	return std::make_unique<Day18::RAMRun>();
 				case 19:	return std::make_unique<Day19::LinenLayout>();
 				case 20:	return std::make_unique<Day20::RaceCondition>();
+				case 21:	return std::make_unique<Day21::KeypadConundrum>();
 				default:	return nullptr;
 			}
 		}
