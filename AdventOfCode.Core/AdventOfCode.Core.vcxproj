@@ -30,6 +30,7 @@
     <ClInclude Include="include\Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Direction.cpp" />
     <ClCompile Include="src\IntProcessor.cpp" />
     <ClCompile Include="src\Utils.cpp" />
   </ItemGroup>
