@@ -22,6 +22,7 @@
 #include "Day19/Day19_LinenLayout.h"
 #include "Day20/Day20_RaceCondition.h"
 #include "Day21/Day21_KeypadConundrum.h"
+#include "Day22/Day22_MonkeyMarket.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -52,6 +53,7 @@ namespace AdventOfCode::Year2024
 				case 19:	return std::make_unique<Day19::LinenLayout>();
 				case 20:	return std::make_unique<Day20::RaceCondition>();
 				case 21:	return std::make_unique<Day21::KeypadConundrum>();
+				case 22:	return std::make_unique<Day22::MonkeyMarket>();
 				default:	return nullptr;
 			}
 		}
