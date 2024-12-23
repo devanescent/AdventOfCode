@@ -71,6 +71,9 @@
     <Filter Include="Day22">
       <Filter>{49e3a89e-806d-4bd2-9ac4-d0141eb71da5}</Filter>
     </Filter>
+    <Filter Include="Day23">
+      <Filter>{9c1e6bdf-4e88-48c3-9419-f8f4e876f74a}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -191,6 +194,15 @@
     <ClInclude Include="Day22\Day22_MonkeyMarket.h">
       <Filter>Day22</Filter>
     </ClInclude>
+    <ClInclude Include="Day23\Day23_LANParty.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\Connection.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23\ConnectionProcessor.h">
+      <Filter>Day23</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -288,6 +300,12 @@
     </ClCompile>
     <ClCompile Include="Day22\Day22_MonkeyMarket.cpp">
       <Filter>Day22</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\Day23_LANParty.cpp">
+      <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23\ConnectionProcessor.cpp">
+      <Filter>Day23</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
