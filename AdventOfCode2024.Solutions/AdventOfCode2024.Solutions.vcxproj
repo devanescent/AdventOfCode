@@ -57,8 +57,11 @@
     <ClInclude Include="Day21\Day21_KeypadConundrum.h" />
     <ClInclude Include="Day22\Day22_MonkeyMarket.h" />
     <ClInclude Include="Day23\Day23_LANParty.h" />
-	<ClInclude Include="Day23\Connection.h" />
+    <ClInclude Include="Day23\Connection.h" />
     <ClInclude Include="Day23\ConnectionProcessor.h" />
+    <ClInclude Include="Day24\Day24_CrossedWires.h" />
+    <ClInclude Include="Day24\LogicGate.h" />
+    <ClInclude Include="Day24\LogicGateProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp" />
@@ -95,6 +98,8 @@
     <ClCompile Include="Day22\Day22_MonkeyMarket.cpp" />
     <ClCompile Include="Day23\ConnectionProcessor.cpp" />
     <ClCompile Include="Day23\Day23_LANParty.cpp" />
+    <ClCompile Include="Day24\Day24_CrossedWires.cpp" />
+    <ClCompile Include="Day24\LogicGateProcessor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

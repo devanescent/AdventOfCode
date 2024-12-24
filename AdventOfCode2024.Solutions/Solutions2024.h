@@ -24,6 +24,7 @@
 #include "Day21/Day21_KeypadConundrum.h"
 #include "Day22/Day22_MonkeyMarket.h"
 #include "Day23/Day23_LANParty.h"
+#include "Day24/Day24_CrossedWires.h"
 
 namespace AdventOfCode::Year2024
 {
@@ -56,6 +57,7 @@ namespace AdventOfCode::Year2024
 				case 21:	return std::make_unique<Day21::KeypadConundrum>();
 				case 22:	return std::make_unique<Day22::MonkeyMarket>();
 				case 23:	return std::make_unique<Day23::LANParty>();
+				case 24:	return std::make_unique<Day24::CrossedWires>();
 				default:	return nullptr;
 			}
 		}

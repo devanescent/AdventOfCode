@@ -74,6 +74,9 @@
     <Filter Include="Day23">
       <Filter>{9c1e6bdf-4e88-48c3-9419-f8f4e876f74a}</Filter>
     </Filter>
+    <Filter Include="Day24">
+      <Filter>{22f41b59-a942-44f8-9272-598863db10b1}</Filter>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solutions2024.h" />
@@ -203,6 +206,15 @@
     <ClInclude Include="Day23\ConnectionProcessor.h">
       <Filter>Day23</Filter>
     </ClInclude>
+    <ClInclude Include="Day24\Day24_CrossedWires.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\LogicGate.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24\LogicGateProcessor.h">
+      <Filter>Day24</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Day01\Day01_HistorianHysteria.cpp">
@@ -306,6 +318,12 @@
     </ClCompile>
     <ClCompile Include="Day23\ConnectionProcessor.cpp">
       <Filter>Day23</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\Day24_CrossedWires.cpp">
+      <Filter>Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24\LogicGateProcessor.cpp">
+      <Filter>Day24</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
